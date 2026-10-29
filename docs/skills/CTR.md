@@ -1,25 +1,27 @@
 # CTR: choose a transformation deliberately
 
-**Question:** What change of representation could reveal something useful, and what must it preserve?
+An archive is caught between opening fragile notebooks to readers and protecting them from handling. Defend access and preservation starts to look like obstruction. Defend preservation and access starts to look careless. The argument can keep changing sides without changing shape.
 
-## The problem and the method
+CTR gives names to the movements that might help. A rotation changes the view of the same relationship. An inversion develops its opposing direction. A dimensional lift introduces a distinction that the opening frame could not express.
 
-“Think differently” leaves the choice of transformation implicit. A model may invert a claim, import an analogy or change scale without saying what has changed. A clever reframing can then answer a different question.
+## A movement that changes the question's shape
 
-CTR makes a vocabulary of transformations available for deliberate selection: abstraction and concretization, symmetry, constraint isolation, temporal shifts, counterfactual interventions, negation and falsification, relationship rebasing and other families. A selected operation names its target, what it preserves, what it disturbs and how the result will be checked.
+In the archive, the useful distinction may be between reading the text and examining the physical notebook. The original open-or-closed choice had treated both as the same kind of access. Once they are separated, reproductions and supervised original handling become different possibilities rather than opposing slogans.
 
-A return path explains how the transformed view still addresses the opening problem. It is not the same as a software rollback.
+In the earlier Prism/Parallax analogy, this was the YZ tilt: leave the opening plane of alternatives while keeping the problem in view. The [full example](../DIALECTICAL_SEARCH.md) follows the movement from thesis and antithesis through the practical paradox to a possible synthesis.
 
-## Historical development
+CTR's current dimensional-lift operation describes a related move: add a missing dimension while preserving the conflicting observations. Its rotation and inversion operations capture other parts of the older circle.
 
-Recovered April 3, 2026 discussion describes an early registry organized around symmetry, deformation, dimensional, topology and dynamics families. Subsequent discussion identified ordered path reasoning as another requirement.
+## What CTR keeps attached
 
-On May 2, the design was consolidated into one operator registry rather than repeated CTR passes. Exploration moved into ETE. The current v2.1 revision follows the May 6 split between ontology, primitive dynamics and regime, so these layers can be transformed independently.
+The change of view needs a return path. In this case, the original purpose includes meaningful study and preservation for future readers. A new arrangement must still answer that question. It cannot quietly redefine useful access as something no researcher actually needs.
 
-## Example and boundary
+The registry names what a transformation preserves, what it disturbs and how the result should be checked. A brief request to “think differently” can elicit such a move; the contract helps make the move deliberate and inspectable.
 
-Instead of interpreting a stalled repair as lack of skill, isolate access control as a candidate constraint. The transformed view is useful only if it explains the original delay and survives evidence about who can authorize access.
+## How the registry developed
 
-CTR selects operations; it does not execute every alternative or prove that an analogy is valid. Ordinary prompting can request these operations too. The registry adds an inspectable choice and preservation contract.
+Recovered December 2025 discussions describe dialectical movement and YZ escape before the present registry existed. An April 3, 2026 account names the earlier transform families. On May 2, the design separated one CTR registry from ETE's exploration work. The current v2.1 revision follows the May 6 separation of ontology, dynamics and regime.
 
-**Read:** [CTR v2.1 specification](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) · [packet template](../../framework/CTR_Parallax_v2.1_PacketTemplate.json) · [ETE](ETE.md) · [evidence trail](../HISTORY.md#evidence-trail)
+CTR selects a transformation. [ETE](ETE.md) explores what it produces; [PSPP](PSPP.md) compares the candidates. The analogy describes a route a model may use, not an automatic requirement to visit every position or end in synthesis.
+
+**Read:** [CTR v2.1 specification](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) · [packet template](../../framework/CTR_Parallax_v2.1_PacketTemplate.json) · [circle-and-tilt example](../DIALECTICAL_SEARCH.md) · [evidence trail](../HISTORY.md#evidence-trail)

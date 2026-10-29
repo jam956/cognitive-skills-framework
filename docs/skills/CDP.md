@@ -14,6 +14,12 @@ The original Prism sought broader inquiry before closure in late 2025. The survi
 
 The practical refinement was selective breadth. A suppressed domain can be reconsidered if residual error suggests that the opening map was too narrow.
 
+## Keeping the subject at the center
+
+In the older circle analogy, the subject could stay fixed while the inquiry moved between positions around it. An archive's access problem can be viewed from readers' needs or preservation needs without leaving the selected ontology. The [YZ-tilt example](../DIALECTICAL_SEARCH.md) then introduces different kinds of access, rather than abandoning the archive for an unrelated topic.
+
+CDP helps hold that domain boundary. CTR and ETE supply movements within or beyond the opening representation when they materially change the analysis.
+
 ## Example and boundary
 
 A procurement delay may initially look like a scheduling issue. An authority lens changes the analysis if the person who can perform the work cannot approve the purchase. Naming economics or psychology without any corresponding change adds little.

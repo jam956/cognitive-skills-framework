@@ -16,6 +16,12 @@ The May 6 refinement separated a reduced Dynamical Core from the Regime Field. P
 
 The preserved filename includes v1.2, while its declared reduced-core version is v0.2.0. [Version notes](../PROVENANCE.md) explain that naming history.
 
+## The earlier dialectical movements
+
+Earlier discussions also used thesis, antithesis, paradox, escape and synthesis to describe how an inquiry could move. Those are transformations of the analysis, rather than additional primitive actions in the reduced core. In the current package, related moves are named by CTR and explored by ETE.
+
+The [circle-and-tilt example](../DIALECTICAL_SEARCH.md) follows one such movement while keeping the original subject and constraints visible.
+
 ## Example and boundary
 
 “Centralized control” might involve receiving information, granting permission and gating execution. The same actions can serve different purposes under emergency authorization or routine administration. A label alone does not establish either the process or its legitimacy.

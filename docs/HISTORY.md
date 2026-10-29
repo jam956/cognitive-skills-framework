@@ -4,6 +4,16 @@ The original [Prism and sentence-thought history](../README.md#1-prism-broaden-t
 
 This is a reconstructed design history. Module order is not invention order. Some supporting ideas appeared before the later pipeline acquired its present names.
 
+## The earlier circle and tilt
+
+Before the current registry, executor and comparator acquired separate roles, the Prism/Parallax work used a geometric picture. The inquiry could move around the same subject: develop a thesis, turn toward its antithesis, and retain the paradox when both positions exposed something consequential. A YZ tilt sought a different explanatory basis when revisiting those positions stopped helping.
+
+Recovered December 2025 discussions describe this as preserving the problem's identity and constraints while changing a domain, level, role or explanatory relationship. Other discussions used different descriptions of the Y and Z axes. The functional thread is re-expression with a return path, rather than a single fixed coordinate system or a compulsory sequence of angles.
+
+The [archive example](DIALECTICAL_SEARCH.md) lets the reader follow that movement. Access and preservation remain the concerns throughout; distinguishing kinds of access changes what arrangements become possible.
+
+The later package distributes these jobs. [CTR](skills/CTR.md) names rotation, inversion and dimensional lift; [ETE](skills/ETE.md) explores their consequences, inheriting earlier MPO and MetaDiagnostic responsibilities; [PSPP](skills/PSPP.md) compares the resulting candidates. CDP can keep a specified ontology in focus throughout. A tilt does not automatically authorize changing the subject or guarantee a synthesis.
+
 ## Read by the problem you are trying to solve
 
 | Question | Method and reader guide |
@@ -36,7 +46,7 @@ That distinction is central to the documentation: a specification describes a me
 | Period | Development | Evidence status |
 |---|---|---|
 | October 2025 | Organ Atlas and lightweight/full probe-handshake ideas appear alongside the early Prism controls. | Recovered conversation references to exact artifact names; not proof of identity with today's files. |
-| December 2025 | RewardController is described within broad-to-narrow search and external adaptive control. | Recovered discussion; no model-weight update established. |
+| December 2025 | Dialectical search and YZ paradox escape are described in Prism/Parallax discussions; RewardController appears in broad-to-narrow external control. | Recovered discussion; geometric language is conceptual, and no model-weight update is established. |
 | March 2026 | Search transformations, explicit intermediate representations and bounded feedback are discussed; programming orchestration and reward-policy integration are reconsidered. | Recovered design discussion. |
 | Early April 2026 | CTR names transform families; ordered derivation/path operations are identified as a further requirement. | Recovered design discussion, with later specifications preserving these responsibilities. |
 | April 20, 2026 | Dynamics-first and ontology-first system construction, Coupler responsibilities and candidate-system comparison become explicit. | Recovered discussion and references to earlier v4-era artifacts. |
@@ -58,6 +68,7 @@ The history was researched through the surviving source package, local source-co
 |---|---|---|
 | October 20, 2025: Prism v13 control discussion naming Organ_Atlas_Template_v0.3.json, probe_handshake_template.py and a concise/analyst split. | Antecedents of optional monitoring and selective escalation. The intervening revision path remains incomplete. | [Current atlas](../framework/Organ_Atlas_Template_v0.3.json), [probe profiles](../framework/CognitiveTools_ProbeProfiles_v1.json). |
 | December 7, 2025: RewardController and coarse-to-fine search discussion; March 22, 2026: programming-orchestrator integration discussion. | Feedback as bounded search/control and differing integration contexts. | [Current Reward Controller contract](../framework/RewardController_ParallaxEngine.v1.json). |
+| December 11 and 15, 2025 local time: Prism/DVM and Prism Reasoning Protocol discussions of thesis, antithesis and YZ paradox escape. | Earlier geometric search vocabulary; preservation of problem identity while re-expressing the frame. Exact axis descriptions varied. | [Descriptive example](DIALECTICAL_SEARCH.md), [rotation and dimensional-lift definitions](../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json), [ETE](../framework/ETE_v1.1_SplitLayerExplorationTransform.json). |
 | April 3, 2026: CognitiveTransformationRegistry_ParallaxEngine_v1.json discussion; April 8 local time: sequential/path-family proposal. | Named transformations and the requirement to license ordered steps. | [CTR supersession and transform families](../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json), [CEC definition](../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json). |
 | April 20, 2026: system-construction and v4-era skill discussion. | Ontology-first, dynamics-first and hybrid entry points; candidate systems rather than merely alternative phrasings. | [Dynamical Prism](../framework/Dynamical_Prism_v1.2_ReducedCore.json), [Coupler](../framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json), [PSPP supersession](../framework/PSPP_v5.0_CandidateSystemComparator.json). |
 | April 26–27, 2026: CREM_ConflictRebase_EdgeDiscovery_Module_v1.json and pipeline-document discussion. | Early conflict/dependency pipeline, with deterministic, heuristic and model-driven portions distinguished. | [Historical PDF](../framework/references/CREM_Pipeline_Document_v1.pdf), [current CREM](../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json). |

@@ -63,6 +63,8 @@ Once a concept is preserved, another question follows: what should the model do 
 
 **CTR** names the available transformations and what they must preserve. **ETE** applies selected transformations to produce meaningfully different candidate systems. **PSPP** compares those candidates and records why a branch is selected, merged or deferred. This division became clearer in the April–May 2026 revisions; it is a functional explanation, not the order in which every idea was invented.
 
+An earlier picture made the search easier to imagine: walk around a circle from a thesis to its opposing view, hold the tension when both reveal something important, then try a **YZ tilt** if movement around the same plane keeps returning to the same difficulty. In the [archive example](docs/DIALECTICAL_SEARCH.md), opening fragile notebooks and protecting them seem opposed until the inquiry distinguishes access to their words from access to the physical objects. That distinction creates new arrangements worth exploring; comparison determines whether any of them earns the name synthesis.
+
 Three further concerns require different checks. **CREM** reframes relationships while preserving the parties' differences and shared dependencies. **CEC** checks whether consequential steps form a licensed path. **DARE/IDCM** asks whether the opening frame or rejected branches concealed something important.
 
 The supporting controls address cost, observability and feedback: **probe profiles** select the smallest useful route, **Organ Atlas** describes optional monitoring surfaces, and **Reward Controller** bounds how observed results may influence future effort. Some of these ideas have antecedents in the 2025 Prism work.

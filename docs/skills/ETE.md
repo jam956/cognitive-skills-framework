@@ -1,23 +1,29 @@
-# ETE: explore alternatives without losing the question
+# ETE: explore what the changed view makes possible
 
-**Question:** What candidate systems emerge when we actually apply the selected transformations?
+Recognizing a missing distinction does not yet produce a workable arrangement. In the archive example, separating access to text from access to the physical notebook opens several routes: reproductions, supervised handling, a staged combination or continued restrictions where neither route is adequate.
 
-## The problem and the method
+ETE is concerned with exploring those possibilities. The branches should differ in something that matters, rather than retell the same solution in different words.
 
-Asking for several answers can produce stylistic variations of the same assumption. Exploration needs alternatives that differ in a consequential relationship, condition or mechanism.
+## After the tilt
 
-ETE specifies how to apply CTR's selected operations, construct candidate systems and retain their return paths. It records rejected branches and reasons so a later reviewer can examine what pruning removed. Bounded exploration should stop producing branches when they no longer add useful distinctions.
+The [circle-and-tilt example](../DIALECTICAL_SEARCH.md) begins with two coherent positions: readers need access and the notebooks need protection. The tilt introduces kinds of access as a further dimension.
 
-## Historical development
+One branch might serve routine textual study with reproductions. Another might reserve original handling for material questions. A combined branch must confront the costs and limitations of both. None earns acceptance simply because it sounds like a synthesis.
 
-Earlier discussions used MPO and MetaDiagnostic roles for projection and diagnostic exploration. Recovered May 2, 2026 discussion consolidated their runtime responsibilities into ETE, separating the transform vocabulary from its application. CTR was the registry; ETE was the executor.
+Exploration keeps the connections visible: which need a branch serves, what it leaves unmet and what would make it untenable. If a reproduction cannot capture the evidence a researcher needs, that limitation belongs with the branch. If a branch is rejected, the reason remains available for later review.
 
-ETE v1.1, added in the May 6 source update, extends that division to the separated ontology, Dynamical Core and Regime Field. It can explore changing an operating condition without replacing the entire domain, or investigate a different process under the same constraints.
+## From moving around to constructing alternatives
 
-## Example and boundary
+Earlier Prism/Parallax work described rotational and paradox-escape search. MPO and MetaDiagnostic later carried projection and diagnostic responsibilities. Recovered May 2, 2026 discussion consolidated those responsibilities into ETE.
 
-A stalled repair might involve missing competence, unavailable parts or controlled access. These are useful alternatives only when the facts leave them plausible. ETE should state what each candidate would explain and what evidence would distinguish it.
+The division is practical: [CTR](CTR.md) supplies the transform vocabulary; ETE applies selected moves. The v1.1 revision, added in the May 6 source update, permits separate exploration of processes and the regimes under which they operate.
 
-The publication contains the execution specification, not an autonomous search service. A model or harness must carry out the operations. More branches do not automatically mean better reasoning; [PSPP](PSPP.md) compares the survivors.
+A tilt need not change the chosen ontology. The archive can remain the subject while roles, access modes, timescales or operating conditions change. A cross-domain analogy is useful only if its relationship transfers back.
 
-**Read:** [ETE v1.1 specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) · [packet template](../../framework/ETE_v1.1_PacketTemplate.json) · [CTR](CTR.md) · [evidence trail](../HISTORY.md#evidence-trail)
+## Knowing when to hand over
+
+Exploration has done useful work when it has produced a small set of meaningfully different candidates and exposed their limits. [PSPP](PSPP.md) then compares them. Repeatedly adding branches after they stop changing the choice consumes attention without improving the result.
+
+The publication supplies this execution specification. A model or harness must perform the exploration; reading the document does not launch an autonomous search.
+
+**Read:** [ETE v1.1 specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) · [packet template](../../framework/ETE_v1.1_PacketTemplate.json) · [circle-and-tilt example](../DIALECTICAL_SEARCH.md) · [evidence trail](../HISTORY.md#evidence-trail)
