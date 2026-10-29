@@ -1,0 +1,936 @@
+{
+  "module_name": "Discontinuous Anchor Reconstitution Engine / Ignorance Detection and Correction Module",
+  "short_name": "DARE_IDCM",
+  "version": "v1.0.0",
+  "status": "design_stable_executable_spec",
+  "revision_kind": "parallel_supervisory_counteragent_and_unknown_correction_layer",
+  "generated_utc": "2026-05-02T19:55:04.464957+00:00",
+  "purpose": "Run as a parallel supervisory counteragent across the cognitive stack. DARE/IDCM audits premature collapse, anchor lock-in, pruning opacity, missing operators, false harmony, forced alignment, fragile conclusions, and unknown-pressure. It can approve standard flow, request targeted reruns, rescue pruned branches, request CTR operator injection, trigger CREM/CEC review, or authorize bounded discontinuous anchor suspension and logic reconstitution.",
+  "core_doctrine": [
+    "DARE/IDCM is not a primary solver.",
+    "It audits the path by which candidate truth survived.",
+    "It inspects decision artifacts, not only final answers.",
+    "Unknown unknowns are inferred from distortion signatures: contradiction, residual error, pruning loss, fragility, and failed repair.",
+    "Premature coherence is suspicious when robustness is low.",
+    "Anchor rejection is permitted only under bounded reconstitution rules.",
+    "Relationship strengthening must not become false harmony, forced alignment, party erasure, or manipulation.",
+    "Operator gaps should trigger targeted correction before whole-pipeline reruns.",
+    "Rescue pruned branches only when rejection reason is weak relative to lost potential value.",
+    "Truth and safety override novelty."
+  ],
+  "responsibility_boundary": {
+    "owns": [
+      "supervisory_audit",
+      "anchor_suspicion_scoring",
+      "dependency_suspicion_scoring",
+      "operator_gap_detection",
+      "unknown_pressure_scoring",
+      "pruning_loss_audit",
+      "rejected_branch_rescue",
+      "false_harmony_detection",
+      "forced_alignment_detection",
+      "party_erasure_detection",
+      "fragility_detection",
+      "adversarial_verification_request",
+      "targeted_rerun_request",
+      "CTR_operator_injection_request",
+      "CREM_review_request",
+      "CEC_review_request",
+      "bounded_discontinuous_authorization",
+      "anchor_suspension",
+      "new_anchor_induction_request",
+      "logic_reconstitution_review",
+      "audit_report_emission"
+    ],
+    "does_not_own": [
+      "normal_anchor_extraction",
+      "domain_axis_selection",
+      "primitive_dynamical_operator_definition",
+      "actor_binding_execution",
+      "general_transform_execution",
+      "candidate_system_competition",
+      "conflict_or_relationship_rebase_execution",
+      "ordered_path_validation_execution",
+      "final_answer_synthesis",
+      "external_fact_verification",
+      "durable_memory_write_execution"
+    ],
+    "handoff_note": "DARE/IDCM emits audit reports, correction requests, rescued branches, operator injection requests, reconstitution packets, and approval/hold decisions. The Arbiter or orchestrator decides how to apply them."
+  },
+  "registry_refs": {
+    "KCE": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "PrismCoupler": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+    "CTR": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+    "ETE": "ETE_v1.1_SplitLayerExplorationTransform.json",
+    "PSPP_Lite": "PSPP_v5.0_CandidateSystemComparator.json",
+    "CEC": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+    "CREM": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+    "Arbiter": "final_arbiter_internal_contract"
+  },
+  "intended_runtime": "Parallel supervisory layer active across the full stack, with checkpoints after KCE, CDP, Coupler, ETE, CREM, PSPP-lite, CEC, and before final Arbiter synthesis.",
+  "placement": {
+    "pipeline_role": "parallel_supervisory_counteragent",
+    "watches": [
+      "KCE.anchor_candidates",
+      "KCE.compression_telemetry",
+      "KCE.dare_signals",
+      "CDP.domain_lock_report",
+      "CDP.dare_domain_signals",
+      "PrismCoupler.binding_stability_report",
+      "PrismCoupler.crem_handoff_packet",
+      "PrismCoupler.route_gate_decision",
+      "PrismCoupler.dare_coupling_signals",
+      "CTR.selected_transform_plan",
+      "ETE.rejected_branch_artifacts",
+      "ETE.projection_ledger",
+      "ETE.dare_exploration_signals",
+      "CREM.gate_report",
+      "CREM.relationship_rebase_plan",
+      "CREM.telemetry",
+      "PSPP_Lite.decision_artifacts",
+      "PSPP_Lite.fragility_report",
+      "PSPP_Lite.dare_audit_request",
+      "CEC.gap_report",
+      "CEC.path_validatability_report",
+      "Arbiter.synthesis_candidate"
+    ],
+    "intervenes_at": [
+      "after_KCE",
+      "after_CDP",
+      "after_Coupler_route_gate",
+      "after_ETE_pruning",
+      "after_CREM_rebase",
+      "after_PSPP_selection",
+      "after_CEC_path_validation",
+      "before_final_synthesis"
+    ],
+    "default_mode": "watch_and_audit"
+  },
+  "inputs": {
+    "prompt_text": {
+      "type": "string",
+      "description": "Raw prompt retained for objective preservation and anchor suspicion checks."
+    },
+    "stack_packets": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "kce_packet": "object",
+        "cdp_packet": "object",
+        "dynamical_packet": "object",
+        "coupler_packet": "object",
+        "ctr_packet": "object",
+        "ete_packet": "object",
+        "crem_packet": "object",
+        "pspp_packet": "object",
+        "cec_packet": "object",
+        "arbiter_candidate": "object"
+      }
+    },
+    "decision_artifacts": {
+      "type": "object",
+      "required": false,
+      "description": "PSPP-lite or solver artifacts including candidate branches, pruned branches, scores, assumptions, dependencies, and selection reasons."
+    },
+    "rejected_branch_artifacts": {
+      "type": "array",
+      "required": false,
+      "description": "Rejected candidates from ETE, PSPP-lite, CREM, or other modules."
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "audit_mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "light",
+            "standard",
+            "strict",
+            "discontinuous_authorization"
+          ],
+          "default": "auto"
+        },
+        "novelty_mode": {
+          "type": "string",
+          "enum": [
+            "bounded",
+            "elevated",
+            "max_discovery"
+          ],
+          "default": "bounded"
+        },
+        "safety_level": {
+          "type": "string",
+          "enum": [
+            "normal",
+            "high_stakes",
+            "creative_speculative"
+          ],
+          "default": "normal"
+        },
+        "allow_anchor_suspension": {
+          "type": "boolean",
+          "default": false
+        },
+        "allow_operator_injection": {
+          "type": "boolean",
+          "default": true
+        },
+        "allow_branch_rescue": {
+          "type": "boolean",
+          "default": true
+        },
+        "relationship_safety_watch": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  },
+  "outputs": {
+    "dare_idcm_packet": {
+      "type": "object",
+      "description": "Supervisory audit, unknown-pressure, correction requests, rescued branches, reconstitution packet, and final approval/hold decision."
+    },
+    "audit_report": "object",
+    "correction_requests": "array",
+    "rescued_branches": "array",
+    "operator_injection_requests": "array",
+    "reconstitution_packet": "object_or_null",
+    "approval_decision": "object"
+  },
+  "activation_policy": {
+    "always_watch_when": [
+      "multi_module_stack_active",
+      "PSPP_lite_decision_artifacts_available",
+      "ETE_rejected_branch_artifacts_available",
+      "CREM_relationship_or_conflict_rebase_active",
+      "final_synthesis_pending"
+    ],
+    "active_intervention_when": [
+      "anchor_suspicion_high",
+      "dependency_suspicion_high",
+      "operator_gap_suspicion_high",
+      "unknown_pressure_high",
+      "high_pruning_loss",
+      "premature_collapse_suspicion",
+      "selected_system_fragility_high",
+      "many_rejections_due_to_low_returnability",
+      "high_coherence_low_robustness",
+      "false_harmony_suspicion_high",
+      "forced_alignment_suspicion_high",
+      "party_erasure_suspicion_high",
+      "CEC_reports_reconstitution_required",
+      "PSPP_top_branch_margin_low",
+      "CREM_gate_failure_with_high_relationship_or_conflict_salience"
+    ],
+    "do_not_intervene_when": [
+      "simple_direct_answer_low_risk",
+      "single_step_fact_retrieval",
+      "user_requests_no_deep_analysis",
+      "all_risk_scores_low_and_standard_route_sufficient",
+      "intervention_cost_exceeds_expected_information_gain"
+    ]
+  },
+  "unknown_pressure_model": {
+    "description": "A system infers unknown unknowns from observable distortion signatures.",
+    "components": {
+      "contradiction_density": 0.18,
+      "residual_error": 0.16,
+      "pruning_loss": 0.16,
+      "fragility_score": 0.16,
+      "operator_gap_suspicion": 0.14,
+      "anchor_suspicion": 0.1,
+      "repair_failure_count": 0.06,
+      "novelty_gain_negative": 0.04
+    },
+    "formula_note": "unknown_pressure = weighted distortion signals minus successful repair effects. High unknown_pressure does not prove the answer is wrong; it means the current model may be insufficient.",
+    "thresholds": {
+      "low": 0.25,
+      "moderate": 0.45,
+      "high": 0.65,
+      "critical": 0.8
+    },
+    "actions_by_band": {
+      "low": "allow_standard_route",
+      "moderate": "request_targeted_check",
+      "high": "request_operator_injection_or_branch_rescue",
+      "critical": "authorize_DARE_review_and_possible_anchor_suspension_if_allowed"
+    }
+  },
+  "stage_order": [
+    "packet_ingest",
+    "decision_artifact_integrity_check",
+    "anchor_and_compression_audit",
+    "domain_and_binding_audit",
+    "operator_gap_audit",
+    "pruning_loss_audit",
+    "relationship_safety_audit",
+    "fragility_and_robustness_audit",
+    "unknown_pressure_score",
+    "correction_strategy_selection",
+    "branch_rescue_if_justified",
+    "operator_injection_request_if_needed",
+    "specialist_review_request_if_needed",
+    "discontinuous_authorization_if_needed",
+    "reconstitution_packet_emit_if_authorized",
+    "approval_or_hold_decision",
+    "handoff_emit"
+  ],
+  "stages": {
+    "packet_ingest": {
+      "description": "Ingest all available stack packets, traces, rejected branches, and decision artifacts.",
+      "outputs": [
+        "packet_inventory",
+        "available_artifacts",
+        "missing_artifact_report"
+      ]
+    },
+    "decision_artifact_integrity_check": {
+      "description": "Check whether solving modules exposed enough artifacts to audit the collapse path.",
+      "required_artifacts": [
+        "anchor_used",
+        "candidate_branches",
+        "pruned_branches",
+        "pruning_reasons",
+        "score_table",
+        "assumptions_preserved",
+        "dependencies_preserved",
+        "return_path_status",
+        "verification_failures",
+        "falsifiers",
+        "final_selection_reason"
+      ],
+      "outputs": [
+        "artifact_integrity_report"
+      ]
+    },
+    "anchor_and_compression_audit": {
+      "description": "Evaluate whether KCE anchor compression created false center, lost anomaly markers, or overcommitted to a clean invariant.",
+      "checks": [
+        "single_anchor_dominance_too_early",
+        "high_compression_risk",
+        "anomaly_loss_high",
+        "multiple_viable_anchors_suppressed",
+        "selected_anchor_explains_prompt_too_cleanly",
+        "lost_scale_or_boundary_markers",
+        "memory_write_attempt_before_validation"
+      ],
+      "outputs": [
+        "anchor_audit_report"
+      ]
+    },
+    "domain_and_binding_audit": {
+      "description": "Audit CDP and Coupler outputs for domain lock, misbinding, role overcommitment, and relationship routing errors.",
+      "checks": [
+        "domain_lock",
+        "watch_axis_suppressed_despite_anomaly",
+        "actor_role_misbind",
+        "affordance_prior_overreach",
+        "unstable_binding_ignored",
+        "CREM_route_needed_but_not_taken",
+        "ETE_route_needed_but_not_taken",
+        "parallel_route_needed"
+      ],
+      "outputs": [
+        "domain_binding_audit_report"
+      ]
+    },
+    "operator_gap_audit": {
+      "description": "Detect missing reasoning operator families from the failure pattern.",
+      "gap_types": [
+        "abstraction_ladder_needed",
+        "negation_falsifier_needed",
+        "constraint_isolation_needed",
+        "counterfactual_intervention_needed",
+        "temporal_decomposition_needed",
+        "adversarial_verification_needed",
+        "CREM_alignment_rebase_needed",
+        "CREM_conflict_rebase_needed",
+        "CEC_path_validation_needed",
+        "discontinuous_reconstitution_needed"
+      ],
+      "outputs": [
+        "operator_gap_report"
+      ]
+    },
+    "pruning_loss_audit": {
+      "description": "Inspect pruned/rejected branches for weak rejection reasons and lost potential value.",
+      "checks": [
+        "rejected_for_low_returnability_but_high_novelty",
+        "rejected_for_low_coherence_but_high_anomaly_explanatory_power",
+        "rejected_due_to_anchor_incompatibility_only",
+        "duplicate_collapse_erased_material_difference",
+        "branch_pruned_before_required_operator_was_available",
+        "branch_pruned_without_falsifier"
+      ],
+      "outputs": [
+        "pruning_audit_report",
+        "branch_rescue_candidates"
+      ]
+    },
+    "relationship_safety_audit": {
+      "description": "Audit CREM/Coupler relationship outputs for false harmony, forced alignment, party erasure, domination, or manipulation risk.",
+      "checks": [
+        "false_harmony",
+        "forced_alignment",
+        "party_erasure",
+        "domination_disguised_as_alignment",
+        "avoidance_disguised_as_repair",
+        "unreciprocated_concession",
+        "productive_tension_erased",
+        "relationship_strengthening_without_party_integrity",
+        "trust_repair_without_accountability"
+      ],
+      "outputs": [
+        "relationship_safety_report"
+      ]
+    },
+    "fragility_and_robustness_audit": {
+      "description": "Attack the selected system or synthesis candidate for edge-case fragility.",
+      "checks": [
+        "high_coherence_low_robustness",
+        "small_perturbation_breaks_claim",
+        "narrow_condition_success",
+        "missing_falsifiers",
+        "selected_branch_margin_low",
+        "edge_case_failure",
+        "constraint_perturbation_failure",
+        "regime_shift_failure"
+      ],
+      "outputs": [
+        "fragility_audit_report"
+      ]
+    },
+    "unknown_pressure_score": {
+      "description": "Integrate contradiction, residual error, pruning loss, fragility, operator gaps, anchor suspicion, repair failures, and novelty decay.",
+      "outputs": [
+        "unknown_pressure_report"
+      ]
+    },
+    "correction_strategy_selection": {
+      "description": "Choose the minimum sufficient correction strategy.",
+      "strategies": [
+        "allow_standard_route",
+        "request_targeted_rerun",
+        "request_CTR_operator_injection",
+        "rescue_pruned_branch",
+        "request_CREM_review",
+        "request_CEC_review",
+        "request_ETE_reexploration",
+        "request_PSPP_rescore",
+        "request_adversarial_verification",
+        "authorize_anchor_suspension",
+        "hold_for_arbiter_caveat"
+      ],
+      "outputs": [
+        "correction_strategy"
+      ]
+    },
+    "branch_rescue_if_justified": {
+      "description": "Rescue rejected branches whose lost potential value exceeds rejection confidence.",
+      "rescue_conditions": [
+        "weak_pruning_reason",
+        "high_anomaly_explanatory_power",
+        "high_novelty_with_return_path_possible",
+        "operator_gap_explains_failure",
+        "DARE_can_define_repair_conditions"
+      ],
+      "outputs": [
+        "rescued_branches"
+      ]
+    },
+    "operator_injection_request_if_needed": {
+      "description": "Request missing operators from CTR v2.1 or route to specialist modules.",
+      "outputs": [
+        "operator_injection_requests"
+      ]
+    },
+    "specialist_review_request_if_needed": {
+      "description": "Request CREM, CEC, ETE, or PSPP-lite review depending on detected failure mode.",
+      "outputs": [
+        "specialist_review_requests"
+      ]
+    },
+    "discontinuous_authorization_if_needed": {
+      "description": "Authorize bounded anchor suspension only when normal repair paths are insufficient and context allows it.",
+      "requirements": [
+        "unknown_pressure_high_or_critical",
+        "anchor_suspicion_high",
+        "lower_cost_repairs_failed_or_insufficient",
+        "hard_constraints_preserved",
+        "user_goal_preserved",
+        "falsifier_requirements_defined",
+        "speculation_marking_required",
+        "allow_anchor_suspension_true_or_user_explicitly_requests_paradigm_shift"
+      ],
+      "outputs": [
+        "discontinuous_authorization_report"
+      ]
+    },
+    "reconstitution_packet_emit_if_authorized": {
+      "description": "Emit a reconstitution packet after anchor suspension or replacement-anchor induction.",
+      "outputs": [
+        "reconstitution_packet"
+      ]
+    },
+    "approval_or_hold_decision": {
+      "description": "Decide whether the stack may proceed to synthesis, must rerun a module, must preserve caveats, or must hold for Arbiter review.",
+      "outputs": [
+        "approval_decision"
+      ]
+    },
+    "handoff_emit": {
+      "description": "Emit DARE/IDCM packet to orchestrator, CREM, CEC, ETE, PSPP-lite, or Arbiter.",
+      "outputs": [
+        "dare_idcm_packet"
+      ]
+    }
+  },
+  "correction_operator_map": {
+    "wrong_abstraction_level": {
+      "request": "CTR.operator_injection",
+      "operators": [
+        "abstraction_lift",
+        "concretization_drop",
+        "level_crossing"
+      ]
+    },
+    "weak_falsification": {
+      "request": "CTR.operator_injection",
+      "operators": [
+        "contrapositive",
+        "negation_search",
+        "impossibility_probe",
+        "adversarial_attack_pass"
+      ]
+    },
+    "overconstrained_problem": {
+      "request": "CTR.operator_injection",
+      "operators": [
+        "constraint_drop_one",
+        "constraint_tighten_one",
+        "constraint_substitution"
+      ]
+    },
+    "causal_ambiguity": {
+      "request": "CTR.operator_injection",
+      "operators": [
+        "do_intervention",
+        "natural_experiment",
+        "mediator_cut"
+      ]
+    },
+    "mixed_temporal_regimes": {
+      "request": "CTR.operator_injection",
+      "operators": [
+        "phase_decompose",
+        "boundary_condition_propagation",
+        "lag_and_feedback_delay_probe"
+      ]
+    },
+    "relationship_false_harmony": {
+      "request": "CREM.review",
+      "operators_or_modes": [
+        "alignment_preservation_gate",
+        "relationship_strengthening_gate",
+        "party_integrity_preservation"
+      ]
+    },
+    "multi_party_conflict_unresolved": {
+      "request": "CREM.review",
+      "operators_or_modes": [
+        "conflict_rebase",
+        "mixed_rebase",
+        "latent_axis_ranking"
+      ]
+    },
+    "unsupported_path": {
+      "request": "CEC.review",
+      "operators_or_modes": [
+        "dependency_unroll",
+        "intermediate_state_insert",
+        "dependency_gate"
+      ]
+    },
+    "frame_violation_likely": {
+      "request": "DARE.discontinuous_reconstitution",
+      "operators": [
+        "anchor_suspension",
+        "dependency_inversion",
+        "new_anchor_induction",
+        "logic_reconstitution"
+      ]
+    }
+  },
+  "discontinuous_reconstitution_protocol": {
+    "description": "Bounded procedure for anchor suspension and replacement-anchor induction.",
+    "allowed_only_when": [
+      "unknown_pressure >= high_threshold",
+      "anchor_suspicion >= high_threshold",
+      "normal_transforms_failed_or_insufficient",
+      "hard_constraints_preserved",
+      "user_goal_preserved",
+      "falsifiers_defined",
+      "speculation_marked"
+    ],
+    "operators": [
+      {
+        "id": "DARE_ANCHOR_SUSPEND_001",
+        "label": "anchor_suspension",
+        "purpose": "Temporarily suspend the primary anchor while preserving observations, user goal, and hard constraints."
+      },
+      {
+        "id": "DARE_DEP_INVERT_001",
+        "label": "dependency_inversion",
+        "purpose": "Test whether preserved dependencies are false, reversed, or emergent."
+      },
+      {
+        "id": "DARE_BOUNDARY_DESTROY_001",
+        "label": "boundary_destruction",
+        "purpose": "Erase the assumed system boundary and reconstitute around observed interaction patterns."
+      },
+      {
+        "id": "DARE_NEW_ANCHOR_001",
+        "label": "new_anchor_induction",
+        "purpose": "Induce replacement anchors from residual observations."
+      },
+      {
+        "id": "DARE_RECONSTITUTE_001",
+        "label": "logic_reconstitution",
+        "purpose": "Rebuild coherent logic around the replacement anchor and report what old constraints survive."
+      }
+    ],
+    "must_emit": [
+      "old_anchor_failure_explanation",
+      "preserved_observations",
+      "preserved_hard_constraints",
+      "replacement_anchor_candidates",
+      "surviving_dependencies",
+      "discarded_dependencies",
+      "falsifiers",
+      "speculation_status",
+      "CEC_reconstitution_review_request_if_path_order_matters"
+    ]
+  },
+  "scoring": {
+    "anchor_suspicion": {
+      "compression_risk": 0.25,
+      "anomaly_loss": 0.2,
+      "anchor_candidate_divergence": 0.15,
+      "role_ambiguity": 0.1,
+      "constraint_suspicion": 0.1,
+      "causal_suspicion": 0.1,
+      "level_conflict": 0.1
+    },
+    "pruning_rescue_priority": {
+      "lost_potential_value": 0.25,
+      "weak_pruning_reason": 0.2,
+      "high_anomaly_explanatory_power": 0.18,
+      "operator_gap_explains_failure": 0.15,
+      "return_path_possible": 0.12,
+      "bounded_speculation": 0.1
+    },
+    "operator_gap_priority": {
+      "failure_pattern_match": 0.3,
+      "candidate_differentiation_expected": 0.25,
+      "cost_efficiency": 0.15,
+      "verification_value": 0.15,
+      "prior_operator_absence": 0.15
+    },
+    "relationship_safety_risk": {
+      "party_erasure": 0.22,
+      "forced_alignment": 0.2,
+      "false_harmony": 0.18,
+      "domination_risk": 0.16,
+      "avoidance_disguised_as_repair": 0.1,
+      "unreciprocated_concession": 0.08,
+      "productive_tension_erased": 0.06
+    }
+  },
+  "thresholds": {
+    "anchor_suspicion_high": 0.6,
+    "dependency_suspicion_high": 0.6,
+    "operator_gap_suspicion_high": 0.6,
+    "high_pruning_loss": 0.45,
+    "premature_collapse_suspicion_high": 0.55,
+    "fragility_high": 0.55,
+    "false_harmony_high": 0.6,
+    "forced_alignment_high": 0.6,
+    "party_erasure_high": 0.6,
+    "unknown_pressure_high": 0.65,
+    "unknown_pressure_critical": 0.8,
+    "branch_rescue_min_priority": 0.62,
+    "operator_injection_min_priority": 0.58,
+    "discontinuous_authorization_min": 0.75
+  },
+  "guards": {
+    "anti_overintervention": {
+      "do_not_intervene_when_risk_low": true,
+      "prefer_targeted_rerun_over_full_pipeline_rerun": true,
+      "prefer_operator_injection_over_anchor_suspension": true,
+      "intervention_requires_expected_information_gain": true
+    },
+    "anti_unbounded_discontinuity": {
+      "anchor_suspension_requires_authorization": true,
+      "hard_constraints_must_be_preserved": true,
+      "user_goal_must_be_preserved": true,
+      "falsifiers_required": true,
+      "speculation_must_be_marked": true,
+      "CEC_review_required_when_order_matters": true
+    },
+    "anti_false_harmony": {
+      "alignment_must_preserve_party_distinction": true,
+      "relationship_strengthening_must_not_erase_productive_tension": true,
+      "trust_repair_requires_accountability_or_boundary": true,
+      "flag_domination_disguised_as_alignment": true
+    },
+    "anti_pruning_opacity": {
+      "every_pruned_branch_needs_reason": true,
+      "weak_rejection_reason_triggers_rescue_scan": true,
+      "duplicate_collapse_must_preserve_material_differences": true
+    },
+    "truth_before_novelty": {
+      "novelty_cannot_override_failed_constraints": true,
+      "external_fact_verification_not_replaced_by_reframing": true,
+      "safety_and_truth_precede_attunement_and_style": true
+    },
+    "anti_memory_contamination": {
+      "DARE_does_not_write_durable_memory": true,
+      "emit_memory_recommendation_only_after_validation": true,
+      "do_not_store_failed_anchor_as_truth": true
+    }
+  },
+  "output_schema": {
+    "dare_idcm_packet": {
+      "schema_version": "dare_idcm.parallax/1.0",
+      "source_refs": {
+        "kce_packet_ref": "string_or_null",
+        "cdp_packet_ref": "string_or_null",
+        "coupler_packet_ref": "string_or_null",
+        "ctr_packet_ref": "string_or_null",
+        "ete_packet_ref": "string_or_null",
+        "crem_packet_ref": "string_or_null",
+        "pspp_packet_ref": "string_or_null",
+        "cec_packet_ref": "string_or_null",
+        "arbiter_candidate_ref": "string_or_null"
+      },
+      "artifact_integrity_report": {
+        "required_artifacts_present": "boolean",
+        "missing_artifacts": "array",
+        "audit_confidence": "number",
+        "notes": "array"
+      },
+      "audit_report": {
+        "anchor_audit": "object",
+        "domain_binding_audit": "object",
+        "operator_gap_report": "object",
+        "pruning_audit": "object",
+        "relationship_safety_report": "object",
+        "fragility_audit": "object",
+        "unknown_pressure_report": "object"
+      },
+      "correction_strategy": {
+        "selected_strategy": "allow_standard_route|targeted_rerun|operator_injection|branch_rescue|CREM_review|CEC_review|ETE_reexploration|PSPP_rescore|adversarial_verification|anchor_suspension|hold_for_arbiter_caveat",
+        "reason": "array",
+        "expected_information_gain": "number",
+        "cost_risk_note": "string"
+      },
+      "correction_requests": [
+        {
+          "request_id": "string",
+          "target_module": "KCE|CDP|PrismCoupler|CTR|ETE|CREM|PSPP_Lite|CEC|Arbiter",
+          "request_type": "rerun|operator_injection|branch_rescue|review|rescore|reconstitution_review|caveat",
+          "payload": "object",
+          "priority": "low|moderate|high|critical"
+        }
+      ],
+      "rescued_branches": [
+        {
+          "branch_id": "string",
+          "source_module": "string",
+          "original_rejection_reason": "string",
+          "rescue_reason": "string",
+          "required_repair": "array",
+          "rescue_priority": "number",
+          "send_to": "ETE|PSPP_Lite|CEC|CREM|Arbiter"
+        }
+      ],
+      "operator_injection_requests": [
+        {
+          "request_id": "string",
+          "target": "CTR",
+          "operator_family": "string",
+          "operator_labels": "array",
+          "failure_pattern": "string",
+          "expected_information_gain": "number",
+          "verification_requirements": "array"
+        }
+      ],
+      "reconstitution_packet": {
+        "status": "not_applicable|requested|authorized|emitted|rejected",
+        "old_anchor_failure_explanation": "string_or_null",
+        "preserved_observations": "array",
+        "preserved_hard_constraints": "array",
+        "replacement_anchor_candidates": "array",
+        "surviving_dependencies": "array",
+        "discarded_dependencies": "array",
+        "falsifiers": "array",
+        "speculation_status": "none|bounded_speculative|requires_validation",
+        "CEC_review_required": "boolean"
+      },
+      "approval_decision": {
+        "decision": "approve_standard_synthesis|approve_with_caveats|hold_for_rerun|hold_for_CREM|hold_for_CEC|hold_for_operator_injection|hold_for_reconstitution|reject_current_selection",
+        "reason": "array",
+        "required_before_synthesis": "array",
+        "caveats_for_arbiter": "array"
+      },
+      "handoff": {
+        "to_CTR": "operator_injection_requests",
+        "to_ETE": "rescued_branches_or_reexploration_request",
+        "to_CREM": "relationship_or_conflict_review_request",
+        "to_PSPP": "rescore_or_branch_rescue_request",
+        "to_CEC": "path_or_reconstitution_review_request",
+        "to_Arbiter": "approval_decision_and_caveats"
+      },
+      "trace": {
+        "operators_used": "array",
+        "decision_notes": "array",
+        "risk_notes": "array"
+      }
+    }
+  },
+  "routing_policy": {
+    "default": "watch_and_audit",
+    "rules": [
+      {
+        "condition": "all_risk_scores_low AND artifact_integrity_good",
+        "action": "approve_standard_synthesis"
+      },
+      {
+        "condition": "artifact_integrity_missing_material_artifacts",
+        "action": "hold_for_artifact_request_or_arbiter_caveat"
+      },
+      {
+        "condition": "operator_gap_suspicion >= operator_gap_suspicion_high",
+        "action": "request_CTR_operator_injection"
+      },
+      {
+        "condition": "high_pruning_loss OR rejected_branch_rescue_priority >= branch_rescue_min_priority",
+        "action": "rescue_pruned_branch_or_request_PSPP_rescore"
+      },
+      {
+        "condition": "false_harmony_suspicion >= false_harmony_high OR forced_alignment_suspicion >= forced_alignment_high",
+        "action": "request_CREM_relationship_safety_review"
+      },
+      {
+        "condition": "fragility_score >= fragility_high OR high_coherence_low_robustness",
+        "action": "request_adversarial_verification_or_CTR_negation_operator"
+      },
+      {
+        "condition": "CEC_reports_reconstitution_required",
+        "action": "request_DARE_reconstitution_packet"
+      },
+      {
+        "condition": "unknown_pressure >= unknown_pressure_high AND anchor_suspicion >= anchor_suspicion_high",
+        "action": "request_targeted_repairs_then_consider_anchor_suspension"
+      },
+      {
+        "condition": "unknown_pressure >= unknown_pressure_critical AND allow_anchor_suspension == true",
+        "action": "authorize_bounded_discontinuous_reconstitution"
+      }
+    ]
+  },
+  "canonical_packet_compatibility": {
+    "legacy_counteragent_fields": [
+      "audit_report",
+      "rescued_branches",
+      "operator_injection_requests",
+      "approval_decision"
+    ],
+    "new_fields": [
+      "unknown_pressure_report",
+      "relationship_safety_report",
+      "reconstitution_packet",
+      "artifact_integrity_report"
+    ],
+    "compatibility_note": "Older orchestrators may consume audit_report and approval_decision. New stack orchestrators should consume unknown_pressure_report, correction_requests, and reconstitution_packet."
+  },
+  "example_packet_minimal": {
+    "artifact_integrity_report": {
+      "required_artifacts_present": true,
+      "missing_artifacts": [],
+      "audit_confidence": 0.78,
+      "notes": []
+    },
+    "audit_report": {
+      "anchor_audit": {
+        "anchor_suspicion": 0.34,
+        "notes": [
+          "No major compression loss."
+        ]
+      },
+      "domain_binding_audit": {
+        "misbinding_suspicion": 0.28,
+        "notes": []
+      },
+      "operator_gap_report": {
+        "operator_gap_suspicion": 0.42,
+        "recommended_operator_family": null
+      },
+      "pruning_audit": {
+        "high_pruning_loss": 0.22,
+        "rescue_candidates": []
+      },
+      "relationship_safety_report": {
+        "false_harmony_suspicion": 0.18,
+        "forced_alignment_suspicion": 0.16,
+        "party_erasure_suspicion": 0.12
+      },
+      "fragility_audit": {
+        "fragility_score": 0.31,
+        "high_coherence_low_robustness": false
+      },
+      "unknown_pressure_report": {
+        "unknown_pressure": 0.33,
+        "band": "low"
+      }
+    },
+    "correction_strategy": {
+      "selected_strategy": "allow_standard_route",
+      "reason": [
+        "Risk scores low; artifacts sufficient."
+      ],
+      "expected_information_gain": 0.12,
+      "cost_risk_note": "No supervisory intervention needed."
+    },
+    "correction_requests": [],
+    "rescued_branches": [],
+    "operator_injection_requests": [],
+    "reconstitution_packet": {
+      "status": "not_applicable",
+      "old_anchor_failure_explanation": null,
+      "preserved_observations": [],
+      "preserved_hard_constraints": [],
+      "replacement_anchor_candidates": [],
+      "surviving_dependencies": [],
+      "discarded_dependencies": [],
+      "falsifiers": [],
+      "speculation_status": "none",
+      "CEC_review_required": false
+    },
+    "approval_decision": {
+      "decision": "approve_standard_synthesis",
+      "reason": [
+        "No material audit failure."
+      ],
+      "required_before_synthesis": [],
+      "caveats_for_arbiter": []
+    }
+  }
+}

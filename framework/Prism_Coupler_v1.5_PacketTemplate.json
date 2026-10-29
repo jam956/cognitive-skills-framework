@@ -1,0 +1,180 @@
+{
+  "schema_version": "coupler.parallax/1.5",
+  "source_refs": {
+    "kce_anchor_ref": "string_or_null",
+    "ontology_profile_ref": "string_or_null",
+    "dynamical_core_ref": "string_or_null",
+    "regime_field_ref": "string_or_null",
+    "prior_coupling_ref": "string_or_null"
+  },
+  "coupling_packet": {
+    "entry_mode": "ontology_first|dynamics_first|regime_first|hybrid|partial|edge_probe|relationship_binding",
+    "actors": [],
+    "roles": [],
+    "qualifier": "active|passive|reactive|reflective|latent|string",
+    "regime": "string",
+    "regime_ref": "string",
+    "candidate_ontology": {},
+    "permissioned_dynamics": [],
+    "suppressed_dynamics": []
+  },
+  "candidate_coupling_packets": [
+    {
+      "coupling_id": "string",
+      "entry_mode": "ontology_first|dynamics_first|regime_first|hybrid|partial|edge_probe|relationship_binding",
+      "actors": [],
+      "ontology_binding": {
+        "phys": 0.0,
+        "bio": 0.0,
+        "neur": 0.0,
+        "info": 0.0,
+        "math": 0.0,
+        "meta": 0.0,
+        "aes": 0.0,
+        "stor": 0.0,
+        "hum": 0.0,
+        "rhet": 0.0,
+        "eth": 0.0,
+        "exp": 0.0,
+        "econ": 0.0,
+        "pol": 0.0,
+        "geo": 0.0,
+        "mus": 0.0,
+        "nai": 0.0,
+        "phil": 0.0,
+        "style": 0.0
+      },
+      "dynamical_core_vector_bound": {
+        "signal": 0.0,
+        "detect": 0.0,
+        "interpret": 0.0,
+        "encode": 0.0,
+        "execute": 0.0,
+        "disrupt": 0.0,
+        "coordinate": 0.0,
+        "constrain": 0.0,
+        "gate": 0.0,
+        "stabilize": 0.0,
+        "explore": 0.0,
+        "select": 0.0,
+        "adapt": 0.0,
+        "anticipate": 0.0
+      },
+      "regime_field_bound": {
+        "scale": "string_or_null",
+        "tempo": "string_or_null",
+        "phase_state": "string_or_null",
+        "stability": "string_or_null",
+        "coupling": "string_or_null",
+        "reversibility": "string_or_null",
+        "constraint_load": "string_or_null",
+        "noise": "string_or_null",
+        "uncertainty": "string_or_null",
+        "resource_condition": "string_or_null",
+        "legitimacy": "string_or_null",
+        "trust": "string_or_null",
+        "authority_gradient": "string_or_null",
+        "adversariality": "string_or_null",
+        "commitment": "string_or_null",
+        "boundary_condition": "string_or_null",
+        "ethical_load": "string_or_null"
+      },
+      "computed_behavior_labels": [
+        {
+          "label": "string",
+          "confidence": 0.0,
+          "supporting_core_operators": [],
+          "supporting_regime_conditions": [],
+          "ontology_dependency": [],
+          "risk_notes": []
+        }
+      ],
+      "operator_regime_mismatch_report": {
+        "mismatch_detected": false,
+        "mismatch_ids": [],
+        "severity": "none|low|moderate|high|critical",
+        "notes": []
+      },
+      "qualifiers": {
+        "directionality": "string_or_null",
+        "participation": "active|passive|mixed|null",
+        "resistance": "low|moderate|high|null",
+        "gain": "low|moderate|high|null",
+        "control_posture": "none|soft|hard|coercive|null"
+      },
+      "binding_stability_score": 0.0,
+      "binding_risk": 0.0,
+      "lock_status": "provisional|contested|lock_candidate"
+    }
+  ],
+  "selected_working_coupling": {
+    "coupling_id": "string_or_null",
+    "selection_reason": "string",
+    "lock_status": "provisional|contested|locked",
+    "lock_allowed": false
+  },
+  "binding_stability_report": {
+    "binding_stability_score": 0.0,
+    "ontology_role_ambiguity": 0.0,
+    "operator_ambiguity": 0.0,
+    "regime_ambiguity": 0.0,
+    "computed_label_ambiguity": 0.0,
+    "operator_regime_conflation": 0.0,
+    "composite_label_collapse": 0.0,
+    "regime_instability": 0.0,
+    "relationship_binding_instability": 0.0,
+    "alternate_bindings": []
+  },
+  "crem_handoff_packet": {
+    "party_actor_bindings": [],
+    "aligned_operator_pairs": [],
+    "conflicting_operator_pairs": [],
+    "aligned_regime_pairs": [],
+    "conflicting_regime_pairs": [],
+    "same_operator_different_regime_pairs": [],
+    "different_operator_same_regime_pairs": [],
+    "relationship_regime_hints": [],
+    "trust_coordination_risks": [],
+    "crem_mode_hint": "conflict_rebase|alignment_rebase|mixed_rebase|none"
+  },
+  "ete_handoff_packet": {
+    "operator_projection_units": [],
+    "regime_projection_units": [],
+    "operator_regime_mismatch_watchpoints": [],
+    "candidate_transform_hints": []
+  },
+  "pspp_handoff_packet": {
+    "candidate_coupling_packets": [],
+    "branch_generation_hints": [],
+    "differential_scoring_hints": [
+      "ontology_fit",
+      "dynamical_core_viability",
+      "regime_field_viability",
+      "computed_label_support",
+      "operator_regime_mismatch_risk"
+    ]
+  },
+  "route_gate_decision": {
+    "recommended_route": "CREM_first|ETE_first|parallel_CREM_ETE|PSPP_direct|CEC|DARE_review",
+    "route_rationale": [],
+    "route_confidence": 0.0,
+    "next_module_hint": "CREM|ETE|CREM_and_ETE|PSPP_Lite|CEC|DARE_IDCM"
+  },
+  "dare_coupling_signals": {
+    "misbinding_suspicion": 0.0,
+    "operator_regime_conflation_risk": 0.0,
+    "composite_label_collapse_risk": 0.0,
+    "regime_instability_suspicion": 0.0,
+    "false_harmony_suspicion": 0.0,
+    "forced_alignment_suspicion": 0.0,
+    "party_erasure_suspicion": 0.0,
+    "edge_probe_recommended": false,
+    "rebind_recommended": false,
+    "recommended_action": "allow_standard_route|reuse_prior_coupling|local_rebind|spawn_alternate_coupling|CREM_edge_mode|DARE_review"
+  },
+  "trace": {
+    "operators_used": [],
+    "decision_notes": [],
+    "risk_notes": []
+  }
+}

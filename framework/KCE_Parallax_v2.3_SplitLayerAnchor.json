@@ -1,0 +1,857 @@
+{
+  "module_name": "Key Concept Extraction Parallax Engine",
+  "short_name": "KCE_Parallax",
+  "version": "v2.3.0",
+  "status": "conceptual_executable_spec",
+  "revision_kind": "split_ontology_dynamical_core_regime_anchor_extraction_upgrade",
+  "supersedes": "KCE_Parallax_v2.2_ProvisionalAnchor",
+  "purpose": "Extract provisional, inspectable anchors from natural language prompts while explicitly separating ontology candidates, dynamical core candidates, regime field candidates, actor-role candidates, computed behavior labels, and transform seeds. KCE v2.3 prevents premature invariant lock-in, operator-regime conflation, and composite-label collapse before downstream CDP, Dynamical Prism v0.2, Regime Field v0.1, Coupler v1.5, CTR v2.1, CREM v1.3, ETE, PSPP, CEC, and DARE processing.",
+  "core_doctrine": [
+    "Extract anchors, but do not trust them yet.",
+    "Compress structure, but report what compression may have destroyed.",
+    "Emit anchor candidates rather than a single final anchor unless confidence is high and risk is low.",
+    "Separate ontology, dynamical core, regime field, actor role, and computed label candidates.",
+    "Do not treat computed behavior labels as primitive operators.",
+    "Do not treat regime conditions as primitive operators.",
+    "Do not treat ontology axes as dynamical causes unless the Coupler validates the binding.",
+    "Preserve anomaly markers that might be erased by compression.",
+    "Emit memory candidates, not durable memory writes.",
+    "Expose uncertainty, suspected operator gaps, regime gaps, and label-collapse risks for DARE/IDCM review."
+  ],
+  "registry_refs": {
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "OntologicPrism": "19D_Ontologic_Prism",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "PrismCoupler": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+    "CTR": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+    "ETE": "ETE_v1.1_SplitLayerExplorationTransform.json",
+    "CREM": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+    "ECE": "ECE_v0.3_optional_affect_reward_regulation",
+    "PSPP_Lite": "PSPP_v5.0_CandidateSystemComparator.json",
+    "CEC": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+    "DARE_IDCM": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json"
+  },
+  "responsibility_boundary": {
+    "owns": [
+      "surface_parse",
+      "alias_guard",
+      "anomaly_marker_extraction",
+      "structural_reduction",
+      "relation_extraction",
+      "role_function_abstraction",
+      "ontology_candidate_seed",
+      "dynamical_core_candidate_seed",
+      "regime_field_candidate_seed",
+      "computed_label_candidate_seed",
+      "actor_role_candidate_seed",
+      "abstraction_ladder_probe",
+      "anchor_candidate_generation",
+      "invariant_compression_variants",
+      "compression_risk_scoring",
+      "operator_regime_conflation_detection",
+      "computed_label_collapse_detection",
+      "regime_gap_detection",
+      "polarity_dualization",
+      "axis_binding",
+      "phase_align_axes",
+      "transform_seed_binding",
+      "ECE_affect_hint_emit",
+      "DARE_signal_emit",
+      "provisional_memory_candidate_emit"
+    ],
+    "does_not_own": [
+      "final_anchor_locking",
+      "durable_memory_write_execution",
+      "domain_axis_selection_final",
+      "primitive_dynamical_operator_definition",
+      "regime_axis_definition",
+      "actor_role_binding_final",
+      "transform_selection_final",
+      "branch_competition",
+      "adversarial_verification",
+      "final_answer_synthesis",
+      "external_fact_verification"
+    ],
+    "handoff_note": "KCE v2.3 emits provisional anchor packets and split-layer seed candidates. Downstream engines may use selected_working_anchor for efficiency, but lock_status must remain provisional or contested until validated by PSPP, DARE/IDCM, CEC, CREM, or the Arbiter."
+  },
+  "placement": {
+    "pipeline_stage": "pre_domain_split_anchor_extraction",
+    "runs_after": [
+      "raw_prompt_intake",
+      "retrieval_or_file_ingest_when_applicable"
+    ],
+    "runs_before": [
+      "CDP_Parallax_v1.2",
+      "Dynamical_Prism_v0.2",
+      "Regime_Field_v0.1",
+      "Prism_Coupler_v1.5",
+      "CTR_v2.1",
+      "ETE",
+      "CREM_v1.3",
+      "ECE_v0.3",
+      "PSPP_Lite",
+      "CEC",
+      "DARE_IDCM",
+      "Arbiter"
+    ],
+    "recommended_mode": "loose_split_anchor_mode_by_default"
+  },
+  "inputs": {
+    "prompt_text": {
+      "type": "string",
+      "description": "Raw natural language prompt, statement, task, observation, or dialogue excerpt."
+    },
+    "retrieved_context": {
+      "type": "array",
+      "required": false,
+      "description": "Optional retrieved/file context, if present."
+    },
+    "conversation_context": {
+      "type": "object",
+      "required": false,
+      "description": "Relevant continuity, user preference, or project-state context."
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "domain_hint": {
+          "type": "array",
+          "items": "string",
+          "description": "Soft hints only; should not force anchor locking."
+        },
+        "depth_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3,
+          "default": 2
+        },
+        "compression_target": {
+          "type": "string",
+          "enum": [
+            "minimal",
+            "balanced",
+            "diagnostic",
+            "loose"
+          ],
+          "default": "loose"
+        },
+        "anchor_mode": {
+          "type": "string",
+          "enum": [
+            "loose",
+            "balanced",
+            "lock_if_safe"
+          ],
+          "default": "loose"
+        },
+        "emit_embedding": {
+          "type": "boolean",
+          "default": false
+        },
+        "emit_axes": {
+          "type": "boolean",
+          "default": true
+        },
+        "emit_trace": {
+          "type": "boolean",
+          "default": true
+        },
+        "emit_transform_plan": {
+          "type": "boolean",
+          "default": true
+        },
+        "dare_watch": {
+          "type": "boolean",
+          "default": true
+        },
+        "ece_watch": {
+          "type": "boolean",
+          "default": true
+        },
+        "memory_write_policy": {
+          "type": "string",
+          "enum": [
+            "provisional_only",
+            "allow_validated_write"
+          ],
+          "default": "provisional_only"
+        }
+      }
+    }
+  },
+  "outputs": {
+    "kce_packet": {
+      "type": "object",
+      "description": "Primary v2.3 packet containing anchor candidates, split-layer seeds, compression telemetry, transform seeds, ECE hints, DARE signals, and memory candidates."
+    },
+    "trace": {
+      "type": "object",
+      "description": "Optional derivation trace for audit, debugging, refinement, and DARE inspection."
+    }
+  },
+  "split_layer_seed_model": {
+    "ontology_seed_candidates": {
+      "axes": [
+        "phys",
+        "bio",
+        "neur",
+        "info",
+        "math",
+        "meta",
+        "aes",
+        "stor",
+        "hum",
+        "rhet",
+        "eth",
+        "exp",
+        "econ",
+        "pol",
+        "geo",
+        "mus",
+        "nai",
+        "phil",
+        "style"
+      ],
+      "description": "Soft candidate ontology axes for CDP. These are not final active domains."
+    },
+    "dynamical_core_seed_candidates": {
+      "operators": [
+        "signal",
+        "detect",
+        "interpret",
+        "encode",
+        "execute",
+        "disrupt",
+        "coordinate",
+        "constrain",
+        "gate",
+        "stabilize",
+        "explore",
+        "select",
+        "adapt",
+        "anticipate"
+      ],
+      "description": "Soft candidate primitive process-verbs for Dynamical Prism v0.2. Computed labels should not be listed here."
+    },
+    "regime_field_seed_candidates": {
+      "axes": [
+        "scale",
+        "tempo",
+        "phase_state",
+        "stability",
+        "coupling",
+        "reversibility",
+        "constraint_load",
+        "noise",
+        "uncertainty",
+        "resource_condition",
+        "legitimacy",
+        "trust",
+        "authority_gradient",
+        "adversariality",
+        "commitment",
+        "boundary_condition",
+        "ethical_load"
+      ],
+      "description": "Soft candidate operating conditions for Regime Field v0.1. These are not primitive operators."
+    },
+    "computed_label_candidates": {
+      "description": "Human-readable behavior labels inferred from the prompt; must be decomposed before serving as explanatory centers.",
+      "examples": [
+        "control",
+        "healing",
+        "growth",
+        "collapse",
+        "conflict",
+        "governance",
+        "creation",
+        "repair",
+        "coordination",
+        "ritual",
+        "competition"
+      ]
+    },
+    "actor_role_seed_candidates": {
+      "description": "Candidate actors and roles for Coupler binding.",
+      "roles": [
+        "source",
+        "target",
+        "mediator",
+        "modulator",
+        "reflector",
+        "container",
+        "observer",
+        "inhibitor",
+        "boundary",
+        "selector",
+        "amplifier",
+        "stabilizer",
+        "explorer",
+        "translator",
+        "trust_holder",
+        "coordinator",
+        "gatekeeper",
+        "regime_carrier",
+        "regime_enforcer",
+        "regime_victim",
+        "regime_beneficiary"
+      ]
+    }
+  },
+  "stage_order": [
+    "surface_parse",
+    "alias_guard",
+    "anomaly_marker_extract",
+    "structural_reduction",
+    "relation_extraction",
+    "role_function_abstraction",
+    "ontology_candidate_seed",
+    "dynamical_core_candidate_seed",
+    "regime_field_candidate_seed",
+    "computed_label_candidate_seed",
+    "actor_role_candidate_seed",
+    "abstraction_ladder_probe",
+    "anchor_candidate_generation",
+    "invariant_compression_variants",
+    "compression_risk_scoring",
+    "operator_regime_conflation_detection",
+    "computed_label_collapse_detection",
+    "regime_gap_detection",
+    "polarity_dualization",
+    "axis_binding",
+    "phase_align_axes",
+    "transform_seed_binding",
+    "ECE_affect_hint_emit",
+    "DARE_signal_emit",
+    "provisional_memory_candidate_emit"
+  ],
+  "stages": {
+    "surface_parse": {
+      "description": "Extract surface entities, explicit relations, tensions, intent markers, constraints, labels, and domain hints.",
+      "outputs": [
+        "entities",
+        "relations",
+        "tensions",
+        "intent_markers",
+        "constraints",
+        "labels",
+        "domain_hints"
+      ]
+    },
+    "alias_guard": {
+      "description": "Detect semantic alias collisions, metaphor collisions, role-label overcompression, and same-token/different-function risks before compression.",
+      "checks": [
+        "surface_synonym_collision",
+        "metaphor_alias_collision",
+        "domain_shift_false_equivalence",
+        "role_label_overcompression",
+        "same_token_different_function",
+        "same_label_different_operator_regime",
+        "different_label_same_operator_regime"
+      ],
+      "actions": [
+        "split_conflicting_labels",
+        "preserve_role_specific_names",
+        "annotate_alias_risk",
+        "defer_merge_until_structure_match"
+      ],
+      "outputs": [
+        "alias_report",
+        "disambiguated_entities",
+        "protected_labels"
+      ]
+    },
+    "anomaly_marker_extract": {
+      "description": "Extract features likely to be erased by aggressive compression.",
+      "markers": [
+        "paradox",
+        "scale_mismatch",
+        "actor_role_instability",
+        "constraint_misalignment",
+        "hidden_dependency",
+        "regime_shift",
+        "regime_asymmetry",
+        "operator_regime_conflation",
+        "computed_label_collapse",
+        "causal_ambiguity",
+        "temporal_phase_conflict",
+        "novelty_request",
+        "metaphor_load",
+        "low_returnability_but_high_salience",
+        "false_harmony_suspicion",
+        "party_erasure_suspicion",
+        "trust_repair_or_low_trust"
+      ],
+      "outputs": [
+        "anomaly_markers",
+        "anomaly_salience_score"
+      ]
+    },
+    "structural_reduction": {
+      "description": "Restate the prompt in neutral structural terms while preserving anomaly markers, protected labels, and party distinctions.",
+      "outputs": [
+        "structural_statement",
+        "preserved_anomaly_markers"
+      ]
+    },
+    "relation_extraction": {
+      "description": "Identify the causal, relational, comparative, regime, or operator pattern driving the prompt.",
+      "target_patterns": [
+        "same_input_different_output",
+        "same_operator_different_regime",
+        "different_operator_same_regime",
+        "low_flow_into_system",
+        "stability_instability",
+        "part_whole_quality",
+        "interaction_quality",
+        "distributed_fit",
+        "threshold_or_transition",
+        "constraint_misalignment",
+        "causal_ambiguity",
+        "level_conflict",
+        "mixed_regime",
+        "overconstraint",
+        "operator_gap",
+        "regime_gap",
+        "computed_label_as_cause"
+      ],
+      "outputs": [
+        "relation_patterns",
+        "candidate_variables",
+        "causal_uncertainty_notes"
+      ]
+    },
+    "role_function_abstraction": {
+      "description": "Replace domain entities with functional roles while preserving role ambiguity rather than forcing a single binding.",
+      "transforms": [
+        "entity_to_agent",
+        "entity_to_system",
+        "entity_to_input",
+        "entity_to_output",
+        "entity_to_constraint",
+        "entity_to_flow",
+        "entity_to_cohesion",
+        "entity_to_alignment",
+        "entity_to_fit",
+        "entity_to_observer",
+        "entity_to_boundary",
+        "entity_to_regime",
+        "entity_to_operator_carrier",
+        "entity_to_regime_carrier",
+        "entity_to_computed_label_source"
+      ],
+      "outputs": [
+        "functional_roles",
+        "functional_statement",
+        "role_ambiguity_report"
+      ]
+    },
+    "ontology_candidate_seed": {
+      "description": "Generate soft 19D ontology axis candidates for CDP.",
+      "outputs": [
+        "ontology_seed_candidates"
+      ]
+    },
+    "dynamical_core_candidate_seed": {
+      "description": "Generate soft reduced-core operator candidates for Dynamical Prism v0.2.",
+      "rules": [
+        "map verbs/processes to primitive operators when possible",
+        "decompose labels before assigning operators",
+        "do_not_emit_regime_terms_as_operators",
+        "do_not_emit_computed_labels_as_operators"
+      ],
+      "outputs": [
+        "dynamical_core_seed_candidates",
+        "operator_gap_suspicion"
+      ]
+    },
+    "regime_field_candidate_seed": {
+      "description": "Generate soft regime-axis candidates for Regime Field v0.1.",
+      "rules": [
+        "map constraints and context to regime axes",
+        "mark uncertainty when regime is inferred rather than explicit",
+        "preserve alternate regime candidates when behavior label changes by regime"
+      ],
+      "outputs": [
+        "regime_field_seed_candidates",
+        "regime_gap_suspicion",
+        "alternate_regime_hints"
+      ]
+    },
+    "computed_label_candidate_seed": {
+      "description": "Generate human-readable behavior labels while marking them computed-not-primitive.",
+      "outputs": [
+        "computed_label_candidates",
+        "label_decomposition_requirements"
+      ]
+    },
+    "actor_role_candidate_seed": {
+      "description": "Generate candidate actors, parties, roles, carriers, boundaries, and observers for Coupler.",
+      "outputs": [
+        "actor_role_seed_candidates",
+        "party_frame_hints"
+      ]
+    },
+    "abstraction_ladder_probe": {
+      "description": "Generate vertical abstraction alternatives within the same frame before cross-domain projection.",
+      "operators": [
+        {
+          "id": "KCE_ABS_LIFT_001",
+          "label": "abstraction_lift",
+          "purpose": "Replace concrete entities with functional classes."
+        },
+        {
+          "id": "KCE_CONC_DROP_001",
+          "label": "concretization_drop",
+          "purpose": "Instantiate an abstract claim with specific bindings or examples."
+        },
+        {
+          "id": "KCE_LEVEL_CROSS_001",
+          "label": "level_crossing",
+          "purpose": "Restate the problem at a different organizational level."
+        }
+      ],
+      "outputs": [
+        "abstraction_ladder"
+      ]
+    },
+    "anchor_candidate_generation": {
+      "description": "Generate multiple candidate anchors instead of prematurely selecting one final anchor.",
+      "policy": {
+        "min_candidates": 1,
+        "default_candidates": 3,
+        "max_candidates": 5,
+        "include_direct_anchor": true,
+        "include_anomaly_preserving_anchor_when_markers_present": true,
+        "include_level_shift_anchor_when_level_conflict_present": true,
+        "include_constraint_suspicion_anchor_when_overconstraint_present": true,
+        "include_regime_split_anchor_when_regime_conflict_present": true,
+        "include_label_decomposition_anchor_when_computed_label_collapse_present": true
+      },
+      "outputs": [
+        "anchor_candidates_pre_compression"
+      ]
+    },
+    "invariant_compression_variants": {
+      "description": "Compress each anchor candidate at multiple strengths while preserving a trace of what was lost.",
+      "compression_levels": {
+        "loose": "Preserve key entities, anomalies, tensions, and split-layer uncertainty.",
+        "minimal": "Highly compact structural formula or relation.",
+        "balanced": "Portable natural-language invariant preserving causal direction.",
+        "diagnostic": "Expanded invariant containing failure modes, hidden constraints, operator/regime gaps, and label-collapse risks."
+      },
+      "outputs": [
+        "anchor_candidates"
+      ]
+    },
+    "compression_risk_scoring": {
+      "description": "Score how much compression may have damaged the prompt's important structure.",
+      "risk_dimensions": {
+        "semantic_loss_score": 0.15,
+        "anomaly_loss_score": 0.2,
+        "actor_role_loss_score": 0.12,
+        "constraint_loss_score": 0.12,
+        "scale_loss_score": 0.08,
+        "causal_loss_score": 0.1,
+        "regime_loss_score": 0.12,
+        "operator_loss_score": 0.06,
+        "computed_label_loss_score": 0.03,
+        "metaphor_loss_score": 0.02
+      },
+      "thresholds": {
+        "low_risk_below": 0.25,
+        "moderate_risk_below": 0.5,
+        "high_risk_gte": 0.5
+      },
+      "outputs": [
+        "compression_telemetry",
+        "anchor_lock_recommendation"
+      ]
+    },
+    "operator_regime_conflation_detection": {
+      "description": "Detect when a candidate anchor fuses primitive action with operating regime.",
+      "checks": [
+        "operator_word_contains_regime_assumption",
+        "conflict_called_dynamical_but_regime_axes_differ",
+        "control_or_governance_label_used_without_regime_decomposition",
+        "same_operator_different_regime_pattern_present"
+      ],
+      "outputs": [
+        "operator_regime_conflation_report"
+      ]
+    },
+    "computed_label_collapse_detection": {
+      "description": "Detect when behavior labels prematurely replace operator/regime decomposition.",
+      "checks": [
+        "label_used_as_cause",
+        "label_used_as_primitive_operator",
+        "label_without_supporting_core_operators",
+        "label_without_supporting_regime_conditions",
+        "label_changes_under_alternate_regime"
+      ],
+      "outputs": [
+        "computed_label_collapse_report"
+      ]
+    },
+    "regime_gap_detection": {
+      "description": "Detect missing or underdefined regime axes likely to change the answer.",
+      "checks": [
+        "trust_unknown_but_relationship_goal_present",
+        "legitimacy_unknown_but_political_or_ethical_task",
+        "resource_condition_unknown_but_economic_or_competition_task",
+        "phase_state_unknown_but_temporal_transition_task",
+        "constraint_load_unknown_but control_or_gate_terms_present",
+        "noise_unknown_but_signal_or_information_task"
+      ],
+      "outputs": [
+        "regime_gap_report"
+      ]
+    },
+    "polarity_dualization": {
+      "description": "Emit positive, negative, inverse, and failure-condition forms of each anchor candidate.",
+      "outputs": [
+        "polarity_forms"
+      ]
+    },
+    "axis_binding": {
+      "description": "Bind anchor candidates to canonical registry axes with weights before phase alignment.",
+      "axis_registry": [
+        "FLOW",
+        "ALIGNMENT",
+        "COHERENCE",
+        "FIT",
+        "CONSTRAINT",
+        "INCENTIVE",
+        "FRICTION",
+        "PERCEPTION",
+        "PARTS",
+        "RELATIONS",
+        "ORGANIZATION",
+        "OUTCOME",
+        "BOUNDARY",
+        "CAUSALITY",
+        "TEMPORALITY",
+        "REGIME",
+        "ABSTRACTION_LEVEL",
+        "UNCERTAINTY",
+        "OPERATOR",
+        "COMPUTED_LABEL",
+        "ACTOR_ROLE",
+        "TRUST",
+        "LEGITIMACY"
+      ],
+      "outputs": [
+        "axis_profiles"
+      ]
+    },
+    "phase_align_axes": {
+      "description": "Normalize and phase-align bound axes while preserving uncertainty and drift indicators.",
+      "operations": [
+        "axis_conflict_scan",
+        "weight_renormalization",
+        "dominant_axis_alignment",
+        "drift_estimation",
+        "phi_local_estimation",
+        "anchor_candidate_separation_estimation"
+      ],
+      "outputs": [
+        "axis_alignment"
+      ]
+    },
+    "transform_seed_binding": {
+      "description": "Map relation patterns, axis tensions, compression risks, anomaly markers, and split-layer risks into CTR v2.1 transform families.",
+      "candidate_operator_sets": [
+        "symmetry_family",
+        "abstraction_ladder_family",
+        "label_decomposition_family",
+        "deformation_family",
+        "constraint_isolation_family",
+        "regime_transform_family",
+        "dimensional_family",
+        "temporal_phase_family",
+        "counterfactual_intervention_family",
+        "negation_falsifier_family",
+        "topology_family",
+        "dynamical_core_family",
+        "coupling_family",
+        "relationship_rebase_family",
+        "adversarial_verification_family",
+        "discontinuous_reconstitution_family"
+      ],
+      "outputs": [
+        "transform_seed_packet"
+      ]
+    },
+    "ECE_affect_hint_emit": {
+      "description": "Emit affect/reward/regime hints for ECE v0.3 without deciding tone or final response.",
+      "outputs": [
+        "ece_hint_packet"
+      ]
+    },
+    "DARE_signal_emit": {
+      "description": "Emit DARE-visible risks for premature lock-in, compression loss, operator/regime conflation, regime gaps, and label collapse.",
+      "outputs": [
+        "dare_signal_packet"
+      ]
+    },
+    "provisional_memory_candidate_emit": {
+      "description": "Emit memory candidate only if it is a durable structural vector and mark it provisional.",
+      "outputs": [
+        "provisional_memory_candidates"
+      ]
+    }
+  },
+  "anchor_candidate_schema": {
+    "anchor_id": "string",
+    "anchor_statement": "string",
+    "anchor_type": [
+      "direct",
+      "structural",
+      "anomaly_preserving",
+      "level_shift",
+      "constraint_suspicion",
+      "regime_split",
+      "label_decomposition",
+      "relationship_rebase",
+      "path_dependency"
+    ],
+    "lock_status": "provisional|contested|lock_candidate",
+    "confidence": 0.0,
+    "risk": 0.0,
+    "ontology_seed_candidates": [],
+    "dynamical_core_seed_candidates": [],
+    "regime_field_seed_candidates": {},
+    "computed_label_candidates": [],
+    "actor_role_seed_candidates": [],
+    "relation_patterns": [],
+    "preserved_anomaly_markers": [],
+    "compression_telemetry": {},
+    "transform_seed_packet_ref": "string_or_null",
+    "dare_signal_ref": "string_or_null"
+  },
+  "handoff_contracts": {
+    "to_CDP": {
+      "provides": [
+        "ontology_seed_candidates",
+        "domain_hint",
+        "anomaly_markers",
+        "anchor_candidates"
+      ]
+    },
+    "to_Dynamical_Prism": {
+      "provides": [
+        "dynamical_core_seed_candidates",
+        "operator_gap_suspicion",
+        "operator_sequence_hints"
+      ]
+    },
+    "to_Regime_Field": {
+      "provides": [
+        "regime_field_seed_candidates",
+        "alternate_regime_hints",
+        "regime_gap_suspicion"
+      ]
+    },
+    "to_Coupler": {
+      "provides": [
+        "actor_role_seed_candidates",
+        "computed_label_candidates",
+        "split_layer_seed_candidates",
+        "party_frame_hints"
+      ]
+    },
+    "to_CTR": {
+      "provides": [
+        "transform_seed_packet",
+        "label_decomposition_requirements",
+        "regime_transform_hints"
+      ]
+    },
+    "to_CREM": {
+      "provides": [
+        "party_frame_hints",
+        "relationship_goal_hints",
+        "same_operator_different_regime_hints"
+      ]
+    },
+    "to_ECE": {
+      "provides": [
+        "ece_hint_packet",
+        "affective_valence_hint",
+        "relationship_safety_hint"
+      ]
+    },
+    "to_DARE": {
+      "provides": [
+        "dare_signal_packet",
+        "compression_risk",
+        "anchor_lock_risk",
+        "operator_regime_conflation",
+        "computed_label_collapse"
+      ]
+    }
+  },
+  "output_schema": {
+    "kce_packet": {
+      "schema_version": "kce.parallax/2.3",
+      "source": {
+        "prompt_text": "string",
+        "retrieved_context_refs": [],
+        "conversation_context_ref": "string_or_null"
+      },
+      "surface_parse": "object",
+      "alias_report": "object",
+      "anomaly_markers": [],
+      "structural_statement": "string",
+      "relation_patterns": [],
+      "functional_roles": [],
+      "split_layer_seed_packet": "object",
+      "anchor_candidates": [],
+      "selected_working_anchor": "object_or_null",
+      "compression_telemetry": "object",
+      "operator_regime_conflation_report": "object",
+      "computed_label_collapse_report": "object",
+      "regime_gap_report": "object",
+      "transform_seed_packet": "object",
+      "ece_hint_packet": "object",
+      "dare_signal_packet": "object",
+      "provisional_memory_candidates": [],
+      "trace": "object"
+    }
+  },
+  "guards": {
+    "anti_premature_anchor_lock": {
+      "enabled": true,
+      "anchor_lock_allowed_only_when": [
+        "confidence_high",
+        "compression_risk_low",
+        "operator_regime_conflation_low",
+        "computed_label_collapse_low",
+        "regime_gap_low",
+        "DARE_no_objection"
+      ]
+    },
+    "anti_operator_regime_conflation": {
+      "enabled": true,
+      "same_operator_different_regime_check": true,
+      "regime_terms_not_allowed_as_core_operators": true
+    },
+    "anti_computed_label_collapse": {
+      "enabled": true,
+      "labels_must_be_marked_computed": true,
+      "label_decomposition_required_when_label_is_material": true
+    },
+    "anti_domain_overbreadth": {
+      "enabled": true,
+      "ontology_seed_is_not_full_CDP_activation": true,
+      "CDP_must_select_domains_later": true
+    },
+    "anti_memory_overwrite": {
+      "enabled": true,
+      "memory_candidates_are_provisional_only": true,
+      "durable_write_not_owned_by_KCE": true
+    }
+  }
+}

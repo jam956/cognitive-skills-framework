@@ -1,0 +1,790 @@
+{
+  "module_name": "ProblemSolving Parallel Pipeline",
+  "short_name": "PSPP_Lite",
+  "version": "v5.0.0-lite",
+  "status": "design_stable_executable_spec",
+  "revision_kind": "candidate_system_comparator_refactor",
+  "supersedes": "ProblemSolving_ParallelPipeline_ParallaxEngine_v4.0.json",
+  "generated_utc": "2026-05-02T19:32:32.184397+00:00",
+  "purpose": "Compare, prune, verify, and select or merge candidate systems produced upstream by ETE. PSPP-lite no longer serves as the primary discovery engine. It receives structured candidate_system_branches, evaluates them under truth/task/coherence/system-viability constraints, requests CEC/CREM/DARE only when needed, and emits a synthesis-ready selection packet plus decision artifacts for audit.",
+  "core_doctrine": [
+    "PSPP-lite compares candidate systems; ETE discovers and transforms them.",
+    "Always preserve the direct branch unless it fails materially.",
+    "Do not generate broad new branches unless ETE output is insufficient or DARE requests rescue.",
+    "Branch selection must be auditable: every score, pruning reason, and uncertainty note must be emitted.",
+    "Verification should be differential: run checks that distinguish surviving systems, not checks that merely add prose.",
+    "Use CEC only when dependency order, causal order, proof order, or execution order materially affects correctness.",
+    "Use CREM only when two or more coherent opposing perspectives or system frames remain in conflict.",
+    "Use DARE/IDCM when high pruning loss, anchor suspicion, fragility, or operator-gap suspicion remains unresolved."
+  ],
+  "responsibility_boundary": {
+    "owns": [
+      "candidate_system_ingest",
+      "branch_normalization",
+      "branch_deduplication",
+      "branch_scoring",
+      "differential_verification_routing",
+      "branch_pruning",
+      "selection_or_merge",
+      "decision_artifact_emission",
+      "synthesis_packet_emission",
+      "DARE_audit_packet_emission"
+    ],
+    "does_not_own": [
+      "primary_anchor_extraction",
+      "domain_axis_selection",
+      "primitive_dynamical_operator_definition",
+      "actor_binding",
+      "transform_operator_definition",
+      "exploration_projection_execution",
+      "ordered_path_execution",
+      "multi_party_conflict_rebase",
+      "final_answer_prose",
+      "external_fact_verification",
+      "durable_memory_write_execution"
+    ],
+    "handoff_note": "PSPP-lite emits selected_system_packet and decision_artifacts. The Arbiter uses the packet for synthesis. DARE/IDCM audits the decision artifacts when collapse or pruning risk is high."
+  },
+  "registry_refs": {
+    "KCE": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "PrismCoupler": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+    "CTR": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+    "ETE": "ETE_v1.1_SplitLayerExplorationTransform.json",
+    "CEC": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+    "CREM": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+    "DARE_IDCM": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json"
+  },
+  "intended_runtime": "Candidate-system competition layer after ETE and before conditional CEC/CREM/DARE review and final Arbiter synthesis.",
+  "placement": {
+    "pipeline_stage": "candidate_system_competition",
+    "runs_after": [
+      "KCE_Parallax_v2.3",
+      "CDP_Parallax_v1.2",
+      "Dynamical_Prism_v0.2",
+      "Regime_Field_v0.1",
+      "Prism_Coupler_v1.5",
+      "CTR_Parallax_v2.1",
+      "ETE_v1.1"
+    ],
+    "runs_before": [
+      "CEC_when_needed",
+      "CREM_when_needed",
+      "DARE_IDCM_audit",
+      "final_arbiter"
+    ],
+    "recommended_mode": "bounded_differential_comparison"
+  },
+  "inputs": {
+    "prompt_text": {
+      "type": "string",
+      "description": "Raw prompt retained for trace and final return-path checks."
+    },
+    "kce_packet": {
+      "type": "object",
+      "required": true,
+      "description": "KCE v2.3 packet for anchor candidates, split-layer seeds, and compression/anchor risk."
+    },
+    "cdp_packet": {
+      "type": "object",
+      "required": true,
+      "description": "CDP v1.2 packet for prism profile, domain lock report, and active/watch axes."
+    },
+    "dynamical_packet": {
+      "type": "object",
+      "required": true,
+      "description": "Dynamical Prism packet for operator vector, clusters, composites, and meta-transform pressure."
+    },
+    "coupler_packet": {
+      "type": "object",
+      "required": true,
+      "description": "Prism Coupler v1.5 packet for selected/alternate couplings, regime binding, and binding stability."
+    },
+    "ctr_packet": {
+      "type": "object",
+      "required": true,
+      "description": "CTR v2.1 transform plan and verification requirements."
+    },
+    "ete_packet": {
+      "type": "object",
+      "required": true,
+      "description": "ETE v1.1 packet containing candidate_system_branches, promoted invariants, rejected artifacts, and projection ledger."
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "depth_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3,
+          "default": 2
+        },
+        "max_candidate_systems": {
+          "type": "integer",
+          "default": 5
+        },
+        "allow_new_branch_generation": {
+          "type": "boolean",
+          "default": false
+        },
+        "verification_mode": {
+          "type": "string",
+          "enum": [
+            "minimal",
+            "standard",
+            "strict",
+            "adversarial"
+          ],
+          "default": "standard"
+        },
+        "dare_watch": {
+          "type": "boolean",
+          "default": true
+        },
+        "require_decision_artifacts": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  },
+  "outputs": {
+    "pspp_packet": {
+      "type": "object",
+      "description": "Selected/merged system, branch score table, pruning artifacts, verification routing, and synthesis-ready packet."
+    },
+    "selected_system_packet": {
+      "type": "object",
+      "description": "Primary system selected or merged from candidate branches."
+    },
+    "decision_artifacts": {
+      "type": "object",
+      "description": "Auditable artifacts for DARE/IDCM, Arbiter, and memory curation."
+    }
+  },
+  "lite_contract": {
+    "purpose": "Keep PSPP v5.0-lite as a bounded comparator and decision-artifact emitter rather than a broad discovery engine.",
+    "must_emit": [
+      "candidate_systems_normalized",
+      "branch_score_table",
+      "pruning_reasons",
+      "suppressed_branch_artifacts",
+      "selection_margin",
+      "differential_verification_plan",
+      "dare_audit_surface",
+      "synthesis_ready_packet"
+    ],
+    "must_not_emit": [
+      "full_new_branch_search_unless_DARE_requests_rescue",
+      "final_answer_prose",
+      "durable_memory_write"
+    ],
+    "dare_audit_surface": {
+      "required_fields": [
+        "pruned_route_ids",
+        "pruning_loss_risk",
+        "selection_margin",
+        "fragility_score",
+        "operator_gap_suspicion",
+        "verification_gaps",
+        "rescued_branch_candidates",
+        "rerun_requests",
+        "operator_injection_requests"
+      ],
+      "dare_review_required_when": [
+        "selection_margin < 0.08",
+        "pruning_loss_risk >= 0.35",
+        "fragility_score >= 0.45",
+        "operator_gap_suspicion >= 0.35",
+        "verification_gaps_not_empty"
+      ]
+    },
+    "full_escalation_boundary": "Escalate to ETE, CREM, CEC, or DARE/IDCM when comparison artifacts show discovery, rebase, path, or supervisory work is needed. PSPP-lite should not perform those full roles itself."
+  },
+  "prompt_classification": {
+    "description": "PSPP-lite consumes upstream classifications but may normalize them for branch comparison.",
+    "fields": [
+      "ambiguity_score",
+      "novelty_pressure",
+      "contradiction_score",
+      "constraint_density",
+      "verification_need",
+      "causal_uncertainty",
+      "temporal_regime_conflict",
+      "operator_gap_suspicion",
+      "anchor_suspicion",
+      "domain_lock_suspicion",
+      "binding_instability"
+    ],
+    "default_policy": "use_upstream_values; assign conservative mid-low values only when missing"
+  },
+  "stage_order": [
+    "packet_ingest",
+    "candidate_system_normalization",
+    "direct_branch_preservation_check",
+    "branch_deduplication",
+    "branch_score_initialization",
+    "verification_need_routing",
+    "differential_verification",
+    "branch_pruning",
+    "merge_or_select",
+    "fragility_and_falsifier_check",
+    "DARE_audit_gate",
+    "decision_artifact_emit",
+    "synthesis_packet_emit"
+  ],
+  "stages": {
+    "packet_ingest": {
+      "description": "Bind all upstream packets and extract ETE candidate_system_branches plus rejected artifacts.",
+      "outputs": [
+        "source_refs",
+        "candidate_system_branches_raw",
+        "upstream_risk_summary",
+        "verification_requirements"
+      ]
+    },
+    "candidate_system_normalization": {
+      "description": "Normalize ETE branches into a common comparison schema.",
+      "normalization_fields": [
+        "branch_id",
+        "branch_type",
+        "anchor_ref_or_shift",
+        "ontology_shift",
+        "dynamics_shift",
+        "coupling_shift",
+        "regime_shift",
+        "return_path",
+        "verification_requirements",
+        "scores",
+        "risk_notes"
+      ],
+      "outputs": [
+        "candidate_systems_normalized"
+      ]
+    },
+    "direct_branch_preservation_check": {
+      "description": "Ensure a direct/non-reframed branch remains available unless materially invalid.",
+      "rules": [
+        "if_direct_branch_absent_and_allow_new_branch_generation_true_create_minimal_direct_branch",
+        "if_direct_branch_absent_and_generation_disallowed_emit_warning",
+        "do_not_prune_direct_branch_without_explicit_reason"
+      ],
+      "outputs": [
+        "direct_branch_status"
+      ]
+    },
+    "branch_deduplication": {
+      "description": "Collapse branches that differ only by label or decorative framing, preserving the highest-information version.",
+      "dedupe_criteria": [
+        "same_anchor_shift",
+        "same_ontology_shift",
+        "same_dynamics_shift",
+        "same_coupling_shift",
+        "same_regime_shift",
+        "same_return_path",
+        "same_verification_requirements"
+      ],
+      "outputs": [
+        "deduped_candidate_systems",
+        "duplicate_branch_artifacts"
+      ]
+    },
+    "branch_score_initialization": {
+      "description": "Score each candidate system using coherence, coverage, constraint satisfaction, returnability, dynamical viability, coupling validity, regime stability, verification value, and novelty.",
+      "outputs": [
+        "branch_score_table_initial"
+      ]
+    },
+    "verification_need_routing": {
+      "description": "Decide whether CEC, CREM, DARE/IDCM, or adversarial verification is required before selection.",
+      "routing_signals": [
+        "dependency_order_sensitivity",
+        "causal_order_sensitivity",
+        "multi_party_or_frame_conflict",
+        "latent_axis_conflict",
+        "high_pruning_loss",
+        "fragility_score",
+        "anchor_suspicion",
+        "operator_gap_suspicion",
+        "verification_need"
+      ],
+      "outputs": [
+        "verification_route_plan"
+      ]
+    },
+    "differential_verification": {
+      "description": "Run or request only verification checks that distinguish surviving candidate systems.",
+      "methods": [
+        "constraint_check",
+        "cross_branch_consistency",
+        "invariant_preservation",
+        "return_path_check",
+        "dynamical_consistency_check",
+        "coupling_consistency_check",
+        "regime_viability_check",
+        "transform_returnability_check",
+        "assumption_and_falsifier_audit",
+        "information_gain_check",
+        "CEC_dependency_path_request_when_needed",
+        "CREM_rebase_request_when_needed",
+        "DARE_pruning_audit_request_when_needed"
+      ],
+      "outputs": [
+        "verification_results",
+        "branch_score_table_updated"
+      ]
+    },
+    "branch_pruning": {
+      "description": "Prune invalid, duplicate, low-returnability, low-viability, or high-speculation branches while preserving audit artifacts.",
+      "pruning_rules": [
+        "low_coherence",
+        "duplicate_structure",
+        "unsupported_jump",
+        "failed_return_path",
+        "failed_constraint_check",
+        "invalid_operator_regime_pairing",
+        "coupling_incoherence",
+        "regime_instability_unresolved",
+        "high_cost_low_gain",
+        "transform_verification_failed",
+        "bounded_speculation_failed",
+        "no_valid_actor_support",
+        "low_information_gain"
+      ],
+      "outputs": [
+        "surviving_branches",
+        "pruned_branch_artifacts"
+      ]
+    },
+    "merge_or_select": {
+      "description": "Select one branch or merge compatible branches when complementary systems preserve constraints and improve coverage.",
+      "selection_policy": [
+        "select_if_one_branch_dominates_by_score_and_robustness",
+        "merge_if_branches_are_complementary_not_contradictory",
+        "defer_to_DARE_or_Arbiter_if_top_branches_tie_under_material_uncertainty",
+        "preserve_minor_alternate_if_high_falsifier_value"
+      ],
+      "outputs": [
+        "selected_or_merged_system"
+      ]
+    },
+    "fragility_and_falsifier_check": {
+      "description": "Check whether the selected/merged system is robust enough for synthesis and whether falsifiers are explicit.",
+      "checks": [
+        "edge_case_fragility",
+        "constraint_perturbation",
+        "anchor_perturbation",
+        "regime_shift_perturbation",
+        "adversarial_falsifier_presence",
+        "high_coherence_low_robustness"
+      ],
+      "outputs": [
+        "fragility_report",
+        "falsifier_report"
+      ]
+    },
+    "DARE_audit_gate": {
+      "description": "Decide whether to request DARE/IDCM audit before final synthesis.",
+      "trigger_conditions": [
+        "high_pruning_loss",
+        "premature_collapse_suspicion",
+        "selected_system_fragility_high",
+        "anchor_suspicion_unresolved",
+        "operator_gap_suspicion_high",
+        "many_rejections_due_to_low_returnability",
+        "top_branch_score_margin_low"
+      ],
+      "outputs": [
+        "dare_audit_request"
+      ]
+    },
+    "decision_artifact_emit": {
+      "description": "Emit auditable artifacts for DARE/IDCM, Arbiter, and memory curator.",
+      "outputs": [
+        "decision_artifacts"
+      ]
+    },
+    "synthesis_packet_emit": {
+      "description": "Emit final PSPP packet for Arbiter synthesis.",
+      "outputs": [
+        "pspp_packet",
+        "selected_system_packet"
+      ]
+    }
+  },
+  "branch_schema": {
+    "candidate_system": {
+      "branch_id": "string",
+      "branch_type": "direct|operator_projection|diagnostic_rotation|transform|metaphorical_projection|escape|constraint_isolation|counterfactual|temporal_decomposition|falsifier|merged",
+      "source_refs": "array",
+      "anchor_ref": "string_or_null",
+      "anchor_shift": "string_or_null",
+      "ontology_shift": "string_or_null",
+      "dynamics_shift": "string_or_null",
+      "coupling_shift": "string_or_null",
+      "regime_shift": "string_or_null",
+      "core_claim": "string",
+      "return_path": "string",
+      "assumptions": "array",
+      "constraints_preserved": "array",
+      "constraints_modified": "array",
+      "falsifiers": "array",
+      "verification_requirements": "array",
+      "scores": "object",
+      "risk_notes": "array",
+      "selected_status": "candidate|survivor|pruned|selected|merged|deferred"
+    }
+  },
+  "branch_scoring": {
+    "criteria": {
+      "coherence": 0.16,
+      "coverage": 0.12,
+      "constraint_satisfaction": 0.14,
+      "compression_gain": 0.06,
+      "returnability": 0.12,
+      "dynamical_viability": 0.1,
+      "coupling_validity": 0.1,
+      "regime_stability": 0.08,
+      "verification_value": 0.07,
+      "novelty": 0.05
+    },
+    "penalties": {
+      "unsupported_jump": -0.2,
+      "unbounded_speculation": -0.18,
+      "weak_return_path": -0.16,
+      "duplicate_structure": -0.12,
+      "high_cost_low_gain": -0.1,
+      "fragility": -0.12
+    },
+    "selection_policy": "merge_or_select"
+  },
+  "operational_thresholds": {
+    "max_candidate_systems_default": 5,
+    "max_candidate_systems_depth_3": 7,
+    "min_candidate_score": 0.58,
+    "selection_score_margin": 0.08,
+    "merge_compatibility_min": 0.68,
+    "max_topic_drift_risk": 0.3,
+    "max_unbounded_speculation": 0.45,
+    "min_return_path_clarity": 0.6,
+    "dare_audit_pruning_loss_threshold": 0.45,
+    "dare_audit_fragility_threshold": 0.55,
+    "cec_dependency_sensitivity_threshold": 0.55,
+    "crem_conflict_threshold": 0.5
+  },
+  "verification_routing": {
+    "CEC": {
+      "invoke_when": [
+        "dependency_order_sensitivity_gte_threshold",
+        "causal_order_sensitivity_gte_threshold",
+        "proof_or_derivation_required",
+        "branch_has_unsupported_jumps",
+        "selected_system_requires_ordered_execution"
+      ],
+      "request_packet": {
+        "branch_refs": "array",
+        "gap_risk_notes": "array",
+        "required_outputs": [
+          "path_packet",
+          "gap_report",
+          "dependency_graph_when_needed"
+        ]
+      }
+    },
+    "CREM": {
+      "invoke_when": [
+        "two_or_more_coherent_candidate_systems_conflict",
+        "opposition_and_alignment_present",
+        "latent_axis_needed",
+        "dependency_invariants_must_constrain_synthesis",
+        "conflict_preservation_needed"
+      ],
+      "request_packet": {
+        "party_or_branch_frames": "array",
+        "opening_conflict_lock": "string",
+        "required_outputs": [
+          "validated_rebase_invariant",
+          "dependency_invariants",
+          "latent_axes",
+          "candidate_system_branches"
+        ]
+      }
+    },
+    "DARE_IDCM": {
+      "invoke_when": [
+        "high_pruning_loss",
+        "premature_collapse_suspicion",
+        "anchor_suspicion_unresolved",
+        "operator_gap_suspicion_high",
+        "fragile_selected_system",
+        "many_rejections_due_to_returnability",
+        "top_branch_margin_low"
+      ],
+      "request_packet": {
+        "decision_artifacts": "object",
+        "pruned_branch_artifacts": "array",
+        "selected_system_packet": "object",
+        "required_outputs": [
+          "audit_report",
+          "rescued_branches",
+          "operator_injection_request",
+          "approval_or_rerun_recommendation"
+        ]
+      }
+    }
+  },
+  "decision_artifact_schema": {
+    "decision_artifacts": {
+      "agent_or_module_id": "PSPP_Lite",
+      "anchor_used": "object",
+      "candidate_branches": "array",
+      "surviving_branches": "array",
+      "pruned_branches": "array",
+      "pruning_reasons": "array",
+      "score_table": "object",
+      "assumptions_preserved": "array",
+      "dependencies_preserved": "array",
+      "constraints_modified": "array",
+      "return_path_status": "object",
+      "verification_failures": "array",
+      "falsifiers": "array",
+      "final_selection_reason": "string",
+      "uncertainty_notes": "array",
+      "DARE_audit_recommended": "boolean"
+    }
+  },
+  "output_schema": {
+    "pspp_packet": {
+      "schema_version": "pspp.parallax/5.0-lite",
+      "source_refs": {
+        "kce_packet_ref": "string_or_null",
+        "cdp_packet_ref": "string_or_null",
+        "dynamical_packet_ref": "string_or_null",
+        "coupler_packet_ref": "string_or_null",
+        "ctr_packet_ref": "string_or_null",
+        "ete_packet_ref": "string_or_null"
+      },
+      "comparison_profile": {
+        "mode": "minimal|standard|strict|adversarial",
+        "candidate_count_raw": "integer",
+        "candidate_count_after_dedup": "integer",
+        "candidate_count_surviving": "integer",
+        "verification_routes_requested": "array"
+      },
+      "branch_score_table": {
+        "branch_scores": "array",
+        "score_margin_top_two": "number",
+        "scoring_notes": "array"
+      },
+      "selected_system_packet": {
+        "selection_type": "single|merged|deferred",
+        "selected_branch_ids": "array",
+        "core_claim": "string",
+        "anchor_ref": "string_or_null",
+        "ontology_model": "object",
+        "dynamical_model": "object",
+        "coupling_model": "object",
+        "regime_model": "object",
+        "preserved_invariants": "array",
+        "modified_constraints": "array",
+        "return_path": "string",
+        "falsifiers": "array",
+        "verification_requirements_remaining": "array",
+        "confidence": "number",
+        "robustness": "number",
+        "bounded_speculation": "number",
+        "synthesis_notes": "array"
+      },
+      "fragility_report": {
+        "fragility_score": "number",
+        "fragile_conditions": "array",
+        "edge_cases": "array",
+        "high_coherence_low_robustness": "boolean"
+      },
+      "dare_audit_request": {
+        "recommended": "boolean",
+        "reason": "array",
+        "urgency": "none|low|moderate|high",
+        "requested_actions": "array"
+      },
+      "decision_artifacts": "object",
+      "handoff": {
+        "to_CEC": "object_or_null",
+        "to_CREM": "object_or_null",
+        "to_DARE": "object_or_null",
+        "to_Arbiter": "selected_system_packet"
+      },
+      "trace": {
+        "operators_used": "array",
+        "decision_notes": "array",
+        "risk_notes": "array"
+      }
+    }
+  },
+  "routing_policy": {
+    "default": "bounded_differential_comparison",
+    "rules": [
+      {
+        "condition": "candidate_count_raw <= 1",
+        "action": "verify_single_candidate_and_emit_low_branch_diversity_note"
+      },
+      {
+        "condition": "candidate_count_raw > max_candidate_systems_default",
+        "action": "deduplicate_and_keep_highest_decision_power_branches"
+      },
+      {
+        "condition": "dependency_order_sensitivity >= cec_dependency_sensitivity_threshold",
+        "action": "request_CEC_before_final_selection"
+      },
+      {
+        "condition": "two_or_more_coherent_branches_conflict AND alignment_dependencies_present",
+        "action": "request_CREM_rebase"
+      },
+      {
+        "condition": "high_pruning_loss OR premature_collapse_suspicion",
+        "action": "request_DARE_pruning_audit"
+      },
+      {
+        "condition": "top_branch_score_margin < selection_score_margin",
+        "action": "defer_or_merge_after_targeted_verification"
+      },
+      {
+        "condition": "selected_system_fragility >= dare_audit_fragility_threshold",
+        "action": "request_adversarial_verification_or_DARE_review"
+      }
+    ]
+  },
+  "guards": {
+    "anti_branch_explosion": {
+      "PSPP_lite_does_not_run_full_discovery_by_default": true,
+      "new_branch_generation_requires_allow_new_branch_generation_or_DARE_request": true,
+      "max_candidate_systems_default": 5,
+      "deduplicate_before_verification": true
+    },
+    "anti_pruning_opacity": {
+      "pruning_reason_required_for_every_pruned_branch": true,
+      "score_table_required": true,
+      "decision_artifacts_required": true
+    },
+    "anti_false_synthesis": {
+      "do_not_merge_contradictory_branches_without_CREM_or_Arbiter_review": true,
+      "preserve_conflict_until_rebase_or_selection": true
+    },
+    "anti_oververification": {
+      "run_differential_checks_first": true,
+      "avoid_checks_that_do_not_change_branch_ranking": true
+    },
+    "anti_memory_contamination": {
+      "PSPP_lite_does_not_write_memory": true,
+      "emit_memory_candidate_route_only_after_selection": true
+    },
+    "truth_before_novelty": {
+      "novelty_cannot_override_failed_constraints": true,
+      "bounded_speculation_required": true,
+      "external_fact_verification_not_replaced_by_branch_scoring": true
+    }
+  },
+  "canonical_packet_compatibility": {
+    "legacy_fields_provided": [
+      "candidate_systems",
+      "selected_system",
+      "evaluation_trace",
+      "policy_trace",
+      "prism_trace",
+      "dynamical_trace",
+      "coupling_trace",
+      "transform_branch_trace",
+      "gap_report"
+    ],
+    "compatibility_note": "PSPP-lite can emit legacy-shaped trace fields, but the primary contract is pspp_packet.selected_system_packet plus decision_artifacts."
+  },
+  "example_packet_minimal": {
+    "comparison_profile": {
+      "mode": "standard",
+      "candidate_count_raw": 4,
+      "candidate_count_after_dedup": 3,
+      "candidate_count_surviving": 2,
+      "verification_routes_requested": []
+    },
+    "branch_score_table": {
+      "branch_scores": [
+        {
+          "branch_id": "ETE_B1",
+          "score": 0.74,
+          "coherence": 0.72,
+          "coverage": 0.68,
+          "returnability": 0.76,
+          "verification_value": 0.7,
+          "fragility": 0.24
+        },
+        {
+          "branch_id": "ETE_B2",
+          "score": 0.69,
+          "coherence": 0.75,
+          "coverage": 0.6,
+          "returnability": 0.68,
+          "verification_value": 0.62,
+          "fragility": 0.32
+        }
+      ],
+      "score_margin_top_two": 0.05,
+      "scoring_notes": [
+        "Top branches close; preserve alternate for Arbiter."
+      ]
+    },
+    "selected_system_packet": {
+      "selection_type": "merged",
+      "selected_branch_ids": [
+        "ETE_B1",
+        "ETE_B2"
+      ],
+      "core_claim": "Candidate system B1 provides the main structure; B2 supplies a useful falsifier/constraint check.",
+      "anchor_ref": "A1",
+      "ontology_model": {
+        "active_axes": [
+          "info",
+          "math",
+          "meta"
+        ]
+      },
+      "dynamical_model": {
+        "dominant_operators": [
+          "interpret",
+          "select",
+          "gate"
+        ]
+      },
+      "coupling_model": {
+        "regime": "recursive"
+      },
+      "regime_model": {
+        "status": "metastable"
+      },
+      "preserved_invariants": [
+        "return_to_user_goal",
+        "constraint_preservation"
+      ],
+      "modified_constraints": [],
+      "return_path": "Return to KCE A1 anchor with B2 as verification constraint.",
+      "falsifiers": [
+        "If B2's constraint check fails, B1 should not be selected alone."
+      ],
+      "verification_requirements_remaining": [],
+      "confidence": 0.72,
+      "robustness": 0.68,
+      "bounded_speculation": 0.2,
+      "synthesis_notes": [
+        "Arbiter should present B1 as primary and B2 as caveat/falsifier."
+      ]
+    },
+    "dare_audit_request": {
+      "recommended": false,
+      "reason": [],
+      "urgency": "none",
+      "requested_actions": []
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "regime_profile/0.1",
+  "template_role": "canonical_handoff_template",
+  "source": {
+    "prompt_text": "string",
+    "anchor_ref": "string_or_null",
+    "cdp_profile_ref": "string_or_null",
+    "dynamical_core_ref": "string_or_null",
+    "coupler_ref": "string_or_null"
+  },
+  "regime_profile": {
+    "regime_id": "string",
+    "selected_working_regime": "string",
+    "regime_class": "exploratory|stabilized|threshold|competitive|recursive|distributed_coordination|metastable|other",
+    "confidence": 0.0,
+    "regime_confidence": 0.0,
+    "context_scope": "local|system|relationship|institutional|abstract|mixed",
+    "ontology_scope": [],
+    "evidence": [],
+    "active_constraints": [],
+    "permissioned_dynamics": [],
+    "suppressed_dynamics": [],
+    "candidate_regimes": [],
+    "constraint_field": {
+      "active_constraints": [],
+      "threshold_bands": {}
+    },
+    "operator_modulation": {
+      "permissioned_dynamics": [],
+      "suppressed_dynamics": [],
+      "active_operator_clusters": []
+    },
+    "regime_shift_triggers": [],
+    "state_flags": [],
+    "dare_regime_watchpoints": []
+  },
+  "regime_field": {
+    "scale": "string_or_null",
+    "tempo": "string_or_null",
+    "phase_state": "string_or_null",
+    "stability": "string_or_null",
+    "coupling": "string_or_null",
+    "reversibility": "string_or_null",
+    "constraint_load": "string_or_null",
+    "noise": "string_or_null",
+    "uncertainty": "string_or_null",
+    "resource_condition": "string_or_null",
+    "legitimacy": "string_or_null",
+    "trust": "string_or_null",
+    "authority_gradient": "string_or_null",
+    "adversariality": "string_or_null",
+    "commitment": "string_or_null",
+    "boundary_condition": "string_or_null",
+    "ethical_load": "string_or_null"
+  },
+  "regime_confidence": 0.0,
+  "alternate_regime_candidates": [
+    {
+      "candidate_id": "string",
+      "regime_field": {
+        "scale": "string_or_null",
+        "tempo": "string_or_null",
+        "phase_state": "string_or_null",
+        "stability": "string_or_null",
+        "coupling": "string_or_null",
+        "reversibility": "string_or_null",
+        "constraint_load": "string_or_null",
+        "noise": "string_or_null",
+        "uncertainty": "string_or_null",
+        "resource_condition": "string_or_null",
+        "legitimacy": "string_or_null",
+        "trust": "string_or_null",
+        "authority_gradient": "string_or_null",
+        "adversariality": "string_or_null",
+        "commitment": "string_or_null",
+        "boundary_condition": "string_or_null",
+        "ethical_load": "string_or_null"
+      },
+      "confidence": 0.0,
+      "why_material": []
+    }
+  ],
+  "regime_bundle_matches": [
+    {
+      "bundle_id": "string",
+      "match_strength": 0.0,
+      "supporting_axes": [],
+      "conflicting_axes": []
+    }
+  ],
+  "operator_regime_mismatch_report": {
+    "mismatch_detected": false,
+    "mismatch_ids": [],
+    "severity": "none|low|moderate|high|critical",
+    "notes": []
+  },
+  "computed_behavior_label_constraints": {
+    "preferred_labels": [],
+    "disallowed_labels_due_to_regime": [],
+    "ambiguity_notes": []
+  },
+  "handoff": {
+    "to_dynamical_prism": {},
+    "to_coupler": {},
+    "to_CREM": {},
+    "to_CTR": {},
+    "to_ETE": {},
+    "to_DARE": {}
+  }
+}

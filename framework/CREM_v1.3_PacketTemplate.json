@@ -1,0 +1,115 @@
+{
+  "schema_version": "crem.parallax/1.3",
+  "source_refs": {
+    "prompt_ref": "string_or_null",
+    "coupler_packet_ref": "string_or_null",
+    "ontology_profile_refs": [],
+    "dynamical_core_refs": [],
+    "regime_field_refs": []
+  },
+  "selected_mode": "operator_conflict_rebase|regime_conflict_rebase|operator_alignment_rebase|regime_alignment_rebase|mixed_rebase|productive_tension_preservation",
+  "party_graph": {
+    "party_nodes": [],
+    "dyadic_edges": [],
+    "hyperedges": []
+  },
+  "factor_hypergraph": {
+    "ontological_factors": [],
+    "operator_factors": [],
+    "regime_factors": [],
+    "computed_label_factors": [],
+    "dependency_factors": [],
+    "trust_coordination_factors": [],
+    "risk_factors": []
+  },
+  "operator_relationship_map": {
+    "opposition_pairs": [],
+    "alignment_sets": [],
+    "complementarity_sets": [],
+    "same_operator_different_regime_pairs": []
+  },
+  "regime_relationship_map": {
+    "opposition_pairs": [],
+    "alignment_sets": [],
+    "asymmetry_sets": [],
+    "different_operator_same_regime_pairs": []
+  },
+  "computed_label_decomposition": [
+    {
+      "label": "string",
+      "party_refs": [],
+      "supporting_core_operators": [],
+      "supporting_regime_conditions": [],
+      "label_conflict_or_ambiguity": "string_or_null",
+      "collapse_risk": 0.0
+    }
+  ],
+  "dependency_invariants": [],
+  "operator_conflict_invariants": [],
+  "regime_conflict_invariants": [],
+  "operator_alignment_invariants": [],
+  "regime_alignment_invariants": [],
+  "validated_rebase_invariant": {
+    "invariant_id": "string_or_null",
+    "invariant_type": "operator_conflict|regime_conflict|operator_alignment|regime_alignment|dependency|complementarity|productive_tension|null",
+    "statement": "string_or_null",
+    "confidence": 0.0,
+    "party_distinction_preserved": false,
+    "return_path_to_opening_conflict_or_goal": "string_or_null"
+  },
+  "relationship_rebase_plan": {
+    "plan_id": "string_or_null",
+    "mode": "string_or_null",
+    "steps": [],
+    "preserved_dependencies": [],
+    "modified_constraints": [],
+    "trust_or_coordination_repairs": [],
+    "risks": []
+  },
+  "candidate_system_branches": [
+    {
+      "branch_id": "string",
+      "branch_type": "string",
+      "core_claim": "string",
+      "party_refs": [],
+      "operator_shift": "object_or_null",
+      "regime_shift": "object_or_null",
+      "ontology_shift": "object_or_null",
+      "dependency_preservation": [],
+      "falsifiers": [],
+      "scores": {}
+    }
+  ],
+  "gate_report": {
+    "conflict_generation_gate": {},
+    "alignment_preservation_gate": {},
+    "false_harmony_gate": {},
+    "operator_regime_integrity_gate": {},
+    "dependency_preservation_gate": {}
+  },
+  "rebase_vector": {
+    "operator_component": {},
+    "regime_component": {},
+    "dependency_component": {},
+    "relationship_component": {},
+    "computed_label_component": {}
+  },
+  "dare_audit_surface": {
+    "false_harmony_score": 0.0,
+    "forced_alignment_score": 0.0,
+    "party_erasure_score": 0.0,
+    "operator_regime_conflation_score": 0.0,
+    "composite_label_collapse_score": 0.0,
+    "regime_asymmetry_ignored_score": 0.0,
+    "DARE_review_recommended": false
+  },
+  "telemetry": {
+    "party_count": 0,
+    "operator_conflict_score": 0.0,
+    "regime_conflict_score": 0.0,
+    "operator_alignment_score": 0.0,
+    "regime_alignment_score": 0.0,
+    "dependency_density": 0.0,
+    "relationship_strengthening_potential": 0.0
+  }
+}

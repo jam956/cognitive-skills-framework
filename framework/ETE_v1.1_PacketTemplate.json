@@ -1,0 +1,82 @@
+{
+  "schema_version": "ete.parallax/1.1",
+  "source_refs": {
+    "kce_ref": "string_or_null",
+    "cdp_ref": "string_or_null",
+    "dynamical_core_ref": "string_or_null",
+    "regime_field_ref": "string_or_null",
+    "coupler_ref": "string_or_null",
+    "ctr_ref": "string_or_null",
+    "ece_ref": "string_or_null"
+  },
+  "execution_profile": {
+    "depth_level": 2,
+    "novelty_mode": "bounded",
+    "max_candidate_systems": 5,
+    "max_projection_packets": 8,
+    "allow_discontinuous_execution": false,
+    "ECE_dials_applied": {}
+  },
+  "local_basin": {
+    "ontology_axes": [],
+    "operator_clusters": [],
+    "regime_axes": {},
+    "actors": [],
+    "computed_labels": [],
+    "native_confidence": 0.0,
+    "adjacent_pressure": [],
+    "redundancy_score": 0.0,
+    "novelty_deficit": 0.0,
+    "search_stagnation_turns": 0
+  },
+  "split_layer_integrity_report": {
+    "integrity_score": 0.0,
+    "computed_label_used_as_operator": false,
+    "regime_used_as_operator": false,
+    "ontology_used_as_causal_dynamical": false,
+    "operator_regime_conflation": 0.0,
+    "same_operator_different_regime_unchecked": false,
+    "notes": []
+  },
+  "label_decomposition_packets": [],
+  "operator_projection_packets": [],
+  "regime_projection_packets": [],
+  "operator_regime_mismatch_packets": [],
+  "diagnostic_rotation_views": [],
+  "transform_views": [],
+  "bundle_projection_packets": [],
+  "candidate_invariants": [],
+  "projection_score_table": [],
+  "return_path_report": {
+    "all_promoted_branches_returnable": false,
+    "unreturnable_branches": [],
+    "CEC_review_recommended": false,
+    "DARE_review_recommended": false
+  },
+  "candidate_system_branches": [],
+  "rejected_branch_artifacts": [],
+  "crem_handoff_request": {
+    "relationship_rebase_needed": false,
+    "recommended_CREM_mode": "operator_conflict_rebase|regime_conflict_rebase|operator_alignment_rebase|regime_alignment_rebase|mixed_rebase|productive_tension_preservation|null",
+    "same_operator_different_regime_pairs": [],
+    "different_operator_same_regime_pairs": [],
+    "operator_conflict_or_alignment_hints": [],
+    "regime_conflict_or_alignment_hints": []
+  },
+  "handoff_packet": {
+    "to_PSPP": {},
+    "to_CREM": {},
+    "to_CEC": {},
+    "to_DARE": {},
+    "to_Arbiter": {}
+  },
+  "telemetry": {
+    "executed_CTR_operators": [],
+    "pruned_count": 0,
+    "promoted_count": 0,
+    "information_gain": 0.0,
+    "novelty_gain": 0.0,
+    "verification_gain": 0.0,
+    "ECE_constraints_applied": []
+  }
+}

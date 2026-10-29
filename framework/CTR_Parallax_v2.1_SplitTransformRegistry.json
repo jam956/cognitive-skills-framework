@@ -1,0 +1,1614 @@
+{
+  "module_name": "Cognitive Transformation Registry",
+  "short_name": "CTR_Parallax",
+  "version": "v2.1.0",
+  "status": "conceptual_executable_spec",
+  "revision_kind": "split_ontology_dynamical_core_regime_transform_registry",
+  "supersedes": "CTR_Parallax_v2.0_OperatorRegistry",
+  "purpose": "Serve as the central registry of transformation families and reasoning operators used by the cognitive toolchain after the split of the old Dynamical Prism into a reduced Dynamical Core and separate Regime Field. CTR v2.1 selects, sequences, and verifies transforms across ontology, dynamical core, regime field, coupling, computed labels, relationship rebasing, path validation, and adversarial audit. It does not execute transforms itself.",
+  "core_doctrine": [
+    "The Ontologic Prism selects where reasoning is projected.",
+    "The Dynamical Core describes primitive process-verbs.",
+    "The Regime Field describes operating constraints, phase-state, context, and legitimacy conditions.",
+    "The Coupler binds ontology, actor role, dynamical core, regime field, and computed behavior labels.",
+    "CTR selects how the reasoning geometry should change.",
+    "Every transform must state what it preserves, what it disturbs, what layer it acts on, and how it will be checked.",
+    "Do not use a computed behavior label as a transform target unless it is decomposed into ontology, operators, and regime conditions.",
+    "Operator transforms and regime transforms must be separately selectable.",
+    "Return paths are required for normal transforms; DARE-mediated discontinuous transforms may temporarily suspend returnability but must later reconstitute it or mark the result speculative.",
+    "Use the minimum sufficient transform first, but do not let minimality suppress necessary discontinuity or regime-bifurcation."
+  ],
+  "registry_refs": {
+    "KCE": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "OntologicPrism": "19D_Ontologic_Prism",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "PrismCoupler": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+    "ETE": "ETE_v1.1_SplitLayerExplorationTransform.json",
+    "CREM": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+    "PSPP_Lite": "PSPP_v5.0_CandidateSystemComparator.json",
+    "CEC": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+    "DARE_IDCM": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json"
+  },
+  "responsibility_boundary": {
+    "owns": [
+      "transform_family_definition",
+      "operator_definition",
+      "operator_selection_rules",
+      "transform_sequence_policy",
+      "layer_target_selection",
+      "operator_gap_detection",
+      "regime_gap_detection",
+      "computed_label_decomposition_request",
+      "verification_requirement_generation",
+      "return_path_requirements",
+      "transform_cost_estimation",
+      "transform_risk_estimation",
+      "handoff_packet_schema"
+    ],
+    "does_not_own": [
+      "anchor_extraction",
+      "domain_axis_selection",
+      "primitive_dynamical_operator_definition",
+      "regime_axis_definition",
+      "actor_binding_execution",
+      "transform_execution",
+      "candidate_system_competition",
+      "conflict_or_relationship_rebase_execution",
+      "causal_path_execution",
+      "final_answer_synthesis",
+      "external_fact_verification",
+      "durable_memory_write_execution"
+    ],
+    "handoff_note": "CTR v2.1 emits transform plans and verification contracts. ETE executes exploration transforms, CREM executes relationship rebases, CEC validates ordered paths, PSPP compares candidate systems, and DARE audits operator/regime gaps, discontinuity, and false collapse."
+  },
+  "layer_targets": {
+    "ontology_layer": {
+      "description": "Transform the 19D domain profile or system boundary.",
+      "axes": [
+        "phys",
+        "bio",
+        "neur",
+        "info",
+        "math",
+        "meta",
+        "aes",
+        "stor",
+        "hum",
+        "rhet",
+        "eth",
+        "exp",
+        "econ",
+        "pol",
+        "geo",
+        "mus",
+        "nai",
+        "phil",
+        "style"
+      ]
+    },
+    "dynamical_core_layer": {
+      "description": "Transform primitive operator vector or operator sequence.",
+      "operators": [
+        "signal",
+        "detect",
+        "interpret",
+        "encode",
+        "execute",
+        "disrupt",
+        "coordinate",
+        "constrain",
+        "gate",
+        "stabilize",
+        "explore",
+        "select",
+        "adapt",
+        "anticipate"
+      ]
+    },
+    "regime_field_layer": {
+      "description": "Transform constraint/context/phase conditions.",
+      "axes": [
+        "scale",
+        "tempo",
+        "phase_state",
+        "stability",
+        "coupling",
+        "reversibility",
+        "constraint_load",
+        "noise",
+        "uncertainty",
+        "resource_condition",
+        "legitimacy",
+        "trust",
+        "authority_gradient",
+        "adversariality",
+        "commitment",
+        "boundary_condition",
+        "ethical_load"
+      ]
+    },
+    "coupling_layer": {
+      "description": "Transform actor-role binding, ontology-operator-regime binding, or relationship coupling.",
+      "targets": [
+        "actor_role",
+        "operator_carrier",
+        "regime_carrier",
+        "relationship_binding",
+        "party_binding"
+      ]
+    },
+    "computed_label_layer": {
+      "description": "Decompose, rename, or falsify behavior labels after grounding in operator and regime support.",
+      "targets": [
+        "label_decomposition",
+        "label_alias",
+        "label_falsifier",
+        "label_replacement"
+      ]
+    },
+    "relationship_layer": {
+      "description": "Transform n-party conflict/alignment/complementarity structure, usually through CREM.",
+      "targets": [
+        "operator_conflict",
+        "regime_conflict",
+        "operator_alignment",
+        "regime_alignment",
+        "dependency_invariant",
+        "productive_tension"
+      ]
+    },
+    "path_layer": {
+      "description": "Transform or validate ordered dependency, causal, proof, execution, or phase paths.",
+      "targets": [
+        "dependency_path",
+        "operator_sequence",
+        "regime_phase_sequence",
+        "return_path"
+      ]
+    }
+  },
+  "inputs": {
+    "anchor_packet": {
+      "type": "object",
+      "required": false,
+      "description": "Anchor or anchor candidate packet from KCE v2.3."
+    },
+    "ontology_profile": {
+      "type": "object",
+      "required": false,
+      "description": "CDP v1.2 or 19D ontologic profile."
+    },
+    "dynamical_core_packet": {
+      "type": "object",
+      "required": false,
+      "description": "Dynamical Prism v0.2 core operator vector, clusters, and mismatch watchpoints."
+    },
+    "regime_field_packet": {
+      "type": "object",
+      "required": false,
+      "description": "Regime Field v0.1 packet with regime axes, bundle matches, alternates, and operator-regime mismatch reports."
+    },
+    "coupling_packet": {
+      "type": "object",
+      "required": false,
+      "description": "Prism Coupler v1.5 packet with split bindings and behavior labels."
+    },
+    "crem_packet": {
+      "type": "object",
+      "required": false,
+      "description": "CREM v1.3 packet when relationship rebase or multi-party conflict/alignment exists."
+    },
+    "prompt_class": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "ambiguity_score": "number",
+        "novelty_pressure": "number",
+        "contradiction_score": "number",
+        "constraint_density": "number",
+        "verification_need": "number",
+        "causal_uncertainty": "number",
+        "temporal_regime_conflict": "number",
+        "operator_gap_suspicion": "number",
+        "regime_gap_suspicion": "number",
+        "operator_regime_conflation": "number",
+        "computed_label_collapse": "number",
+        "false_harmony_suspicion": "number"
+      }
+    },
+    "failure_or_trace_packet": {
+      "type": "object",
+      "required": false,
+      "description": "Optional failure trace from PSPP, CEC, DARE, CREM, ETE, or synthesis review."
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "depth_level": "integer_1_to_3",
+        "novelty_mode": [
+          "bounded",
+          "elevated",
+          "max_discovery"
+        ],
+        "allow_discontinuous_transform": "boolean",
+        "require_return_path": "boolean",
+        "dare_authorized": "boolean",
+        "preferred_layer_target": [
+          "auto",
+          "ontology_layer",
+          "dynamical_core_layer",
+          "regime_field_layer",
+          "coupling_layer",
+          "computed_label_layer",
+          "relationship_layer",
+          "path_layer"
+        ]
+      }
+    }
+  },
+  "signal_scoring": {
+    "scale": "0.0_to_1.0",
+    "required_inputs": [
+      "ambiguity_score",
+      "novelty_pressure",
+      "contradiction_score",
+      "constraint_density",
+      "verification_need"
+    ],
+    "optional_inputs": [
+      "causal_uncertainty",
+      "temporal_regime_conflict",
+      "operator_gap_suspicion",
+      "regime_gap_suspicion",
+      "operator_regime_conflation",
+      "computed_label_collapse",
+      "compression_risk",
+      "domain_lock_suspicion",
+      "binding_instability",
+      "regime_instability",
+      "pruning_loss",
+      "fragility_score",
+      "false_harmony_suspicion"
+    ]
+  },
+  "family_ordering_policy": {
+    "default_progression": [
+      "symmetry_family",
+      "abstraction_ladder_family",
+      "label_decomposition_family",
+      "deformation_family",
+      "constraint_isolation_family",
+      "regime_transform_family",
+      "dimensional_family",
+      "temporal_phase_family",
+      "counterfactual_intervention_family",
+      "negation_falsifier_family",
+      "topology_family",
+      "dynamical_core_family",
+      "coupling_family",
+      "relationship_rebase_family",
+      "adversarial_verification_family",
+      "discontinuous_reconstitution_family"
+    ],
+    "minimum_sufficient_first": true,
+    "allow_order_override_when": [
+      "operator_gap_suspicion_high",
+      "regime_gap_suspicion_high",
+      "operator_regime_conflation_high",
+      "computed_label_collapse_high",
+      "persistent_contradiction_after_lower_cost_transforms",
+      "high_pruning_loss",
+      "fragile_final_solution",
+      "DARE_or_IDCM_authorizes_discontinuity"
+    ],
+    "notes": [
+      "Symmetry remains the cheapest first transform.",
+      "Label decomposition is early because computed labels can prematurely collapse reasoning.",
+      "Regime transforms are now first-class and can precede dimensional or topology transforms when constraints are the likely source of conflict.",
+      "Relationship rebase transforms route to CREM v1.3.",
+      "Path-layer transforms route to CEC when sequence validity matters.",
+      "Discontinuous reconstitution is gated and normally invoked only by DARE/IDCM."
+    ]
+  },
+  "transform_families": {
+    "symmetry_family": {
+      "purpose": "Rotate, invert, complement, mirror, or reparameterize a frame without changing the underlying object class.",
+      "default_layer_targets": [
+        "ontology_layer",
+        "dynamical_core_layer",
+        "regime_field_layer",
+        "computed_label_layer"
+      ],
+      "cost": "low",
+      "risk": "low_to_moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_SYM_ROTATE_001",
+          "label": "rotation",
+          "description": "View the same structure from a different angle, domain orientation, operator emphasis, or regime stance.",
+          "invoke_when": [
+            "direct_view_insufficient",
+            "moderate_ambiguity",
+            "domain_rotation_needed",
+            "regime_perspective_needed"
+          ],
+          "preserves": [
+            "anchor_identity",
+            "core_relations"
+          ],
+          "disturbs": [
+            "salience_order",
+            "viewpoint"
+          ]
+        },
+        {
+          "id": "CTR_SYM_INVERT_001",
+          "label": "inversion",
+          "description": "Invert polarity, direction, dependency, operator orientation, or regime burden while preserving the relation class.",
+          "invoke_when": [
+            "inverse_logic_possible",
+            "asymmetry_suspected",
+            "regime_asymmetry_suspected"
+          ],
+          "preserves": [
+            "relation_pair",
+            "constraint_set"
+          ],
+          "disturbs": [
+            "directionality",
+            "polarity",
+            "burden_assignment"
+          ]
+        },
+        {
+          "id": "CTR_SYM_COMPLEMENT_001",
+          "label": "complement",
+          "description": "Analyze the complementary structure or missing counterpart.",
+          "invoke_when": [
+            "one_sided_frame",
+            "hidden_complement_likely",
+            "different_operator_same_regime_possible"
+          ],
+          "preserves": [
+            "problem_boundary"
+          ],
+          "disturbs": [
+            "focus_region"
+          ]
+        },
+        {
+          "id": "CTR_SYM_GAUGE_001",
+          "label": "gauge_reparameterization",
+          "description": "Separate equivalent framings from superficially similar labels.",
+          "invoke_when": [
+            "alias_collision",
+            "same_function_different_label",
+            "same_label_different_function"
+          ],
+          "preserves": [
+            "observable_structure"
+          ],
+          "disturbs": [
+            "label_basis"
+          ]
+        }
+      ]
+    },
+    "abstraction_ladder_family": {
+      "purpose": "Move vertically along specificity levels within the same ontology, operator, regime, or label frame.",
+      "default_layer_targets": [
+        "ontology_layer",
+        "computed_label_layer",
+        "relationship_layer"
+      ],
+      "cost": "low",
+      "risk": "low",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_ABS_LIFT_001",
+          "label": "abstraction_lift",
+          "description": "Replace concrete entities with functional classes.",
+          "invoke_when": [
+            "over_specified_prompt",
+            "concrete_detail_obscures_structure",
+            "solution_generalizes"
+          ],
+          "preserves": [
+            "functional_role",
+            "relation_pattern"
+          ],
+          "disturbs": [
+            "surface_entities"
+          ]
+        },
+        {
+          "id": "CTR_ABS_DROP_001",
+          "label": "concretization_drop",
+          "description": "Instantiate an abstract claim with a specific binding or test case.",
+          "invoke_when": [
+            "abstract_answer_untestable",
+            "example_needed",
+            "implementation_requires_specificity"
+          ],
+          "preserves": [
+            "abstract_relation"
+          ],
+          "disturbs": [
+            "generality"
+          ]
+        },
+        {
+          "id": "CTR_ABS_LEVEL_001",
+          "label": "level_crossing",
+          "description": "Restate the problem at micro, meso, macro, or meta levels.",
+          "invoke_when": [
+            "scale_mismatch",
+            "part_whole_confusion",
+            "wrong_level_solution_suspected"
+          ],
+          "preserves": [
+            "core_objective",
+            "observed_tension"
+          ],
+          "disturbs": [
+            "organizational_level"
+          ]
+        }
+      ]
+    },
+    "label_decomposition_family": {
+      "purpose": "Prevent computed behavior labels from being mistaken for primitive operators or regimes.",
+      "default_layer_targets": [
+        "computed_label_layer",
+        "coupling_layer"
+      ],
+      "cost": "low",
+      "risk": "low",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_LABEL_DECOMP_001",
+          "label": "computed_label_decompose",
+          "description": "Decompose a behavior label into supporting ontology axes, core operators, regime conditions, and actor roles.",
+          "invoke_when": [
+            "computed_label_collapse_high",
+            "label_used_as_cause",
+            "control_growth_healing_conflict_governance_label_present",
+            "CREM_rebase_center_is_label"
+          ],
+          "preserves": [
+            "surface_label",
+            "user_intent"
+          ],
+          "disturbs": [
+            "primitive_status_of_label"
+          ],
+          "verification": [
+            "supporting_operator_check",
+            "supporting_regime_check",
+            "alternate_label_check"
+          ]
+        },
+        {
+          "id": "CTR_LABEL_ALIAS_001",
+          "label": "label_alias_split",
+          "description": "Split same label/different structure or different label/same structure cases.",
+          "invoke_when": [
+            "same_label_different_function",
+            "different_label_same_function",
+            "alias_collision"
+          ],
+          "preserves": [
+            "observable_behavior"
+          ],
+          "disturbs": [
+            "label_identity"
+          ],
+          "verification": [
+            "operator_vector_comparison",
+            "regime_field_comparison"
+          ]
+        },
+        {
+          "id": "CTR_LABEL_RENAME_001",
+          "label": "label_replacement",
+          "description": "Replace an unsupported label with a better supported computed behavior label.",
+          "invoke_when": [
+            "label_support_low",
+            "alternate_label_support_high",
+            "regime_conditions_change_label"
+          ],
+          "preserves": [
+            "underlying_packet"
+          ],
+          "disturbs": [
+            "human_readable_label"
+          ],
+          "verification": [
+            "label_support_score",
+            "ambiguity_note_required"
+          ]
+        }
+      ]
+    },
+    "deformation_family": {
+      "purpose": "Change weights, constraints, relationships, salience, or regime axis values while preserving rough topology.",
+      "default_layer_targets": [
+        "ontology_layer",
+        "dynamical_core_layer",
+        "regime_field_layer",
+        "coupling_layer"
+      ],
+      "cost": "low_to_moderate",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_DEF_SHEAR_001",
+          "label": "shear_relationships",
+          "description": "Change relationship weights or directions to expose sensitivity.",
+          "invoke_when": [
+            "same_parts_different_behavior",
+            "relationship_weight_sensitivity"
+          ],
+          "preserves": [
+            "actors",
+            "boundary"
+          ],
+          "disturbs": [
+            "edge_weights",
+            "salience"
+          ]
+        },
+        {
+          "id": "CTR_DEF_CONSTRAINT_001",
+          "label": "constraint_deformation",
+          "description": "Alter constraint shape without removing the constraint entirely.",
+          "invoke_when": [
+            "constraint_density_high",
+            "constraint_shape_suspected",
+            "regime_constraint_load_material"
+          ],
+          "preserves": [
+            "constraint_intent"
+          ],
+          "disturbs": [
+            "constraint_mechanism",
+            "constraint_load"
+          ]
+        },
+        {
+          "id": "CTR_DEF_SALIENCE_001",
+          "label": "salience_reweighting",
+          "description": "Reweight which features dominate the reasoning path.",
+          "invoke_when": [
+            "dominant_feature_overfit",
+            "early_coherence_too_high"
+          ],
+          "preserves": [
+            "feature_set"
+          ],
+          "disturbs": [
+            "feature_priority"
+          ]
+        }
+      ]
+    },
+    "constraint_isolation_family": {
+      "purpose": "Test whether constraints are necessary, excessive, insufficient, replaceable, or regime-specific.",
+      "default_layer_targets": [
+        "regime_field_layer",
+        "coupling_layer",
+        "path_layer"
+      ],
+      "cost": "low_to_moderate",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_CON_DROP_001",
+          "label": "constraint_drop_one",
+          "description": "Remove constraints one at a time and check which removal changes branch viability.",
+          "invoke_when": [
+            "overconstrained_problem",
+            "binding_constraint_unknown",
+            "no_candidate_system_works"
+          ],
+          "preserves": [
+            "user_goal",
+            "remaining_constraints"
+          ],
+          "disturbs": [
+            "single_constraint"
+          ]
+        },
+        {
+          "id": "CTR_CON_TIGHTEN_001",
+          "label": "constraint_tighten_one",
+          "description": "Tighten or add constraints one at a time to find which addition breaks a candidate system.",
+          "invoke_when": [
+            "candidate_systems_survive_too_easily",
+            "verification_need_high",
+            "falsifier_generation_needed"
+          ],
+          "preserves": [
+            "candidate_system"
+          ],
+          "disturbs": [
+            "constraint_strictness"
+          ]
+        },
+        {
+          "id": "CTR_CON_SUB_001",
+          "label": "constraint_substitution",
+          "description": "Replace one constraint with a structurally different one that serves the same purpose.",
+          "invoke_when": [
+            "constraint_intent_valid_but_mechanism_wrong",
+            "policy_or_design_tradeoff"
+          ],
+          "preserves": [
+            "constraint_purpose"
+          ],
+          "disturbs": [
+            "constraint_form"
+          ]
+        }
+      ]
+    },
+    "regime_transform_family": {
+      "purpose": "Transform, split, compare, or rebind regime field conditions.",
+      "default_layer_targets": [
+        "regime_field_layer",
+        "coupling_layer",
+        "relationship_layer"
+      ],
+      "cost": "moderate",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_REG_SHIFT_001",
+          "label": "regime_shift",
+          "description": "Move the analysis from one operating regime to another while preserving ontology and core operators.",
+          "invoke_when": [
+            "same_operator_different_regime_suspected",
+            "same_behavior_changes_under_context",
+            "regime_conflict_score_high"
+          ],
+          "preserves": [
+            "ontology_profile",
+            "dynamical_core_vector"
+          ],
+          "disturbs": [
+            "regime_field"
+          ],
+          "verification": [
+            "label_change_check",
+            "return_to_original_regime_check"
+          ]
+        },
+        {
+          "id": "CTR_REG_BIFURCATE_001",
+          "label": "regime_bifurcation",
+          "description": "Split one apparent system into two or more regimes with different constraints or phases.",
+          "invoke_when": [
+            "mixed_regime",
+            "same_label_different_dynamics",
+            "temporal_regime_conflict"
+          ],
+          "preserves": [
+            "observed_parts",
+            "prompt_boundary"
+          ],
+          "disturbs": [
+            "single_regime_assumption"
+          ],
+          "verification": [
+            "phase_boundary_check",
+            "actor_regime_binding_check"
+          ]
+        },
+        {
+          "id": "CTR_REG_RELAX_001",
+          "label": "regime_relaxation",
+          "description": "Loosen a regime constraint to see whether a candidate branch becomes viable.",
+          "invoke_when": [
+            "overconstrained_regime",
+            "constraint_load_high",
+            "trust_repair_blocked_by_constraint"
+          ],
+          "preserves": [
+            "operator_vector",
+            "goal"
+          ],
+          "disturbs": [
+            "constraint_load",
+            "boundary_condition"
+          ],
+          "verification": [
+            "safety_or_integrity_check"
+          ]
+        },
+        {
+          "id": "CTR_REG_TIGHTEN_001",
+          "label": "regime_tightening",
+          "description": "Increase constraint or verification load to test branch fragility.",
+          "invoke_when": [
+            "candidate_too_easy",
+            "need_falsifier",
+            "high_stakes_regime"
+          ],
+          "preserves": [
+            "candidate_claim"
+          ],
+          "disturbs": [
+            "constraint_load",
+            "verification_need"
+          ],
+          "verification": [
+            "falsifier_generation",
+            "fragility_check"
+          ]
+        },
+        {
+          "id": "CTR_REG_INVERT_001",
+          "label": "regime_inversion",
+          "description": "Invert a key regime axis such as trust, authority, scarcity, legitimacy, or reversibility.",
+          "invoke_when": [
+            "regime_axis_hidden_assumption",
+            "inverse_regime_may_change_label",
+            "AB5_like_regime_probe_needed"
+          ],
+          "preserves": [
+            "operator_vector",
+            "ontology_profile"
+          ],
+          "disturbs": [
+            "selected_regime_axis"
+          ],
+          "verification": [
+            "contrastive_label_check",
+            "return_path_required"
+          ]
+        },
+        {
+          "id": "CTR_REG_ASYM_001",
+          "label": "regime_asymmetry_probe",
+          "description": "Check whether different parties occupy different regimes within the same system.",
+          "invoke_when": [
+            "party_asymmetry_suspected",
+            "false_harmony_suspicion",
+            "CREM_relationship_prompt"
+          ],
+          "preserves": [
+            "party_distinctions"
+          ],
+          "disturbs": [
+            "shared_regime_assumption"
+          ],
+          "verification": [
+            "party_regime_map_required"
+          ]
+        }
+      ]
+    },
+    "dimensional_family": {
+      "purpose": "Project, lift, split, or shift boundaries when the object is represented in the wrong dimensional basis.",
+      "default_layer_targets": [
+        "ontology_layer",
+        "regime_field_layer",
+        "relationship_layer"
+      ],
+      "cost": "moderate",
+      "risk": "moderate_to_high",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_DIM_PROJECT_001",
+          "label": "projection",
+          "description": "Reduce a higher-dimensional structure to a simpler lower-dimensional view.",
+          "invoke_when": [
+            "too_many_interacting_variables",
+            "need_simplified_view"
+          ],
+          "preserves": [
+            "dominant_relation"
+          ],
+          "disturbs": [
+            "detail",
+            "secondary_axes"
+          ]
+        },
+        {
+          "id": "CTR_DIM_LIFT_001",
+          "label": "dimensional_lift",
+          "description": "Add a missing dimension to make contradictions separable.",
+          "invoke_when": [
+            "contradiction_persists",
+            "latent_axis_suspected",
+            "two_views_both_valid"
+          ],
+          "preserves": [
+            "conflicting_observations"
+          ],
+          "disturbs": [
+            "dimensional_basis"
+          ]
+        },
+        {
+          "id": "CTR_DIM_BOUNDARY_001",
+          "label": "boundary_shift",
+          "description": "Move the system boundary to include or exclude different causal or regime elements.",
+          "invoke_when": [
+            "wrong_boundary_suspected",
+            "externality_or_hidden_context",
+            "system_scope_ambiguity"
+          ],
+          "preserves": [
+            "user_goal",
+            "observed_anomaly"
+          ],
+          "disturbs": [
+            "system_boundary"
+          ]
+        },
+        {
+          "id": "CTR_DIM_BIFURCATE_001",
+          "label": "system_bifurcation",
+          "description": "Split one apparent system into two or more systems with different operators or regimes.",
+          "invoke_when": [
+            "mixed_regime",
+            "conflated_actor_classes",
+            "same_label_different_dynamics"
+          ],
+          "preserves": [
+            "observed_parts"
+          ],
+          "disturbs": [
+            "system_unity"
+          ]
+        }
+      ]
+    },
+    "temporal_phase_family": {
+      "purpose": "Separate system behavior across phases, transitions, lags, and boundary conditions.",
+      "default_layer_targets": [
+        "regime_field_layer",
+        "path_layer",
+        "dynamical_core_layer"
+      ],
+      "cost": "moderate",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_TEMP_PHASE_DECOMP_001",
+          "label": "phase_decompose",
+          "description": "Divide the timeline into distinct phases or regimes and analyze each separately.",
+          "invoke_when": [
+            "temporal_regime_conflict",
+            "before_after_logic",
+            "history_matters",
+            "system_behavior_changes_over_time"
+          ],
+          "preserves": [
+            "timeline",
+            "phase_order"
+          ],
+          "disturbs": [
+            "static_model_assumption"
+          ]
+        },
+        {
+          "id": "CTR_TEMP_BOUNDARY_PROP_001",
+          "label": "boundary_condition_propagation",
+          "description": "Solve each temporal phase and check consistency at phase boundaries.",
+          "invoke_when": [
+            "transition_state_matters",
+            "initial_or_terminal_conditions_drive_result"
+          ],
+          "preserves": [
+            "phase_outputs"
+          ],
+          "disturbs": [
+            "global_single_solution"
+          ]
+        },
+        {
+          "id": "CTR_TEMP_LAG_001",
+          "label": "lag_and_feedback_delay_probe",
+          "description": "Test whether contradiction comes from delay, hysteresis, or asynchronous feedback.",
+          "invoke_when": [
+            "feedback_delay",
+            "hysteresis",
+            "lagged_effect_suspected"
+          ],
+          "preserves": [
+            "causal_candidates"
+          ],
+          "disturbs": [
+            "simultaneity_assumption"
+          ]
+        }
+      ]
+    },
+    "counterfactual_intervention_family": {
+      "purpose": "Break observational dependency chains to test causal structure.",
+      "default_layer_targets": [
+        "ontology_layer",
+        "dynamical_core_layer",
+        "regime_field_layer",
+        "path_layer"
+      ],
+      "cost": "moderate_to_high",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_CAUS_DO_001",
+          "label": "do_intervention",
+          "description": "Set a variable to a value regardless of its normal causes and inspect downstream consequences.",
+          "invoke_when": [
+            "causal_uncertainty",
+            "correlation_vs_causation",
+            "mechanism_dispute"
+          ],
+          "preserves": [
+            "downstream_observables"
+          ],
+          "disturbs": [
+            "natural_upstream_causes"
+          ]
+        },
+        {
+          "id": "CTR_CAUS_MEDIATE_001",
+          "label": "mediator_cut",
+          "description": "Remove or isolate a mediator to test whether the causal chain depends on it.",
+          "invoke_when": [
+            "hidden_mediator_suspected",
+            "dependency_chain_uncertain"
+          ],
+          "preserves": [
+            "source_and_outcome"
+          ],
+          "disturbs": [
+            "intermediate_link"
+          ]
+        },
+        {
+          "id": "CTR_CAUS_REGIME_DO_001",
+          "label": "regime_do_intervention",
+          "description": "Counterfactually set a regime condition such as trust, scarcity, legitimacy, or constraint load and inspect label/branch changes.",
+          "invoke_when": [
+            "regime_causality_uncertain",
+            "same_operator_different_regime",
+            "regime_conflict_rebase_needed"
+          ],
+          "preserves": [
+            "ontology_profile",
+            "operator_vector"
+          ],
+          "disturbs": [
+            "selected_regime_axis"
+          ],
+          "verification": [
+            "behavior_label_delta",
+            "branch_viability_delta"
+          ]
+        }
+      ]
+    },
+    "negation_falsifier_family": {
+      "purpose": "Generate contradiction, falsifier, absence, or negative-space tests.",
+      "default_layer_targets": [
+        "computed_label_layer",
+        "relationship_layer",
+        "path_layer"
+      ],
+      "cost": "moderate",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_NEG_FALSIFY_001",
+          "label": "falsifier_search",
+          "description": "Find what would make a candidate claim, label, or branch false.",
+          "invoke_when": [
+            "verification_need_high",
+            "branch_confidence_suspicious",
+            "label_support_unclear"
+          ],
+          "preserves": [
+            "candidate_claim"
+          ],
+          "disturbs": [
+            "assumed_truth"
+          ]
+        },
+        {
+          "id": "CTR_NEG_ABSENCE_001",
+          "label": "absence_probe",
+          "description": "Ask what should be present if the claim were true, but is absent.",
+          "invoke_when": [
+            "missing_evidence",
+            "silent_failure",
+            "unexplained_gap"
+          ],
+          "preserves": [
+            "claim_structure"
+          ],
+          "disturbs": [
+            "evidence_expectation"
+          ]
+        },
+        {
+          "id": "CTR_NEG_LABEL_001",
+          "label": "label_falsifier",
+          "description": "Test whether a computed label is unsupported by its operator and regime packet.",
+          "invoke_when": [
+            "computed_label_collapse_high",
+            "label_support_low",
+            "DARE_label_audit_requested"
+          ],
+          "preserves": [
+            "ontology_operator_regime_packet"
+          ],
+          "disturbs": [
+            "behavior_label"
+          ],
+          "verification": [
+            "supporting_core_operator_absence",
+            "supporting_regime_condition_absence"
+          ]
+        }
+      ]
+    },
+    "topology_family": {
+      "purpose": "Change relationship topology, graph boundary, or node-edge interpretation.",
+      "default_layer_targets": [
+        "ontology_layer",
+        "coupling_layer",
+        "relationship_layer"
+      ],
+      "cost": "moderate_to_high",
+      "risk": "moderate_to_high",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_TOP_REWIRE_001",
+          "label": "edge_rewire",
+          "description": "Change which actors, constraints, operators, or regimes are connected.",
+          "invoke_when": [
+            "wrong_relationship_suspected",
+            "network_effects_material",
+            "party_graph_needs_rebase"
+          ],
+          "preserves": [
+            "node_set"
+          ],
+          "disturbs": [
+            "edge_set"
+          ]
+        },
+        {
+          "id": "CTR_TOP_HYPEREDGE_001",
+          "label": "hyperedge_lift",
+          "description": "Replace pairwise edges with group-level dependency or conflict hyperedges.",
+          "invoke_when": [
+            "n_party_system",
+            "dyadic_analysis_insufficient",
+            "shared_dependency_suspected"
+          ],
+          "preserves": [
+            "party_set"
+          ],
+          "disturbs": [
+            "edge_arity"
+          ]
+        },
+        {
+          "id": "CTR_TOP_BASIN_001",
+          "label": "attractor_basin_probe",
+          "description": "Identify attractor basin, local stability, escape path, or basin boundary.",
+          "invoke_when": [
+            "repeated_looping",
+            "stable_failure_mode",
+            "escape_needed"
+          ],
+          "preserves": [
+            "system_behavior"
+          ],
+          "disturbs": [
+            "state_space_view"
+          ]
+        }
+      ]
+    },
+    "dynamical_core_family": {
+      "purpose": "Transform primitive operator vectors and sequences.",
+      "default_layer_targets": [
+        "dynamical_core_layer",
+        "path_layer",
+        "coupling_layer"
+      ],
+      "cost": "moderate",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_DYN_OPERATOR_SWAP_001",
+          "label": "operator_swap",
+          "description": "Replace one active core operator with another to test whether behavior changes.",
+          "invoke_when": [
+            "operator_gap_suspicion",
+            "invalid_operator_regime_pairing",
+            "alternative_action_possible"
+          ],
+          "preserves": [
+            "ontology_profile",
+            "regime_field"
+          ],
+          "disturbs": [
+            "operator_vector"
+          ]
+        },
+        {
+          "id": "CTR_DYN_OPERATOR_REWEIGHT_001",
+          "label": "operator_reweight",
+          "description": "Change weights across the dynamical core vector.",
+          "invoke_when": [
+            "operator_salience_unclear",
+            "same_operators_different_behavior",
+            "branch_sensitivity_needed"
+          ],
+          "preserves": [
+            "operator_set"
+          ],
+          "disturbs": [
+            "operator_weights"
+          ]
+        },
+        {
+          "id": "CTR_DYN_SEQUENCE_001",
+          "label": "operator_sequence_reorder",
+          "description": "Reorder operator sequence such as detect→interpret→select versus select→interpret.",
+          "invoke_when": [
+            "causal_order_sensitivity",
+            "execution_order_sensitivity",
+            "CEC_needed"
+          ],
+          "preserves": [
+            "operator_set"
+          ],
+          "disturbs": [
+            "operator_order"
+          ],
+          "verification": [
+            "CEC_path_validation"
+          ]
+        },
+        {
+          "id": "CTR_DYN_SHARED_OP_001",
+          "label": "shared_operator_probe",
+          "description": "Check whether apparently opposed parties share the same core operator under different regimes.",
+          "invoke_when": [
+            "CREM_prompt",
+            "same_operator_different_regime_suspected",
+            "regime_conflict_score_high"
+          ],
+          "preserves": [
+            "party_distinction"
+          ],
+          "disturbs": [
+            "assumed_operator_conflict"
+          ]
+        }
+      ]
+    },
+    "coupling_family": {
+      "purpose": "Transform actor-role, operator-carrier, regime-carrier, or party-coupling assignments.",
+      "default_layer_targets": [
+        "coupling_layer",
+        "relationship_layer"
+      ],
+      "cost": "moderate",
+      "risk": "moderate_to_high",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_COUPLE_REBIND_001",
+          "label": "actor_role_rebind",
+          "description": "Reassign actor roles when source, target, gatekeeper, selector, or stabilizer role is ambiguous.",
+          "invoke_when": [
+            "role_non_uniqueness",
+            "actor_substitutability",
+            "misbinding_suspicion"
+          ],
+          "preserves": [
+            "actors"
+          ],
+          "disturbs": [
+            "roles"
+          ]
+        },
+        {
+          "id": "CTR_COUPLE_REGIME_CARRIER_001",
+          "label": "regime_carrier_rebind",
+          "description": "Determine whether regime belongs to actor, relationship, institution, environment, or temporal phase.",
+          "invoke_when": [
+            "regime_ambiguity_high",
+            "wrong_regime_carrier_suspected",
+            "party_asymmetry_suspected"
+          ],
+          "preserves": [
+            "regime_axes"
+          ],
+          "disturbs": [
+            "regime_binding_target"
+          ]
+        },
+        {
+          "id": "CTR_COUPLE_ALT_001",
+          "label": "alternate_coupling_emit",
+          "description": "Emit alternate couplings rather than forcing a single clean binding.",
+          "invoke_when": [
+            "binding_instability",
+            "top_branches_tie",
+            "DARE_edge_probe_requested"
+          ],
+          "preserves": [
+            "candidate_set"
+          ],
+          "disturbs": [
+            "single_binding_assumption"
+          ]
+        }
+      ]
+    },
+    "relationship_rebase_family": {
+      "purpose": "Route and specify relationship, conflict, alignment, trust, and coalition transforms for CREM v1.3.",
+      "default_layer_targets": [
+        "relationship_layer"
+      ],
+      "cost": "moderate_to_high",
+      "risk": "moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_REL_OPERATOR_CONFLICT_001",
+          "label": "operator_conflict_rebase",
+          "description": "Route to CREM to rebase around a conflict-generating core operator invariant.",
+          "invoke_when": [
+            "operator_conflict_score_high",
+            "opposing_core_operator_pairs_material"
+          ],
+          "preserves": [
+            "party_distinction",
+            "opening_conflict"
+          ],
+          "disturbs": [
+            "conflict_center"
+          ]
+        },
+        {
+          "id": "CTR_REL_REGIME_CONFLICT_001",
+          "label": "regime_conflict_rebase",
+          "description": "Route to CREM to rebase around regime-level conflict, especially same-operator/different-regime cases.",
+          "invoke_when": [
+            "regime_conflict_score_high",
+            "same_operator_different_regime_present"
+          ],
+          "preserves": [
+            "party_distinction",
+            "shared_operator_if_present"
+          ],
+          "disturbs": [
+            "regime_center"
+          ]
+        },
+        {
+          "id": "CTR_REL_ALIGNMENT_001",
+          "label": "alignment_rebase",
+          "description": "Route to CREM to strengthen shared or complementary operator/regime invariants.",
+          "invoke_when": [
+            "relationship_strengthening_intent",
+            "alignment_score_high",
+            "trust_repair_or_coalition_goal"
+          ],
+          "preserves": [
+            "party_distinction"
+          ],
+          "disturbs": [
+            "relationship_center"
+          ]
+        },
+        {
+          "id": "CTR_REL_TENSION_001",
+          "label": "productive_tension_preserve",
+          "description": "Route to CREM to preserve necessary conflict rather than resolving it falsely.",
+          "invoke_when": [
+            "false_harmony_risk",
+            "productive_tension_material",
+            "conflict_contains_falsifier_value"
+          ],
+          "preserves": [
+            "necessary_difference"
+          ],
+          "disturbs": [
+            "premature_resolution"
+          ]
+        }
+      ]
+    },
+    "adversarial_verification_family": {
+      "purpose": "Stress-test candidate systems, labels, regimes, and rebase plans.",
+      "default_layer_targets": [
+        "computed_label_layer",
+        "relationship_layer",
+        "path_layer",
+        "regime_field_layer"
+      ],
+      "cost": "moderate_to_high",
+      "risk": "low_to_moderate",
+      "requires_return_path": true,
+      "operators": [
+        {
+          "id": "CTR_ADV_REDTEAM_001",
+          "label": "red_team_branch",
+          "description": "Construct the strongest objection or failure branch.",
+          "invoke_when": [
+            "high_stakes",
+            "fragility_score_high",
+            "confidence_too_clean"
+          ],
+          "preserves": [
+            "candidate_system"
+          ],
+          "disturbs": [
+            "confidence"
+          ]
+        },
+        {
+          "id": "CTR_ADV_FALSE_HARMONY_001",
+          "label": "false_harmony_attack",
+          "description": "Attack relationship-strengthening plans for coercion, party erasure, or compliance theater.",
+          "invoke_when": [
+            "CREM_alignment_rebase",
+            "trust_low",
+            "forced_alignment_suspicion"
+          ],
+          "preserves": [
+            "relationship_goal"
+          ],
+          "disturbs": [
+            "surface_agreement"
+          ]
+        },
+        {
+          "id": "CTR_ADV_REGIME_STRESS_001",
+          "label": "regime_stress_test",
+          "description": "Perturb key regime axes to test whether the candidate branch remains viable.",
+          "invoke_when": [
+            "regime_instability",
+            "same_operator_different_regime",
+            "branch_regime_dependent"
+          ],
+          "preserves": [
+            "operator_vector"
+          ],
+          "disturbs": [
+            "regime_axis_values"
+          ]
+        }
+      ]
+    },
+    "discontinuous_reconstitution_family": {
+      "purpose": "Authorize bounded discontinuity only under DARE/IDCM supervision.",
+      "default_layer_targets": [
+        "ontology_layer",
+        "dynamical_core_layer",
+        "regime_field_layer",
+        "relationship_layer",
+        "path_layer"
+      ],
+      "cost": "high",
+      "risk": "high",
+      "requires_return_path": "deferred_but_required",
+      "operators": [
+        {
+          "id": "CTR_DISC_ANCHOR_SUSPEND_001",
+          "label": "anchor_suspension",
+          "description": "Temporarily suspend the current anchor when it appears to be the source of collapse or distortion.",
+          "invoke_when": [
+            "DARE_authorized",
+            "anchor_suspicion_critical",
+            "unknown_pressure_high"
+          ],
+          "preserves": [
+            "prompt_objective"
+          ],
+          "disturbs": [
+            "anchor_identity"
+          ],
+          "verification": [
+            "DARE_reconstitution_required"
+          ]
+        },
+        {
+          "id": "CTR_DISC_OPERATOR_INJECT_001",
+          "label": "operator_injection",
+          "description": "Introduce a missing transform family when failure pattern indicates an operator gap.",
+          "invoke_when": [
+            "DARE_authorized",
+            "operator_gap_suspicion_high",
+            "repair_failure_count_high"
+          ],
+          "preserves": [
+            "audit_trace"
+          ],
+          "disturbs": [
+            "operator_set"
+          ],
+          "verification": [
+            "operator_gap_resolved_check"
+          ]
+        },
+        {
+          "id": "CTR_DISC_RECONSTITUTE_001",
+          "label": "logic_reconstitution",
+          "description": "Rebuild a coherent path after bounded discontinuity.",
+          "invoke_when": [
+            "DARE_reconstitution_packet_available",
+            "CEC_review_needed"
+          ],
+          "preserves": [
+            "rescued_insight"
+          ],
+          "disturbs": [
+            "normal_path_assumption"
+          ],
+          "verification": [
+            "CEC_reconstitution_path_review"
+          ]
+        }
+      ]
+    }
+  },
+  "operator_selection_rules": [
+    {
+      "condition": "computed_label_collapse >= 0.45",
+      "select": [
+        "CTR_LABEL_DECOMP_001"
+      ],
+      "reason": "Decompose label before using it as a premise or rebase center."
+    },
+    {
+      "condition": "operator_regime_conflation >= 0.45",
+      "select": [
+        "CTR_REG_SHIFT_001",
+        "CTR_DYN_SHARED_OP_001"
+      ],
+      "reason": "Separate operator conflict from regime conflict."
+    },
+    {
+      "condition": "same_operator_different_regime_suspected == true",
+      "select": [
+        "CTR_REG_SHIFT_001",
+        "CTR_REL_REGIME_CONFLICT_001"
+      ],
+      "reason": "Likely CREM v1.3 regime conflict rebase."
+    },
+    {
+      "condition": "regime_conflict_score >= 0.35",
+      "select": [
+        "CTR_REL_REGIME_CONFLICT_001"
+      ],
+      "reason": "Route to CREM for regime conflict rebase."
+    },
+    {
+      "condition": "operator_conflict_score >= 0.35",
+      "select": [
+        "CTR_REL_OPERATOR_CONFLICT_001"
+      ],
+      "reason": "Route to CREM for operator conflict rebase."
+    },
+    {
+      "condition": "temporal_regime_conflict >= 0.35",
+      "select": [
+        "CTR_TEMP_PHASE_DECOMP_001",
+        "CTR_REG_BIFURCATE_001"
+      ],
+      "reason": "Separate phase/regime changes across time."
+    },
+    {
+      "condition": "false_harmony_suspicion >= 0.45",
+      "select": [
+        "CTR_ADV_FALSE_HARMONY_001",
+        "CTR_REL_TENSION_001"
+      ],
+      "reason": "Prevent relationship alignment from erasing necessary difference."
+    },
+    {
+      "condition": "regime_instability >= 0.45",
+      "select": [
+        "CTR_ADV_REGIME_STRESS_001",
+        "CTR_REG_BIFURCATE_001"
+      ],
+      "reason": "Stress-test and possibly split unstable regime assumptions."
+    }
+  ],
+  "output_schema": {
+    "ctr_packet": {
+      "schema_version": "ctr.parallax/2.1",
+      "source_refs": {
+        "anchor_ref": "string_or_null",
+        "ontology_profile_ref": "string_or_null",
+        "dynamical_core_ref": "string_or_null",
+        "regime_field_ref": "string_or_null",
+        "coupler_packet_ref": "string_or_null",
+        "crem_packet_ref": "string_or_null"
+      },
+      "transform_plan": {
+        "selected_families": [],
+        "selected_operators": [],
+        "layer_targets": [],
+        "execution_order": [],
+        "return_path_requirements": [],
+        "verification_requirements": []
+      },
+      "operator_gap_report": "object",
+      "regime_gap_report": "object",
+      "label_decomposition_request": "object_or_null",
+      "routing_hints": {
+        "to_ETE": "object",
+        "to_CREM": "object",
+        "to_CEC": "object",
+        "to_PSPP": "object",
+        "to_DARE": "object"
+      },
+      "risk_report": {
+        "transform_risk": "number",
+        "returnability_risk": "number",
+        "operator_regime_conflation_risk": "number",
+        "composite_label_collapse_risk": "number",
+        "false_harmony_risk": "number"
+      },
+      "trace": {
+        "selection_notes": [],
+        "suppressed_families": [],
+        "uncertainty_notes": []
+      }
+    }
+  },
+  "guards": {
+    "anti_label_collapse": {
+      "computed_behavior_label_is_not_primitive": true,
+      "label_decomposition_required_when_label_used_as_cause": true,
+      "supporting_operator_and_regime_conditions_required_when_ambiguous": true
+    },
+    "anti_operator_regime_conflation": {
+      "operator_conflict_and_regime_conflict_scored_separately": true,
+      "same_operator_different_regime_check_required_for_CREM": true,
+      "regime_transform_available_before_forcing_operator_transform": true
+    },
+    "anti_false_harmony": {
+      "relationship_alignment_requires_party_distinction": true,
+      "low_trust_or_coercion_blocks_clean_alignment_label": true,
+      "productive_tension_may_be_preserved": true
+    },
+    "anti_overtransform": {
+      "minimum_sufficient_first": true,
+      "do_not_execute_transform_that_will_not_change_route_branch_or_verification": true
+    },
+    "anti_unreturnable_transform": {
+      "return_path_required_for_normal_transforms": true,
+      "DARE_required_for_discontinuous_transform": true,
+      "CEC_reconstitution_required_after_DARE_discontinuity": true
+    }
+  }
+}

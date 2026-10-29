@@ -1,0 +1,374 @@
+{
+  "module_name": "Exploration and Transform Engine",
+  "short_name": "ETE",
+  "version": "v1.1.0",
+  "status": "conceptual_executable_spec",
+  "revision_kind": "split_ontology_dynamical_core_regime_execution_layer",
+  "supersedes": "ETE_ExplorationTransformEngine_v1.0",
+  "purpose": "Execute bounded exploration and transform plans produced by CTR v2.1 using the split architecture: 19D Ontologic Prism, Dynamical Prism v0.2 Reduced Core, Regime Field v0.1, Prism Coupler v1.5, CREM v1.3, KCE v2.3, and ECE v0.3.",
+  "core_doctrine": [
+    "CTR is the transform vocabulary and router; ETE is the transform executor.",
+    "Project primitive operators separately from regimes.",
+    "Decompose computed labels before using them as explanatory centers.",
+    "Prefer operator-level and regime-level projection before whole-domain metaphorical projection.",
+    "Promote candidate systems, not merely clever framings.",
+    "Preserve return paths unless DARE explicitly authorizes discontinuity.",
+    "Prune by validity, returnability, information gain, branch distinctness, and split-layer integrity.",
+    "Emit rejected-branch artifacts for DARE inspection.",
+    "When apparent dynamical conflict is same-operator/different-regime, route or hand off to CREM v1.3."
+  ],
+  "registry_refs": {
+    "KCE": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "PrismCoupler": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+    "CTR": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+    "CREM": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+    "ECE": "ECE_v0.3_optional_affect_reward_regulation",
+    "PSPP_Lite": "PSPP_v5.0_CandidateSystemComparator.json",
+    "CEC": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+    "DARE_IDCM": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json"
+  },
+  "responsibility_boundary": {
+    "owns": [
+      "exploration_orchestration",
+      "CTR_plan_execution",
+      "operator_level_projection",
+      "regime_level_projection",
+      "computed_label_decomposition_execution",
+      "split_layer_diagnostic_rotation",
+      "transform_view_generation",
+      "bundle_projection",
+      "candidate_invariant_extraction",
+      "operator_regime_mismatch_exploration",
+      "same_operator_different_regime_branch_generation",
+      "different_operator_same_regime_branch_generation",
+      "projection_validity_scoring",
+      "return_path_tracking",
+      "projection_ledger_update",
+      "candidate_system_branch_emission",
+      "rejected_branch_artifact_emission",
+      "CREM_handoff_request_when_relationship_rebase_needed"
+    ],
+    "does_not_own": [
+      "operator_registry_definition",
+      "primary_anchor_extraction",
+      "domain_axis_definition",
+      "primitive_dynamical_operator_definition",
+      "regime_axis_definition",
+      "actor_binding_final",
+      "branch_final_selection",
+      "ordered_path_validation",
+      "relationship_rebase_execution",
+      "final_answer_synthesis",
+      "external_fact_verification",
+      "durable_memory_write_execution"
+    ]
+  },
+  "placement": {
+    "pipeline_stage": "exploration_transform_execution",
+    "runs_after": [
+      "KCE_Parallax_v2.3",
+      "CDP_Parallax_v1.2",
+      "Dynamical_Prism_v0.2",
+      "Regime_Field_v0.1",
+      "Prism_Coupler_v1.5",
+      "CTR_v2.1_transform_plan_request",
+      "ECE_v0.3_dial_nudges_optional"
+    ],
+    "runs_before": [
+      "PSPP_lite_candidate_system_comparison",
+      "CREM_v1.3_when_relationship_rebase_needed",
+      "CEC_when_sequence_validity_needed",
+      "DARE_IDCM_audit",
+      "final_arbiter"
+    ],
+    "recommended_mode": "bounded_iterative_split_layer_exploration"
+  },
+  "inputs": {
+    "prompt_text": {
+      "type": "string"
+    },
+    "kce_packet": {
+      "type": "object",
+      "required": true
+    },
+    "cdp_packet": {
+      "type": "object",
+      "required": true
+    },
+    "dynamical_core_packet": {
+      "type": "object",
+      "required": true
+    },
+    "regime_field_packet": {
+      "type": "object",
+      "required": true
+    },
+    "coupler_packet": {
+      "type": "object",
+      "required": true
+    },
+    "ctr_packet": {
+      "type": "object",
+      "required": true
+    },
+    "ece_packet": {
+      "type": "object",
+      "required": false
+    },
+    "context": {
+      "type": "object",
+      "required": false
+    }
+  },
+  "stage_order": [
+    "packet_ingest_and_trace_bind",
+    "CTR_plan_read",
+    "ECE_dial_read_optional",
+    "exploration_need_assessment",
+    "local_basin_formation",
+    "split_layer_integrity_scan",
+    "escape_detection",
+    "information_gain_schedule",
+    "computed_label_decomposition_pass",
+    "operator_projection_pass",
+    "regime_projection_pass",
+    "operator_regime_mismatch_pass",
+    "split_layer_diagnostic_rotation_pass",
+    "transform_execution_pass",
+    "bundle_projection_pass",
+    "invariant_extraction",
+    "projection_validity_scoring",
+    "return_path_validation",
+    "projection_ledger_update",
+    "pruning_and_promotion",
+    "candidate_system_branch_emission",
+    "CREM_handoff_request_if_needed",
+    "rejected_branch_artifact_emit",
+    "handoff_emit"
+  ],
+  "stage_summaries": {
+    "computed_label_decomposition_pass": {
+      "purpose": "Execute CTR label-decomposition transforms so labels do not serve as primitive causes.",
+      "operators_consumed": [
+        "CTR_LABEL_DECOMP_001",
+        "CTR_LABEL_ALIAS_001",
+        "CTR_LABEL_RENAME_001",
+        "CTR_NEG_LABEL_001"
+      ],
+      "outputs": [
+        "label_decomposition_packets",
+        "label_support_scores",
+        "alternate_label_candidates"
+      ]
+    },
+    "operator_projection_pass": {
+      "purpose": "Project primitive operator motifs across selected ontologies and actors.",
+      "projection_units": [
+        "signal_detect_interpret",
+        "detect_interpret_select",
+        "constrain_gate_stabilize",
+        "explore_select_execute_encode",
+        "disrupt_stabilize_recovery",
+        "coordinate_signal_trust",
+        "anticipate_select_execute",
+        "adapt_stabilize_feedback",
+        "gate_execute_threshold"
+      ]
+    },
+    "regime_projection_pass": {
+      "purpose": "Project regime motifs across candidate systems while preserving operator vectors when possible.",
+      "projection_units": [
+        "trust_shift",
+        "legitimacy_shift",
+        "scarcity_to_abundance",
+        "crisis_to_repair",
+        "high_noise_to_low_noise",
+        "hierarchy_to_distributed_authority",
+        "reversible_to_irreversible",
+        "open_boundary_to_gated_boundary",
+        "underconstrained_to_overconstrained",
+        "stable_to_bifurcating"
+      ]
+    },
+    "operator_regime_mismatch_pass": {
+      "purpose": "Explore mismatches where a valid operator vector becomes risky or changes meaning under a regime.",
+      "mismatch_patterns": [
+        "stabilize_under_growth_regime",
+        "explore_under_emergency_regime",
+        "constrain_under_trust_repair_regime",
+        "signal_under_high_noise_regime",
+        "coordinate_under_low_trust_regime",
+        "select_under_high_uncertainty_regime",
+        "adapt_under_high_irreversibility_regime"
+      ]
+    },
+    "invariant_extraction": {
+      "target_invariant_types": [
+        "feedback_loop",
+        "cooperation_breakdown",
+        "signal_noise",
+        "phase_lock_instability",
+        "resource_competition",
+        "role_conflict",
+        "threshold_transition",
+        "redundancy_or_fragility",
+        "selection_pressure",
+        "communication_distortion",
+        "gating_misalignment",
+        "rectification_window",
+        "constraint_binding",
+        "wrong_abstraction_level",
+        "causal_mediator",
+        "temporal_phase_boundary",
+        "falsifier_condition",
+        "same_operator_different_regime",
+        "different_operator_same_regime",
+        "regime_asymmetry",
+        "computed_label_instability",
+        "operator_regime_mismatch"
+      ]
+    }
+  },
+  "candidate_branch_schema": {
+    "branch_id": "string",
+    "branch_type": [
+      "direct_branch",
+      "operator_projection_branch",
+      "regime_projection_branch",
+      "label_decomposition_branch",
+      "operator_regime_mismatch_branch",
+      "same_operator_different_regime_branch",
+      "different_operator_same_regime_branch",
+      "bundle_projection_branch",
+      "diagnostic_rotation_branch",
+      "CREM_handoff_branch",
+      "CEC_path_validation_branch",
+      "falsifier_branch"
+    ],
+    "anchor_ref_or_shift": "string_or_null",
+    "ontology_binding": {
+      "phys": 0.0,
+      "bio": 0.0,
+      "neur": 0.0,
+      "info": 0.0,
+      "math": 0.0,
+      "meta": 0.0,
+      "aes": 0.0,
+      "stor": 0.0,
+      "hum": 0.0,
+      "rhet": 0.0,
+      "eth": 0.0,
+      "exp": 0.0,
+      "econ": 0.0,
+      "pol": 0.0,
+      "geo": 0.0,
+      "mus": 0.0,
+      "nai": 0.0,
+      "phil": 0.0,
+      "style": 0.0
+    },
+    "dynamical_core_vector": {
+      "signal": 0.0,
+      "detect": 0.0,
+      "interpret": 0.0,
+      "encode": 0.0,
+      "execute": 0.0,
+      "disrupt": 0.0,
+      "coordinate": 0.0,
+      "constrain": 0.0,
+      "gate": 0.0,
+      "stabilize": 0.0,
+      "explore": 0.0,
+      "select": 0.0,
+      "adapt": 0.0,
+      "anticipate": 0.0
+    },
+    "regime_field": {
+      "scale": "string_or_null",
+      "tempo": "string_or_null",
+      "phase_state": "string_or_null",
+      "stability": "string_or_null",
+      "coupling": "string_or_null",
+      "reversibility": "string_or_null",
+      "constraint_load": "string_or_null",
+      "noise": "string_or_null",
+      "uncertainty": "string_or_null",
+      "resource_condition": "string_or_null",
+      "legitimacy": "string_or_null",
+      "trust": "string_or_null",
+      "authority_gradient": "string_or_null",
+      "adversariality": "string_or_null",
+      "commitment": "string_or_null",
+      "boundary_condition": "string_or_null",
+      "ethical_load": "string_or_null"
+    },
+    "computed_behavior_labels": [],
+    "operator_shift": "object_or_null",
+    "regime_shift": "object_or_null",
+    "coupling_shift": "object_or_null",
+    "return_path": "string_or_null",
+    "verification_requirements": [],
+    "scores": {},
+    "risk_notes": []
+  },
+  "handoff_contracts": {
+    "to_PSPP": [
+      "candidate_system_branches",
+      "projection_score_table",
+      "branch_comparison_hints",
+      "rejected_branch_artifacts"
+    ],
+    "to_CREM": [
+      "relationship_rebase_needed",
+      "same_operator_different_regime_pairs",
+      "different_operator_same_regime_pairs",
+      "operator_conflict_or_alignment_hints",
+      "regime_conflict_or_alignment_hints"
+    ],
+    "to_CEC": [
+      "ordered_path_needed",
+      "operator_sequence_paths",
+      "regime_phase_sequence_paths",
+      "dependency_sensitive_branches"
+    ],
+    "to_DARE": [
+      "rejected_branch_artifacts",
+      "pruning_loss_risk",
+      "operator_regime_conflation_unresolved",
+      "computed_label_collapse_unresolved",
+      "false_harmony_unresolved",
+      "unreturnable_branch_artifacts"
+    ],
+    "to_Arbiter": [
+      "promoted_invariants",
+      "selected_candidate_systems_for_comparison",
+      "projection_ledger",
+      "caveats"
+    ]
+  },
+  "guards": {
+    "split_layer_integrity_guard": {
+      "computed_labels_not_primitive": true,
+      "regime_terms_not_core_operators": true,
+      "ontology_not_action_without_coupler_binding": true,
+      "same_operator_different_regime_check_required_when_CREM_like": true
+    },
+    "return_path_guard": {
+      "normal_transforms_require_return_path": true,
+      "DARE_required_for_unreturnable_discontinuity": true,
+      "CEC_review_required_for_order_sensitive_reconstitution": true
+    },
+    "anti_decorative_metaphor_guard": {
+      "metaphor_must_improve_candidate_system_or_uncertainty": true,
+      "decorative_projection_pruned": true
+    },
+    "ECE_safety_guard": {
+      "honor_safety_gate_strength": true,
+      "do_not_promote_manipulative_attunement_branch": true,
+      "false_harmony_unresolved_blocks_relationship_branch": true
+    }
+  }
+}

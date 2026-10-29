@@ -1,0 +1,175 @@
+{
+  "schema_version": "kce.parallax/2.3",
+  "source": {
+    "prompt_text": "string",
+    "retrieved_context_refs": [],
+    "conversation_context_ref": "string_or_null"
+  },
+  "surface_parse": {
+    "entities": [],
+    "relations": [],
+    "tensions": [],
+    "intent_markers": [],
+    "constraints": [],
+    "labels": [],
+    "domain_hints": []
+  },
+  "alias_report": {
+    "alias_collisions": [],
+    "protected_labels": [],
+    "same_label_different_function": [],
+    "different_label_same_function": [],
+    "notes": []
+  },
+  "anomaly_markers": [],
+  "structural_statement": "string_or_null",
+  "relation_patterns": [],
+  "sentence_structure_coupling": {
+    "sentence_structure": {
+      "subject": "literal_source_subject_or_actor",
+      "predicate": "literal_source_motion_or_relation",
+      "object": "literal_source_object_or_target_if_present",
+      "surface_cause": "literal_surface_cause_if_present",
+      "deeper_cause": "literal_deeper_cause_if_present",
+      "condition": "literal_condition_if_present",
+      "coupling_relation": "not_x_but_y|cause|condition|tradeoff|inversion|actor_perspective_shift|none"
+    },
+    "generalized_sentence_structure": {
+      "subject": "generalized_ontology_slot",
+      "predicate": "generalized_dynamical_slot",
+      "object": "generalized_target_or_object_if_present",
+      "surface_cause": "generalized_surface_cause_if_present",
+      "deeper_cause": "generalized_deeper_cause_if_present",
+      "condition": "generalized_condition_if_present",
+      "coupling_relation": "preserved_generalized_relation"
+    },
+    "kce_slot_map": {
+      "ontology_slots": {},
+      "dynamical_slots": {},
+      "regime_slots": {},
+      "destination_regime": {},
+      "vector_direction": "source_regime -> destination_regime",
+      "coupling_relation": "preserved_relation"
+    },
+    "destination_regime": {
+      "source_state": "starting_regime",
+      "target_state": "destination_regime",
+      "vector_direction": "compact_direction_label"
+    },
+    "materialization_rule": "Curator bounded rewordings may be printed deterministically when coherence bounds do not fail and coupling_relation is explicit; do not loop back to KCE or the excavator for routine rewording.",
+    "memory_worthiness_rule": "coupling_relation is mandatory for durable sentence-vector seeds; coupling_relation=none marks a local summary that should be deferred or suppressed before writer handoff."
+  },
+  "functional_roles": [],
+  "split_layer_seed_packet": {
+    "ontology_seed_candidates": [],
+    "dynamical_core_seed_candidates": [],
+    "regime_field_seed_candidates": {
+      "scale": [],
+      "tempo": [],
+      "phase_state": [],
+      "stability": [],
+      "coupling": [],
+      "reversibility": [],
+      "constraint_load": [],
+      "noise": [],
+      "uncertainty": [],
+      "resource_condition": [],
+      "legitimacy": [],
+      "trust": [],
+      "authority_gradient": [],
+      "adversariality": [],
+      "commitment": [],
+      "boundary_condition": [],
+      "ethical_load": []
+    },
+    "computed_label_candidates": [],
+    "actor_role_seed_candidates": [],
+    "party_frame_hints": []
+  },
+  "anchor_candidates": [
+    {
+      "anchor_id": "string",
+      "anchor_statement": "string",
+      "anchor_type": "direct|structural|anomaly_preserving|level_shift|constraint_suspicion|regime_split|label_decomposition|relationship_rebase|path_dependency",
+      "lock_status": "provisional|contested|lock_candidate",
+      "confidence": 0.0,
+      "risk": 0.0,
+      "ontology_seed_candidates": [],
+      "dynamical_core_seed_candidates": [],
+      "regime_field_seed_candidates": {},
+      "computed_label_candidates": [],
+      "actor_role_seed_candidates": [],
+      "relation_patterns": [],
+      "preserved_anomaly_markers": [],
+      "compression_telemetry": {},
+      "transform_seed_packet_ref": "string_or_null",
+      "dare_signal_ref": "string_or_null"
+    }
+  ],
+  "selected_working_anchor": {
+    "anchor_id": "string_or_null",
+    "selection_reason": "string_or_null",
+    "lock_status": "provisional|contested|lock_candidate|null",
+    "lock_allowed": false
+  },
+  "compression_telemetry": {
+    "semantic_loss_score": 0.0,
+    "anomaly_loss_score": 0.0,
+    "actor_role_loss_score": 0.0,
+    "constraint_loss_score": 0.0,
+    "scale_loss_score": 0.0,
+    "causal_loss_score": 0.0,
+    "regime_loss_score": 0.0,
+    "operator_loss_score": 0.0,
+    "computed_label_loss_score": 0.0,
+    "metaphor_loss_score": 0.0,
+    "overall_compression_risk": 0.0
+  },
+  "operator_regime_conflation_report": {
+    "conflation_detected": false,
+    "score": 0.0,
+    "patterns": [],
+    "notes": []
+  },
+  "computed_label_collapse_report": {
+    "collapse_detected": false,
+    "score": 0.0,
+    "labels_requiring_decomposition": [],
+    "notes": []
+  },
+  "regime_gap_report": {
+    "regime_gap_suspicion": 0.0,
+    "missing_or_underdefined_axes": [],
+    "alternate_regime_hints": [],
+    "notes": []
+  },
+  "transform_seed_packet": {
+    "candidate_transform_families": [],
+    "candidate_transform_operators": [],
+    "return_path_requirements": [],
+    "verification_requirements": []
+  },
+  "ece_hint_packet": {
+    "affective_valence_hint": "negative|neutral|positive|mixed|null",
+    "urgency_hint": "low|moderate|high|critical|null",
+    "relationship_safety_hint": [],
+    "regime_affect_hint": []
+  },
+  "dare_signal_packet": {
+    "anchor_lock_risk": 0.0,
+    "compression_risk": 0.0,
+    "operator_regime_conflation": 0.0,
+    "computed_label_collapse": 0.0,
+    "regime_gap_suspicion": 0.0,
+    "domain_lock_risk": 0.0,
+    "party_erasure_suspicion": 0.0,
+    "false_harmony_suspicion": 0.0,
+    "DARE_review_recommended": false
+  },
+  "provisional_memory_candidates": [],
+  "trace": {
+    "stage_notes": [],
+    "uncertainty_notes": [],
+    "suppressed_candidates": []
+  }
+}

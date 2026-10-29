@@ -1,0 +1,606 @@
+{
+  "module_name": "Cognitive Tools Probe Profiles",
+  "short_name": "CT_PROBES",
+  "version": "v1.0.0",
+  "status": "routing_stable",
+  "purpose": "Provide cheap, DARE-auditable probe-mode profiles for cognitive-tools modules so an outer loop or agent can decide whether to suppress, use lite output, escalate to a full module, or switch strategy without duplicating full engine specs.",
+  "core_rule": "Probe mode may classify, route, suppress, and emit compact handoff hints. Every lite decision must leave an audit stub for DARE/IDCM. Full mode is required for durable artifacts, final synthesis, deep validation, or memory-worthy state vectors.",
+  "decision_values": [
+    "suppress",
+    "emit_probe_only",
+    "escalate_full",
+    "switch_strategy"
+  ],
+  "probe_packet_schema": {
+    "probe_id": "string",
+    "module": "string",
+    "source_spec": "string",
+    "decision": "suppress | emit_probe_only | escalate_full | switch_strategy",
+    "confidence": "number_0_to_1",
+    "expected_gain": "number_0_to_1",
+    "estimated_cost": "low | medium | high",
+    "required_inputs_present": "boolean",
+    "minimal_outputs": "object",
+    "kept_fields": "array",
+    "suppressed_fields": "array",
+    "escalation_reasons": "array",
+    "suppression_reasons": "array",
+    "suppression_rationale": "string",
+    "escalation_rationale": "string",
+    "dare_watchpoints": "array",
+    "pruned_or_deferred_artifacts": "array",
+    "audit_stub": {
+      "decision_basis": "string",
+      "confidence_basis": "string",
+      "risk_if_suppressed": "low | medium | high",
+      "recheck_trigger": "string",
+      "outer_loop_review_hint": "string"
+    },
+    "handoff_target": "router | regime | coupler | ctr | ete | pspp | crem | cec | dare_idcm | memory_curator | final_arbiter"
+  },
+  "lite_audit_contract": {
+    "purpose": "Make lite/probe decisions inspectable by DARE/IDCM without requiring full module execution.",
+    "required_fields": [
+      "decision",
+      "confidence",
+      "expected_gain",
+      "kept_fields",
+      "suppressed_fields",
+      "suppression_reasons",
+      "escalation_reasons",
+      "dare_watchpoints",
+      "audit_stub"
+    ],
+    "suppression_is_valid_only_when": [
+      "risk_if_suppressed_is_low_or_named",
+      "recheck_trigger_is_explicit",
+      "minimal_outputs_preserve_required_handoff_fields",
+      "suppression_rationale_names_why_full_execution_would_not_change_route_or_branch_choice"
+    ],
+    "dare_review_required_when": [
+      "risk_if_suppressed_is_high",
+      "suppressed_fields_include_anchor_or_return_path",
+      "operator_gap_or_pruning_loss_is_suspected",
+      "memory_artifact_would_depend_on_suppressed_details",
+      "false_harmony_or_forced_alignment_is_possible"
+    ],
+    "module_watchpoint_defaults": {
+      "KCE": [
+        "anchor_lock_in",
+        "compression_loss",
+        "operator_gap_seed_loss"
+      ],
+      "CDP": [
+        "domain_lock",
+        "overbreadth",
+        "underbreadth",
+        "axis_collision"
+      ],
+      "RegimeProfile": [
+        "illegal_dynamic_allowed",
+        "required_dynamic_suppressed",
+        "threshold_band_mismatch",
+        "low_regime_confidence"
+      ],
+      "DynamicalPrism": [
+        "operator_gap",
+        "regime_instability",
+        "threshold_mismatch"
+      ],
+      "CouplingPrism": [
+        "actor_binding_ambiguity",
+        "false_harmony",
+        "relationship_edge_loss"
+      ],
+      "CTR": [
+        "missing_transform_operator",
+        "unreturnable_transform",
+        "overcost_transform"
+      ],
+      "ETE": [
+        "ornamental_projection",
+        "rejected_branch_loss",
+        "return_path_break"
+      ],
+      "CREM": [
+        "party_erasure",
+        "forced_alignment",
+        "dependency_invariant_loss"
+      ],
+      "PSPP": [
+        "premature_pruning",
+        "weak_branch_distinction",
+        "selection_margin_low"
+      ],
+      "CEC": [
+        "hidden_step",
+        "dependency_order_gap",
+        "path_rigidity_overconstraint"
+      ],
+      "DARE_IDCM": [
+        "audit_overuse",
+        "primary_solver_drift",
+        "unbounded_reconstitution"
+      ]
+    }
+  },
+  "shared_thresholds": {
+    "escalate_full_when_expected_gain_gte": 0.62,
+    "suppress_when_expected_gain_lte": 0.25,
+    "emit_probe_only_when_confidence_gte": 0.70,
+    "switch_strategy_when_required_inputs_missing": true
+  },
+  "module_probes": {
+    "KCE": {
+      "source_spec": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+      "probe_name": "KCE-probe::anchor_relevance",
+      "purpose": "Decide whether an invariant anchor is needed and extract a compact anchor candidate.",
+      "keep_fields": [
+        "anchor_candidate",
+        "prompt_class",
+        "transform_seed",
+        "anchor_confidence"
+      ],
+      "escalate_when": [
+        "anchor_confidence_lt_0.55",
+        "multiple_anchor_candidates_compete",
+        "transform_seed_changes_route_choice",
+        "mission_boundary_depends_on_anchor"
+      ],
+      "suppress_when": [
+        "prompt_is_direct_fact",
+        "anchor_is_explicit_and_uncontested"
+      ],
+      "minimal_outputs": {
+        "anchor": "compact invariant or null",
+        "prompt_class": "direct | structural | conflict | transfer | verification",
+        "route_hint": "direct | system_construction | branch_compare | conflict_rebase | path_tighten"
+      }
+    },
+    "CDP": {
+      "source_spec": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+      "probe_name": "CDP-probe::domain_axis_fit",
+      "purpose": "Estimate active domain axes without full prism expansion.",
+      "keep_fields": [
+        "active_axes",
+        "axis_confidence",
+        "domain_collision_risk"
+      ],
+      "escalate_when": [
+        "axis_confidence_lt_0.55",
+        "domain_collision_risk_gte_0.45",
+        "cross_domain_transfer_depends_on_axis_choice",
+        "memory_basin_requires_precise_domain_signature"
+      ],
+      "suppress_when": [
+        "task_domain_is_explicit_and_low_risk",
+        "module_only_task_does_not_need_domain_projection"
+      ],
+      "minimal_outputs": {
+        "prism_profile": {
+          "active_axes": "array",
+          "energy_alloc": "compact_object",
+          "collision_risks": "array"
+        }
+      }
+    },
+    "DynamicalPrism": {
+      "source_spec": "Dynamical_Prism_v1.2_ReducedCore.json",
+      "probe_name": "Dynamical-probe::operator_cluster_fit",
+      "purpose": "Estimate active operator clusters under the active regime profile and determine whether full dynamical projection is needed.",
+      "keep_fields": [
+        "active_operator_clusters",
+        "operator_vector_top_k",
+        "regime_hint",
+        "operator_conflict_risk"
+      ],
+      "escalate_when": [
+        "operator_conflict_risk_gte_0.45",
+        "regime_choice_changes_branch_selection",
+        "paradox_or_instability_present",
+        "runtime_probe_may_change_coupling"
+      ],
+      "suppress_when": [
+        "task_is_static_taxonomy",
+        "operator_sequence_is_explicit_and_low_risk"
+      ],
+      "minimal_outputs": {
+        "dynamical_profile": {
+          "active_operator_clusters": "array",
+          "operator_vector": "top_k_object",
+          "computed_behavior_labels": "computed_not_primitive_array",
+          "meta_transform_pressure": "array"
+        }
+      }
+    },
+    "RegimeProfile": {
+      "source_spec": "CognitiveTools_RegimeProfile_v1.json",
+      "probe_name": "Regime-probe::constraint_surface_fit",
+      "purpose": "Emit a compact operating-regime surface that gates possible dynamical options before Coupler handoff.",
+      "keep_fields": [
+        "regime_id",
+        "active_constraints",
+        "permissioned_dynamics",
+        "suppressed_dynamics",
+        "threshold_bands",
+        "confidence"
+      ],
+      "escalate_when": [
+        "regime_confidence_lt_0.55",
+        "permissioned_dynamics_conflict_with_task_goal",
+        "suppressed_dynamics_include_needed_operator",
+        "threshold_bands_change_route_choice"
+      ],
+      "suppress_when": [
+        "direct_low_jump_task",
+        "no_operating_condition_or_dynamic_constraint_surface"
+      ],
+      "minimal_outputs": {
+        "regime_profile": {
+          "regime_id": "string",
+          "active_constraints": "array",
+          "permissioned_dynamics": "array",
+          "suppressed_dynamics": "array",
+          "threshold_bands": "compact_object",
+          "confidence": "number_0_to_1"
+        }
+      }
+    },
+    "DynamicalPrismExec": {
+      "source_spec": "Dynamical_Prism_v1.2_ReducedCore.json",
+      "probe_name": "DynamicalExec-probe::runtime_value",
+      "purpose": "Decide whether executable dynamical probing is worth the cost.",
+      "keep_fields": [
+        "runtime_probe_needed",
+        "instability_signal",
+        "fail_safe_signal"
+      ],
+      "escalate_when": [
+        "operator_conflict_could_change_branch_selection",
+        "hidden_state_or_fail_safe_uncertainty_is_material",
+        "regime_stability_is_unclear"
+      ],
+      "suppress_when": [
+        "static_dynamical_profile_is_sufficient",
+        "runtime_probe_would_not_change_verification"
+      ],
+      "minimal_outputs": {
+        "runtime_probe_active": "boolean",
+        "runtime_probe_reason": "string"
+      }
+    },
+    "CouplingPrism": {
+      "source_spec": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+      "probe_name": "Coupler-probe::binding_fit",
+      "purpose": "Check whether actor-role-regime bindings are clear enough for routing.",
+      "keep_fields": [
+        "actor_count",
+        "role_bindings",
+        "regime_hint",
+        "binding_ambiguity"
+      ],
+      "escalate_when": [
+        "binding_ambiguity_gte_0.45",
+        "actor_role_assignment_changes_answer",
+        "multiple_couplings_remain_viable",
+        "CREM_or_PSPP_needs_coupling_seed"
+      ],
+      "suppress_when": [
+        "no_actor_or_role_surface",
+        "binding_is_explicit_and_non_decisive"
+      ],
+      "minimal_outputs": {
+        "coupling_packet": {
+          "actors": "compact_array",
+          "roles": "array",
+          "qualifier": "string",
+          "regime": "string"
+        }
+      }
+    },
+    "CTR": {
+      "source_spec": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+      "probe_name": "CTR-probe::transform_operator_need",
+      "purpose": "Decide whether transform-family and operator selection is needed before exploration, rebase, comparison, or validation.",
+      "keep_fields": [
+        "transform_needed",
+        "selected_families",
+        "selected_operators",
+        "returnability_risk",
+        "verification_requirements"
+      ],
+      "escalate_when": [
+        "route_requires_transform_execution",
+        "operator_gap_detected",
+        "return_path_requirements_change_strategy",
+        "ETE_or_CREM_needs_transform_plan"
+      ],
+      "suppress_when": [
+        "direct_construction_is_sufficient",
+        "no_transform_or_operator_gap",
+        "projection_would_be_ornamental"
+      ],
+      "minimal_outputs": {
+        "transform_plan": {
+          "selected_families": "array",
+          "selected_operators": "array",
+          "verification_requirements": "array",
+          "return_path": "string"
+        }
+      }
+    },
+    "CREM": {
+      "source_spec": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+      "probe_name": "CREM-probe::relationship_rebase_need",
+      "purpose": "Decide whether n-party conflict, alignment, repair, coalition, or relationship structure needs dependency-preserving rebase.",
+      "keep_fields": [
+        "coherent_party_count",
+        "conflict_score",
+        "alignment_score",
+        "relationship_strengthening_score",
+        "dependency_density",
+        "candidate_rebase_invariant",
+        "latent_axis_hints"
+      ],
+      "escalate_when": [
+        "coherent_party_count_gte_2",
+        "conflict_score_gte_0.35",
+        "alignment_score_gte_0.25",
+        "relationship_strengthening_score_gte_0.25",
+        "dependency_density_gte_0.25",
+        "reframing_risks_topic_drift"
+      ],
+      "suppress_when": [
+        "single_frame_task",
+        "conflict_is_semantic_only",
+        "one_party_frame_is_incoherent",
+        "simple_fact_retrieval"
+      ],
+      "minimal_outputs": {
+        "crem_probe": {
+          "rebase_needed": "boolean",
+          "candidate_rebase_invariant": "string_or_null",
+          "top_latent_axis_hints": "array",
+          "handoff_target": "CREM | PSPP | direct_synthesis"
+        }
+      }
+    },
+    "PSPP": {
+      "source_spec": "PSPP_v5.0_CandidateSystemComparator.json",
+      "probe_name": "PSPP-probe::branch_competition_need",
+      "purpose": "Decide whether upstream candidate systems should be compared, pruned, merged, or selected.",
+      "keep_fields": [
+        "branch_need",
+        "candidate_system_count_estimate",
+        "structural_difference_signal",
+        "branch_budget"
+      ],
+      "escalate_when": [
+        "multiple_material_candidate_systems",
+        "branch_need_high",
+        "CREM_or_ETE_emitted_candidate_branches",
+        "direct_system_branch_has_low_confidence"
+      ],
+      "suppress_when": [
+        "single_coherent_system_is_sufficient",
+        "branching_would_duplicate_surface_answers"
+      ],
+      "minimal_outputs": {
+        "branch_policy": {
+          "max_branches": "integer",
+          "required_branch_types": "array",
+          "prune_criteria": "array"
+        }
+      }
+    },
+    "ETE": {
+      "source_spec": "ETE_v1.1_SplitLayerExplorationTransform.json",
+      "probe_name": "ETE-probe::exploration_transform_value",
+      "purpose": "Decide whether bounded exploration, operator-level projection, or transform execution is useful and returnable.",
+      "keep_fields": [
+        "exploration_needed",
+        "operator_projection_needed",
+        "candidate_branch_discovery_needed",
+        "returnability_risk"
+      ],
+      "escalate_when": [
+        "novelty_pressure_gte_0.45",
+        "operator_level_projection_is_material",
+        "direct_domain_fails_to_generate_viable_system",
+        "candidate_branch_discovery_changes_pspp_input",
+        "return_path_can_be_preserved"
+      ],
+      "suppress_when": [
+        "direct_domain_is_sufficient",
+        "returnability_risk_gte_0.50",
+        "projection_would_be_ornamental"
+      ],
+      "minimal_outputs": {
+        "transform_plan": {
+          "selected_families": "array",
+          "selected_operators": "array",
+          "return_path": "string"
+        }
+      }
+    },
+    "CEC": {
+      "source_spec": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+      "probe_name": "CEC-probe::path_validity_risk",
+      "purpose": "Decide whether ordered dependency tightening is needed.",
+      "keep_fields": [
+        "path_validity_risk",
+        "hidden_step_risk",
+        "order_sensitivity",
+        "fragile_branch_refs"
+      ],
+      "escalate_when": [
+        "proof_or_derivation_requested",
+        "causal_or_mechanistic_order_matters",
+        "hidden_step_risk_gte_0.45",
+        "branch_comparison_depends_on_sequence"
+      ],
+      "suppress_when": [
+        "low_jump_direct_answer",
+        "ordering_is_obvious",
+        "path_structure_has_no_verification_gain"
+      ],
+      "minimal_outputs": {
+        "cec_probe": {
+          "path_tightening_needed": "boolean",
+          "fragile_branch_refs": "array",
+          "handoff_target": "CEC | final_synthesis"
+        }
+      }
+    },
+    "DARE_IDCM": {
+      "source_spec": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json",
+      "probe_name": "DARE-probe::supervisory_audit_need",
+      "purpose": "Decide whether the stack needs supervisory audit for anchor lock-in, pruning loss, false harmony, operator gaps, fragility, or unknown-pressure.",
+      "keep_fields": [
+        "anchor_suspicion",
+        "pruning_loss_risk",
+        "false_harmony_risk",
+        "operator_gap_risk",
+        "unknown_pressure"
+      ],
+      "escalate_when": [
+        "full_stack_run",
+        "anchor_suspicion_gte_0.35",
+        "pruning_loss_risk_gte_0.35",
+        "false_harmony_risk_gte_0.35",
+        "operator_gap_risk_gte_0.35",
+        "memory_artifact_needs_curation_notes"
+      ],
+      "suppress_when": [
+        "direct_low_jump_task",
+        "one_branch_clearly_wins_and_no_fragility",
+        "no_policy_or_memory_implications"
+      ],
+      "minimal_outputs": {
+        "dare_probe": {
+          "supervisory_audit_needed": "boolean",
+          "audit_focus": "array",
+          "handoff_target": "DARE_IDCM | final_arbiter"
+        }
+      }
+    }
+  },
+  "stack_presets": {
+    "direct_answer_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "CEC-probe::path_validity_risk"
+    ],
+    "state_space_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "CDP-probe::domain_axis_fit",
+      "Regime-probe::constraint_surface_fit",
+      "Dynamical-probe::operator_cluster_fit",
+      "Coupler-probe::binding_fit"
+    ],
+    "exploration_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "CDP-probe::domain_axis_fit",
+      "Regime-probe::constraint_surface_fit",
+      "Dynamical-probe::operator_cluster_fit",
+      "Coupler-probe::binding_fit",
+      "CTR-probe::transform_operator_need",
+      "ETE-probe::exploration_transform_value"
+    ],
+    "candidate_system_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "CDP-probe::domain_axis_fit",
+      "Regime-probe::constraint_surface_fit",
+      "Dynamical-probe::operator_cluster_fit",
+      "Coupler-probe::binding_fit",
+      "ETE-probe::exploration_transform_value",
+      "PSPP-probe::branch_competition_need"
+    ],
+    "relationship_rebase_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "CDP-probe::domain_axis_fit",
+      "Regime-probe::constraint_surface_fit",
+      "Dynamical-probe::operator_cluster_fit",
+      "Coupler-probe::binding_fit",
+      "CREM-probe::relationship_rebase_need",
+      "PSPP-probe::branch_competition_need"
+    ],
+    "cross_domain_transfer_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "CDP-probe::domain_axis_fit",
+      "Regime-probe::constraint_surface_fit",
+      "Dynamical-probe::operator_cluster_fit",
+      "CTR-probe::transform_operator_need",
+      "ETE-probe::exploration_transform_value",
+      "PSPP-probe::branch_competition_need"
+    ],
+    "verification_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "Regime-probe::constraint_surface_fit",
+      "Dynamical-probe::operator_cluster_fit",
+      "CEC-probe::path_validity_risk",
+      "DARE-probe::supervisory_audit_need"
+    ],
+    "supervisory_probe_stack": [
+      "KCE-probe::anchor_relevance",
+      "CDP-probe::domain_axis_fit",
+      "Regime-probe::constraint_surface_fit",
+      "Dynamical-probe::operator_cluster_fit",
+      "Coupler-probe::binding_fit",
+      "PSPP-probe::branch_competition_need",
+      "DARE-probe::supervisory_audit_need"
+    ]
+  },
+  "context_compression_policy": {
+    "keep": [
+      "anchor",
+      "active_axes",
+      "regime_id",
+      "permissioned_dynamics",
+      "suppressed_dynamics",
+      "top_operator_clusters",
+      "coupling_regime",
+      "route_hint",
+      "selected_transform_operators",
+      "branch_need",
+      "relationship_rebase_need",
+      "verification_need",
+      "supervisory_audit_need",
+      "return_path",
+      "basin_key"
+    ],
+    "drop_until_full_escalation": [
+      "full_trace",
+      "complete_scoring_breakdown",
+      "exhaustive_subdomains",
+      "all_candidate_branches",
+      "long_explanatory_prose",
+      "low_confidence_edge_cases",
+      "all_rejected_branches_unless_DARE_active"
+    ]
+  },
+  "handoff_contract": {
+    "to_outer_loop": [
+      "probe_stack_used",
+      "module_decisions",
+      "selected_route",
+      "suppressed_modules",
+      "escalated_modules",
+      "dare_audit_surface",
+      "minimal_packet"
+    ],
+    "to_inner_agents": [
+      "selected_route",
+      "allowed_modules",
+      "required_outputs",
+      "dare_watchpoints",
+      "stop_conditions"
+    ],
+    "to_memory_curator": [
+      "basin_key",
+      "state_vector_candidate",
+      "rebase_vector_candidate",
+      "decision_artifacts",
+      "durability_recommendation"
+    ]
+  }
+}

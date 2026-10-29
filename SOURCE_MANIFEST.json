@@ -1,0 +1,148 @@
+{
+  "publication": "cognitive-skills-framework",
+  "source_repository": "bounded-route-hyperagent",
+  "source_subdirectory": "skills/cognitive-tools",
+  "source_commit": "dc6b7e536aeace455637fa22ce08edbbade712c4",
+  "files": [
+    {
+      "path": "framework/CDP_Parallax_v1.2_BoundedDomainSpace.json",
+      "bytes": 23483,
+      "sha256": "9ee9f9ebd37dfb7f9d2abd51e360038f448fd4bfd022a2354d67b43edc56cbeb"
+    },
+    {
+      "path": "framework/CEC_Parallax_v1.1_ConditionalPathValidator.json",
+      "bytes": 28356,
+      "sha256": "608f8f88c64eed3d10cb81d77612de2ff28a153f8c3206d60fd87404e11d86ca"
+    },
+    {
+      "path": "framework/CREM_v1.3_PacketTemplate.json",
+      "bytes": 3469,
+      "sha256": "5dab302202dc0c278b058e56d75eee1f39889a1b3eebeff9dfc20e4dba50ec54"
+    },
+    {
+      "path": "framework/CREM_v1.3_SplitOntologyDynamicsRegime.json",
+      "bytes": 28691,
+      "sha256": "58fc61366f8c7c882ebbe25c84f57c5a70d8f678d994c35c102b979a73959081"
+    },
+    {
+      "path": "framework/CTR_Parallax_v2.1_PacketTemplate.json",
+      "bytes": 2798,
+      "sha256": "0f078a5c93947dc52930783c0ae23634386d4f8e6ff774bf23ecfcaff0c9d0d6"
+    },
+    {
+      "path": "framework/CTR_Parallax_v2.1_SplitTransformRegistry.json",
+      "bytes": 51554,
+      "sha256": "eb6107f5bb966dbc23073c06b2df642b7e494fb52b3f682262fbef1f434a2f93"
+    },
+    {
+      "path": "framework/CognitiveTools_PacketTemplateIndex_v1.json",
+      "bytes": 3345,
+      "sha256": "0eeac58c7809a039055f167ee893f970c88c6b3f0f5e6da2fd911d706019b017"
+    },
+    {
+      "path": "framework/CognitiveTools_ProbeProfiles_v1.json",
+      "bytes": 20236,
+      "sha256": "bbc8c64298f3ff19fb70eeb3c59ee8c01733e589d5681a273451ee6f1b9266ba"
+    },
+    {
+      "path": "framework/CognitiveTools_RegimeProfile_v1.json",
+      "bytes": 3814,
+      "sha256": "789b91dbfe9ad02907acc7ad1ce7e99993231d9af0b91371c493cd57687cd0f8"
+    },
+    {
+      "path": "framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json",
+      "bytes": 33013,
+      "sha256": "4c94e65a71d4831fc14e02964c95d8eee0ef941cbf0b8817faade2f726e206fb"
+    },
+    {
+      "path": "framework/Dynamical_Prism_v0.2_PacketTemplate.json",
+      "bytes": 2253,
+      "sha256": "b8fe2c6a2f62770846f377f865224432a2e3528e7bf5d60483867fa58bdf19eb"
+    },
+    {
+      "path": "framework/Dynamical_Prism_v1.2_ReducedCore.json",
+      "bytes": 10533,
+      "sha256": "59bbe5d61d3a75c430f0970d2a453b4fe839a1938e2a2ee6935bda384a0d4de7"
+    },
+    {
+      "path": "framework/ETE_v1.1_PacketTemplate.json",
+      "bytes": 2497,
+      "sha256": "84a2db48aa3691c9d5a42994951a52efdd703a322e7d4b165218e2bf46002b9e"
+    },
+    {
+      "path": "framework/ETE_v1.1_SplitLayerExplorationTransform.json",
+      "bytes": 12217,
+      "sha256": "c5f64050f75949cdad55d716f1ecd8c9597ef0fd91dcd6a35bd7d90f56bc2d1e"
+    },
+    {
+      "path": "framework/KCE_Parallax_v2.3_PacketTemplate.json",
+      "bytes": 5844,
+      "sha256": "7db778e2d19f5f888f606334362ab0b01d5373e3eba7e3a576dfc237d466b6c9"
+    },
+    {
+      "path": "framework/KCE_Parallax_v2.3_SplitLayerAnchor.json",
+      "bytes": 27421,
+      "sha256": "eb4080069d8ea1d423e924ebe56ac65bb55ef9180d152ba1cc73062adbc14cf3"
+    },
+    {
+      "path": "framework/Organ_Atlas_Template_v0.3.json",
+      "bytes": 6482,
+      "sha256": "eb65daeec8c435f9c8bf0cfe28f71e6f00e044b6a0e445a035bb15d23e18a262"
+    },
+    {
+      "path": "framework/PSPP_v5.0_CandidateSystemComparator.json",
+      "bytes": 26911,
+      "sha256": "2b19f9e019244169b9005db841e47a639db3911b9075b329419aaf13f5410bce"
+    },
+    {
+      "path": "framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+      "bytes": 24392,
+      "sha256": "465e692d67919e406d6702acbe7d170cb38a4432778035e75e844b3aa9c429d0"
+    },
+    {
+      "path": "framework/Prism_Coupler_v1.5_PacketTemplate.json",
+      "bytes": 5675,
+      "sha256": "e99737db81da06362e33f245cf6a026325009d37308413f5354702c59e42d67b"
+    },
+    {
+      "path": "framework/Regime_Field_v0.1.json",
+      "bytes": 17405,
+      "sha256": "fe08bf27b1e5a18f05c17080112a3a8bad89cae9a03786f865c195be9c2a590c"
+    },
+    {
+      "path": "framework/Regime_Field_v0.1_PacketTemplate.json",
+      "bytes": 3302,
+      "sha256": "c9d3a3317b5724d3fd882a71a599c2e02a7068965d60e8ee7f4dd1660c0e75ed"
+    },
+    {
+      "path": "framework/RewardController_ParallaxEngine.v1.json",
+      "bytes": 2450,
+      "sha256": "8033cde691199db6662c55beaad54736dd9c41c35e5ff6feaaf93bdd50b79c8c"
+    },
+    {
+      "path": "framework/SKILL.md",
+      "bytes": 14251,
+      "sha256": "072993340e215dea29536b42239bdb6160c9b5baca5520f39d0d5f59efa39c4b"
+    },
+    {
+      "path": "framework/references/CREM_Pipeline_Document_v1.pdf",
+      "bytes": 2861,
+      "sha256": "a728b965b02b9a04896a10a04e56679feb9323215605e14007c0daf893f9825e"
+    },
+    {
+      "path": "framework/references/cognitive-tools-architecture.md",
+      "bytes": 14795,
+      "sha256": "29faeb3c8bdc76a97f52bb37067e372d1e8bacc8780fcae249c19a8180004021"
+    },
+    {
+      "path": "framework/references/cognitive-tools-file-map.md",
+      "bytes": 5473,
+      "sha256": "01cf52763fcc780606e9b6cdd53bdf97c3cf195dc5caf5ba1c346e0eab334a88"
+    },
+    {
+      "path": "framework/references/cognitive-tools-probe-strategy.md",
+      "bytes": 4428,
+      "sha256": "b2d570a90141f9c5c4c96629bfac178eb3d3972bc3e480065fe5c0f981dc2fc3"
+    }
+  ]
+}

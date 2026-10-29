@@ -1,0 +1,376 @@
+{
+  "module_name": "Dynamical Prism",
+  "short_name": "Dynamical_Prism",
+  "version": "v0.2.0_reduced_core",
+  "status": "conceptual_refactor",
+  "supersedes": "Dynamical_Prism_Preliminary_v0.1",
+  "purpose": "Describe what systems do using a reduced primitive dynamical core separated from regime constraints and computed behavior labels.",
+  "core_doctrine": [
+    "The Dynamical Core describes primitive process-verbs.",
+    "The Regime Field describes constraints, phase-state, context, and operating conditions.",
+    "Composite behavior labels are computed from ontology + actor role + dynamical core + regime field.",
+    "Do not treat control, healing, growth, conflict, governance, collapse, or creation as primitive operators.",
+    "Do not treat crisis, scarcity, legitimacy, trust, ritual, market, homeostasis, or emergency as primitive operators.",
+    "The same operator vector may produce different behavior labels under different regimes.",
+    "Operator-regime mismatch is a first-class diagnostic target."
+  ],
+  "layer_model": {
+    "ontology_layer": "What kind of thing/domain is involved. Owned by CDP.",
+    "actor_role_layer": "Who or what carries, receives, gates, reflects, or transforms operator mass. Owned by Coupler.",
+    "dynamical_core": "Reduced primitive operator vector describing what the system is doing.",
+    "regime_field": "Constraint/context/phase field describing under what conditions the operator vector acts.",
+    "computed_behavior_label": "Human-readable derived label for the bound pattern."
+  },
+  "reduced_operator_count": 14,
+  "dynamical_core": {
+    "information_representation": [
+      "signal",
+      "detect",
+      "interpret",
+      "encode"
+    ],
+    "intervention_action": [
+      "execute",
+      "disrupt",
+      "coordinate"
+    ],
+    "boundary_control": [
+      "constrain",
+      "gate",
+      "stabilize"
+    ],
+    "adaptive_search": [
+      "explore",
+      "select",
+      "adapt",
+      "anticipate"
+    ]
+  },
+  "operators": {
+    "signal": {
+      "cluster": "information_representation",
+      "definition": "Emit, project, or propagate information, state, force, or influence into a system."
+    },
+    "detect": {
+      "cluster": "information_representation",
+      "definition": "Sense, register, receive, measure, or notice incoming information, state, or perturbation."
+    },
+    "interpret": {
+      "cluster": "information_representation",
+      "definition": "Assign meaning, classify, decode, infer, or contextualize what has been detected or signaled."
+    },
+    "encode": {
+      "cluster": "information_representation",
+      "definition": "Form, structure, compress, or transform representation so it can persist, transmit, store, or operate downstream."
+    },
+    "execute": {
+      "cluster": "intervention_action",
+      "definition": "Cause a concrete effect, state change, or action in a system."
+    },
+    "disrupt": {
+      "cluster": "intervention_action",
+      "definition": "Break continuity, degrade structure, interrupt flow, destabilize pattern, or fracture an existing order."
+    },
+    "coordinate": {
+      "cluster": "intervention_action",
+      "definition": "Synchronize, align, organize, or orchestrate multiple elements toward compatible action."
+    },
+    "constrain": {
+      "cluster": "boundary_control",
+      "definition": "Limit possible states, actions, transitions, or interpretations available to a system."
+    },
+    "gate": {
+      "cluster": "boundary_control",
+      "definition": "Permit, deny, filter, or condition passage across a boundary, threshold, channel, or interface."
+    },
+    "stabilize": {
+      "cluster": "boundary_control",
+      "definition": "Maintain, restore, dampen, or preserve dynamic equilibrium against perturbation."
+    },
+    "explore": {
+      "cluster": "adaptive_search",
+      "definition": "Search possibility space, sample alternatives, expand options, or test reachable states."
+    },
+    "select": {
+      "cluster": "adaptive_search",
+      "definition": "Choose, filter, prefer, rank, or collapse alternatives according to criteria."
+    },
+    "adapt": {
+      "cluster": "adaptive_search",
+      "definition": "Reconfigure internal state, behavior, or structure in response to environmental change or feedback."
+    },
+    "anticipate": {
+      "cluster": "adaptive_search",
+      "definition": "Model, forecast, prepare for, or weight possible future states before they arrive."
+    }
+  },
+  "regime_field": {
+    "definition": "Constraint/context field under which the dynamical core behaves.",
+    "primary_regime_axes": {
+      "scale": [
+        "micro",
+        "local",
+        "meso",
+        "institutional",
+        "civilizational",
+        "planetary",
+        "cosmic",
+        "abstract"
+      ],
+      "tempo": [
+        "static",
+        "slow",
+        "cyclic",
+        "pulsed",
+        "rapid",
+        "accelerating",
+        "chaotic"
+      ],
+      "phase_state": [
+        "baseline",
+        "growth",
+        "stress",
+        "transition",
+        "crisis",
+        "collapse",
+        "repair",
+        "renewal",
+        "lock_in",
+        "metastable"
+      ],
+      "stability": [
+        "stable",
+        "metastable",
+        "unstable",
+        "chaotic",
+        "bifurcating",
+        "recovering"
+      ],
+      "coupling": [
+        "isolated",
+        "loosely_coupled",
+        "tightly_coupled",
+        "synchronized",
+        "entangled",
+        "overcoupled"
+      ],
+      "reversibility": [
+        "fully_reversible",
+        "partially_reversible",
+        "path_dependent",
+        "hysteretic",
+        "irreversible"
+      ],
+      "constraint_load": [
+        "low",
+        "moderate",
+        "high",
+        "overconstrained",
+        "underconstrained"
+      ],
+      "noise": [
+        "low_noise",
+        "moderate_noise",
+        "high_noise",
+        "adversarial_noise",
+        "signal_loss"
+      ],
+      "uncertainty": [
+        "known",
+        "bounded_unknown",
+        "ambiguous",
+        "unknown_pressure",
+        "unknown_unknown_suspected"
+      ],
+      "resource_condition": [
+        "abundance",
+        "adequacy",
+        "scarcity",
+        "zero_sum",
+        "negative_sum",
+        "commons_dependency"
+      ],
+      "legitimacy": [
+        "irrelevant",
+        "accepted",
+        "contested",
+        "collapsing",
+        "coercive",
+        "ritualized",
+        "sacred",
+        "procedural"
+      ],
+      "trust": [
+        "high_trust",
+        "moderate_trust",
+        "low_trust",
+        "broken_trust",
+        "untrusted",
+        "trust_repair"
+      ],
+      "authority_gradient": [
+        "flat",
+        "distributed",
+        "hierarchical",
+        "asymmetric",
+        "coercive",
+        "illegitimate_authority"
+      ],
+      "adversariality": [
+        "cooperative",
+        "neutral",
+        "competitive",
+        "adversarial",
+        "hostile",
+        "deceptive"
+      ],
+      "commitment": [
+        "tentative",
+        "low_commitment",
+        "revisable",
+        "committed",
+        "locked",
+        "sunk_cost_locked"
+      ],
+      "boundary_condition": [
+        "open",
+        "porous",
+        "filtered",
+        "gated",
+        "closed",
+        "contested_boundary",
+        "wrong_boundary_suspected"
+      ],
+      "ethical_load": [
+        "low",
+        "duty_bound",
+        "harm_sensitive",
+        "permission_required",
+        "justice_conflict",
+        "moral_injury_risk"
+      ]
+    }
+  },
+  "computed_behavior_labels_policy": {
+    "status": "computed_not_primitive",
+    "description": "Composite labels are inferred from ontology + actor role + core vector + regime field.",
+    "examples": {
+      "control": {
+        "core_vector": {
+          "constrain": 0.9,
+          "gate": 0.8,
+          "signal": 0.5,
+          "execute": 0.6,
+          "stabilize": 0.6
+        },
+        "regime_conditions": [
+          "authority_gradient",
+          "trust",
+          "constraint_load",
+          "legitimacy"
+        ]
+      },
+      "healing": {
+        "core_vector": {
+          "detect": 0.8,
+          "interpret": 0.7,
+          "gate": 0.6,
+          "execute": 0.6,
+          "stabilize": 0.9,
+          "adapt": 0.7
+        },
+        "regime_conditions": [
+          "damage_or_stress",
+          "repair",
+          "harm_sensitive"
+        ]
+      },
+      "growth": {
+        "core_vector": {
+          "execute": 0.5,
+          "encode": 0.5,
+          "select": 0.5,
+          "adapt": 0.8,
+          "stabilize": 0.4
+        },
+        "regime_conditions": [
+          "growth",
+          "adequate_resources",
+          "irreversibility_increasing"
+        ]
+      },
+      "collapse": {
+        "core_vector": {
+          "disrupt": 0.9,
+          "stabilize": 0.1,
+          "coordinate": 0.2,
+          "constrain": 0.2,
+          "adapt": 0.2
+        },
+        "regime_conditions": [
+          "unstable",
+          "overcoupled_or_fragmenting",
+          "repair_failure"
+        ]
+      },
+      "creation": {
+        "core_vector": {
+          "explore": 0.8,
+          "select": 0.7,
+          "execute": 0.7,
+          "encode": 0.8,
+          "stabilize": 0.4
+        },
+        "regime_conditions": [
+          "possibility_space_open",
+          "constraint_load_low_to_moderate"
+        ]
+      },
+      "conflict": {
+        "core_vector": {
+          "select": 0.6,
+          "execute": 0.5,
+          "constrain": 0.5,
+          "disrupt": 0.5,
+          "coordinate": 0.2
+        },
+        "regime_conditions": [
+          "adversariality",
+          "scarcity",
+          "low_trust",
+          "contested_legitimacy"
+        ]
+      }
+    }
+  },
+  "operator_regime_mismatch_rules": [
+    {
+      "pattern": "stabilize_under_growth_regime",
+      "risk": "stagnation_or_suppression"
+    },
+    {
+      "pattern": "explore_under_emergency_regime",
+      "risk": "dangerous_delay"
+    },
+    {
+      "pattern": "constrain_under_trust_repair_regime",
+      "risk": "domination_disguised_as_repair"
+    },
+    {
+      "pattern": "signal_under_high_noise_regime",
+      "risk": "distortion_or_misinterpretation"
+    },
+    {
+      "pattern": "coordinate_under_low_trust_regime",
+      "risk": "false_alignment_or_compliance_theater"
+    },
+    {
+      "pattern": "select_under_high_uncertainty_regime",
+      "risk": "premature_collapse"
+    },
+    {
+      "pattern": "adapt_under_high_irreversibility_regime",
+      "risk": "maladaptive_lock_in"
+    }
+  ]
+}

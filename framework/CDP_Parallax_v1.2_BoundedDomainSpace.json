@@ -1,0 +1,787 @@
+{
+  "module_name": "Cognitive Domain Prism",
+  "short_name": "CDP_Parallax",
+  "version": "v1.2.0",
+  "status": "design_stable_executable_spec",
+  "revision_kind": "efficiency_and_space_definition_upgrade",
+  "supersedes": "CognitiveDomainPrism_Parallax_v1.json",
+  "generated_utc": "2026-05-02T19:12:25.818982+00:00",
+  "purpose": "Provide a bounded 19-domain coordinate layer for selecting, weighting, and auditing the domain space in which reasoning should operate. This version preserves the original 19D prism but tightens activation, reduces over-breadth, consumes KCE v2.3 split-layer anchor candidates, emits candidate-specific prism profiles, and exports DARE-visible breadth, collision, and domain-lock signals.",
+  "core_doctrine": [
+    "CDP defines where reasoning should search; it does not decide the final answer.",
+    "Activate only domains that materially change the analysis.",
+    "Prefer a small, high-signal active domain set over full 19D activation.",
+    "When KCE emits multiple anchor candidates, CDP should map each candidate separately before collapsing domain space.",
+    "Do not overfit domain selection to a single clean anchor when KCE marks the anchor as provisional or contested.",
+    "Domain breadth should be budgeted globally and reallocated only when novelty, contradiction, or DARE signals justify it."
+  ],
+  "responsibility_boundary": {
+    "owns": [
+      "domain_axis_selection",
+      "subdomain_selection",
+      "bounded_energy_allocation",
+      "domain_collision_detection",
+      "anchor_candidate_domain_mapping",
+      "domain_breadth_budgeting",
+      "domain_lock_risk_detection",
+      "domain_profile_deduplication",
+      "DARE_domain_signal_emit"
+    ],
+    "does_not_own": [
+      "anchor_extraction",
+      "primitive_dynamical_operator_definition",
+      "actor_role_binding",
+      "transform_geometry",
+      "branch_scoring",
+      "candidate_system_competition",
+      "final_answer_synthesis",
+      "persona_control"
+    ],
+    "handoff_note": "CDP v1.2 emits prism profiles, not conclusions. For legacy modules expecting a single prism_profile, the selected_working_profile may be used as a provisional compatibility profile."
+  },
+  "intended_runtime": "Space-definition layer after KCE and before Dynamical Prism, Coupler, ETE, PSPP, CREM, CEC, DARE/IDCM, and final Arbiter.",
+  "placement": {
+    "pipeline_stage": "domain_space_definition",
+    "runs_after": [
+      "KCE_Parallax_v2.3"
+    ],
+    "runs_before": [
+      "Dynamical_Prism",
+      "Prism_Coupler",
+      "ExplorationTransformEngine",
+      "ProblemSolving_ParallelPipeline_ParallaxEngine",
+      "CREM",
+      "CEC",
+      "DARE_IDCM"
+    ],
+    "recommended_mode": "bounded_candidate_profile_mode"
+  },
+  "inputs": {
+    "prompt_text": {
+      "type": "string",
+      "description": "Raw prompt retained for audit and fallback."
+    },
+    "kce_packet": {
+      "type": "object",
+      "required": true,
+      "description": "KCE v2.3 packet containing anchor_candidates, selected_working_anchor, split-layer seeds, compression_telemetry, and DARE signals."
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "domain_hint": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Optional soft domain hints; these increase priors but cannot force activation."
+        },
+        "complexity_override": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "force_minimal",
+            "force_multi_domain",
+            "force_full_prism"
+          ],
+          "default": "auto"
+        },
+        "depth_level": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3,
+          "default": 2
+        },
+        "max_active_axes": {
+          "type": "integer",
+          "default": 7
+        },
+        "dare_watch": {
+          "type": "boolean",
+          "default": true
+        },
+        "allow_full_19d": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "axes": {
+    "dims": [
+      "phys",
+      "bio",
+      "neur",
+      "info",
+      "math",
+      "meta",
+      "aes",
+      "stor",
+      "hum",
+      "rhet",
+      "eth",
+      "exp",
+      "econ",
+      "pol",
+      "geo",
+      "mus",
+      "nai",
+      "phil",
+      "style"
+    ],
+    "subdomains": {
+      "phys": [
+        "energy",
+        "phase",
+        "coherence",
+        "entropy",
+        "force",
+        "matter"
+      ],
+      "bio": [
+        "metabolism",
+        "cell_cycle",
+        "signaling",
+        "biophotonics",
+        "adaptation",
+        "homeostasis"
+      ],
+      "neur": [
+        "plasticity",
+        "attention",
+        "memory",
+        "affect",
+        "prediction",
+        "self_model"
+      ],
+      "info": [
+        "encoding",
+        "compression",
+        "search",
+        "representation",
+        "retrieval",
+        "noise"
+      ],
+      "math": [
+        "logic",
+        "optimization",
+        "geometry",
+        "stochasticity",
+        "proof",
+        "invariant"
+      ],
+      "meta": [
+        "ontology",
+        "teleology",
+        "analogy",
+        "paradox",
+        "abstraction",
+        "frame"
+      ],
+      "aes": [
+        "tone",
+        "harmony",
+        "contrast",
+        "motif",
+        "image",
+        "texture"
+      ],
+      "stor": [
+        "arc",
+        "theme",
+        "twist",
+        "cadence",
+        "reveal",
+        "stakes"
+      ],
+      "hum": [
+        "empathy",
+        "behavior",
+        "relationship",
+        "identity",
+        "motivation",
+        "conflict"
+      ],
+      "rhet": [
+        "persuasion",
+        "clarity",
+        "style",
+        "voice",
+        "audience",
+        "framing"
+      ],
+      "eth": [
+        "duty",
+        "care",
+        "tradeoff",
+        "harm",
+        "fairness",
+        "permission"
+      ],
+      "exp": [
+        "sensation",
+        "presence",
+        "temporal_lag",
+        "memory_trace",
+        "embodiment",
+        "attention"
+      ],
+      "econ": [
+        "resource",
+        "value",
+        "incentive",
+        "constraint",
+        "cost",
+        "allocation"
+      ],
+      "pol": [
+        "power",
+        "coordination",
+        "legitimacy",
+        "order",
+        "coalition",
+        "governance"
+      ],
+      "geo": [
+        "ecology",
+        "space",
+        "environment",
+        "flow",
+        "place",
+        "distribution"
+      ],
+      "mus": [
+        "rhythm",
+        "melody",
+        "counterpoint",
+        "silence",
+        "tension",
+        "resolution"
+      ],
+      "nai": [
+        "intuition",
+        "insight",
+        "emergence",
+        "hunch",
+        "pattern_sense",
+        "sixth_domain_escape"
+      ],
+      "phil": [
+        "truth",
+        "faith",
+        "reason",
+        "meaning",
+        "epistemology",
+        "being"
+      ],
+      "style": [
+        "romance",
+        "confrontation",
+        "tension",
+        "resolution",
+        "warmth",
+        "edge"
+      ]
+    }
+  },
+  "activation_policy": {
+    "default_active_axis_range": [
+      3,
+      7
+    ],
+    "soft_cap": 9,
+    "hard_cap": 19,
+    "selection_rule": "activate_only_axes_that_materially_change_analysis",
+    "anchor_candidate_policy": "map_each_material_anchor_candidate_separately_before_collapsing",
+    "overbreadth_guard": "suppress_axes_that_add_language_but_not_decision_power",
+    "underbreadth_guard": "reactivate_suppressed_axis_if_DARE_or_residual_error_flags_domain_lock",
+    "full_19d_allowed_only_if": [
+      "user_explicitly_requests_full_prism",
+      "depth_level == 3",
+      "contradiction_or_novelty_pressure_high",
+      "allow_full_19d == true"
+    ],
+    "axis_materiality_tests": [
+      "Does this domain change candidate branch generation?",
+      "Does this domain expose a constraint, falsifier, or missing variable?",
+      "Does this domain alter actor-role/dynamical binding downstream?",
+      "Does this domain reduce uncertainty among anchor candidates?",
+      "Does this domain preserve anomaly markers that KCE warned might be lost?"
+    ]
+  },
+  "energy_budget": {
+    "total": 1.0,
+    "caps": {
+      "phys": 0.1,
+      "bio": 0.1,
+      "neur": 0.07,
+      "info": 0.08,
+      "math": 0.08,
+      "meta": 0.08,
+      "aes": 0.06,
+      "stor": 0.06,
+      "hum": 0.06,
+      "rhet": 0.05,
+      "eth": 0.05,
+      "exp": 0.05,
+      "econ": 0.04,
+      "pol": 0.04,
+      "geo": 0.04,
+      "mus": 0.04,
+      "nai": 0.05,
+      "phil": 0.06,
+      "style": 0.03
+    },
+    "floor_policy": {
+      "description": "No active axis should receive trivial energy unless it serves as a watch axis.",
+      "minimum_active_axis_weight": 0.03,
+      "watch_axis_weight": 0.01
+    },
+    "reallocation_policy": {
+      "from_low_entropy_channels": true,
+      "to_high_decision_power_axes": true,
+      "protect_kce_anomaly_axes": true,
+      "avoid_duplicate_domain_profiles": true
+    }
+  },
+  "stage_order": [
+    "ingest_kce_packet",
+    "anchor_candidate_domain_mapping",
+    "domain_prior_scoring",
+    "axis_materiality_filter",
+    "subdomain_selection",
+    "energy_allocation",
+    "collision_and_alias_scan",
+    "domain_profile_deduplication",
+    "domain_lock_risk_detection",
+    "selected_working_profile_emit",
+    "DARE_domain_signal_emit"
+  ],
+  "stages": {
+    "ingest_kce_packet": {
+      "description": "Read KCE anchor candidates, selected_working_anchor, abstraction ladder, compression telemetry, and DARE signals.",
+      "outputs": [
+        "anchor_candidate_refs",
+        "kce_risk_summary",
+        "kce_anomaly_markers",
+        "kce_abstraction_level"
+      ]
+    },
+    "anchor_candidate_domain_mapping": {
+      "description": "Map each material KCE anchor candidate into a candidate-specific domain profile before selecting a working profile.",
+      "policy": {
+        "map_top_n_anchor_candidates": 3,
+        "always_map_contested_anchor": true,
+        "always_map_anomaly_preserving_anchor": true
+      },
+      "outputs": [
+        "candidate_prism_profiles"
+      ]
+    },
+    "domain_prior_scoring": {
+      "description": "Score domain axes using anchor axes, prompt cues, domain hints, anomaly markers, abstraction level, and likely downstream decision power.",
+      "scoring_dimensions": {
+        "anchor_axis_fit": 0.22,
+        "prompt_entity_fit": 0.12,
+        "relation_pattern_fit": 0.14,
+        "anomaly_preservation": 0.14,
+        "downstream_decision_power": 0.16,
+        "user_context_fit": 0.08,
+        "novelty_or_escape_value": 0.08,
+        "cost_penalty": 0.06
+      },
+      "outputs": [
+        "domain_scores"
+      ]
+    },
+    "axis_materiality_filter": {
+      "description": "Select active axes only when they materially change analysis or preserve a KCE-flagged anomaly.",
+      "rules": [
+        "keep_axis_if_score_above_activation_threshold",
+        "keep_axis_if_required_by_contested_anchor",
+        "keep_axis_if_required_by_anomaly_marker",
+        "drop_axis_if_only_decorative_or_style_echo",
+        "mark_suppressed_axis_as_watch_axis_if_possible_future_relevance"
+      ],
+      "thresholds": {
+        "activation_threshold": 0.42,
+        "watch_threshold": 0.25,
+        "decorative_axis_penalty": 0.15
+      },
+      "outputs": [
+        "active_axes",
+        "watch_axes",
+        "suppressed_axes"
+      ]
+    },
+    "subdomain_selection": {
+      "description": "Select bounded subdomains within each active axis.",
+      "policy": {
+        "max_subdomains_per_axis_default": 3,
+        "max_subdomains_per_axis_depth_3": 5,
+        "prefer_subdomains_that_map_to_KCE_relations": true,
+        "avoid_subdomain_sprawl": true
+      },
+      "outputs": [
+        "active_subdomains"
+      ]
+    },
+    "energy_allocation": {
+      "description": "Allocate normalized energy across active axes under global caps.",
+      "outputs": [
+        "energy_alloc",
+        "energy_rationale"
+      ]
+    },
+    "collision_and_alias_scan": {
+      "description": "Detect domain collisions, metaphor alias risks, false equivalence, and teleological overreach.",
+      "detectors": [
+        {
+          "name": "semantic_coalescer",
+          "threshold": 0.15,
+          "action": "split_and_rephase"
+        },
+        {
+          "name": "teleology_brake",
+          "threshold": 0.18,
+          "action": "restore_causality"
+        },
+        {
+          "name": "domain_alias_collision",
+          "threshold": 0.2,
+          "action": "protect_distinct_domain_roles"
+        },
+        {
+          "name": "style_bleed_detector",
+          "threshold": 0.18,
+          "action": "separate_aesthetic_language_from_structural_role"
+        }
+      ],
+      "outputs": [
+        "collision_risks",
+        "collision_actions"
+      ]
+    },
+    "domain_profile_deduplication": {
+      "description": "Merge or suppress candidate prism profiles that are structurally duplicate despite different labels.",
+      "rules": [
+        "compare_active_axis_overlap",
+        "compare_subdomain_overlap",
+        "compare_downstream_decision_power",
+        "preserve_duplicate_only_if_it_maps_to_different_KCE_anchor_risk"
+      ],
+      "outputs": [
+        "deduped_candidate_prism_profiles"
+      ]
+    },
+    "domain_lock_risk_detection": {
+      "description": "Detect whether CDP is overcommitting to a native or familiar domain set.",
+      "signals": [
+        "one_domain_dominates_energy_too_early",
+        "KCE_anchor_contested_but_domain_profile_single",
+        "high_anomaly_salience_but_low_domain_diversity",
+        "suppressed_axes_include_high_novelty_value",
+        "watch_axes_repeat_across_failed_runs"
+      ],
+      "outputs": [
+        "domain_lock_report"
+      ]
+    },
+    "selected_working_profile_emit": {
+      "description": "Emit one provisional selected profile for legacy compatibility while preserving alternatives.",
+      "outputs": [
+        "selected_working_profile",
+        "candidate_prism_profiles"
+      ]
+    },
+    "DARE_domain_signal_emit": {
+      "description": "Emit DARE/IDCM-visible signals about overbreadth, underbreadth, collision, domain-lock, and missing-domain risks.",
+      "outputs": [
+        "dare_domain_signals"
+      ]
+    }
+  },
+  "output_schema": {
+    "cdp_packet": {
+      "schema_version": "cdp.parallax/1.2",
+      "source": {
+        "prompt_text": "string",
+        "kce_packet_ref": "string_or_null"
+      },
+      "candidate_prism_profiles": [
+        {
+          "profile_id": "string",
+          "anchor_ref": "string",
+          "active_axes": "array",
+          "watch_axes": "array",
+          "suppressed_axes": "array",
+          "active_subdomains": "object",
+          "energy_alloc": "object",
+          "domain_scores": "object",
+          "collision_risks": "array",
+          "domain_lock_risk": "number",
+          "profile_confidence": "number",
+          "profile_cost": "number",
+          "decision_power_score": "number",
+          "prism_rationale": "array",
+          "lock_status": "provisional|contested|lock_candidate"
+        }
+      ],
+      "selected_working_profile": {
+        "profile_id": "string_or_null",
+        "anchor_ref": "string_or_null",
+        "selection_reason": "string",
+        "lock_status": "provisional|contested|locked",
+        "lock_allowed": "boolean"
+      },
+      "domain_breadth_budget": {
+        "active_axis_count": "integer",
+        "watch_axis_count": "integer",
+        "suppressed_axis_count": "integer",
+        "budget_status": "under_budget|within_budget|over_budget",
+        "recommended_next_action": "continue|tighten_axes|widen_axes|DARE_review"
+      },
+      "collision_report": {
+        "semantic_collisions": "array",
+        "teleology_overreach": "array",
+        "metaphor_alias_risks": "array",
+        "style_bleed_risks": "array",
+        "actions_taken": "array"
+      },
+      "domain_lock_report": {
+        "domain_lock_risk": "number",
+        "dominant_axes": "array",
+        "neglected_axes": "array",
+        "why_suspicious": "array",
+        "recommended_correction": "none|widen_watch_axes|spawn_alternate_profile|DARE_anchor_review"
+      },
+      "dare_domain_signals": {
+        "overbreadth_suspicion": "number",
+        "underbreadth_suspicion": "number",
+        "domain_lock_suspicion": "number",
+        "collision_suspicion": "number",
+        "missing_domain_suspicion": "number",
+        "watch_axis_rescue_recommended": "boolean",
+        "recommended_action": "allow_standard_route|tighten_domain_set|widen_domain_set|spawn_alternate_profile|DARE_review"
+      },
+      "handoff": {
+        "to_dynamical_prism": {
+          "active_axes": "array",
+          "active_subdomains": "object",
+          "energy_alloc": "object",
+          "watch_axes": "array"
+        },
+        "to_coupler": {
+          "active_axes": "array",
+          "active_subdomains": "object",
+          "domain_role_hints": "array"
+        },
+        "to_ETE": {
+          "candidate_prism_profiles": "array",
+          "watch_axes": "array",
+          "domain_lock_report": "object"
+        },
+        "to_PSPP": {
+          "selected_working_profile": "object",
+          "alternate_profiles": "array",
+          "avoid_duplicate_domain_profiles": true
+        },
+        "to_DARE": {
+          "dare_domain_signals": "object",
+          "domain_lock_report": "object",
+          "collision_report": "object"
+        }
+      },
+      "trace": {
+        "operators_used": "array",
+        "decision_notes": "array",
+        "risk_notes": "array"
+      }
+    }
+  },
+  "routing_policy": {
+    "default": "bounded_candidate_profile_mode",
+    "rules": [
+      {
+        "condition": "KCE.selected_working_anchor.lock_status == 'provisional' AND KCE.dare_signals.anchor_suspicion < 0.45",
+        "action": "map_primary_anchor_and_top_alternate_if_material"
+      },
+      {
+        "condition": "KCE.selected_working_anchor.lock_status == 'contested' OR KCE.dare_signals.anchor_suspicion >= 0.60",
+        "action": "map_multiple_anchor_candidates_and_emit_DARE_domain_review"
+      },
+      {
+        "condition": "active_axis_count > soft_cap",
+        "action": "tighten_axes_by_decision_power"
+      },
+      {
+        "condition": "domain_lock_suspicion >= 0.60",
+        "action": "spawn_alternate_profile_or_DARE_review"
+      },
+      {
+        "condition": "collision_suspicion >= 0.55",
+        "action": "split_and_rephase_colliding_axes"
+      },
+      {
+        "condition": "underbreadth_suspicion >= 0.55 AND contradiction_or_anomaly_persists",
+        "action": "promote_watch_axis_to_active_axis"
+      }
+    ]
+  },
+  "guards": {
+    "anti_overbreadth": {
+      "soft_cap_axes": 9,
+      "default_max_axes": 7,
+      "suppress_decorative_axes": true,
+      "prefer_decision_power_over_domain_coverage": true
+    },
+    "anti_underbreadth": {
+      "watch_axes_enabled": true,
+      "preserve_kce_anomaly_axes_as_watch_or_active": true,
+      "domain_lock_detection_required": true
+    },
+    "anti_domain_alias_collapse": {
+      "metaphor_alias_guard": true,
+      "split_domains_when_same_token_has_different_function": true,
+      "style_axis_separated_from_structural_axes": true
+    },
+    "anti_recomputation": {
+      "emit_profile_ids_for_reuse": true,
+      "deduplicate_domain_profiles": true,
+      "do_not_rerun_domain_mapping_unless_anchor_or_DARE_signals_change": true
+    },
+    "anti_memory_contamination": {
+      "CDP_does_not_write_memory": true,
+      "emit_memory_relevance_only_as_trace": true
+    }
+  },
+  "scoring": {
+    "domain_score": {
+      "anchor_axis_fit": 0.22,
+      "prompt_entity_fit": 0.12,
+      "relation_pattern_fit": 0.14,
+      "anomaly_preservation": 0.14,
+      "downstream_decision_power": 0.16,
+      "user_context_fit": 0.08,
+      "novelty_or_escape_value": 0.08,
+      "cost_penalty": -0.06
+    },
+    "profile_confidence": {
+      "active_axis_fit": 0.25,
+      "subdomain_specificity": 0.15,
+      "collision_low": 0.15,
+      "decision_power": 0.2,
+      "KCE_anchor_compatibility": 0.15,
+      "cost_economy": 0.1
+    },
+    "domain_lock_suspicion": {
+      "single_axis_dominance": 0.25,
+      "low_domain_diversity_under_high_anomaly": 0.2,
+      "contested_anchor_single_profile": 0.2,
+      "suppressed_high_novelty_axes": 0.15,
+      "repeated_watch_axis_rescue": 0.1,
+      "style_or_native_domain_overfit": 0.1
+    }
+  },
+  "canonical_packet_compatibility": {
+    "legacy_fields_provided": [
+      "prism_profile"
+    ],
+    "legacy_field_mapping": {
+      "prism_profile.active_axes": "selected_working_profile.active_axes",
+      "prism_profile.active_subdomains": "selected_working_profile.active_subdomains",
+      "prism_profile.energy_alloc": "selected_working_profile.energy_alloc",
+      "prism_profile.collision_risks": "selected_working_profile.collision_risks",
+      "prism_profile.prism_rationale": "selected_working_profile.prism_rationale"
+    },
+    "compatibility_note": "For older modules expecting a single prism_profile, selected_working_profile may be used provisionally. Modules should preserve alternate_profiles when KCE or CDP lock_status is contested."
+  },
+  "example_packet_minimal": {
+    "candidate_prism_profiles": [
+      {
+        "profile_id": "P1",
+        "anchor_ref": "A1",
+        "active_axes": [
+          "info",
+          "math",
+          "meta",
+          "rhet"
+        ],
+        "watch_axes": [
+          "nai",
+          "eth"
+        ],
+        "suppressed_axes": [
+          "phys",
+          "bio",
+          "geo",
+          "mus"
+        ],
+        "active_subdomains": {
+          "info": [
+            "compression",
+            "representation",
+            "search"
+          ],
+          "math": [
+            "logic",
+            "invariant"
+          ],
+          "meta": [
+            "ontology",
+            "abstraction",
+            "frame"
+          ],
+          "rhet": [
+            "clarity",
+            "framing"
+          ]
+        },
+        "energy_alloc": {
+          "info": 0.28,
+          "math": 0.23,
+          "meta": 0.27,
+          "rhet": 0.12,
+          "nai": 0.05,
+          "eth": 0.05
+        },
+        "domain_scores": {
+          "info": 0.81,
+          "math": 0.72,
+          "meta": 0.79,
+          "rhet": 0.55,
+          "nai": 0.41,
+          "eth": 0.38
+        },
+        "collision_risks": [],
+        "domain_lock_risk": 0.34,
+        "profile_confidence": 0.74,
+        "profile_cost": 0.38,
+        "decision_power_score": 0.71,
+        "prism_rationale": [
+          "Information and meta axes explain representation and frame risk.",
+          "Math axis supports invariant and logic checks.",
+          "Rhetoric axis retained for prompt-framing effects."
+        ],
+        "lock_status": "provisional"
+      }
+    ],
+    "selected_working_profile": {
+      "profile_id": "P1",
+      "anchor_ref": "A1",
+      "selection_reason": "Highest decision power under bounded axis budget.",
+      "lock_status": "provisional",
+      "lock_allowed": false
+    },
+    "dare_domain_signals": {
+      "overbreadth_suspicion": 0.22,
+      "underbreadth_suspicion": 0.31,
+      "domain_lock_suspicion": 0.34,
+      "collision_suspicion": 0.18,
+      "missing_domain_suspicion": 0.29,
+      "watch_axis_rescue_recommended": false,
+      "recommended_action": "allow_standard_route"
+    }
+  }
+}

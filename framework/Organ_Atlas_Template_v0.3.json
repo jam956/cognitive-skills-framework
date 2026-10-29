@@ -1,0 +1,182 @@
+{
+  "module_name": "Organ_Atlas_Template_v0.3",
+  "purpose": "Optional hidden-state and fail-safe probe atlas used during full-stack orchestration when the executable dynamical process is invoked to monitor latent instability, entropy divergence, and recovery posture.",
+  "integration_policy": {
+    "pipeline_role": "optional runtime support layer for Dynamical Prism execution",
+    "parameter_policy": "project_tunable",
+    "invoke_when": [
+      "full_stack_orchestrator_uses_executable_dynamical_probe",
+      "hidden_state_risk_is_material",
+      "entropy_or_regime_instability_is_suspected",
+      "fail_safe_monitoring_needed_before_or_after_coupling"
+    ],
+    "do_not_invoke_when": [
+      "spec_only_dynamical_projection_is_sufficient",
+      "task_is_direct_and_low_jump",
+      "runtime_probe_would_not_change_verification"
+    ]
+  },
+  "parameter_schema": {
+    "stability_floor": 0.35,
+    "paradox_pressure_ceiling": 0.3,
+    "runaway_exploration_ceiling": 0.25,
+    "minimum_selection_commits": 1.0,
+    "entropy_divergence_tolerance": 0.2,
+    "expected_entropy_tissue": "reasoning_core",
+    "irreversible_commitment_guard": true,
+    "coupling_recheck_on_instability": true,
+    "surface_hidden_assumptions_on_flag": true
+  },
+  "project_profiles": {
+    "default_balanced": {
+      "description": "Balanced project defaults for general cognitive-tools orchestration.",
+      "parameters": {
+        "stability_floor": 0.35,
+        "paradox_pressure_ceiling": 0.3,
+        "runaway_exploration_ceiling": 0.25,
+        "minimum_selection_commits": 1.0,
+        "entropy_divergence_tolerance": 0.2,
+        "expected_entropy_tissue": "reasoning_core"
+      }
+    },
+    "safety_critical": {
+      "description": "Stricter fail-safe posture for projects where unstable coupling or hidden-state drift is expensive.",
+      "parameters": {
+        "stability_floor": 0.45,
+        "paradox_pressure_ceiling": 0.22,
+        "runaway_exploration_ceiling": 0.18,
+        "minimum_selection_commits": 1.0,
+        "entropy_divergence_tolerance": 0.12,
+        "expected_entropy_tissue": "state_guard"
+      }
+    },
+    "exploration_heavy": {
+      "description": "Looser thresholds for speculative or research-heavy projects where wider search is acceptable.",
+      "parameters": {
+        "stability_floor": 0.25,
+        "paradox_pressure_ceiling": 0.4,
+        "runaway_exploration_ceiling": 0.38,
+        "minimum_selection_commits": 0.5,
+        "entropy_divergence_tolerance": 0.3,
+        "expected_entropy_tissue": "reasoning_core"
+      }
+    },
+    "escape_sensitive": {
+      "description": "Bias toward early escape detection and fallback-basin discipline.",
+      "parameters": {
+        "stability_floor": 0.33,
+        "paradox_pressure_ceiling": 0.2,
+        "runaway_exploration_ceiling": 0.2,
+        "minimum_selection_commits": 1.0,
+        "entropy_divergence_tolerance": 0.15,
+        "expected_entropy_tissue": "escape_router"
+      }
+    }
+  },
+  "organ_atlas": {
+    "version": "0.3",
+    "model_id": "Prism_v13_host",
+    "created": "2025-10-20",
+    "tissues": [
+      {
+        "name": "reasoning_core",
+        "role": "multi-hop inference and plan chaining",
+        "observed_features": [
+          "operator sequencing",
+          "selection pressure",
+          "paradox handling"
+        ],
+        "known_regulators": [
+          "interpret",
+          "select",
+          "stabilize"
+        ],
+        "entropy_gap": {
+          "expected": 0.62,
+          "measured": null,
+          "comment": "Use when coordination entropy rises above the expected basin for stable reasoning."
+        },
+        "probe_methods": [
+          "operator trace audit",
+          "entropy watch",
+          "stability comparison"
+        ],
+        "validation_status": "template"
+      },
+      {
+        "name": "state_guard",
+        "role": "monitor hidden instability, regime drift, and irreversible commitment risk",
+        "observed_features": [
+          "stability",
+          "reversibility",
+          "commitment",
+          "drift"
+        ],
+        "known_regulators": [
+          "gate",
+          "stabilize",
+          "interpret"
+        ],
+        "entropy_gap": {
+          "expected": 0.48,
+          "measured": null,
+          "comment": "Escalate fail-safe checks when hidden instability remains above a moderate entropy band."
+        },
+        "probe_methods": [
+          "fail_safe flag audit",
+          "regime reclassification",
+          "rollback readiness check"
+        ],
+        "validation_status": "template"
+      },
+      {
+        "name": "escape_router",
+        "role": "track whether paradox pressure requires bounded escape or fallback regime selection",
+        "observed_features": [
+          "paradox pressure",
+          "escape count",
+          "fallback basin stability"
+        ],
+        "known_regulators": [
+          "escape",
+          "thesis",
+          "antithesis",
+          "synthesis"
+        ],
+        "entropy_gap": {
+          "expected": 0.35,
+          "measured": null,
+          "comment": "Use a lower entropy target because escape routing should narrow search rather than widen it."
+        },
+        "probe_methods": [
+          "paradox pressure watch",
+          "escape outcome comparison",
+          "fallback basin confirmation"
+        ],
+        "validation_status": "template"
+      }
+    ],
+    "global_regulators": {
+      "fail_safe_priority_order": [
+        "interpret",
+        "select",
+        "stabilize",
+        "gate"
+      ],
+      "rollback_posture": "prefer lower-commitment stable basin before further coupling or transform escalation"
+    },
+    "experimental_limitations": {
+      "hidden_state_visibility": "transient activations; limited causal visibility",
+      "methodological_gap": "functional probing substitutes for direct observation",
+      "entropy_gap_comment": "use when observed entropy diverges from predicted coordination"
+    }
+  },
+  "cognitive_tools_handoff": {
+    "role": "hidden_state_and_fail_safe_probe",
+    "canonical_packet_fields_provided": [
+      "hidden_state_watch",
+      "fail_safe_report"
+    ],
+    "handoff_note": "Use only as an optional adjunct to executable dynamical probing. Do not treat the organ atlas as a replacement for the canonical dynamical profile. Project profiles or explicit parameter overrides may tune fail-safe thresholds without changing the canonical packet vocabulary."
+  }
+}

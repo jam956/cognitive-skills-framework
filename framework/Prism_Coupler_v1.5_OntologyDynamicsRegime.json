@@ -1,0 +1,722 @@
+{
+  "module_name": "Prism Coupler",
+  "short_name": "Prism_Coupler",
+  "version": "v1.5.0",
+  "status": "conceptual_executable_spec",
+  "revision_kind": "ontology_dynamical_core_regime_split_refactor",
+  "supersedes": "Prism_Coupler_v1.4_CREMRouteGate",
+  "purpose": "Bind the 19D Ontologic Prism, Dynamical Prism v0.2 reduced operator core, and Regime Field v0.1 into actor-centered behavior packets. v1.5 explicitly separates ontology, primitive action, regime constraints, and computed behavior labels to prevent operator-regime conflation and composite-label premature collapse.",
+  "core_doctrine": [
+    "The Ontologic Prism defines what kind of domain or substrate is involved.",
+    "The Dynamical Core defines what primitive process-verbs are active.",
+    "The Regime Field defines under what constraints, phase-state, context, and legitimacy conditions the operators behave.",
+    "The Coupler binds what exists, what it does, and under what conditions it does it.",
+    "Computed behavior labels are outputs of coupling, not primitive inputs.",
+    "Do not force a single coupling when actor-role, regime, or operator binding is non-unique.",
+    "Detect whether apparent dynamical conflict is actually regime conflict.",
+    "Detect whether apparent alignment is false harmony caused by regime or party erasure.",
+    "Keep ontology, dynamics, and regime separately auditable for CREM, ETE, PSPP, CEC, and DARE/IDCM.",
+    "Regime ambiguity must remain visible when it materially changes the behavior label."
+  ],
+  "registry_refs": {
+    "KCE": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "OntologicPrism": "19D_Ontologic_Prism",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "CTR": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+    "ETE": "ETE_v1.1_SplitLayerExplorationTransform.json",
+    "CREM": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+    "PSPP_Lite": "PSPP_v5.0_CandidateSystemComparator.json",
+    "CEC": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+    "DARE_IDCM": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json"
+  },
+  "layer_model": {
+    "ontology_profile": {
+      "owned_by": "CDP / Ontologic Prism",
+      "question": "What kind of domain, substrate, or coherent field is involved?",
+      "axes": [
+        "phys",
+        "bio",
+        "neur",
+        "info",
+        "math",
+        "meta",
+        "aes",
+        "stor",
+        "hum",
+        "rhet",
+        "eth",
+        "exp",
+        "econ",
+        "pol",
+        "geo",
+        "mus",
+        "nai",
+        "phil",
+        "style"
+      ]
+    },
+    "actor_role_packet": {
+      "owned_by": "Prism Coupler",
+      "question": "Who or what carries, receives, gates, modulates, reflects, selects, or stabilizes the operator vector?"
+    },
+    "dynamical_core_vector": {
+      "owned_by": "Dynamical Prism v0.2",
+      "question": "What primitive processes are active?",
+      "operators": [
+        "signal",
+        "detect",
+        "interpret",
+        "encode",
+        "execute",
+        "disrupt",
+        "coordinate",
+        "constrain",
+        "gate",
+        "stabilize",
+        "explore",
+        "select",
+        "adapt",
+        "anticipate"
+      ]
+    },
+    "regime_field": {
+      "owned_by": "Regime Field v0.1",
+      "question": "Under what constraints and phase conditions do the operators behave?",
+      "axes": [
+        "scale",
+        "tempo",
+        "phase_state",
+        "stability",
+        "coupling",
+        "reversibility",
+        "constraint_load",
+        "noise",
+        "uncertainty",
+        "resource_condition",
+        "legitimacy",
+        "trust",
+        "authority_gradient",
+        "adversariality",
+        "commitment",
+        "boundary_condition",
+        "ethical_load"
+      ]
+    },
+    "computed_behavior_label": {
+      "owned_by": "Prism Coupler / Arbiter",
+      "question": "What should the bound ontology-operator-regime pattern be called in human terms?"
+    }
+  },
+  "inputs": {
+    "kce_packet": {
+      "type": "object",
+      "required": false,
+      "description": "KCE v2.3 anchor candidates, functional roles, relation patterns, constraints, split-layer seeds, and DARE signals."
+    },
+    "ontology_profile": {
+      "type": "object",
+      "required": true,
+      "description": "CDP/19D ontologic profile with active axes, watch axes, subdomains, energy allocation, and domain-lock risks."
+    },
+    "dynamical_core_packet": {
+      "type": "object",
+      "required": true,
+      "description": "Dynamical Prism v0.2 packet containing reduced core operator vector and active operator clusters."
+    },
+    "regime_field_packet": {
+      "type": "object",
+      "required": true,
+      "description": "Regime Field v0.1 packet containing regime axes, confidence, alternate regimes, bundle matches, and mismatch reports."
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "prior_coupling_cache": "object",
+        "party_frames": "array",
+        "relationship_goal": [
+          "none",
+          "strengthen_relationship",
+          "repair_trust",
+          "build_coalition",
+          "improve_coordination",
+          "preserve_productive_tension",
+          "find_common_ground",
+          "synthesize_without_erasure"
+        ],
+        "depth_level": "integer_1_to_3",
+        "allow_rebind": "boolean",
+        "force_alternate_bindings": "boolean",
+        "dare_watch": "boolean"
+      }
+    }
+  },
+  "actor_schema": {
+    "description": "An actor is any ontological node, party, aggregate, field, process, interface, or constraint-bearing structure that can carry, receive, modulate, inhibit, reflect, select, gate, stabilize, or transform operator mass.",
+    "template": {
+      "actor_id": "string",
+      "actor_label": "string",
+      "party_ref": "string_or_null",
+      "actor_type": [
+        "entity",
+        "agent",
+        "field",
+        "structure",
+        "process",
+        "constraint",
+        "aggregate",
+        "interface",
+        "observer",
+        "boundary",
+        "regime",
+        "party",
+        "coalition"
+      ],
+      "ontic_status": [
+        "actual",
+        "latent",
+        "distributed",
+        "emergent",
+        "virtual",
+        "contested"
+      ],
+      "roles": [
+        "source",
+        "target",
+        "mediator",
+        "modulator",
+        "reflector",
+        "container",
+        "observer",
+        "inhibitor",
+        "boundary",
+        "selector",
+        "amplifier",
+        "stabilizer",
+        "explorer",
+        "translator",
+        "trust_holder",
+        "coordinator",
+        "gatekeeper",
+        "regime_carrier",
+        "regime_enforcer",
+        "regime_victim",
+        "regime_beneficiary"
+      ],
+      "ontology_axis_weights": "object",
+      "dynamical_core_vector": "object",
+      "regime_field": "object",
+      "subdomain_tags": "array",
+      "relationship_markers": {
+        "trust_load": "number",
+        "coordination_load": "number",
+        "conflict_load": "number",
+        "alignment_load": "number",
+        "complementarity_load": "number",
+        "regime_asymmetry_load": "number"
+      },
+      "state_markers": {
+        "coherence": "stable|metastable|unstable|contested",
+        "activation": "number",
+        "constraint_load": "number",
+        "reflective_load": "number",
+        "role_ambiguity": "number",
+        "regime_ambiguity": "number"
+      }
+    }
+  },
+  "stage_order": [
+    "ingest_split_packets",
+    "binding_cache_check",
+    "actor_candidate_extraction",
+    "ontology_role_binding",
+    "dynamical_core_binding",
+    "regime_field_binding",
+    "operator_regime_mismatch_scan",
+    "computed_behavior_label_inference",
+    "party_actor_binding_extraction",
+    "relationship_operator_pair_detection",
+    "relationship_regime_pair_detection",
+    "alignment_conflict_complementarity_partition",
+    "qualifier_assignment",
+    "binding_stability_check",
+    "alternate_binding_generation_if_needed",
+    "route_gate_decision",
+    "CREM_handoff_packet_emit",
+    "ETE_handoff_packet_emit",
+    "PSPP_handoff_packet_emit",
+    "DARE_coupling_signal_emit",
+    "selected_working_coupling_emit"
+  ],
+  "stages": {
+    "ingest_split_packets": {
+      "description": "Read ontology, dynamical core, and regime packets as separate auditable layers.",
+      "outputs": [
+        "ontology_profile_ref",
+        "dynamical_core_ref",
+        "regime_field_ref",
+        "upstream_anchor_ref",
+        "upstream_risk_summary"
+      ]
+    },
+    "binding_cache_check": {
+      "description": "Reuse prior coupling only if ontology, operator vector, actor roles, and regime field have not materially drifted.",
+      "reuse_allowed_when": [
+        "same_or_compatible_ontology_profile",
+        "operator_vector_drift_below_threshold",
+        "regime_field_drift_below_threshold",
+        "actor_role_bindings_unchanged",
+        "relationship_goal_unchanged",
+        "no_new_DARE_instability_signal",
+        "no_new_CDP_domain_lock_alert",
+        "no_new_KCE_anchor_contestation"
+      ],
+      "rebind_required_when": [
+        "KCE_anchor_lock_status_contested",
+        "CDP_domain_lock_suspicion_gte_threshold",
+        "operator_vector_drift_gte_threshold",
+        "regime_field_drift_gte_threshold",
+        "role_ambiguity_gte_threshold",
+        "regime_ambiguity_gte_threshold",
+        "party_structure_changed",
+        "relationship_goal_changed",
+        "operator_regime_mismatch_high",
+        "DARE_requests_rebind",
+        "CREM_invokes_coupler_edge_mode"
+      ],
+      "thresholds": {
+        "operator_vector_drift": 0.18,
+        "regime_field_drift": 0.22,
+        "role_ambiguity": 0.45,
+        "regime_ambiguity": 0.45,
+        "domain_lock_suspicion": 0.6,
+        "relationship_binding_drift": 0.25
+      },
+      "outputs": [
+        "cache_decision",
+        "reuse_or_rebind_reason"
+      ]
+    },
+    "actor_candidate_extraction": {
+      "description": "Extract candidate actors from KCE roles, ontology profile, operator carriers, and regime-bearing structures.",
+      "outputs": [
+        "actor_candidates",
+        "role_candidates",
+        "ambiguous_actor_role_pairs"
+      ]
+    },
+    "ontology_role_binding": {
+      "description": "Bind actors to 19D ontologic axes and subdomains without treating ontology as action or regime.",
+      "outputs": [
+        "actor_ontology_bindings",
+        "ontology_binding_risks"
+      ]
+    },
+    "dynamical_core_binding": {
+      "description": "Bind reduced core operator masses to actors and roles.",
+      "outputs": [
+        "actor_operator_bindings",
+        "operator_binding_risks"
+      ]
+    },
+    "regime_field_binding": {
+      "description": "Bind regime axes to actors, environment, relationship field, or whole-system context.",
+      "binding_targets": [
+        "actor_specific_regime",
+        "relationship_regime",
+        "system_regime",
+        "environmental_regime",
+        "institutional_regime",
+        "temporal_phase_regime"
+      ],
+      "outputs": [
+        "actor_regime_bindings",
+        "system_regime_bindings",
+        "regime_binding_risks"
+      ]
+    },
+    "operator_regime_mismatch_scan": {
+      "description": "Detect cases where an otherwise valid operator vector is risky, invalid, or misleading under the inferred regime.",
+      "outputs": [
+        "operator_regime_mismatch_report",
+        "mismatch_watchpoints"
+      ]
+    },
+    "computed_behavior_label_inference": {
+      "description": "Infer human-readable labels from bound ontology + actor role + core operator vector + regime field.",
+      "label_policy": [
+        "labels_are_computed_not_primitive",
+        "emit_alternate_labels_when_regime_ambiguous",
+        "do_not_emit_control_when_governance_or_stewardship_better_supported",
+        "do_not_emit_alignment_when_low_trust_or_forced_alignment_regime_high",
+        "do_not_emit_conflict_when_shared_core_operator_and_regime_difference_explain_tension"
+      ],
+      "outputs": [
+        "computed_behavior_labels",
+        "label_ambiguity_report"
+      ]
+    },
+    "party_actor_binding_extraction": {
+      "description": "Bind actors to explicit or inferred parties, perspectives, branches, coalitions, or relationship roles.",
+      "outputs": [
+        "party_actor_bindings",
+        "party_count_estimate",
+        "coalition_candidates",
+        "party_binding_ambiguity"
+      ]
+    },
+    "relationship_operator_pair_detection": {
+      "description": "Detect aligned, conflicting, and complementary operator relationships across parties or candidate branches.",
+      "outputs": [
+        "aligned_operator_pairs",
+        "conflicting_operator_pairs",
+        "complementary_operator_pairs"
+      ]
+    },
+    "relationship_regime_pair_detection": {
+      "description": "Detect same-operator/different-regime and different-operator/same-regime patterns across parties.",
+      "pattern_types": [
+        "same_operator_different_regime",
+        "different_operator_same_regime",
+        "shared_regime_different_label",
+        "different_regime_false_conflict",
+        "regime_asymmetry_hidden_dependency",
+        "regime_mismatch_generates_conflict"
+      ],
+      "outputs": [
+        "aligned_regime_pairs",
+        "conflicting_regime_pairs",
+        "regime_asymmetry_pairs"
+      ]
+    },
+    "alignment_conflict_complementarity_partition": {
+      "description": "Partition relationship factors into operator alignment/conflict and regime alignment/conflict separately.",
+      "outputs": [
+        "operator_alignment_map",
+        "regime_alignment_map",
+        "combined_relationship_map"
+      ]
+    },
+    "qualifier_assignment": {
+      "description": "Assign directionality, participation, resistance, gain, intensity, control posture, and confidence qualifiers.",
+      "outputs": [
+        "qualifier_distribution"
+      ]
+    },
+    "binding_stability_check": {
+      "description": "Detect non-unique, unstable, misbound, overdetermined, or underdetermined bindings across ontology, operator, regime, and label layers.",
+      "signals": [
+        "ontology_role_ambiguity",
+        "operator_ambiguity",
+        "regime_ambiguity",
+        "computed_label_ambiguity",
+        "operator_regime_conflation",
+        "composite_label_collapse",
+        "role_non_uniqueness",
+        "actor_substitutability",
+        "regime_instability",
+        "qualifier_conflict",
+        "affordance_prior_overreach",
+        "domain_lock_coupling",
+        "anchor_contestation_coupling",
+        "party_binding_ambiguity",
+        "relationship_binding_instability"
+      ],
+      "outputs": [
+        "binding_stability_report"
+      ]
+    },
+    "alternate_binding_generation_if_needed": {
+      "description": "Emit alternate coupling packets when ontology, operator, regime, or label ambiguity changes downstream reasoning.",
+      "outputs": [
+        "candidate_coupling_packets"
+      ]
+    },
+    "route_gate_decision": {
+      "description": "Choose next major route: CREM-first, ETE-first, parallel CREM+ETE, PSPP-direct, CEC, or DARE-review.",
+      "outputs": [
+        "route_gate_decision"
+      ]
+    },
+    "CREM_handoff_packet_emit": {
+      "description": "Emit CREM-ready party, operator, regime, alignment, conflict, complementarity, and trust/coordination packets.",
+      "outputs": [
+        "crem_handoff_packet"
+      ]
+    },
+    "ETE_handoff_packet_emit": {
+      "description": "Emit ETE-ready operator projection, regime projection, and mismatch exploration hints.",
+      "outputs": [
+        "ete_handoff_packet"
+      ]
+    },
+    "PSPP_handoff_packet_emit": {
+      "description": "Emit PSPP-ready candidate coupling variants for branch comparison.",
+      "outputs": [
+        "pspp_handoff_packet"
+      ]
+    },
+    "DARE_coupling_signal_emit": {
+      "description": "Emit DARE-visible risks for misbinding, operator-regime conflation, composite collapse, regime instability, false harmony, and party erasure.",
+      "outputs": [
+        "dare_coupling_signals"
+      ]
+    },
+    "selected_working_coupling_emit": {
+      "description": "Emit one provisional selected coupling for compatibility while preserving alternatives.",
+      "outputs": [
+        "selected_working_coupling",
+        "candidate_coupling_packets",
+        "coupling_trace"
+      ]
+    }
+  },
+  "relationship_patterns": {
+    "operator_patterns": {
+      "aligned_operator_pairs": [
+        {
+          "pattern": [
+            "coordinate",
+            "coordinate"
+          ],
+          "meaning": "shared coordination posture"
+        },
+        {
+          "pattern": [
+            "signal",
+            "detect"
+          ],
+          "meaning": "communication channel can stabilize if trusted"
+        },
+        {
+          "pattern": [
+            "detect",
+            "interpret"
+          ],
+          "meaning": "shared sensing and meaning-making"
+        },
+        {
+          "pattern": [
+            "constrain",
+            "adapt"
+          ],
+          "meaning": "safe boundary plus flexible response"
+        },
+        {
+          "pattern": [
+            "stabilize",
+            "stabilize"
+          ],
+          "meaning": "shared preference for continuity or order"
+        }
+      ],
+      "conflicting_operator_pairs": [
+        {
+          "pattern": [
+            "stabilize",
+            "disrupt"
+          ],
+          "meaning": "continuity versus rupture"
+        },
+        {
+          "pattern": [
+            "constrain",
+            "explore"
+          ],
+          "meaning": "boundary-control versus option expansion"
+        },
+        {
+          "pattern": [
+            "gate",
+            "execute"
+          ],
+          "meaning": "permission threshold versus immediate action"
+        },
+        {
+          "pattern": [
+            "select",
+            "explore"
+          ],
+          "meaning": "closure versus search"
+        }
+      ],
+      "complementary_operator_pairs": [
+        {
+          "pattern": [
+            "stabilize",
+            "explore"
+          ],
+          "meaning": "continuity plus adaptive search"
+        },
+        {
+          "pattern": [
+            "signal",
+            "interpret"
+          ],
+          "meaning": "expression plus meaning-making"
+        },
+        {
+          "pattern": [
+            "detect",
+            "execute"
+          ],
+          "meaning": "sensing plus action"
+        },
+        {
+          "pattern": [
+            "anticipate",
+            "coordinate"
+          ],
+          "meaning": "forecasting plus joint preparation"
+        }
+      ]
+    },
+    "regime_patterns": {
+      "same_operator_different_regime": {
+        "description": "Parties share a core operator but conflict because the regime differs.",
+        "example": "Both parties seek stabilize; one under hierarchy, one under autonomy."
+      },
+      "different_operator_same_regime": {
+        "description": "Parties use different operators under a shared regime and may be complementary rather than opposed.",
+        "example": "One detects while another executes under emergency conditions."
+      },
+      "regime_asymmetry": {
+        "description": "Different parties occupy different regime positions even in the same system.",
+        "example": "A regulator operates under authority; the regulated party operates under constraint."
+      },
+      "false_harmony_regime": {
+        "description": "Surface agreement hides low trust, coercion, or party erasure.",
+        "example": "Coordination exists formally but trust is broken and authority is coercive."
+      }
+    }
+  },
+  "route_gate_policy": {
+    "routes": {
+      "CREM_first": {
+        "use_when": [
+          "party_count_estimate >= 2",
+          "operator_conflict_or_regime_conflict_material",
+          "relationship_goal_detected",
+          "trust_or_coordination_regime_material",
+          "party_actor_bindings_sufficiently_defined"
+        ]
+      },
+      "ETE_first": {
+        "use_when": [
+          "general_transform_exploration_needed",
+          "operator_projection_or_regime_projection_needed",
+          "party_count_estimate < 2",
+          "operator_gap_or_transform_plan_dominates"
+        ]
+      },
+      "parallel_CREM_ETE": {
+        "use_when": [
+          "multi_party_system_present",
+          "both_relationship_rebase_and_transform_exploration_needed",
+          "operator_space_or_regime_space_contested",
+          "conflict_and_alignment_both_present"
+        ]
+      },
+      "PSPP_direct": {
+        "use_when": [
+          "low_complexity",
+          "single_stable_coupling",
+          "regime_confidence_high",
+          "no_transform_or_relationship_specialist_needed"
+        ]
+      },
+      "CEC": {
+        "use_when": [
+          "ordered_path_or_causal_sequence_material",
+          "operator_sequence_requires_validation",
+          "regime_phase_sequence_requires_validation"
+        ]
+      },
+      "DARE_review": {
+        "use_when": [
+          "anchor_suspicion_high",
+          "misbinding_suspicion_high",
+          "operator_regime_conflation_high",
+          "composite_label_collapse_high",
+          "forced_alignment_or_false_harmony_risk_high",
+          "operator_gap_or_regime_gap_suspicion_high"
+        ]
+      }
+    },
+    "thresholds": {
+      "party_count_min_for_CREM": 2,
+      "relationship_goal_score_min": 0.4,
+      "operator_conflict_score_min": 0.35,
+      "regime_conflict_score_min": 0.35,
+      "operator_regime_mismatch_review_min": 0.55,
+      "parallel_need_min": 0.5,
+      "dare_review_risk_min": 0.6
+    }
+  },
+  "scoring": {
+    "binding_stability_score": {
+      "ontology_role_clarity": 0.12,
+      "operator_vector_fit": 0.14,
+      "regime_field_fit": 0.14,
+      "actor_role_clarity": 0.1,
+      "computed_label_support": 0.1,
+      "low_operator_regime_conflation": 0.1,
+      "regime_confidence": 0.1,
+      "party_actor_binding_clarity": 0.08,
+      "relationship_binding_clarity": 0.06,
+      "low_domain_lock_coupling": 0.03,
+      "low_causal_role_ambiguity": 0.03
+    },
+    "misbinding_suspicion": {
+      "ontology_role_ambiguity": 0.1,
+      "operator_ambiguity": 0.12,
+      "regime_ambiguity": 0.12,
+      "computed_label_ambiguity": 0.1,
+      "operator_regime_conflation": 0.14,
+      "composite_label_collapse": 0.12,
+      "role_non_uniqueness": 0.08,
+      "actor_substitutability": 0.06,
+      "regime_instability": 0.08,
+      "party_binding_ambiguity": 0.08,
+      "relationship_binding_instability": 0.1
+    }
+  },
+  "output_schema": {
+    "coupler_packet": {
+      "schema_version": "coupler.parallax/1.5",
+      "source_refs": {
+        "kce_anchor_ref": "string_or_null",
+        "ontology_profile_ref": "string_or_null",
+        "dynamical_core_ref": "string_or_null",
+        "regime_field_ref": "string_or_null",
+        "prior_coupling_ref": "string_or_null"
+      },
+      "selected_working_coupling": "object",
+      "candidate_coupling_packets": "array",
+      "computed_behavior_labels": "array",
+      "operator_regime_mismatch_report": "object",
+      "binding_stability_report": "object",
+      "crem_handoff_packet": "object",
+      "ete_handoff_packet": "object",
+      "pspp_handoff_packet": "object",
+      "route_gate_decision": "object",
+      "dare_coupling_signals": "object",
+      "trace": "object"
+    }
+  },
+  "canonical_packet_compatibility": {
+    "legacy_fields_provided": [
+      "coupling_packet"
+    ],
+    "legacy_mapping": {
+      "legacy.candidate_ontology": "candidate_coupling_packets[].ontology_binding",
+      "legacy.operator_vector_bound": "candidate_coupling_packets[].dynamical_core_vector_bound",
+      "legacy.regime": "candidate_coupling_packets[].regime_field_bound",
+      "legacy.alias": "computed_behavior_labels[].label",
+      "legacy.alias_decomposition": "computed_behavior_labels[].supporting_core_operators + supporting_regime_conditions"
+    },
+    "compatibility_note": "Older modules expecting a single coupling_packet may consume selected_working_coupling. New modules should consume ontology_binding, dynamical_core_vector_bound, regime_field_bound, computed_behavior_labels, and operator_regime_mismatch_report separately."
+  }
+}

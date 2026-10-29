@@ -1,0 +1,748 @@
+{
+  "module_name": "Conflict and Relationship Rebase Module",
+  "short_name": "CREM",
+  "version": "v1.3.0",
+  "status": "conceptual_executable_spec",
+  "revision_kind": "split_ontology_dynamical_core_regime_rebase_upgrade",
+  "supersedes": "CREM_v1.2_NPartyRelationshipRebase",
+  "purpose": "Rebase relationships among two or more coherent parties, perspectives, agents, systems, or candidate branches using the split Prism architecture: 19D Ontologic Prism, Dynamical Core v0.2, Regime Field v0.1, and Prism Coupler v1.5. CREM v1.3 separates operator conflict from regime conflict, operator alignment from regime alignment, and composite behavior labels from primitive explanatory structure.",
+  "core_statement": "When multiple coherent perspectives interact, do not merely choose, average, or compromise. Factor each party into ontology, actor role, dynamical core vector, regime field, and computed behavior labels. Determine whether conflict or alignment arises from primitive operator structure, regime constraints, shared dependencies, or mislabeled composites. Rebase around the appropriate invariant while preserving party distinction and necessary dependencies.",
+  "core_doctrine": [
+    "CREM supports n-party systems, not only dyads.",
+    "Conflict rebase and alignment rebase remain sibling modes.",
+    "Operator conflict and regime conflict must be separated.",
+    "Operator alignment and regime alignment must be separated.",
+    "Many apparent dynamical conflicts are actually same-operator/different-regime conflicts.",
+    "Many apparent compromises erase party distinction by hiding regime asymmetry.",
+    "Computed labels such as control, governance, healing, conflict, growth, collapse, or cooperation are not primitive rebase centers unless decomposed.",
+    "Aligned dynamicals must be structural, not merely agreeable language.",
+    "Relationship strengthening requires preserving party distinction while improving compatible coordination.",
+    "Preserve productive tension when tension carries necessary information.",
+    "Emit PSPP-ready candidate systems and DARE-auditable decision artifacts."
+  ],
+  "registry_refs": {
+    "KCE": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "OntologicPrism": "19D_Ontologic_Prism",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "PrismCoupler": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+    "CTR": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+    "ETE": "ETE_v1.1_SplitLayerExplorationTransform.json",
+    "PSPP_Lite": "PSPP_v5.0_CandidateSystemComparator.json",
+    "CEC": "CEC_Parallax_v1.1_ConditionalPathValidator.json",
+    "DARE_IDCM": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json"
+  },
+  "responsibility_boundary": {
+    "owns": [
+      "n_party_frame_normalization",
+      "party_anchor_mapping",
+      "party_ontology_mapping",
+      "party_dynamical_core_mapping",
+      "party_regime_field_mapping",
+      "party_coupling_mapping",
+      "operator_conflict_alignment_partition",
+      "regime_conflict_alignment_partition",
+      "same_operator_different_regime_detection",
+      "different_operator_same_regime_detection",
+      "computed_label_decomposition",
+      "shared_dependency_invariant_extraction",
+      "operator_conflict_invariant_extraction",
+      "regime_conflict_invariant_extraction",
+      "operator_alignment_invariant_extraction",
+      "regime_alignment_invariant_extraction",
+      "mixed_rebase_center_selection",
+      "party_integrity_preservation_gate",
+      "false_harmony_gate",
+      "forced_alignment_gate",
+      "relationship_rebase_plan_generation",
+      "candidate_system_branch_emission",
+      "rebase_vector_emission",
+      "DARE_audit_artifact_emit"
+    ],
+    "does_not_own": [
+      "primitive_domain_axis_definition",
+      "primitive_dynamical_operator_definition",
+      "regime_axis_definition",
+      "primary_anchor_extraction",
+      "general_transform_execution",
+      "candidate_system_competition",
+      "ordered_path_validation_execution",
+      "final_answer_synthesis",
+      "external_fact_verification",
+      "durable_memory_write_execution"
+    ],
+    "handoff_note": "CREM v1.3 emits rebase packets, operator/regime invariants, dependency invariants, latent axes, relationship-strengthening plans, and PSPP-ready candidate systems. PSPP-lite compares candidate systems; CEC validates ordered paths; DARE audits pruning, false harmony, operator-regime conflation, and party-erasure risks."
+  },
+  "activation_policy": {
+    "invoke_when": [
+      "two_or_more_coherent_perspectives_conflict",
+      "three_or_more_parties_or_branches_interact",
+      "opposition_and_alignment_are_both_present",
+      "argument_looping_or_repeating_known_positions",
+      "same_operator_different_regime_suspected",
+      "different_operator_same_regime_suspected",
+      "operator_regime_conflation_suspected",
+      "computed_label_conflict_suspected",
+      "shared_dependencies_visible_or_suspected",
+      "relationship_strengthening_requested",
+      "trust_repair_or_coalition_formation_requested",
+      "common_ground_requested_without_erasing_differences",
+      "PSPP_Lite_detects_multiple_coherent_candidate_systems_with_alignment_or_conflict",
+      "Coupler_v1_5_emits_CREM_first_or_parallel_CREM_ETE_route"
+    ],
+    "do_not_invoke_when": [
+      "single_party_problem_without_material_conflict_or_relationship_goal",
+      "simple_fact_retrieval",
+      "pure_summarization_without_party_dynamics",
+      "conflict_is_trivial_or_semantic_only",
+      "one_party_frame_is_incoherent_and_needs_basic_correction_first",
+      "relationship_strengthening_request_has_no_identifiable_parties"
+    ],
+    "mode_selection": {
+      "operator_conflict_rebase": [
+        "operator_conflict_score >= 0.35",
+        "opposition_factors_material",
+        "regime_conflict_score < operator_conflict_score"
+      ],
+      "regime_conflict_rebase": [
+        "regime_conflict_score >= 0.35",
+        "same_operator_different_regime_present",
+        "regime_conflict_score >= operator_conflict_score"
+      ],
+      "operator_alignment_rebase": [
+        "operator_alignment_score >= 0.35",
+        "relationship_strengthening_intent_present",
+        "shared_or_complementary_core_operators_present"
+      ],
+      "regime_alignment_rebase": [
+        "regime_alignment_score >= 0.35",
+        "shared_regime_conditions_can_support_coordination",
+        "party_distinction_preserved"
+      ],
+      "mixed_rebase": [
+        "operator_conflict_score >= 0.30",
+        "regime_conflict_score >= 0.30",
+        "alignment_score >= 0.25",
+        "n_party_system_contains_coalitions_or_subgroups"
+      ],
+      "productive_tension_preservation": [
+        "conflict_contains_valid_dependency_information",
+        "resolution_would_erase_party_integrity_or_falsifier_value"
+      ]
+    }
+  },
+  "inputs": {
+    "prompt_text": {
+      "type": "string",
+      "description": "Raw prompt, discourse excerpt, debate, relationship request, article/rebuttal set, or multi-branch candidate system statement."
+    },
+    "party_frames": {
+      "type": "array",
+      "required": false,
+      "description": "Party-specific perspectives, claims, goals, values, fears, incentives, or relationship goals.",
+      "items_template": {
+        "party_id": "string",
+        "party_label": "string",
+        "party_type": "person|group|institution|agent|system|branch|role|perspective",
+        "claims": [],
+        "evidence": [],
+        "stated_goal": "string_or_null",
+        "protected_values": [],
+        "relationship_goal": "string_or_null",
+        "context": {}
+      }
+    },
+    "coupler_packet_v1_5": {
+      "type": "object",
+      "required": false,
+      "description": "Preferred input: Prism Coupler v1.5 packet with party_actor_bindings, ontology/dynamical/regime bindings, operator/regime relationship maps, and DARE signals."
+    },
+    "candidate_system_branches": {
+      "type": "array",
+      "required": false,
+      "description": "PSPP-lite or ETE branches that can be treated as parties/perspectives for conflict or alignment rebase."
+    },
+    "optional_upstream_packets": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "kce_packets": "array",
+        "ontology_profiles": "array",
+        "dynamical_core_packets": "array",
+        "regime_field_packets": "array",
+        "coupling_packets": "array",
+        "ete_packet": "object",
+        "pspp_packet": "object",
+        "prior_memory_vectors": "array",
+        "projection_ledger": "object"
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "depth_level": "integer_1_to_3",
+        "mode": [
+          "auto",
+          "operator_conflict_rebase",
+          "regime_conflict_rebase",
+          "operator_alignment_rebase",
+          "regime_alignment_rebase",
+          "mixed_rebase",
+          "productive_tension_preservation"
+        ],
+        "novelty_mode": [
+          "bounded",
+          "elevated",
+          "max_discovery"
+        ],
+        "relationship_goal": [
+          "none",
+          "strengthen_relationship",
+          "repair_trust",
+          "build_coalition",
+          "improve_coordination",
+          "preserve_productive_tension",
+          "find_common_ground",
+          "synthesize_without_erasure"
+        ],
+        "require_citations_or_fact_check": "boolean",
+        "handoff_target": [
+          "direct_synthesis",
+          "pspp",
+          "memory",
+          "outer_loop",
+          "all"
+        ],
+        "max_candidate_invariants": "integer",
+        "max_latent_axes": "integer",
+        "max_candidate_systems": "integer",
+        "max_party_count_soft": "integer"
+      }
+    }
+  },
+  "party_graph_schema": {
+    "party_node": {
+      "party_id": "string",
+      "party_label": "string",
+      "party_type": "string",
+      "core_optimization": "string",
+      "protected_invariant": "string",
+      "ontology_profile": {
+        "phys": 0.0,
+        "bio": 0.0,
+        "neur": 0.0,
+        "info": 0.0,
+        "math": 0.0,
+        "meta": 0.0,
+        "aes": 0.0,
+        "stor": 0.0,
+        "hum": 0.0,
+        "rhet": 0.0,
+        "eth": 0.0,
+        "exp": 0.0,
+        "econ": 0.0,
+        "pol": 0.0,
+        "geo": 0.0,
+        "mus": 0.0,
+        "nai": 0.0,
+        "phil": 0.0,
+        "style": 0.0
+      },
+      "dynamical_core_vector": {
+        "signal": 0.0,
+        "detect": 0.0,
+        "interpret": 0.0,
+        "encode": 0.0,
+        "execute": 0.0,
+        "disrupt": 0.0,
+        "coordinate": 0.0,
+        "constrain": 0.0,
+        "gate": 0.0,
+        "stabilize": 0.0,
+        "explore": 0.0,
+        "select": 0.0,
+        "adapt": 0.0,
+        "anticipate": 0.0
+      },
+      "regime_field": {
+        "scale": "string_or_null",
+        "tempo": "string_or_null",
+        "phase_state": "string_or_null",
+        "stability": "string_or_null",
+        "coupling": "string_or_null",
+        "reversibility": "string_or_null",
+        "constraint_load": "string_or_null",
+        "noise": "string_or_null",
+        "uncertainty": "string_or_null",
+        "resource_condition": "string_or_null",
+        "legitimacy": "string_or_null",
+        "trust": "string_or_null",
+        "authority_gradient": "string_or_null",
+        "adversariality": "string_or_null",
+        "commitment": "string_or_null",
+        "boundary_condition": "string_or_null",
+        "ethical_load": "string_or_null"
+      },
+      "computed_behavior_labels": [],
+      "dominant_core_operators": [],
+      "dominant_regime_factors": [],
+      "necessary_conditions": [],
+      "failure_conditions": [],
+      "relationship_goal": "string_or_null",
+      "anchor_confidence": 0.0
+    },
+    "dyadic_edge": {
+      "edge_id": "string",
+      "party_refs": [
+        "party_a",
+        "party_b"
+      ],
+      "operator_opposition_factors": [],
+      "operator_alignment_factors": [],
+      "operator_complementarity_factors": [],
+      "regime_opposition_factors": [],
+      "regime_alignment_factors": [],
+      "regime_asymmetry_factors": [],
+      "dependency_factors": [],
+      "trust_or_coordination_state": "string",
+      "operator_conflict_score": 0.0,
+      "regime_conflict_score": 0.0,
+      "operator_alignment_score": 0.0,
+      "regime_alignment_score": 0.0,
+      "edge_repair_potential": 0.0
+    },
+    "hyperedge": {
+      "hyperedge_id": "string",
+      "party_refs": [],
+      "shared_dependency": "string",
+      "shared_core_operator": "string_or_null",
+      "shared_regime_factor": "string_or_null",
+      "conflict_generating_operator": "string_or_null",
+      "conflict_generating_regime": "string_or_null",
+      "alignment_strengthening_operator": "string_or_null",
+      "alignment_strengthening_regime": "string_or_null",
+      "coalition_or_cluster_label": "string_or_null",
+      "hyperedge_score": 0.0
+    }
+  },
+  "stage_order": [
+    "intake_and_party_frame_normalization",
+    "mode_selection",
+    "party_anchor_mapping",
+    "party_ontology_mapping",
+    "party_dynamical_core_mapping",
+    "party_regime_field_mapping",
+    "party_coupling_ingest_or_reconstruction",
+    "computed_label_decomposition",
+    "party_graph_construction",
+    "factor_hypergraph_extraction",
+    "operator_opposition_alignment_partition",
+    "regime_opposition_alignment_partition",
+    "same_operator_different_regime_detection",
+    "different_operator_same_regime_detection",
+    "dependency_invariant_extraction",
+    "operator_conflict_invariant_extraction_if_needed",
+    "regime_conflict_invariant_extraction_if_needed",
+    "operator_alignment_invariant_extraction_if_needed",
+    "regime_alignment_invariant_extraction_if_needed",
+    "conflict_generation_gate_if_conflict_mode",
+    "alignment_preservation_gate_if_alignment_mode",
+    "relationship_strengthening_gate_if_relationship_goal",
+    "false_harmony_and_forced_alignment_gate",
+    "rebase_center_selection",
+    "latent_axis_ranking",
+    "dependency_constrained_rotation",
+    "relationship_rebase_plan_generation",
+    "candidate_system_branch_emission",
+    "dependency_preservation_gate",
+    "tradeoff_surface_extraction_optional",
+    "memory_rebase_vector_emit",
+    "telemetry_emit"
+  ],
+  "stages": {
+    "intake_and_party_frame_normalization": {
+      "purpose": "Normalize parties, perspectives, agents, systems, or candidate branches without prematurely judging which is correct.",
+      "outputs": [
+        "party_frames_normalized",
+        "opening_conflict_lock",
+        "relationship_goal_lock"
+      ]
+    },
+    "mode_selection": {
+      "purpose": "Select operator_conflict, regime_conflict, operator_alignment, regime_alignment, mixed, or productive_tension mode.",
+      "outputs": [
+        "selected_mode",
+        "mode_rationale"
+      ]
+    },
+    "party_anchor_mapping": {
+      "purpose": "Run lightweight KCE-style anchor mapping per party, preserving party-specific values and relationship goals.",
+      "outputs": [
+        "party_anchor_packets"
+      ]
+    },
+    "party_ontology_mapping": {
+      "purpose": "Map each party's 19D ontology profile independently.",
+      "outputs": [
+        "party_ontology_profiles",
+        "domain_overlap",
+        "domain_collision_risks"
+      ]
+    },
+    "party_dynamical_core_mapping": {
+      "purpose": "Map each party's reduced core operator vector independently.",
+      "outputs": [
+        "party_dynamical_core_profiles",
+        "operator_conflicts",
+        "operator_alignments",
+        "operator_complementarities"
+      ]
+    },
+    "party_regime_field_mapping": {
+      "purpose": "Map each party's regime field independently, including asymmetries and shared regime constraints.",
+      "outputs": [
+        "party_regime_profiles",
+        "regime_conflicts",
+        "regime_alignments",
+        "regime_asymmetries"
+      ]
+    },
+    "party_coupling_ingest_or_reconstruction": {
+      "purpose": "Consume Coupler v1.5 packets when available or reconstruct minimal couplings from ontology/core/regime inputs.",
+      "outputs": [
+        "party_coupling_packets",
+        "coupling_instabilities"
+      ]
+    },
+    "computed_label_decomposition": {
+      "purpose": "Decompose labels such as control, healing, growth, collapse, conflict, or governance into supporting operators and regimes.",
+      "outputs": [
+        "label_decomposition_packets",
+        "label_collapse_risks"
+      ]
+    },
+    "party_graph_construction": {
+      "purpose": "Construct dyadic and hyperedge graph over all parties, including separate operator and regime relationship layers.",
+      "outputs": [
+        "party_graph"
+      ]
+    },
+    "factor_hypergraph_extraction": {
+      "purpose": "Extract compact factors from party anchors, ontologies, core dynamics, regimes, couplings, and party graph.",
+      "factor_types": [
+        "ontological_factor",
+        "operator_factor",
+        "regime_factor",
+        "computed_label_factor",
+        "role_factor",
+        "dependency_factor",
+        "constraint_factor",
+        "cost_factor",
+        "risk_factor",
+        "legitimacy_factor",
+        "trust_factor",
+        "coordination_factor",
+        "repair_factor",
+        "shared_goal_factor",
+        "complementarity_factor"
+      ],
+      "outputs": [
+        "factor_hypergraph"
+      ]
+    },
+    "operator_opposition_alignment_partition": {
+      "purpose": "Partition operator factors into opposition, alignment, complementarity, dependency, and neutral sets.",
+      "outputs": [
+        "operator_opposition_pairs",
+        "operator_alignment_sets",
+        "operator_complementarity_sets"
+      ]
+    },
+    "regime_opposition_alignment_partition": {
+      "purpose": "Partition regime factors into opposition, alignment, asymmetry, dependency, and neutral sets.",
+      "outputs": [
+        "regime_opposition_pairs",
+        "regime_alignment_sets",
+        "regime_asymmetry_sets"
+      ]
+    },
+    "same_operator_different_regime_detection": {
+      "purpose": "Detect parties sharing core operators while diverging because of different regime fields.",
+      "outputs": [
+        "same_operator_different_regime_pairs"
+      ]
+    },
+    "different_operator_same_regime_detection": {
+      "purpose": "Detect parties using different operators under the same regime, often indicating complementarity.",
+      "outputs": [
+        "different_operator_same_regime_pairs"
+      ]
+    },
+    "dependency_invariant_extraction": {
+      "purpose": "Extract invariants from dependencies required for the system or relationship to function.",
+      "outputs": [
+        "dependency_invariants"
+      ]
+    },
+    "operator_conflict_invariant_extraction_if_needed": {
+      "purpose": "Extract the operator-level invariant that generates observed opposition.",
+      "outputs": [
+        "candidate_operator_conflict_invariants"
+      ]
+    },
+    "regime_conflict_invariant_extraction_if_needed": {
+      "purpose": "Extract the regime-level invariant that generates observed opposition.",
+      "outputs": [
+        "candidate_regime_conflict_invariants"
+      ]
+    },
+    "operator_alignment_invariant_extraction_if_needed": {
+      "purpose": "Extract shared or complementary core operators that can strengthen coordination.",
+      "outputs": [
+        "candidate_operator_alignment_invariants"
+      ]
+    },
+    "regime_alignment_invariant_extraction_if_needed": {
+      "purpose": "Extract shared or compatible regime conditions that can strengthen relationship without erasing differences.",
+      "outputs": [
+        "candidate_regime_alignment_invariants"
+      ]
+    },
+    "conflict_generation_gate_if_conflict_mode": {
+      "purpose": "Require the conflict invariant to reproduce and explain the original conflict.",
+      "outputs": [
+        "validated_conflict_invariants",
+        "conflict_generation_report"
+      ]
+    },
+    "alignment_preservation_gate_if_alignment_mode": {
+      "purpose": "Require the alignment invariant to preserve party distinction and explain actual compatibility.",
+      "outputs": [
+        "validated_alignment_invariants",
+        "alignment_preservation_report"
+      ]
+    },
+    "relationship_strengthening_gate_if_relationship_goal": {
+      "purpose": "Require strengthening plans to improve trust, coordination, or shared purpose while preserving party integrity.",
+      "outputs": [
+        "relationship_strengthening_report"
+      ]
+    },
+    "false_harmony_and_forced_alignment_gate": {
+      "purpose": "Reject or flag rebases that create surface agreement by erasing trust deficits, regime asymmetry, or party distinction.",
+      "outputs": [
+        "false_harmony_report",
+        "forced_alignment_report",
+        "party_erasure_report"
+      ]
+    },
+    "rebase_center_selection": {
+      "purpose": "Select the appropriate rebase center: operator invariant, regime invariant, shared dependency, complementarity, or productive tension.",
+      "outputs": [
+        "validated_rebase_invariant",
+        "rebase_center_rationale"
+      ]
+    },
+    "latent_axis_ranking": {
+      "purpose": "Rank latent axes that explain persistent conflict or alignment not captured by surface factors.",
+      "outputs": [
+        "ranked_latent_axes"
+      ]
+    },
+    "dependency_constrained_rotation": {
+      "purpose": "Rotate or reframe using dependency invariants as constraints so novelty does not erase system requirements.",
+      "outputs": [
+        "dependency_constrained_views"
+      ]
+    },
+    "relationship_rebase_plan_generation": {
+      "purpose": "Generate practical or conceptual plans for conflict resolution, relationship strengthening, coalition, repair, or productive tension preservation.",
+      "outputs": [
+        "relationship_rebase_plan"
+      ]
+    },
+    "candidate_system_branch_emission": {
+      "purpose": "Emit PSPP-ready candidate systems.",
+      "outputs": [
+        "candidate_system_branches"
+      ]
+    },
+    "dependency_preservation_gate": {
+      "purpose": "Ensure emitted branches preserve necessary dependencies.",
+      "outputs": [
+        "dependency_preservation_report"
+      ]
+    },
+    "tradeoff_surface_extraction_optional": {
+      "purpose": "Extract tradeoffs among parties, operators, regimes, values, and costs when relevant.",
+      "outputs": [
+        "tradeoff_surface"
+      ]
+    },
+    "memory_rebase_vector_emit": {
+      "purpose": "Emit optional memory-worthy rebase vectors without executing durable memory writes.",
+      "outputs": [
+        "memory_rebase_vector_candidates"
+      ]
+    },
+    "telemetry_emit": {
+      "purpose": "Emit audit metrics for branch selection, false harmony risk, regime conflict, and novelty.",
+      "outputs": [
+        "telemetry"
+      ]
+    }
+  },
+  "gates": {
+    "conflict_generation_gate": {
+      "questions": [
+        "Does this invariant explain why the opening conflict exists?",
+        "If this invariant is removed, does the original conflict disappear or become unintelligible?",
+        "Does it preserve the subject rather than replacing it?"
+      ],
+      "pass_condition": "candidate_conflict_generation_score >= 0.62 AND return_path_to_opening_conflict_present == true"
+    },
+    "alignment_preservation_gate": {
+      "questions": [
+        "Does this invariant explain why relationship strengthening is possible?",
+        "Does it preserve party distinction rather than flattening differences?",
+        "Does it identify shared or complementary operators/regimes rather than vague common ground?",
+        "Would strengthening this invariant improve trust, coordination, or shared action?"
+      ],
+      "pass_condition": "candidate_alignment_score >= 0.62 AND party_distinction_preserved == true"
+    },
+    "false_harmony_gate": {
+      "questions": [
+        "Is agreement produced by coercion, avoidance, low-trust compliance, or party erasure?",
+        "Does the plan acknowledge regime asymmetry?",
+        "Does it preserve necessary conflict or productive tension?"
+      ],
+      "fail_condition": "false_harmony_score >= 0.60 OR forced_alignment_score >= 0.60 OR party_erasure_score >= 0.60"
+    },
+    "operator_regime_integrity_gate": {
+      "questions": [
+        "Is an operator conflict being confused with a regime conflict?",
+        "Is a computed label being used as a primitive cause?",
+        "Does the rebase center specify whether it is operator-level, regime-level, dependency-level, or label-level?"
+      ],
+      "pass_condition": "operator_regime_conflation_score < 0.45 AND composite_label_collapse_score < 0.45"
+    }
+  },
+  "candidate_branch_types": [
+    "direct_preservation_branch",
+    "operator_conflict_rebase_branch",
+    "regime_conflict_rebase_branch",
+    "operator_alignment_rebase_branch",
+    "regime_alignment_rebase_branch",
+    "dependency_rebase_branch",
+    "complementarity_rebase_branch",
+    "productive_tension_branch",
+    "same_operator_different_regime_branch",
+    "different_operator_same_regime_branch",
+    "false_harmony_rejection_branch",
+    "trust_repair_branch",
+    "coalition_branch",
+    "falsifier_branch"
+  ],
+  "output_schema": {
+    "crem_packet": {
+      "schema_version": "crem.parallax/1.3",
+      "source_refs": {
+        "prompt_ref": "string_or_null",
+        "coupler_packet_ref": "string_or_null",
+        "ontology_profile_refs": [],
+        "dynamical_core_refs": [],
+        "regime_field_refs": []
+      },
+      "selected_mode": "operator_conflict_rebase|regime_conflict_rebase|operator_alignment_rebase|regime_alignment_rebase|mixed_rebase|productive_tension_preservation",
+      "party_graph": "object",
+      "factor_hypergraph": "object",
+      "operator_relationship_map": "object",
+      "regime_relationship_map": "object",
+      "computed_label_decomposition": "array",
+      "dependency_invariants": "array",
+      "operator_conflict_invariants": "array",
+      "regime_conflict_invariants": "array",
+      "operator_alignment_invariants": "array",
+      "regime_alignment_invariants": "array",
+      "validated_rebase_invariant": "object",
+      "relationship_rebase_plan": "object",
+      "candidate_system_branches": "array",
+      "gate_report": "object",
+      "rebase_vector": "object",
+      "dare_audit_surface": "object",
+      "telemetry": "object"
+    }
+  },
+  "scoring": {
+    "operator_conflict_score": {
+      "opposing_core_operator_pairs": 0.35,
+      "incompatible_action_sequences": 0.2,
+      "operator_goal_collision": 0.15,
+      "execution_timing_conflict": 0.1,
+      "operator_regime_mismatch": 0.1,
+      "return_path_to_conflict": 0.1
+    },
+    "regime_conflict_score": {
+      "same_operator_different_regime": 0.25,
+      "regime_axis_opposition": 0.25,
+      "trust_or_legitimacy_gap": 0.15,
+      "resource_or_authority_asymmetry": 0.15,
+      "phase_state_incompatibility": 0.1,
+      "boundary_condition_conflict": 0.1
+    },
+    "alignment_score": {
+      "shared_core_operators": 0.2,
+      "complementary_core_operators": 0.2,
+      "shared_regime_conditions": 0.15,
+      "compatible_regime_differences": 0.15,
+      "shared_dependency_invariants": 0.15,
+      "relationship_goal_support": 0.15
+    },
+    "false_harmony_score": {
+      "low_trust_masked_as_alignment": 0.2,
+      "coercive_authority_masked_as_agreement": 0.2,
+      "party_distinction_erased": 0.2,
+      "regime_asymmetry_ignored": 0.15,
+      "productive_tension_erased": 0.15,
+      "unreciprocated_concession": 0.1
+    }
+  },
+  "handoff": {
+    "to_PSPP": {
+      "candidate_system_branches": "array",
+      "branch_scoring_hints": [
+        "operator_conflict_resolution",
+        "regime_conflict_resolution",
+        "party_integrity_preservation",
+        "dependency_preservation",
+        "false_harmony_risk",
+        "relationship_strengthening_potential"
+      ]
+    },
+    "to_CEC": {
+      "ordered_path_needed": "boolean",
+      "dependency_sensitive_branches": [],
+      "regime_phase_sequence_risks": []
+    },
+    "to_ETE": {
+      "projection_needed": "boolean",
+      "operator_projection_hints": [],
+      "regime_projection_hints": [],
+      "label_decomposition_hints": []
+    },
+    "to_DARE": {
+      "false_harmony_report": "object",
+      "operator_regime_conflation_report": "object",
+      "party_erasure_report": "object",
+      "pruning_or_branch_loss_risks": []
+    },
+    "to_Arbiter": {
+      "validated_rebase_invariant": "object",
+      "candidate_system_branches": "array",
+      "relationship_rebase_plan": "object",
+      "caveats": []
+    }
+  }
+}

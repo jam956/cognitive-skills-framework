@@ -1,0 +1,824 @@
+{
+  "module_name": "Causal Entailment Chaining Parallax Engine",
+  "short_name": "CEC_Parallax",
+  "version": "v1.1.0",
+  "status": "design_stable_executable_spec",
+  "revision_kind": "conditional_late_stage_path_validator_refactor",
+  "supersedes": "CausalEntailmentChaining_ParallaxEngine_v1.json",
+  "generated_utc": "2026-05-02T19:39:09.729155+00:00",
+  "purpose": "Validate ordered reasoning, causal chains, proof paths, dependency paths, and execution sequences only when sequence materially affects correctness. CEC v1.1 preserves the original operator family but updates placement for the reorganized stack: it is now primarily a conditional late-stage validator invoked by PSPP-lite, CREM, DARE/IDCM after reconstitution, or the final Arbiter when path validity remains material.",
+  "core_doctrine": [
+    "CEC does not discover new conceptual space.",
+    "CEC does not decide which candidate system is best.",
+    "CEC validates whether a selected, surviving, or contested path can be walked without unsupported jumps.",
+    "Invoke late by default, after exploration and candidate-system comparison.",
+    "Invoke early only when the task itself is a proof, derivation, causal mechanism, debugging trace, ordered plan, or executable process.",
+    "Do not reject DARE-mediated discontinuous branches merely because they lack a normal path; classify them as reconstitution-required unless a reconstitution packet exists.",
+    "Path rigor should increase correctness, not prematurely suppress novelty."
+  ],
+  "responsibility_boundary": {
+    "owns": [
+      "dependency_unroll",
+      "forward_chain",
+      "goal_backchain",
+      "intermediate_state_insert",
+      "branchpoint_marking",
+      "dependency_gate",
+      "path_validatability_classification",
+      "missing_middle_audit",
+      "ordered_path_packet_emission",
+      "gap_report_emission",
+      "dependency_graph_emission_when_needed",
+      "DARE_reconstitution_path_review"
+    ],
+    "does_not_own": [
+      "anchor_extraction",
+      "domain_axis_selection",
+      "dynamical_operator_selection",
+      "actor_binding",
+      "transform_selection",
+      "exploration",
+      "candidate_system_competition",
+      "conflict_rebase",
+      "adversarial_anchor_rejection",
+      "final_answer_synthesis",
+      "external_fact_verification",
+      "durable_memory_write_execution"
+    ],
+    "handoff_note": "CEC v1.1 emits path packets, dependency graphs, and gap reports. PSPP-lite or the Arbiter decide how these affect final selection. DARE/IDCM may request CEC after reconstitution, not before."
+  },
+  "registry_refs": {
+    "KCE": "KCE_Parallax_v2.3_SplitLayerAnchor.json",
+    "CDP": "CDP_Parallax_v1.2_BoundedDomainSpace.json",
+    "DynamicalPrism": "Dynamical_Prism_v1.2_ReducedCore.json",
+    "RegimeField": "Regime_Field_v0.1.json",
+    "PrismCoupler": "Prism_Coupler_v1.5_OntologyDynamicsRegime.json",
+    "CTR": "CTR_Parallax_v2.1_SplitTransformRegistry.json",
+    "ETE": "ETE_v1.1_SplitLayerExplorationTransform.json",
+    "PSPP_Lite": "PSPP_v5.0_CandidateSystemComparator.json",
+    "CREM": "CREM_v1.3_SplitOntologyDynamicsRegime.json",
+    "DARE_IDCM": "DARE_IDCM_v1.0_ParallelSupervisoryLayer.json"
+  },
+  "intended_runtime": "Conditional path-validity layer after PSPP-lite selection/competition, after CREM when dependency preservation is critical, after DARE/IDCM reconstitution when discontinuous branches need path repair, or directly for proof/debug/causal/execution tasks.",
+  "placement": {
+    "pipeline_role": "conditional_late_stage_path_validator",
+    "recommended_position_standard": [
+      "KCE",
+      "CDP",
+      "Dynamical_Prism",
+      "Prism_Coupler",
+      "CTR",
+      "ETE",
+      "PSPP_Lite",
+      "CEC_if_needed",
+      "Arbiter"
+    ],
+    "recommended_position_conflict": [
+      "KCE",
+      "CDP",
+      "Dynamical_Prism",
+      "Prism_Coupler",
+      "CTR",
+      "ETE",
+      "PSPP_Lite",
+      "CREM_if_needed",
+      "CEC_if_dependency_preservation_requires_path_validation",
+      "Arbiter"
+    ],
+    "recommended_position_DARE": [
+      "DARE_rescued_or_discontinuous_branch",
+      "DARE_reconstitution_packet",
+      "CEC_reconstitution_path_review_if_needed",
+      "PSPP_Lite_or_Arbiter"
+    ],
+    "early_invoke_exception": [
+      "proof_or_derivation_requested",
+      "causal_mechanism_requested",
+      "debugging_or_state_tracing_requested",
+      "planning_requires_ordered_steps",
+      "programming_or_process_execution_task",
+      "multi_step_dependency_risk_detected_at_prompt_level"
+    ]
+  },
+  "inputs": {
+    "prompt_text": {
+      "type": "string",
+      "description": "Raw prompt retained for return-to-objective validation."
+    },
+    "anchor_packet": {
+      "type": "object",
+      "required": false,
+      "description": "KCE anchor or selected working anchor, preferably with lock_status."
+    },
+    "selected_system_packet": {
+      "type": "object",
+      "required": false,
+      "description": "PSPP-lite selected or merged system packet."
+    },
+    "candidate_branches": {
+      "type": "array",
+      "required": false,
+      "description": "One or more PSPP-lite or ETE branches requiring path validation."
+    },
+    "crem_packet": {
+      "type": "object",
+      "required": false,
+      "description": "CREM output containing dependency invariants, validated rebase invariant, or latent axes."
+    },
+    "dare_packet": {
+      "type": "object",
+      "required": false,
+      "description": "DARE/IDCM audit, rescued branch, reconstitution packet, or discontinuity report."
+    },
+    "decision_artifacts": {
+      "type": "object",
+      "required": false,
+      "description": "PSPP-lite decision artifacts containing assumptions, preserved dependencies, pruned branches, selected branch, falsifiers, and uncertainty notes."
+    },
+    "context": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "light",
+            "standard",
+            "deep",
+            "reconstitution_review"
+          ],
+          "default": "auto"
+        },
+        "task_type": {
+          "type": "string",
+          "enum": [
+            "proof_chain",
+            "causal_chain",
+            "mechanism_explanation",
+            "comparative_derivation",
+            "diagnostic_walk",
+            "execution_plan",
+            "programming_step_plan",
+            "debug_trace",
+            "workflow_chain",
+            "state_transition_plan",
+            "reconstitution_path_review"
+          ],
+          "default": "diagnostic_walk"
+        },
+        "allow_branching": {
+          "type": "boolean",
+          "default": true
+        },
+        "strictness": {
+          "type": "string",
+          "enum": [
+            "low",
+            "normal",
+            "high"
+          ],
+          "default": "normal"
+        },
+        "dare_discontinuity_allowed": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "outputs": {
+    "cec_packet": {
+      "type": "object",
+      "description": "Path-validatability classification, ordered path packets, gap report, dependency graph, and handoff guidance."
+    },
+    "path_packets": {
+      "type": "array",
+      "description": "Validated or partially validated ordered paths for candidate branches."
+    },
+    "gap_report": {
+      "type": "object",
+      "description": "Missing steps, unsupported jumps, hidden assumptions, branchpoints, and reconstitution requirements."
+    },
+    "dependency_graph": {
+      "type": "object",
+      "description": "Optional graph of prerequisite relations, branch points, dependency gates, and path conflicts."
+    }
+  },
+  "activation_policy": {
+    "invoke_when": [
+      "proof_or_derivation_requested",
+      "causal_mechanism_requested",
+      "debugging_or_state_tracing_requested",
+      "planning_requires_ordered_steps",
+      "programming_or_process_execution_task",
+      "multi_step_dependency_risk_detected",
+      "large_anchor_to_conclusion_gap_detected",
+      "hidden_assumption_risk_detected",
+      "PSPP_Lite_detects_dependency_order_sensitivity",
+      "PSPP_Lite_detects_causal_order_sensitivity",
+      "PSPP_Lite_selected_system_contains_unsupported_jumps",
+      "CREM_dependency_invariants_require_path_validation",
+      "DARE_rescued_branch_requires_path_repair_after_reconstitution",
+      "Arbiter_requests_path_audit_before_synthesis"
+    ],
+    "do_not_invoke_when": [
+      "single_step_fact_retrieval",
+      "trivial_reformatting",
+      "purely_aesthetic_generation_with_no_dependency_constraints",
+      "simple_direct_answer_with_low_jump_risk",
+      "ordering_is_obvious_and_non_decisive",
+      "added_path_structure_has_no_verification_gain",
+      "early_exploration_would_be_suppressed_by_path_rigidity",
+      "DARE_discontinuous_branch_lacks_reconstitution_packet"
+    ],
+    "default_mode": "late_conditional"
+  },
+  "path_validatability_classes": {
+    "normal_path_validatable": {
+      "description": "Branch has enough premises, constraints, and intermediate states to validate or repair as an ordered path.",
+      "allowed_actions": [
+        "run_dependency_unroll",
+        "run_forward_chain",
+        "run_goal_backchain",
+        "insert_missing_intermediates",
+        "emit_validated_or_failed_path"
+      ]
+    },
+    "partial_path_validatable": {
+      "description": "Branch has some ordered structure but contains unresolved assumptions or missing links.",
+      "allowed_actions": [
+        "run_gap_report",
+        "insert_limited_intermediates",
+        "mark_assumptions",
+        "return_to_PSPP_or_Arbiter_with_caveats"
+      ]
+    },
+    "reconstitution_required": {
+      "description": "Branch comes from DARE/discontinuous logic or anchor suspension and needs a reconstitution packet before full path validation.",
+      "allowed_actions": [
+        "emit_reconstitution_gap_report",
+        "do_not_reject_for_missing_normal_path",
+        "request_DARE_reconstitution_packet"
+      ]
+    },
+    "not_path_validatable_yet": {
+      "description": "Branch is too underdefined, speculative, or disconnected to validate without more structure.",
+      "allowed_actions": [
+        "emit_insufficient_structure_report",
+        "request_more_branch_detail",
+        "return_to_ETE_or_DARE"
+      ]
+    },
+    "path_invalid": {
+      "description": "Branch contains irreparable dependency violation, contradiction, or unsupported jump under the current frame.",
+      "allowed_actions": [
+        "emit_failure_report",
+        "mark_branch_for_pruning_or_revision",
+        "provide_repair_conditions_if_possible"
+      ]
+    }
+  },
+  "modes": {
+    "light": {
+      "description": "Minimal ordering pass for modest dependency risk.",
+      "max_inserted_intermediates": 2,
+      "allow_branching": false,
+      "backchain_depth": 1,
+      "emit_dependency_graph": false
+    },
+    "standard": {
+      "description": "Full ordered reasoning pass with missing-middle detection.",
+      "max_inserted_intermediates": 5,
+      "allow_branching": true,
+      "backchain_depth": 3,
+      "emit_dependency_graph": "when_needed"
+    },
+    "deep": {
+      "description": "Strong dependency analysis, branchpoint marking, reversibility checks, and path comparison.",
+      "max_inserted_intermediates": 10,
+      "allow_branching": true,
+      "backchain_depth": 6,
+      "emit_dependency_graph": true
+    },
+    "reconstitution_review": {
+      "description": "Special mode for DARE-rescued or anchor-suspended branches after reconstitution.",
+      "max_inserted_intermediates": 6,
+      "allow_branching": true,
+      "backchain_depth": 4,
+      "emit_dependency_graph": true,
+      "do_not_require_original_anchor_as_initial_premise": true,
+      "require_reconstitution_return_path": true
+    }
+  },
+  "operator_family": {
+    "name": "sequential_derivational_path",
+    "description": "Operators for converting structural candidate systems into valid ordered paths.",
+    "operators": [
+      {
+        "id": "OP_DEP_UNROLL_001",
+        "label": "dependency_unroll",
+        "purpose": "Expand compressed claims into prerequisite steps."
+      },
+      {
+        "id": "OP_FORWARD_CHAIN_001",
+        "label": "forward_chain",
+        "purpose": "Advance from premises through licensed intermediate states toward a conclusion."
+      },
+      {
+        "id": "OP_BACKCHAIN_001",
+        "label": "goal_backchain",
+        "purpose": "Start from target conclusion and derive required antecedent conditions."
+      },
+      {
+        "id": "OP_MISSING_MIDDLE_001",
+        "label": "intermediate_state_insert",
+        "purpose": "Insert missing states between unsupported steps."
+      },
+      {
+        "id": "OP_BRANCH_MARK_001",
+        "label": "branchpoint_marking",
+        "purpose": "Mark genuine forks where multiple valid paths remain."
+      },
+      {
+        "id": "OP_DEP_GATE_001",
+        "label": "dependency_gate",
+        "purpose": "Prevent use of a step before its prerequisites are satisfied."
+      },
+      {
+        "id": "OP_PATH_CLASSIFY_001",
+        "label": "path_validatability_classify",
+        "purpose": "Classify branches as normal, partial, reconstitution-required, not-yet-validatable, or invalid."
+      },
+      {
+        "id": "OP_RECON_REVIEW_001",
+        "label": "reconstitution_path_review",
+        "purpose": "Validate a DARE-reconstituted branch without forcing it back into the original anchor prematurely."
+      }
+    ]
+  },
+  "stage_order": [
+    "packet_ingest",
+    "task_and_mode_classification",
+    "path_validatability_classification",
+    "dependency_extraction",
+    "jump_risk_detection",
+    "path_seed_selection",
+    "forward_or_backward_chain",
+    "intermediate_insertion",
+    "branchpoint_detection",
+    "dependency_gate_validation",
+    "reconstitution_review_if_applicable",
+    "path_scoring",
+    "gap_report_emit",
+    "handoff_emit"
+  ],
+  "stages": {
+    "packet_ingest": {
+      "description": "Ingest PSPP-lite selected system, candidate branches, CREM dependency invariants, DARE reconstitution packets, and decision artifacts.",
+      "outputs": [
+        "branch_refs",
+        "selected_system_ref",
+        "assumptions",
+        "constraints",
+        "dependencies",
+        "falsifiers",
+        "return_path",
+        "upstream_uncertainty_notes"
+      ]
+    },
+    "task_and_mode_classification": {
+      "description": "Classify whether path validation is necessary and select light/standard/deep/reconstitution_review mode.",
+      "outputs": [
+        "task_type",
+        "path_mode",
+        "invoke_or_suppress_decision"
+      ]
+    },
+    "path_validatability_classification": {
+      "description": "Classify each branch before attempting full validation.",
+      "outputs": [
+        "path_validatability_report"
+      ]
+    },
+    "dependency_extraction": {
+      "description": "Extract prerequisite relations, necessary conditions, dependency invariants, and forbidden jumps.",
+      "outputs": [
+        "dependency_relations",
+        "critical_dependencies"
+      ]
+    },
+    "jump_risk_detection": {
+      "description": "Detect large unsupported moves from premise to conclusion or from anchor to system selection.",
+      "outputs": [
+        "unsupported_jumps",
+        "jump_risk_score"
+      ]
+    },
+    "path_seed_selection": {
+      "description": "Choose forward-chain, backchain, or mixed path seed based on task type.",
+      "outputs": [
+        "path_seed",
+        "path_strategy"
+      ]
+    },
+    "forward_or_backward_chain": {
+      "description": "Build ordered path from premises forward, target backward, or both.",
+      "outputs": [
+        "candidate_path_steps"
+      ]
+    },
+    "intermediate_insertion": {
+      "description": "Insert missing intermediate states while marking assumptions explicitly.",
+      "outputs": [
+        "repaired_path_steps",
+        "inserted_intermediates"
+      ]
+    },
+    "branchpoint_detection": {
+      "description": "Mark genuine forks where multiple valid paths remain.",
+      "outputs": [
+        "branchpoints",
+        "branchpoint_notes"
+      ]
+    },
+    "dependency_gate_validation": {
+      "description": "Ensure no step is used before prerequisites are satisfied.",
+      "outputs": [
+        "gate_results",
+        "dependency_violations"
+      ]
+    },
+    "reconstitution_review_if_applicable": {
+      "description": "For DARE reconstituted branches, check whether the new logic has a coherent path and explicit return/reconstitution relation.",
+      "checks": [
+        "reconstitution_packet_present",
+        "old_anchor_failure_explained",
+        "replacement_anchor_defined",
+        "hard_constraints_preserved",
+        "return_path_or_speculative_status_marked",
+        "falsifiers_present"
+      ],
+      "outputs": [
+        "reconstitution_path_report"
+      ]
+    },
+    "path_scoring": {
+      "description": "Score path validity, anchor/reconstitution preservation, constraint satisfaction, economy, gap repair quality, and branch discipline.",
+      "outputs": [
+        "path_scores"
+      ]
+    },
+    "gap_report_emit": {
+      "description": "Emit missing steps, unsupported jumps, assumptions, branchpoints, reversal-sensitive steps, and repair recommendations.",
+      "outputs": [
+        "gap_report"
+      ]
+    },
+    "handoff_emit": {
+      "description": "Emit CEC packet to PSPP-lite, CREM, DARE, or Arbiter.",
+      "outputs": [
+        "cec_packet"
+      ]
+    }
+  },
+  "selection_policy": {
+    "reasoning_tasks": {
+      "preferred_operators": [
+        "goal_backchain",
+        "forward_chain",
+        "intermediate_state_insert",
+        "dependency_gate"
+      ]
+    },
+    "process_tasks": {
+      "preferred_operators": [
+        "dependency_unroll",
+        "dependency_gate",
+        "forward_chain"
+      ]
+    },
+    "debugging_tasks": {
+      "preferred_operators": [
+        "dependency_unroll",
+        "branchpoint_marking",
+        "intermediate_state_insert"
+      ]
+    },
+    "pspp_selected_system_review": {
+      "preferred_operators": [
+        "path_validatability_classify",
+        "dependency_unroll",
+        "intermediate_state_insert",
+        "dependency_gate"
+      ]
+    },
+    "dare_reconstitution_review": {
+      "preferred_operators": [
+        "path_validatability_classify",
+        "reconstitution_path_review",
+        "goal_backchain",
+        "dependency_gate"
+      ]
+    }
+  },
+  "scoring": {
+    "path_validity": 0.3,
+    "anchor_or_reconstitution_preservation": 0.18,
+    "constraint_satisfaction": 0.15,
+    "economy": 0.08,
+    "gap_repair_quality": 0.12,
+    "branch_discipline": 0.09,
+    "falsifier_visibility": 0.08
+  },
+  "validity_checks": [
+    "each_step_has_licensed_predecessor",
+    "no_conclusion_without_support",
+    "assumptions_are_explicitly_marked",
+    "constraints_not_silently_dropped",
+    "branchpoints_marked_not_blurred",
+    "final_path_returns_to_anchor_objective_or_reconstitution_packet",
+    "falsifiers_and_failure_conditions_visible",
+    "DARE_discontinuous_branch_not_rejected_without_reconstitution_review"
+  ],
+  "thresholds": {
+    "min_path_score_valid": 0.7,
+    "min_path_score_partial": 0.55,
+    "max_unsupported_jump_risk": 0.35,
+    "max_unmarked_assumption_count": 2,
+    "reconstitution_review_requires_packet": true
+  },
+  "gap_report_schema": {
+    "missing_steps": "array",
+    "unsupported_jumps": "array",
+    "assumptions_inserted": "array",
+    "branchpoints": "array",
+    "reversal_sensitive_steps": "array",
+    "dependency_violations": "array",
+    "reconstitution_requirements": "array",
+    "repair_recommendations": "array",
+    "notes": "array"
+  },
+  "path_packet_schema": {
+    "path_id": "string",
+    "branch_ref": "string_or_null",
+    "task_type": "string",
+    "path_mode": "light|standard|deep|reconstitution_review",
+    "validatability_class": "normal_path_validatable|partial_path_validatable|reconstitution_required|not_path_validatable_yet|path_invalid",
+    "steps": [
+      {
+        "step_id": "string",
+        "kind": "premise|intermediate|branch|conclusion|execution|reconstitution",
+        "statement": "string",
+        "depends_on": "array",
+        "licenses_next": "array",
+        "assumptions_used": "array",
+        "constraints_used": "array",
+        "risk_flags": "array"
+      }
+    ],
+    "anchor_similarity": "number_or_null",
+    "reconstitution_integrity": "number_or_null",
+    "path_score": "number",
+    "selected": "boolean",
+    "validation_status": "valid|partial|invalid|requires_reconstitution|insufficient_structure"
+  },
+  "output_schema": {
+    "cec_packet": {
+      "schema_version": "cec.parallax/1.1",
+      "source_refs": {
+        "pspp_packet_ref": "string_or_null",
+        "selected_system_ref": "string_or_null",
+        "crem_packet_ref": "string_or_null",
+        "dare_packet_ref": "string_or_null",
+        "anchor_ref": "string_or_null"
+      },
+      "invoke_decision": {
+        "invoked": "boolean",
+        "reason": "array",
+        "suppressed_reason": "string_or_null",
+        "path_mode": "light|standard|deep|reconstitution_review"
+      },
+      "path_validatability_report": [
+        {
+          "branch_ref": "string",
+          "validatability_class": "string",
+          "reason": "array",
+          "recommended_action": "validate|partial_validate|request_reconstitution|return_to_ETE_or_DARE|prune_or_repair"
+        }
+      ],
+      "path_packets": "array",
+      "dependency_graph": {
+        "nodes": "array",
+        "edges": "array",
+        "critical_dependencies": "array",
+        "branchpoints": "array"
+      },
+      "gap_report": "object",
+      "path_scores": "array",
+      "handoff": {
+        "to_PSPP": {
+          "validated_branch_paths": "array",
+          "invalid_or_partial_paths": "array",
+          "selection_impact_notes": "array"
+        },
+        "to_CREM": {
+          "dependency_preservation_notes": "array",
+          "conflict_path_notes": "array"
+        },
+        "to_DARE": {
+          "reconstitution_required": "array",
+          "unsupported_jumps_in_rescued_branches": "array",
+          "repair_conditions": "array"
+        },
+        "to_Arbiter": {
+          "path_summary": "string",
+          "safe_to_synthesize": "boolean",
+          "required_caveats": "array"
+        }
+      },
+      "trace": {
+        "operators_used": "array",
+        "decision_notes": "array",
+        "risk_notes": "array"
+      }
+    }
+  },
+  "routing_policy": {
+    "default": "late_conditional_validation",
+    "rules": [
+      {
+        "condition": "task_type in ['proof_chain','causal_chain','debug_trace','execution_plan','programming_step_plan']",
+        "action": "allow_early_or_direct_CEC"
+      },
+      {
+        "condition": "PSPP_Lite.dependency_order_sensitivity >= 0.55",
+        "action": "invoke_standard_CEC_before_final_synthesis"
+      },
+      {
+        "condition": "selected_system.contains_unsupported_jumps",
+        "action": "invoke_standard_or_deep_CEC"
+      },
+      {
+        "condition": "CREM.dependency_invariants_present AND dependency_preservation_affects_selection",
+        "action": "invoke_CEC_dependency_preservation_review"
+      },
+      {
+        "condition": "DARE_branch_discontinuous AND no_reconstitution_packet",
+        "action": "classify_reconstitution_required_and_request_DARE_reconstitution"
+      },
+      {
+        "condition": "DARE_reconstitution_packet_present",
+        "action": "invoke_reconstitution_review_mode"
+      },
+      {
+        "condition": "ordering_obvious_and_no_verification_gain",
+        "action": "suppress_CEC_and_emit_suppression_note"
+      }
+    ]
+  },
+  "guards": {
+    "anti_early_overconstraint": {
+      "late_by_default": true,
+      "do_not_run_before_ETE_unless_task_requires_order": true,
+      "do_not_prune_novel_branch_merely_for_initial_path_incompleteness": true
+    },
+    "anti_discontinuous_rejection": {
+      "DARE_branch_requires_reconstitution_classification": true,
+      "do_not_force_old_anchor_as_first_premise_for_reconstituted_branch": true,
+      "mark_speculative_until_reconstitution_path_review_passes": true
+    },
+    "anti_path_opacity": {
+      "unsupported_jumps_must_be_listed": true,
+      "inserted_assumptions_must_be_marked": true,
+      "branchpoints_must_not_be_blurred": true
+    },
+    "anti_overprocessing": {
+      "suppress_when_no_material_ordering_risk": true,
+      "use_light_mode_for_modest_risk": true,
+      "emit_dependency_graph_only_when_needed": true
+    },
+    "truth_before_elegance": {
+      "valid_path_required_for_final_claims_when_order_matters": true,
+      "elegant_story_cannot_replace_dependency_support": true,
+      "external_fact_verification_not_replaced_by_path_validity": true
+    }
+  },
+  "canonical_packet_compatibility": {
+    "legacy_fields_provided": [
+      "path_packet",
+      "dependency_graph",
+      "gap_report",
+      "execution_trace"
+    ],
+    "new_fields": [
+      "path_validatability_report",
+      "reconstitution_path_report",
+      "handoff.to_DARE",
+      "invoke_decision"
+    ],
+    "compatibility_note": "Older modules may consume path_packet and gap_report as before. New stack modules should also consume path_validatability_report to avoid over-pruning DARE or ETE branches."
+  },
+  "example_packet_minimal": {
+    "invoke_decision": {
+      "invoked": true,
+      "reason": [
+        "PSPP-lite selected system has dependency order sensitivity above threshold."
+      ],
+      "suppressed_reason": null,
+      "path_mode": "standard"
+    },
+    "path_validatability_report": [
+      {
+        "branch_ref": "ETE_B1",
+        "validatability_class": "normal_path_validatable",
+        "reason": [
+          "Branch includes premises, constraints, return path, and falsifier list."
+        ],
+        "recommended_action": "validate"
+      }
+    ],
+    "path_packets": [
+      {
+        "path_id": "CEC_PATH_001",
+        "branch_ref": "ETE_B1",
+        "task_type": "diagnostic_walk",
+        "path_mode": "standard",
+        "validatability_class": "normal_path_validatable",
+        "steps": [
+          {
+            "step_id": "S1",
+            "kind": "premise",
+            "statement": "The candidate system preserves the user goal and hard constraints.",
+            "depends_on": [],
+            "licenses_next": [
+              "S2"
+            ],
+            "assumptions_used": [],
+            "constraints_used": [
+              "user_goal",
+              "hard_constraints"
+            ],
+            "risk_flags": []
+          },
+          {
+            "step_id": "S2",
+            "kind": "intermediate",
+            "statement": "The proposed constraint change is isolated and reversible.",
+            "depends_on": [
+              "S1"
+            ],
+            "licenses_next": [
+              "S3"
+            ],
+            "assumptions_used": [
+              "constraint can be evaluated independently"
+            ],
+            "constraints_used": [
+              "constraint_isolation"
+            ],
+            "risk_flags": [
+              "assumption_marked"
+            ]
+          },
+          {
+            "step_id": "S3",
+            "kind": "conclusion",
+            "statement": "The branch is path-valid if the isolated constraint test changes solvability as predicted.",
+            "depends_on": [
+              "S2"
+            ],
+            "licenses_next": [],
+            "assumptions_used": [],
+            "constraints_used": [
+              "verification_requirement"
+            ],
+            "risk_flags": []
+          }
+        ],
+        "anchor_similarity": 0.78,
+        "reconstitution_integrity": null,
+        "path_score": 0.73,
+        "selected": true,
+        "validation_status": "valid"
+      }
+    ],
+    "gap_report": {
+      "missing_steps": [],
+      "unsupported_jumps": [],
+      "assumptions_inserted": [
+        "constraint can be evaluated independently"
+      ],
+      "branchpoints": [],
+      "reversal_sensitive_steps": [
+        "S2"
+      ],
+      "dependency_violations": [],
+      "reconstitution_requirements": [],
+      "repair_recommendations": [],
+      "notes": [
+        "Assumption should remain visible in final synthesis."
+      ]
+    }
+  }
+}

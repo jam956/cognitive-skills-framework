@@ -1,0 +1,584 @@
+{
+  "module_name": "Regime Field",
+  "short_name": "Regime_Field",
+  "version": "v0.1.0",
+  "status": "conceptual_executable_spec",
+  "revision_kind": "dynamical_prism_split_support_module",
+  "purpose": "Represent the constraint/context/phase field under which a Dynamical Core operator vector behaves. The Regime Field separates primitive actions from operating conditions so that computed behavior labels such as control, healing, growth, collapse, governance, conflict, ritual, or creation are not mistaken for primitive dynamical operators.",
+  "core_doctrine": [
+    "Regime is not ontology.",
+    "Regime is not a primitive dynamical operator.",
+    "Regime is the operating condition under which operator vectors acquire meaning, viability, risk, and likely outcome.",
+    "The same operator vector can produce different behavior labels under different regimes.",
+    "The same regime can modify many different operator vectors across ontologies.",
+    "Regime should be inferred provisionally and audited when ambiguity, high stakes, or operator-regime mismatch is present.",
+    "Regime fields should remain extensible; not every possible regime can be predefined.",
+    "Prefer structured regime axes plus freeform notes over premature closed-taxonomy collapse."
+  ],
+  "layer_position": {
+    "upstream_inputs": [
+      "KCE.anchor_candidates",
+      "CDP.ontology_profile",
+      "Dynamical_Prism.dynamical_core_vector",
+      "Prism_Coupler.actor_role_packet",
+      "prompt_constraints",
+      "retrieved_facts_when_available"
+    ],
+    "downstream_consumers": [
+      "Prism_Coupler",
+      "CTR",
+      "ETE",
+      "CREM",
+      "PSPP_Lite",
+      "CEC",
+      "DARE_IDCM",
+      "Arbiter"
+    ],
+    "conceptual_formula": "ontology + actor_role + dynamical_core + regime_field -> computed_behavior_label"
+  },
+  "regime_field_axes": {
+    "scale": {
+      "definition": "Spatial, organizational, or abstraction scale at which the operator vector acts.",
+      "allowed_values": [
+        "micro",
+        "local",
+        "meso",
+        "institutional",
+        "civilizational",
+        "planetary",
+        "cosmic",
+        "abstract"
+      ],
+      "examples": {
+        "micro": "molecular/cellular process",
+        "institutional": "agency, court, corporation, church, university, state apparatus",
+        "abstract": "logic, mathematics, ontology, symbolic reasoning"
+      }
+    },
+    "tempo": {
+      "definition": "Temporal speed, rhythm, or pacing of the regime.",
+      "allowed_values": [
+        "static",
+        "slow",
+        "cyclic",
+        "pulsed",
+        "rapid",
+        "accelerating",
+        "chaotic"
+      ],
+      "examples": {
+        "cyclic": "seasonal, hormonal, ritual, market cycle",
+        "pulsed": "hormone pulse, musical beat, periodic signal",
+        "accelerating": "runaway feedback or technological acceleration"
+      }
+    },
+    "phase_state": {
+      "definition": "Lifecycle or condition phase of the system.",
+      "allowed_values": [
+        "baseline",
+        "growth",
+        "stress",
+        "transition",
+        "crisis",
+        "collapse",
+        "repair",
+        "renewal",
+        "lock_in",
+        "metastable"
+      ],
+      "examples": {
+        "stress": "threat load or compensatory strain",
+        "repair": "post-damage correction",
+        "lock_in": "path-dependent commitment to a state"
+      }
+    },
+    "stability": {
+      "definition": "Robustness of the system's current state or attractor.",
+      "allowed_values": [
+        "stable",
+        "metastable",
+        "unstable",
+        "chaotic",
+        "bifurcating",
+        "recovering"
+      ],
+      "examples": {
+        "metastable": "appears stable but can flip under perturbation",
+        "bifurcating": "approaching a branch or regime transition"
+      }
+    },
+    "coupling": {
+      "definition": "Degree and quality of interdependence among actors, components, or channels.",
+      "allowed_values": [
+        "isolated",
+        "loosely_coupled",
+        "tightly_coupled",
+        "synchronized",
+        "entangled",
+        "overcoupled"
+      ],
+      "examples": {
+        "tightly_coupled": "failure or signal propagates quickly",
+        "overcoupled": "fragility from excessive interdependence"
+      }
+    },
+    "reversibility": {
+      "definition": "Ease with which a transition, commitment, or state change can be reversed.",
+      "allowed_values": [
+        "fully_reversible",
+        "partially_reversible",
+        "path_dependent",
+        "hysteretic",
+        "irreversible"
+      ],
+      "examples": {
+        "hysteretic": "return path differs from forward path",
+        "irreversible": "state transition cannot be undone within practical constraints"
+      }
+    },
+    "constraint_load": {
+      "definition": "Degree to which the available state-space is restricted.",
+      "allowed_values": [
+        "low",
+        "moderate",
+        "high",
+        "overconstrained",
+        "underconstrained"
+      ],
+      "examples": {
+        "overconstrained": "too few viable moves remain",
+        "underconstrained": "too little structure to guide coherent behavior"
+      }
+    },
+    "noise": {
+      "definition": "Distortion, ambiguity, interference, or corruption of signal and interpretation.",
+      "allowed_values": [
+        "low_noise",
+        "moderate_noise",
+        "high_noise",
+        "adversarial_noise",
+        "signal_loss"
+      ],
+      "examples": {
+        "adversarial_noise": "deliberate confusion or deception",
+        "signal_loss": "channel failure or unreadable signal"
+      }
+    },
+    "uncertainty": {
+      "definition": "Known and unknown uncertainty pressure on interpretation or action.",
+      "allowed_values": [
+        "known",
+        "bounded_unknown",
+        "ambiguous",
+        "unknown_pressure",
+        "unknown_unknown_suspected"
+      ],
+      "examples": {
+        "unknown_pressure": "distortion signs suggest current model is incomplete",
+        "unknown_unknown_suspected": "high residual error or contradiction without clear source"
+      }
+    },
+    "resource_condition": {
+      "definition": "Availability and distribution of resources, energy, attention, capital, time, or capacity.",
+      "allowed_values": [
+        "abundance",
+        "adequacy",
+        "scarcity",
+        "zero_sum",
+        "negative_sum",
+        "commons_dependency"
+      ],
+      "examples": {
+        "zero_sum": "one actor's gain directly reduces another's",
+        "commons_dependency": "shared resource supports all parties but is vulnerable to depletion"
+      }
+    },
+    "legitimacy": {
+      "definition": "Acceptedness, authority validity, ritual status, or normative permission of the operating order.",
+      "allowed_values": [
+        "irrelevant",
+        "accepted",
+        "contested",
+        "collapsing",
+        "coercive",
+        "ritualized",
+        "sacred",
+        "procedural"
+      ],
+      "examples": {
+        "contested": "authority or interpretation is disputed",
+        "procedural": "legitimacy rests on formal process"
+      }
+    },
+    "trust": {
+      "definition": "Reliability, confidence, relational safety, and willingness to accept signals or coordination.",
+      "allowed_values": [
+        "high_trust",
+        "moderate_trust",
+        "low_trust",
+        "broken_trust",
+        "untrusted",
+        "trust_repair"
+      ],
+      "examples": {
+        "low_trust": "signals are discounted or suspected",
+        "trust_repair": "regime requires accountability and boundary-sensitive coordination"
+      }
+    },
+    "authority_gradient": {
+      "definition": "Distribution of permission, command power, hierarchy, and enforcement.",
+      "allowed_values": [
+        "flat",
+        "distributed",
+        "hierarchical",
+        "asymmetric",
+        "coercive",
+        "illegitimate_authority"
+      ],
+      "examples": {
+        "distributed": "authority spread across nodes or peers",
+        "coercive": "compliance obtained through force or threat"
+      }
+    },
+    "adversariality": {
+      "definition": "Degree of cooperative, competitive, hostile, or deceptive posture among actors.",
+      "allowed_values": [
+        "cooperative",
+        "neutral",
+        "competitive",
+        "adversarial",
+        "hostile",
+        "deceptive"
+      ],
+      "examples": {
+        "competitive": "actors optimize against each other under shared constraints",
+        "deceptive": "information is strategically corrupted"
+      }
+    },
+    "commitment": {
+      "definition": "Degree to which action, interpretation, or selection is tentative versus locked.",
+      "allowed_values": [
+        "tentative",
+        "low_commitment",
+        "revisable",
+        "committed",
+        "locked",
+        "sunk_cost_locked"
+      ],
+      "examples": {
+        "revisable": "branch can be changed without large loss",
+        "sunk_cost_locked": "past investment prevents rational exit"
+      }
+    },
+    "boundary_condition": {
+      "definition": "Openness, permeability, gatekeeping, or correctness of system boundaries.",
+      "allowed_values": [
+        "open",
+        "porous",
+        "filtered",
+        "gated",
+        "closed",
+        "contested_boundary",
+        "wrong_boundary_suspected"
+      ],
+      "examples": {
+        "porous": "flows can pass but with leakage",
+        "wrong_boundary_suspected": "analysis may be drawn around the wrong system"
+      }
+    },
+    "ethical_load": {
+      "definition": "Moral salience, harm risk, consent requirement, duty, justice pressure, or accountability burden.",
+      "allowed_values": [
+        "low",
+        "duty_bound",
+        "harm_sensitive",
+        "permission_required",
+        "justice_conflict",
+        "moral_injury_risk"
+      ],
+      "examples": {
+        "permission_required": "action depends on consent or legitimate authorization",
+        "moral_injury_risk": "actor may violate deeply held values under pressure"
+      }
+    }
+  },
+  "regime_bundle_library": {
+    "homeostatic_repair": {
+      "typical_axes": {
+        "phase_state": "repair",
+        "stability": "recovering",
+        "coupling": "tightly_coupled",
+        "reversibility": "partially_reversible",
+        "constraint_load": "moderate",
+        "ethical_load": "harm_sensitive"
+      },
+      "common_operator_vectors": [
+        "detect",
+        "interpret",
+        "gate",
+        "execute",
+        "stabilize",
+        "adapt"
+      ],
+      "possible_behavior_labels": [
+        "healing",
+        "repair",
+        "restoration",
+        "recovery"
+      ]
+    },
+    "crisis_governance": {
+      "typical_axes": {
+        "scale": "institutional",
+        "tempo": "rapid",
+        "phase_state": "crisis",
+        "stability": "metastable",
+        "constraint_load": "high",
+        "legitimacy": "contested",
+        "authority_gradient": "hierarchical",
+        "ethical_load": "justice_conflict"
+      },
+      "common_operator_vectors": [
+        "signal",
+        "interpret",
+        "constrain",
+        "gate",
+        "coordinate",
+        "stabilize"
+      ],
+      "possible_behavior_labels": [
+        "emergency_governance",
+        "political_control",
+        "public_order_management"
+      ]
+    },
+    "creative_generation": {
+      "typical_axes": {
+        "phase_state": "growth",
+        "tempo": "cyclic",
+        "constraint_load": "low",
+        "commitment": "revisable",
+        "uncertainty": "ambiguous",
+        "boundary_condition": "open"
+      },
+      "common_operator_vectors": [
+        "explore",
+        "select",
+        "execute",
+        "encode",
+        "stabilize"
+      ],
+      "possible_behavior_labels": [
+        "creation",
+        "innovation",
+        "composition",
+        "design"
+      ]
+    },
+    "adversarial_competition": {
+      "typical_axes": {
+        "resource_condition": "scarcity",
+        "adversariality": "competitive",
+        "trust": "low_trust",
+        "legitimacy": "contested",
+        "noise": "adversarial_noise"
+      },
+      "common_operator_vectors": [
+        "select",
+        "execute",
+        "constrain",
+        "disrupt",
+        "signal",
+        "anticipate"
+      ],
+      "possible_behavior_labels": [
+        "competition",
+        "conflict",
+        "rivalry",
+        "information_warfare"
+      ]
+    },
+    "ritual_coherence": {
+      "typical_axes": {
+        "tempo": "cyclic",
+        "phase_state": "renewal",
+        "coupling": "synchronized",
+        "legitimacy": "ritualized",
+        "trust": "high_trust",
+        "boundary_condition": "gated",
+        "ethical_load": "duty_bound"
+      },
+      "common_operator_vectors": [
+        "signal",
+        "encode",
+        "coordinate",
+        "stabilize",
+        "anticipate"
+      ],
+      "possible_behavior_labels": [
+        "ritual",
+        "entrainment",
+        "communal_bonding",
+        "symbolic_stabilization"
+      ]
+    },
+    "market_selection": {
+      "typical_axes": {
+        "resource_condition": "scarcity",
+        "adversariality": "competitive",
+        "commitment": "revisable",
+        "trust": "moderate_trust",
+        "noise": "moderate_noise",
+        "scale": "institutional"
+      },
+      "common_operator_vectors": [
+        "signal",
+        "interpret",
+        "select",
+        "coordinate",
+        "adapt",
+        "anticipate"
+      ],
+      "possible_behavior_labels": [
+        "pricing",
+        "allocation",
+        "competition",
+        "market_adaptation"
+      ]
+    },
+    "collapse_transition": {
+      "typical_axes": {
+        "phase_state": "collapse",
+        "stability": "unstable",
+        "coupling": "overcoupled",
+        "reversibility": "path_dependent",
+        "constraint_load": "overconstrained",
+        "uncertainty": "unknown_pressure"
+      },
+      "common_operator_vectors": [
+        "disrupt",
+        "detect",
+        "adapt",
+        "stabilize"
+      ],
+      "possible_behavior_labels": [
+        "collapse",
+        "failure_cascade",
+        "system_breakdown",
+        "regime_shift"
+      ]
+    },
+    "trust_repair": {
+      "typical_axes": {
+        "phase_state": "repair",
+        "trust": "trust_repair",
+        "authority_gradient": "distributed",
+        "adversariality": "cooperative",
+        "commitment": "revisable",
+        "ethical_load": "permission_required"
+      },
+      "common_operator_vectors": [
+        "signal",
+        "detect",
+        "interpret",
+        "coordinate",
+        "adapt",
+        "stabilize"
+      ],
+      "possible_behavior_labels": [
+        "repair_dialogue",
+        "relationship_repair",
+        "coordination_recovery"
+      ]
+    }
+  },
+  "operator_regime_mismatch_rules": [
+    {
+      "id": "ORM_001",
+      "pattern": "stabilize_under_growth_regime",
+      "risk": "stagnation_or_suppression",
+      "diagnostic_question": "Is stabilization preserving viability or preventing necessary expansion?"
+    },
+    {
+      "id": "ORM_002",
+      "pattern": "explore_under_emergency_regime",
+      "risk": "dangerous_delay",
+      "diagnostic_question": "Is more search useful, or is immediate execution required?"
+    },
+    {
+      "id": "ORM_003",
+      "pattern": "constrain_under_trust_repair_regime",
+      "risk": "domination_disguised_as_repair",
+      "diagnostic_question": "Does the constraint protect boundaries or erase agency?"
+    },
+    {
+      "id": "ORM_004",
+      "pattern": "signal_under_high_noise_regime",
+      "risk": "distortion_or_misinterpretation",
+      "diagnostic_question": "Should the system improve channel quality before increasing signal volume?"
+    },
+    {
+      "id": "ORM_005",
+      "pattern": "coordinate_under_low_trust_regime",
+      "risk": "false_alignment_or_compliance_theater",
+      "diagnostic_question": "Is coordination real or merely formal compliance?"
+    },
+    {
+      "id": "ORM_006",
+      "pattern": "select_under_high_uncertainty_regime",
+      "risk": "premature_collapse",
+      "diagnostic_question": "Has the system gathered enough discriminating evidence to choose?"
+    },
+    {
+      "id": "ORM_007",
+      "pattern": "adapt_under_high_irreversibility_regime",
+      "risk": "maladaptive_lock_in",
+      "diagnostic_question": "Will adaptation become locked before feedback can validate it?"
+    }
+  ],
+  "handoff_contracts": {
+    "to_dynamical_prism": {
+      "provides": [
+        "regime_field",
+        "regime_bundle_hints",
+        "operator_regime_mismatch_watchpoints"
+      ]
+    },
+    "to_coupler": {
+      "provides": [
+        "actor_role_regime_conditions",
+        "regime_confidence",
+        "alternate_regime_candidates"
+      ]
+    },
+    "to_CREM": {
+      "provides": [
+        "conflict_regime_factors",
+        "alignment_regime_factors",
+        "shared_dependency_regime_factors",
+        "trust_coordination_risks"
+      ]
+    },
+    "to_CTR": {
+      "provides": [
+        "regime_transform_needed",
+        "candidate_regime_transforms",
+        "mismatch_type"
+      ]
+    },
+    "to_ETE": {
+      "provides": [
+        "regime_projection_units",
+        "regime_bundle_candidates",
+        "regime_shift_candidates"
+      ]
+    },
+    "to_DARE": {
+      "provides": [
+        "regime_instability_suspicion",
+        "operator_regime_conflation_risk",
+        "composite_label_collapse_risk"
+      ]
+    }
+  }
+}

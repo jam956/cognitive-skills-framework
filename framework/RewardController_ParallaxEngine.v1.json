@@ -1,0 +1,100 @@
+{
+  "module": "RewardController",
+  "schema_version": "1.0",
+  "authority": {
+    "owner": "auditor",
+    "runtime_role": "bounded_evaluation_control",
+    "not_owned_by": [
+      "inner_agent",
+      "primary_solver",
+      "branch_generator"
+    ],
+    "rule": "The reward controller may nudge future assignment and policy dials through the auditor or outer loop, but an inner agent may not optimize or rewrite its own reward target."
+  },
+  "interfaces": {
+    "inputs": [
+      "r_truth",
+      "r_task",
+      "r_coherence",
+      "r_attune",
+      "r_humility",
+      "r_safety",
+      "kl_div"
+    ],
+    "outputs": [
+      "auditor_reward_report",
+      "dial_nudges"
+    ],
+    "targets": [
+      "pspe.dials.planning",
+      "pspe.dials.exploration",
+      "pspe.dials.verification_rigour",
+      "pspe.dials.clarification_freq"
+    ],
+    "guards": [
+      "pspe.safety_covenant",
+      "prism.safety",
+      "parallax.privacy"
+    ]
+  },
+  "weights": {
+    "truth": 0.35,
+    "task": 0.25,
+    "coherence": 0.15,
+    "attune": 0.15,
+    "humility": 0.1
+  },
+  "cap": 1.0,
+  "lambdas": {
+    "kl": 0.1,
+    "deception": 0.5
+  },
+  "cooldowns": {
+    "segment_cap": 1.0,
+    "novelty_decay": 0.6
+  },
+  "update_policy": {
+    "bounded": true,
+    "alpha": 0.02,
+    "applies_to": "future_assignments_only",
+    "requires_auditor_or_outer_loop_gate": true
+  },
+  "lexicographic_order": [
+    "safety",
+    "truth",
+    "task",
+    "coherence",
+    "attunement",
+    "style"
+  ],
+  "anti_wireheading": {
+    "kl_tether": true,
+    "deception_penalty": true,
+    "caps": true,
+    "cooldowns": true,
+    "inner_agent_cannot_update_reward": true,
+    "positive_reward_blocked_when_safety_or_truth_low": true
+  },
+  "cognitive_tools_handoff": {
+    "role": "auditor_owned_bounded_dial_nudger",
+    "consumes": [
+      "mpe_evaluation",
+      "dare_audit_report_optional",
+      "process_scorecard",
+      "adequacy_summary",
+      "regime_profile_optional",
+      "retrieval_summary"
+    ],
+    "provides": [
+      "auditor_reward_report",
+      "dial_nudges"
+    ],
+    "dial_nudge_targets": [
+      "pspe.dials.planning",
+      "pspe.dials.exploration",
+      "pspe.dials.verification_rigour",
+      "pspe.dials.clarification_freq"
+    ],
+    "handoff_rule": "Reward output is advisory and bounded. It may influence outer-loop assignment packets and low-risk policy adaptation, but it is not a scalar objective exposed to inner agents."
+  }
+}

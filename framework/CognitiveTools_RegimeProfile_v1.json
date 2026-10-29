@@ -1,0 +1,109 @@
+{
+  "module_name": "Cognitive Tools Regime Profile",
+  "short_name": "REGIME_PROFILE",
+  "version": "v1.0.0",
+  "status": "canonical_handoff_stable",
+  "purpose": "Provide a lightweight passable constraint surface between ontology selection and dynamical projection. The regime profile states which dynamical options are permissioned, suppressed, threshold-bound, or risky under the current operating conditions.",
+  "runtime_position": "KCE -> CDP -> RegimeProfile -> DynamicalPrism -> Coupler",
+  "ownership_boundary": {
+    "owns": [
+      "candidate_regimes",
+      "regime_id",
+      "selected_working_regime",
+      "regime_class",
+      "regime_confidence",
+      "context_scope",
+      "active_constraints",
+      "constraint_field",
+      "permissioned_dynamics",
+      "suppressed_dynamics",
+      "operator_modulation",
+      "threshold_bands",
+      "regime_shift_triggers",
+      "dare_regime_watchpoints",
+      "state_flags",
+      "evidence",
+      "confidence"
+    ],
+    "does_not_own": [
+      "primitive ontology axes",
+      "operator vector construction",
+      "actor role binding",
+      "transform family selection",
+      "final branch selection"
+    ]
+  },
+  "input_contract": {
+    "prompt": "string",
+    "prism_profile": {
+      "active_axes": "array",
+      "energy_alloc": "object",
+      "collision_risks": "array"
+    },
+    "dynamical_profile": {
+      "operator_vector": "object",
+      "active_operator_clusters": "array",
+      "meta_transform_pressure": "array"
+    },
+    "coupling_policy": {
+      "default_regime": "string",
+      "regime_keywords": "object"
+    },
+    "threshold_band_policy": "object",
+    "coherence_band_policy": "object"
+  },
+  "output_contract": {
+    "regime_profile": {
+      "candidate_regimes": "array",
+      "regime_id": "string",
+      "selected_working_regime": "string",
+      "regime_class": "string",
+      "regime_confidence": "number_0_to_1",
+      "source": "string",
+      "ontology_scope": "array",
+      "context_scope": "object",
+      "active_operator_clusters": "array",
+      "active_constraints": "array",
+      "constraint_field": "object",
+      "permissioned_dynamics": "array",
+      "suppressed_dynamics": "array",
+      "operator_modulation": "object",
+      "threshold_bands": "object",
+      "regime_shift_triggers": "array",
+      "dare_regime_watchpoints": "array",
+      "state_flags": "array",
+      "evidence": "object",
+      "confidence": "number_0_to_1"
+    }
+  },
+  "compact_default_fields": [
+    "candidate_regimes",
+    "selected_working_regime",
+    "regime_confidence",
+    "context_scope",
+    "constraint_field",
+    "operator_modulation",
+    "regime_shift_triggers",
+    "dare_regime_watchpoints"
+  ],
+  "optional_full_stack_fields": [
+    "ontology_reclassification_risk",
+    "mutation_conditions"
+  ],
+  "handoff_policy": {
+    "to_dynamical_prism": "Dynamical Prism should interpret operator availability through permissioned_dynamics, suppressed_dynamics, and threshold_bands.",
+    "to_coupler": "Coupler should preserve regime_profile.regime_id as coupling_packet.regime and coupling_packet.regime_ref for compatibility.",
+    "to_memory": "Memory and basin-key inference should prefer regime_profile.regime_id when present, falling back to coupling_packet.regime for older packets.",
+    "to_dare_idcm": "DARE/IDCM should audit illegal_dynamic_allowed, required_dynamic_suppressed, threshold_band_mismatch, and low_regime_confidence."
+  },
+  "minimal_regime_classes": [
+    "metastable",
+    "exploratory",
+    "stabilized",
+    "threshold",
+    "competitive",
+    "recursive",
+    "distributed_coordination"
+  ],
+  "compatibility_rule": "Keep coupling_packet.regime as a scalar compatibility mirror; do not require downstream agents to parse coupling_packet to recover the regime surface."
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": "dynamical_prism/0.2",
+  "source": {
+    "prompt_text": "string",
+    "anchor_ref": "string_or_null",
+    "cdp_profile_ref": "string_or_null"
+  },
+  "dynamical_profile": {
+    "active_operator_clusters": [],
+    "operator_vector": {
+      "signal": 0.0,
+      "detect": 0.0,
+      "interpret": 0.0,
+      "encode": 0.0,
+      "execute": 0.0,
+      "disrupt": 0.0,
+      "coordinate": 0.0,
+      "constrain": 0.0,
+      "gate": 0.0,
+      "stabilize": 0.0,
+      "explore": 0.0,
+      "select": 0.0,
+      "adapt": 0.0,
+      "anticipate": 0.0
+    },
+    "global_modifiers": {},
+    "derived_composites": [],
+    "computed_behavior_labels": [],
+    "meta_transform_pressure": []
+  },
+  "dynamical_core_vector": {
+    "signal": 0.0,
+    "detect": 0.0,
+    "interpret": 0.0,
+    "encode": 0.0,
+    "execute": 0.0,
+    "disrupt": 0.0,
+    "coordinate": 0.0,
+    "constrain": 0.0,
+    "gate": 0.0,
+    "stabilize": 0.0,
+    "explore": 0.0,
+    "select": 0.0,
+    "adapt": 0.0,
+    "anticipate": 0.0
+  },
+  "active_operator_clusters": {
+    "information_representation": [],
+    "intervention_action": [],
+    "boundary_control": [],
+    "adaptive_search": []
+  },
+  "regime_field": {
+    "scale": "string_or_null",
+    "tempo": "string_or_null",
+    "phase_state": "string_or_null",
+    "stability": "string_or_null",
+    "coupling": "string_or_null",
+    "reversibility": "string_or_null",
+    "constraint_load": "string_or_null",
+    "noise": "string_or_null",
+    "uncertainty": "string_or_null",
+    "resource_condition": "string_or_null",
+    "legitimacy": "string_or_null",
+    "trust": "string_or_null",
+    "authority_gradient": "string_or_null",
+    "adversariality": "string_or_null",
+    "commitment": "string_or_null",
+    "boundary_condition": "string_or_null",
+    "ethical_load": "string_or_null"
+  },
+  "computed_behavior_labels": [
+    {
+      "label": "string",
+      "confidence": 0.0,
+      "supporting_core_operators": [],
+      "supporting_regime_conditions": [],
+      "ontology_dependency": [],
+      "risk_notes": []
+    }
+  ],
+  "operator_regime_mismatch_report": {
+    "mismatch_detected": false,
+    "mismatch_type": "string_or_null",
+    "severity": "low|moderate|high|critical|null",
+    "notes": []
+  }
+}

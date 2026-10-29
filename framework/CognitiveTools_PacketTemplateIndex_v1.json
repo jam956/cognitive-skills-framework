@@ -1,0 +1,76 @@
+{
+  "schema_version": "cognitive_tools.packet_templates/1.0",
+  "status": "agent_facing_optional_templates",
+  "purpose": "Index packet templates for full module execution while preserving the thin canonical orchestration packet as the default handoff shape.",
+  "use_policy": {
+    "default": "Do not load every template. Preserve the canonical packet fields first, then load a module template only when full execution or durable artifact emission needs the module's richer shape.",
+    "probe_mode": "Use CognitiveTools_ProbeProfiles_v1.json and minimal_outputs instead of full packet templates.",
+    "full_mode": "Use the relevant PacketTemplate file as an example output skeleton, then normalize its products back into the canonical packet vocabulary before handoff.",
+    "compatibility_rule": "Fields named regime_profile, dynamical_profile, coupling_packet, transform_plan, branch_set, crem_packet, path_packet, exec_trace, hidden_state_watch, fail_safe_report, and runtime_parameters are canonical orchestration keys."
+  },
+  "canonical_packet_keys": [
+    "prompt_class",
+    "anchor",
+    "prism_profile",
+    "regime_profile",
+    "dynamical_profile",
+    "coupling_packet",
+    "route_choice",
+    "transform_plan",
+    "branch_set",
+    "verification_requirements",
+    "return_path",
+    "synthesis_notes",
+    "coherence_bands",
+    "threshold_bands"
+  ],
+  "optional_packet_keys": [
+    "path_packet",
+    "dependency_graph",
+    "gap_report",
+    "crem_packet",
+    "rebase_vector",
+    "crem_gate_report",
+    "exec_trace",
+    "hidden_state_watch",
+    "fail_safe_report",
+    "runtime_parameters"
+  ],
+  "templates": {
+    "KCE": {
+      "file": "KCE_Parallax_v2.3_PacketTemplate.json",
+      "primary_packet_key": "anchor",
+      "use_when": "Full anchor extraction, split-layer seed extraction, or durable anchor audit is needed."
+    },
+    "DynamicalPrism": {
+      "file": "Dynamical_Prism_v0.2_PacketTemplate.json",
+      "primary_packet_key": "dynamical_profile",
+      "use_when": "Full reduced-core operator-vector projection or computed-label decomposition is needed."
+    },
+    "RegimeField": {
+      "file": "Regime_Field_v0.1_PacketTemplate.json",
+      "primary_packet_key": "regime_profile",
+      "use_when": "Regime confidence, alternate regimes, mismatch watchpoints, or constraint fields materially affect the route."
+    },
+    "PrismCoupler": {
+      "file": "Prism_Coupler_v1.5_PacketTemplate.json",
+      "primary_packet_key": "coupling_packet",
+      "use_when": "Actor-role-regime binding, alternate coupling packets, or CREM/ETE/PSPP handoff hints are needed."
+    },
+    "CTR": {
+      "file": "CTR_Parallax_v2.1_PacketTemplate.json",
+      "primary_packet_key": "transform_plan",
+      "use_when": "Transform-family/operator selection needs execution order, return-path requirements, or routing hints."
+    },
+    "ETE": {
+      "file": "ETE_v1.1_PacketTemplate.json",
+      "primary_packet_key": "branch_set",
+      "use_when": "Bounded exploration, operator/regime projection, rejected-branch artifacts, or candidate branches are needed."
+    },
+    "CREM": {
+      "file": "CREM_v1.3_PacketTemplate.json",
+      "primary_packet_key": "crem_packet",
+      "use_when": "Relationship rebase, operator/regime conflict separation, dependency invariants, or rebase vectors are needed."
+    }
+  }
+}
