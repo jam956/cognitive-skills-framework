@@ -57,23 +57,38 @@ The [Key Concept Generalization and Specification Evaluation](https://github.com
 
 The historical progression is therefore **broader inquiry → structured thought → reusable concept → specific application**. The dates here follow the author's reconstruction and surviving discussions; they describe the design's evolution, rather than a sequence of verified software releases.
 
+## 4. Choose, explore, compare and check
+
+Once a concept is preserved, another question follows: what should the model do with it? The later modules made different jobs explicit instead of leaving every transformation inside one broad instruction.
+
+**CTR** names the available transformations and what they must preserve. **ETE** applies selected transformations to produce meaningfully different candidate systems. **PSPP** compares those candidates and records why a branch is selected, merged or deferred. This division became clearer in the April–May 2026 revisions; it is a functional explanation, not the order in which every idea was invented.
+
+Three further concerns require different checks. **CREM** reframes relationships while preserving the parties' differences and shared dependencies. **CEC** checks whether consequential steps form a licensed path. **DARE/IDCM** asks whether the opening frame or rejected branches concealed something important.
+
+The supporting controls address cost, observability and feedback: **probe profiles** select the smallest useful route, **Organ Atlas** describes optional monitoring surfaces, and **Reward Controller** bounds how observed results may influence future effort. Some of these ideas have antecedents in the 2025 Prism work.
+
+These are methods a capable model may already perform through prompting. Their intended contribution is to make the choice, constraints and checks explicit and reusable. The [historical guide](docs/HISTORY.md) traces the surviving evidence; each linked page below explains its problem, purpose, evolution and an example.
+
 ## The cognitive methods
 
-| Method | Contribution |
-|---|---|
-| **KCE — key concept extraction/elevation** | Finds provisional anchors and preserves relationships through abstraction. |
-| **CDP — Cognitive Domain Prism** | Selects relevant domain lenses and limits unnecessary breadth. |
-| **Dynamical Prism and Regime Field** | Separates actions and processes from their operating conditions. |
-| **Prism Coupler** | Binds actors, roles, actions and conditions into a candidate system. |
-| **CTR — Cognitive Transformation Registry** | Selects transformations and states what they preserve and disturb. |
-| **ETE — Exploration and Transform Engine** | Explores candidate transformations and retains useful alternatives. |
-| **CREM — Conflict and Relationship Rebase Module** | Reframes relationships while preserving consequential differences and dependencies. |
-| **PSPP — candidate-system comparison** | Compares, selects, merges or defers candidate systems. |
-| **CEC — conditional path validation** | Checks ordered dependencies when sequence matters. |
-| **DARE/IDCM — supervisory audit** | Challenges premature closure, missing operations and unexplained residue. |
-| **Probe profiles, Organ Atlas and Reward Controller** | Specify selective routing, optional monitoring and bounded feedback. |
+| Reader guide | Contribution | Original definition |
+|---|---|---|
+| **[KCE](docs/skills/KCE.md)** | Preserve a reusable concept through abstraction. | [v2.3 JSON](framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) |
+| **[CDP](docs/skills/CDP.md)** | Select domain lenses that can change the analysis. | [v1.2 JSON](framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) |
+| **[Dynamical Prism](docs/skills/DYNAMICAL.md)** | Describe the processes behind a behavior label. | [Reduced-core JSON](framework/Dynamical_Prism_v1.2_ReducedCore.json) |
+| **[Regime Field](docs/skills/REGIME.md)** | Preserve the conditions governing those processes. | [Field](framework/Regime_Field_v0.1.json) / [profile](framework/CognitiveTools_RegimeProfile_v1.json) |
+| **[Prism Coupler](docs/skills/COUPLER.md)** | Bind actors, roles, processes and constraints. | [v1.5 JSON](framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json) |
+| **[CTR](docs/skills/CTR.md)** | Choose transformations and their preservation checks. | [v2.1 JSON](framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) |
+| **[ETE](docs/skills/ETE.md)** | Explore transformations and retain candidate systems. | [v1.1 JSON](framework/ETE_v1.1_SplitLayerExplorationTransform.json) |
+| **[CREM](docs/skills/CREM.md)** | Rebase relationships without erasing parties or dependencies. | [v1.3 JSON](framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) |
+| **[PSPP](docs/skills/PSPP.md)** | Compare candidates before choosing a conclusion. | [v5.0-lite JSON](framework/PSPP_v5.0_CandidateSystemComparator.json) |
+| **[CEC](docs/skills/CEC.md)** | Check consequential causal and dependency steps. | [v1.1 JSON](framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) |
+| **[DARE/IDCM](docs/skills/DARE.md)** | Audit the frame, pruning and unexplained residue. | [v1.0 JSON](framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json) |
+| **[Probe profiles](docs/skills/PROBES.md)** | Decide when a fuller operation is worth its cost. | [Profiles JSON](framework/CognitiveTools_ProbeProfiles_v1.json) |
+| **[Organ Atlas](docs/skills/ORGAN_ATLAS.md)** | Define optional probes and recovery posture. | [v0.3 template](framework/Organ_Atlas_Template_v0.3.json) |
+| **[Reward Controller](docs/skills/REWARD.md)** | Keep bounded feedback under external evaluation. | [Contract JSON](framework/RewardController_ParallaxEngine.v1.json) |
 
-Use the smallest useful combination. A clear, simple task may need none of them. See the [module and file index](docs/MODULES.md) for definitions, versions and entry points.
+Use the smallest useful combination. A clear, simple task may need none of them. The [file index](docs/MODULES.md) also links packet templates and reference documents.
 
 ## Attention steering in practice
 
@@ -83,6 +98,7 @@ Using all of the included stages simultaneously in practice can be quite paralyz
 
 - [The original framework package](framework/): its agent-facing `SKILL.md`, 23 JSON specifications/templates and four reference documents.
 - [An O/D/R/O explanation](docs/ODRO.md), [module index](docs/MODULES.md) and [worked examples](docs/WORKED_EXAMPLES.md).
+- [Module history and evidence trail](docs/HISTORY.md), with individual reader guides linked above.
 - [Research notes and open questions](docs/MUSINGS.md), including a proposed abductive loop.
 - [Source/version notes](docs/PROVENANCE.md) and a [file-hash manifest](SOURCE_MANIFEST.json).
 

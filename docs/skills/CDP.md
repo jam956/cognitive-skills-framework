@@ -1,0 +1,23 @@
+# CDP: choose which domains can change the answer
+
+**Question:** Which knowledge domains deserve attention on this particular problem?
+
+## The problem and the method
+
+“Consider other perspectives” can produce a long list of disciplines without changing the analysis. CDP makes domain selection consequential: activate a lens when it exposes a missing variable, changes a candidate solution, supplies a falsifier or resolves ambiguity.
+
+It is the bounded domain-selection part of the original 19-category Prism. It defines where to search; it does not choose the answer.
+
+## Historical development
+
+The original Prism sought broader inquiry before closure in late 2025. The surviving CDP v1.2 specification, carrying May 2, 2026 metadata, tightened that idea into candidate-specific domain profiles, breadth budgets and collision checks. A provisional KCE anchor need not force all later inquiry into one domain map.
+
+The practical refinement was selective breadth. A suppressed domain can be reconsidered if residual error suggests that the opening map was too narrow.
+
+## Example and boundary
+
+A procurement delay may initially look like a scheduling issue. An authority lens changes the analysis if the person who can perform the work cannot approve the purchase. Naming economics or psychology without any corresponding change adds little.
+
+The specified weights and activation limits are design controls, not evidence that a model has measured its internal attention. Domain selection should improve a decision or a check.
+
+**Read:** [CDP v1.2 specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) · [Prism history](../../README.md#1-prism-broaden-the-inquiry-before-closing-it) · [evidence trail](../HISTORY.md#evidence-trail)

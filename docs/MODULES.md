@@ -2,6 +2,8 @@
 
 Start with the [reader overview](../README.md), then the [original skill guide](../framework/SKILL.md) when applying the methods. Load only the definitions relevant to the task.
 
+For purpose, historical development and examples, use the [historical reader guide](HISTORY.md). The table below remains the source-file index.
+
 ## Definitions and controls
 
 | Component | Internal version | Role | Source |
