@@ -77,19 +77,7 @@ Use the smallest useful combination. A clear, simple task may need none of them.
 
 ## Attention steering in practice
 
-A short prompt can name a desired result while leaving the model to choose the route. Structured context can also describe the route: what to notice, which relationships to preserve, which transformations are permitted, and when to stop or reconsider.
-
-In an analytical article, that might mean moving from a shared aspiration through conflicting dependencies to a conditional proposal. In a disagreement, it might mean recognizing that practical cooperation does not require restored trust. In memory, it might mean retaining the conditions under which a previous method can transfer.
-
-Here, **attention steering means contextual guidance of the model's observable work**. The framework does not expose or directly manipulate neural attention weights. A matched evaluation is needed to establish improvement over a simpler prompt. The [worked examples](docs/WORKED_EXAMPLES.md) show how to try the methods without assuming that improvement in advance.
-
-## Applications and evidence
-
-- **[Key Concept Generalization and Specification Evaluation](https://github.com/jam956/Key_Concept_Generalization_and_Specification_Eval)** tests concept extraction and application of a supplied analytical framework. It includes a normalized Kissinger corpus, scoring rubric and an example Sol 6.1 versus Qwen 3.8 27B comparison. The scores are provisional AI judgments and assess selected abilities, not this entire framework.
-- **[Basin Memory](https://github.com/jam956/basin-memory)** applies a reduced cognitive tool set to reusable conceptual memory, applicability boundaries and provenance. Access depends on that repository's visibility.
-- **Noetic Cortex** is related work on perception, motivation, attention and expression. Its runtime and personal/project databases are outside this documentation release.
-
-These applications offer ways to examine the methods. Their existence does not establish that every module is effective. See [evaluation and limitations](docs/EVALUATION.md).
+Using all of the included stages simultaneously in practice can be quite paralyzing for an LLM as it can be resource intensive to perform exhaustive search of information through the model.  However, many frontier models can take the "main idea" or the strategy of the JSON algorithm and can get quite good of a result.  These cognitive skills are merely illustrative of the various transformations that a model can do.  Not all models can perform these with equal proficiency.
 
 ## What is included
 
