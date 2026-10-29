@@ -1,35 +1,61 @@
 # Cognitive Skills Framework
 
-**A documented approach to steering an LLM's attention, reasoning and expression through explicit cognitive methods.**
+**From searching across knowledge domains to preserving and applying the structure of a thought.**
 
-Large language models can extract concepts, change perspective, construct analogies, compare explanations and adapt their writing. Those abilities are not equally reliable on every suitable task. An answer may sound persuasive while losing a condition, flattening competing interests, or reaching a conclusion before the evidence supports it.
+Large language models can draw connections across disciplines, extract concepts and turn an abstract idea into a specific explanation or piece of writing. These abilities are not always used reliably. A model may settle on the first plausible framing, lose a qualification during abstraction, or produce fluent prose that no longer follows the intended concept.
 
-This framework makes some of those operations explicit. It describes what a model should preserve, what it may transform, when a method applies, and how its result can be checked. The aim is to help an AI collaborator use its existing capabilities more deliberately and carry useful methods between tasks.
+This framework grew out of developing Alex, an AI collaborator intended to carry useful approaches between tasks. Its evolution followed three connected questions: **where should the model look, what structure should it preserve, and how can that structure become reusable?**
 
-This repository publishes the documentation and structured specifications. You can read them, supply selected methods as context to a model, or use them to design your own harness. There is no bundled autonomous runtime or model-weight update.
+This repository publishes the methods and structured specifications behind that work. They can be read, supplied selectively as model context, or used to design a harness. The historical progression below explains their purpose before introducing the individual modules.
 
-## Why we developed it
+## 1. Prism: broaden the inquiry before closing it
 
-The framework grew out of developing Alex, an AI collaborator intended to maintain continuity of approach across writing, engineering and conceptual work. Remembering a prior answer is only part of that task. A reusable method also needs its purpose, the relationships that make it work, its limits, and a way to recognize when it no longer fits.
+The original Prism began with ontology: identifying the kinds of things and relationships involved in a problem. During the October–November 2025 period, that idea developed into a framework of **19 broad categories of human knowledge**. They served as lenses through which the same prompt could be examined.
 
-We began describing these structures explicitly and using them to direct attention. Instead of asking only for a persuasive answer, we could ask which relationship must survive a change of setting, which constraints govern the available actions, or whether a proposed resolution has erased a real disagreement.
+The motivation was to make better use of the knowledge already available to an LLM. A question first framed as an engineering problem might also involve biology, economics, political authority or human behavior. An answer could remain plausible within its opening discipline while missing a relationship another domain would reveal.
 
-The resulting methods are modular. They are meant to guide reasoning and make its products inspectable. Their usefulness still depends on the model, task, supplied evidence and verification.
+Prism therefore sought to delay premature search closure. It encouraged alternative framings and movement through relevant disciplines or coherent domains before committing to an answer. The aim was selective breadth: explore another perspective when it could change the analysis, then stop when further exploration ceased to help.
 
-## Start with O/D/R/O
+At this stage, the central contribution was a map of **where to search**. That map also raised a further question: when an idea moves between domains, what must remain intact?
 
-O/D/R/O is a compact way to describe a situation or transferable concept:
+## 2. Sentence-thought vectors: describe what must survive
 
-| Element | Question |
-|---|---|
-| **Ontology** | What kinds of things, actors, roles or relationships are involved? |
-| **Dynamics** | What happens, changes or maintains the relationship? |
-| **Regime** | Under which conditions and constraints does it operate? |
-| **Outcome / destination** | What follows, or what state is the task trying to reach? |
+By April 2026, in the author's reconstruction of the development, the representation had expanded into the **sentence-thought framework**. Ontology was joined by dynamics, regime and a second ontology representing the object or destination.
 
-For example, a trained technician can still depend on someone else who controls access to the workshop. Skill and access are different parts of the system. A useful abstraction preserves both, along with the condition that access is necessary and exclusively controlled.
+The organizing analogy was the structure of a sentence:
 
-The same representation can support extraction, reframing, comparison, writing and memory. A predicted outcome and a desired destination must remain distinguishable: wanting a result does not establish that it will occur. See [the O/D/R/O guide](docs/ODRO.md).
+| Element | Sentence analogy | Role in the thought |
+|---|---|---|
+| **Ontology** | Subject or noun | The entity, system or relationship we begin with. |
+| **Dynamical** | Action or verb | What it does, undergoes or maintains. |
+| **Regime** | Modifiers and qualifying phrases | Conditions and constraints governing the relationship. |
+| **Ontology: object or destination** | Object or resulting state | What is affected, related to or reached. |
+
+This became **O/D/R/O**. The rationale was that language—the material from which LLMs learn—already expresses meaning through entities, actions, qualifications and their relationships. The framework makes those roles explicit and available for inspection. It is a semantic model, rather than a requirement that every language or sentence follow one grammatical order.
+
+Each component can be analyzed and categorized independently, much as the original Prism organized ontology into broad knowledge domains. Search can then consider a particular process across different subjects, a shared destination reached by different routes, or a relationship whose applicability changes under a different regime.
+
+The components must also remain connected. Consider the test assertions “Americans love freedom” and “Americans do not love freedom.” They share a subject, a relationship and an object, while negation changes what is asserted. In a regime-based encoding, the logical constraint qualifies the love relationship. A useful representation preserves that scope; denying love does not establish hatred.
+
+This was the intended advantage over relying only on whole-sentence similarity: make the consequential parts of meaning separately searchable while preserving the thought they form together. Realizing that advantage requires faithful normalization and a search or applicability check that respects the relationships.
+
+The final O is not automatically a desired outcome. It may be the object of a relationship, such as freedom in the example, or a destination state in a transformation. Current consumer schemas use names such as `outcome` and `destination`; their contracts determine the interpretation. See [the O/D/R/O guide](docs/ODRO.md) for the current distinctions between consequences and objectives.
+
+## 3. KCE: elevate the concept without losing the thought
+
+A structured description of one experience is not yet a reusable method. It may remain tied to its original people, objects or wording. **KCE—Key Concept Extraction or Elevation—**addresses that next problem: identify the governing concept, lift it to a useful level of generality, and preserve the relationships and conditions that make it applicable.
+
+For example, a technician may know how to diagnose a pump but still depend on someone else to unlock the workshop. The transferable concept concerns the separation between capability and control of necessary access. “Skill never creates independence” overgeneralizes it; merely retelling the workshop story leaves the reusable relationship implicit.
+
+In Basin Memory, KCE was incorporated into capture and search orientation to help find reusable concepts across different situations. The documented procedure selects a provisional concept anchor, limits abstraction, and records the governing operation, applicability conditions and failure boundaries. Categories provide routes to the concept; the preserved thought supplies what a later model must assess.
+
+That distinction matters. Two records can occupy similar categories while asserting different relationships. A retrieved candidate must still be checked against the present problem. Broader discovery and precise applicability are complementary parts of the design.
+
+The next step is **specification**: bring the generalized concept back into a particular situation and express it as useful analysis, action or prose. That introduces another opportunity for error. The model must adapt the concept without importing the old example's facts or losing its qualifications.
+
+The [Key Concept Generalization and Specification Evaluation](https://github.com/jam956/Key_Concept_Generalization_and_Specification_Eval) makes those abilities inspectable through extraction exercises, a Kissinger-framework writing task and a scoring rubric. Its example scorecard compares Sol 6.1 with Qwen 3.8 27B with thinking disabled. The current evaluation tests extraction and application separately, supplying the framework for the writing task.
+
+The historical progression is therefore **broader inquiry → structured thought → reusable concept → specific application**. The dates here follow the author's reconstruction and surviving discussions; they describe the design's evolution, rather than a sequence of verified software releases.
 
 ## The cognitive methods
 
