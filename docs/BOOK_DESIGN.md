@@ -8,25 +8,19 @@ The main reading path follows conceptual prerequisites. Development history and 
 
 The narrative stance is collegial exposition. The prose lays out cases, relationships and consequences for a technical peer to assess. Simplicity belongs to the examples and their limits; it does not imply a hierarchy between writer and reader.
 
-## Begin with orientation
+## Begin with two orientation chapters
 
-[Chapter 1: Orientation—Transforming Meaning](chapters/01_ORIENTATION.md) is the first chapter draft.
+[Chapter 1: Orientation—Transforming Meaning](chapters/01_ORIENTATION.md) introduces analogy, metaphor, changes of viewpoint and dimensionality, abstraction, salience, inversion, and reversibility. The triangle, square, prism, and subway map keep the relationships visible. This is a teaching foundation, rather than an exhaustive inventory of primitive faculties.
 
-It introduces:
+[Chapter 2: Working with Transformations](chapters/02_WORKING_WITH_TRANSFORMATIONS.md) develops further operations through behavior labels, conditions, sequences, interventions, connections, roles, requirements, and challenges. It shows how several moves can serve one purpose and leads into the repository's tools. Some operations remain individually useful; their placement here does not make every one a compound.
 
-- Analogy through a visible geometric relation, followed by changed viewpoints, metaphor, and abstraction.
-- Representative transformations from all sixteen families in the current registry, introduced as a developing inquiry creates a need for them.
-- Native transformations as work a model may carry out through learned capacities, while the application need not implement the transformation's algorithm separately.
-- Knowledge from training, supplied context, external retrieval and tools, and relations inferred or proposed from available material.
-- Application design as the arrangement of relevant capabilities, evidence, constraints, and interactions around a recurring need.
+The two chapters preserve the distinction between a model's learned capabilities and the particular arrangements an application supplies. Information may come from training, supplied context, external retrieval, or tools; consequences inferred from that information and proposed alternatives have their own status.
 
-The chapter considers how a statement's meaning can be transformed while remaining logical and coherent. An introduction connects the transformations to application design and establishes the scope of the chapter. The first example applies the same enlargement to a triangle and a square. A unit square makes the limit visible: doubling lengths produces four times the area. A table of contents, prism views and a subway map develop other correspondences and what they preserve. Short lists, a supplied formula, a sheet of paper, and small arrangements of roles or room use make the later distinctions inspectable. Challenges and reconstruction follow the candidate arrangements they concern. Each movement develops one issue, with the examples presented as shared objects of analysis.
-
-The operation names enter with the cases that give them a concrete meaning. The full family map follows the main exposition. Reader-attention planning governs sequence and amount without appearing as instructions to the reader. The vocabulary describes functions a model may perform, without claiming discrete neural faculties or an exhaustive inventory of knowledge.
+Operation names enter with cases that give them a concrete meaning. The detailed family map follows the second chapter, where it is available as reference without carrying the opening exposition. Each movement develops one issue, with the examples presented as shared objects of analysis.
 
 ## Build toward the repository's designs
 
-Later chapters can develop the following sequence. Their division remains provisional while the opening chapter is refined.
+The tools section begins with the [framework overview](tools/00_FRAMEWORK_OVERVIEW.md), which retains the fuller introduction formerly used as the repository README. The following conceptual sequence connects the opening chapters to the individual tool guides.
 
 | Conceptual step | What the reader needs to understand | Repository examples |
 |---|---|---|
@@ -42,8 +36,10 @@ Each module enters after the reader understands the problem it helps organize. T
 
 Organize each section around a consequential distinction. Present the case, explain its governing relationship, and develop the consequence directly. Questions belong where an issue remains open; exposition carries relations whose outcomes can already be stated. Simple analogical cases retain boundaries visible inside the same example: an outline leaves part of a solid unseen, a connection map supplies no distance, and sorting cannot recover a discarded number. Preserve the intermediate explanation while reducing the number of premises. The nonfiction multiplex supplies candidate narration and attention constructions for this movement; it contributes no theory of model operation and does not establish the effectiveness of the resulting chapter.
 
+The prose serves illustration, communication, and edification. Ordinary idiom and useful ambiguity can remain when they help carry the intended relationship; additional precision should earn the attention it consumes. Clarify a distinction where the example depends on it without turning each illustration into a specification.
+
 The main prose explains. Compact tables support comparisons; diagrams can show relationships; examples connect abstractions to understandable situations. Detailed schemas, packet formats, the full transformation registry, and historical documents belong in reference material reached when needed.
 
 Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](EVALUATION.md).
 
-The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapter 1 is a draft; the rest of the textbook remains to be developed.
+The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. The two opening chapters and tools overview provide the current reading route; the individual guides remain starting pages for further development.
