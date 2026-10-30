@@ -8,7 +8,7 @@ The Cognitive Skills Framework organizes examples of this work into reusable met
 
 ## 1. Analogy
 
-Doubling every side of a triangle enlarges the figure while preserving its angles and proportions. Applying the same operation to a square produces a corresponding relationship between the original and enlarged figures. The figures differ, but both undergo enlargement that preserves shape.
+Doubling every side of a triangle enlarges the figure while preserving its angles and proportions. Applying the same operation to a square produces a corresponding relationship between the original and enlarged figures. The figures differ, but both undergo enlargement that preserves shape.  Moreover, it should be noted that analogies allow properties of the object to be preserved, such as the sum of interior angles properties, Euclidean definition of the triangle, the area and circumference formulas.  None of these change, merely the size of the object itself.
 
 This is a simple instance of **analogy**. The correspondence concerns the operation and the relationship it preserves. Recognizing that relationship allows an idea developed in one case to become useful in another.
 
@@ -16,7 +16,7 @@ This is a simple instance of **analogy**. The correspondence concerns the operat
 
 The correspondence has a definite scope. A square with sides of one unit becomes a square with sides of two units. Four of the original unit squares fit inside it. Length doubles; area becomes four times as large.
 
-The transferable rule is therefore **double the lengths**. Extending it to **double every property** would introduce a claim the example does not support. The same picture establishes both the relationship and the boundary of the inference.
+The transferable rule is therefore **double the lengths**. Extending it to **double every property** would introduce a claim the example does not support. The same picture establishes both the relationship and the boundary of the inference.  Basic formula descriptions of the object remain the same.  Analogical vector embedding mathematics is straightforward for an AI model.
 
 ## 2. Metaphor and correspondence
 
@@ -24,7 +24,7 @@ The transferable rule is therefore **double the lengths**. Extending it to **dou
 
 This is **metaphor**: one thing is presented through an image drawn from another. The image makes a selected correspondence prominent without spelling out every part of the comparison.
 
-For document design, the correspondence concerns orientation. A table of contents indicates where an explanation appears and how sections relate within the book. Its usefulness in locating an argument does not establish the argument's correctness. The image carries a navigational relationship, with a clear limit on what that relationship warrants.
+For document design, the correspondence concerns orientation. A table of contents indicates where an explanation appears and how sections relate within the book. Its usefulness in locating an argument does not establish the argument's correctness. The image carries a navigational relationship, with a clear limit on what that relationship warrants. One object is meant to represent the properties of another, although on the surface the two objects are seemingly unrelated.  Metaphors work best when the property under discussion between the two seemingly unrelated items is highlighted.  Modern LLM's do this transformation quite readily.
 
 Analogy can develop a correspondence explicitly across cases. Metaphor can concentrate it into a way of seeing a case. In either form, the correspondence provides something more precise to work with than a general impression of similarity. A model can help recover that structure and assess whether it remains relevant in a proposed application.
 
@@ -36,7 +36,7 @@ The prism gives a concrete image for **rotation of a conceptual view**: the subj
 
 A triangular outline leaves much of the solid unseen. Similarly, a description can be accurate about the view it presents while leaving other consequential relationships outside its scope. Changing viewpoint can recover some of that information without changing the underlying subject.
 
-An omitted dimension creates a different problem. Two roads may cross on a flat map while a traveler reports that they do not meet. Height offers a possible reconciliation: one road passes over the other on a bridge. The projected lines cross, while the roads remain separate in space.
+An omitted dimension creates a different problem. Two roads may cross on a flat map while a traveler reports that they do not meet. This inconsistency may be viewed as a paradox.  However, height offers a possible reconciliation: one road passes over the other on a bridge. The projected lines cross, while the roads remain separate in space.
 
 This is **dimensional lift**. An additional dimension makes an apparent conflict between observations understandable while retaining both observations.
 
@@ -54,15 +54,15 @@ Replacing the names with letters gives:
 
 The pattern can then be described as three nodes joined in a line. Station names and geographical appearance have been set aside; the connections remain.
 
-This is **abstraction**: a selected relationship is retained in a description with fewer particulars. The resulting pattern is easier to recognize in another instance because its identity no longer depends on those particular station names.
+This is **abstraction**: a selected relationship is retained in a description with fewer particulars. The resulting pattern is easier to recognize in another instance because its identity no longer depends on those particular station names. For abstraction, a model can highlight a connection between two items without requiring the consideration of the pathway or intervening items between them.
 
 The pattern supplies no walking distances. Equal line lengths on the page need not represent equally long journeys. Its usefulness depends on the relationship selected for preservation—here, connectivity.
 
-**Concretization** moves back toward particulars. The three-node pattern can be assigned actual stations and services to produce a specified instance. The pattern alone cannot determine those assignments. Station identities and service information have to be supplied, introducing evidence or choices that the abstraction left open.
+**Concretization** moves back toward particulars. The three-node pattern can be assigned actual stations and services to produce a specified instance. The pattern alone cannot determine those assignments. However if one were to walk from one station to the other, then an abstraction map is no longer useful.  One will need the intervening details such as landmarks, street signs, and such to walk from one station to another.  Station names and location information will also have to be supplied, introducing evidence or choices that the abstraction map omitted.
 
 A model can support both movements: extract a connection pattern from a described network, then construct an instance using supplied details. The practical question is whether the selected relationships survive the movement between cases.
 
-Salience can change even when the particulars remain fixed. Two routes may have the following properties:
+**Salience** can change even when the particulars remain fixed. Two routes may have the following properties:
 
 | Route | Travel time | Transfers |
 |---|---:|---:|
@@ -75,13 +75,13 @@ This is **salience reweighting**. Existing features receive different priority w
 
 ## 5. Behavior labels and their supporting actions
 
-“The assistant checks a sum” compresses several possible actions into a behavior label. In a specified checking task, the assistant receives two numbers and a stated answer, calculates the total, compares the results, and reports whether they agree. Its role is to check the supplied calculation under those conditions.
+“The assistant checks a sum” compresses several possible actions into a **behavior label**. In a specified checking task, the assistant receives two numbers and a stated answer, calculates the total, compares the results, and reports whether they agree. Its role is to check the supplied calculation under those conditions.  The label represents the assistant and his role, not the actual task itself.
 
 Making the actor, actions, role, and conditions explicit is **label decomposition**. It replaces a compact claim with an arrangement that can be examined.
 
 For a system designer, the resulting questions concern the information received, the comparison performed, and the meaning of the report. Those details determine what the checking function amounts to in this application.
 
-The description does not establish that a particular assistant performs the stated actions. It specifies the claimed behavior closely enough for that claim to be assessed. A model can help produce this account without the account itself becoming evidence of implementation.
+The description label of "assistant" does not establish that he performed the stated actions. It specifies the claimed behavior closely enough for that claim to be assessed. If the quality of his work were to be reviewed, then his role may be decomposed for inspection.  A model can help produce this account without the account itself becoming evidence of implementation.
 
 ## 6. Conditions and purposes
 
@@ -97,7 +97,7 @@ Replacing the required means while retaining the stated purpose is **constraint 
 
 An additional requirement can change that comparison. If the paper must remain unmarked, a clip that leaves a mark fails even if it holds the sheet securely. The alternative has to preserve the requirements that actually govern the task.
 
-Regime change concerns what happens under another condition. Constraint substitution concerns whether another means can satisfy the same requirement. The distinction allows a proposed change to be examined without losing the purpose it was meant to serve.
+Regime change concerns what happens under another condition, i.e. changing the condition may yield a different results. Constraint substitution concerns whether a different constraint can still yield the same result. The distinction allows a proposed change to be examined without losing the purpose it was meant to serve.
 
 ## 7. Time and order
 
@@ -181,7 +181,7 @@ An arrangement invites a broader challenge. In the proposed room schedule, conve
 
 Developing that branch is **adversarial verification**: a consequential challenge is constructed against a candidate arrangement so that its response can be examined.
 
-The overrun remains hypothetical. Its value lies in exposing a case the arrangement should address, rather than establishing that the case will occur. A model can make the challenge precise enough to inform a decision or a test.
+In this example, the quiet period overrun remains hypothetical. Testing the state of that period lies in exposing that the arrangement was satisfied, rather than assuming that the quiet state will occur. A model can make the challenge precise enough to inform a decision or a test.
 
 ## 12. Organizing assumptions and alternative routes
 
