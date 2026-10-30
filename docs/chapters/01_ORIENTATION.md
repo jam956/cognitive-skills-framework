@@ -8,7 +8,7 @@ The Cognitive Skills Framework organizes examples of this work into reusable met
 
 ## 1. Analogy
 
-Doubling every side of a triangle enlarges the figure while preserving its angles and proportions. Applying the same operation to a square produces a corresponding relationship between the original and enlarged figures. The figures differ, but both undergo enlargement that preserves shape.  Moreover, it should be noted that analogies allow properties of the object to be preserved, such as the sum of interior angles properties, Euclidean definition of the triangle, the area and circumference formulas.  None of these change, merely the size of the object itself.
+Doubling every side of a triangle enlarges the figure while preserving its angles and proportions. Applying the same operation to a square produces a corresponding relationship between the original and enlarged figures. The figures differ, but both undergo enlargement that preserves shape.  The triangle remains a triangle and the square remains a square. Their perimeter and area formulas remain the same, although the values calculated from them change with size.
 
 This is a simple instance of **analogy**. The correspondence concerns the operation and the relationship it preserves. Recognizing that relationship allows an idea developed in one case to become useful in another.
 
@@ -16,7 +16,7 @@ This is a simple instance of **analogy**. The correspondence concerns the operat
 
 The correspondence has a definite scope. A square with sides of one unit becomes a square with sides of two units. Four of the original unit squares fit inside it. Length doubles; area becomes four times as large.
 
-The transferable rule is therefore **double the lengths**. Extending it to **double every property** would introduce a claim the example does not support. The same picture establishes both the relationship and the boundary of the inference.  Basic formula descriptions of the object remain the same.  Analogical vector embedding mathematics is straightforward for an AI model.
+The transferable rule is therefore **double the lengths**. Extending it to **double every property** would introduce a claim the example does not support. The same picture establishes both the relationship and the boundary of the inference.
 
 ## 2. Metaphor and correspondence
 
