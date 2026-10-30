@@ -8,7 +8,7 @@ The Cognitive Skills Framework organizes examples of this work into reusable met
 
 ## 1. Analogy
 
-Doubling every side of a triangle enlarges the figure while preserving its angles and proportions. Applying the same operation to a square produces a corresponding relationship between the original and enlarged figures. The figures differ, but both undergo enlargement that preserves shape.  The triangle remains a triangle and the square remains a square. Their perimeter and area formulas remain the same, although the values calculated from them change with size.
+Doubling every side of a triangle enlarges the figure while preserving its angles and proportions. Applying the same operation to a square produces a corresponding relationship between the original and enlarged figures. The figures differ, but both undergo enlargement that preserves shape.  The triangle remains a triangle and the square remains a square. Their perimeter and area formulas remain the same, although the values calculated from their respective formulas change with the change in the length of the edges.
 
 This is a simple instance of **analogy**. The correspondence concerns the operation and the relationship it preserves. Recognizing that relationship allows an idea developed in one case to become useful in another.
 
