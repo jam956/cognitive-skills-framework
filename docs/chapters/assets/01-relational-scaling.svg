@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" role="img" aria-labelledby="title description">
+<title id="title">Double every length in a triangle and a square</title>
+<desc id="description">Both figures preserve their shapes. The enlarged square has twice the side length and contains four original unit squares.</desc>
+<rect width="800" height="500" fill="white"/>
+<text x="24" y="36" font-family="Arial, sans-serif" font-size="23" fill="#17324d">One operation: double every length</text>
+<text x="165" y="85" font-family="Arial, sans-serif" font-size="17" fill="#17324d">Original</text>
+<text x="435" y="85" font-family="Arial, sans-serif" font-size="17" fill="#17324d">Enlarged</text>
+<text x="24" y="218" font-family="Arial, sans-serif" font-size="16" fill="#17324d">Triangle</text>
+<polygon points="170,230 230,230 170,170" fill="#e9f2f9" stroke="#3171a6" stroke-width="3"/>
+<polygon points="440,230 560,230 440,110" fill="#e9f2f9" stroke="#3171a6" stroke-width="3"/>
+<line x1="282" y1="193" x2="392" y2="193" stroke="#596a78" stroke-width="2"/>
+<line x1="392" y1="193" x2="382" y2="187" stroke="#596a78" stroke-width="2"/>
+<line x1="392" y1="193" x2="382" y2="199" stroke="#596a78" stroke-width="2"/>
+<text x="284" y="178" font-family="Arial, sans-serif" font-size="14" fill="#596a78">lengths × 2</text>
+<text x="605" y="170" font-family="Arial, sans-serif" font-size="15" fill="#17324d">Same angles</text>
+<text x="605" y="195" font-family="Arial, sans-serif" font-size="15" fill="#17324d">Same proportions</text>
+<line x1="24" y1="270" x2="776" y2="270" stroke="#dce3e8" stroke-width="1"/>
+<text x="24" y="423" font-family="Arial, sans-serif" font-size="16" fill="#17324d">Square</text>
+<polygon points="170,380 230,380 230,440 170,440" fill="#e9f2f9" stroke="#3171a6" stroke-width="3"/>
+<polygon points="440,320 560,320 560,440 440,440" fill="#e9f2f9" stroke="#3171a6" stroke-width="3"/>
+<line x1="500" y1="320" x2="500" y2="440" stroke="#3171a6" stroke-width="2"/>
+<line x1="440" y1="380" x2="560" y2="380" stroke="#3171a6" stroke-width="2"/>
+<line x1="282" y1="403" x2="392" y2="403" stroke="#596a78" stroke-width="2"/>
+<line x1="392" y1="403" x2="382" y2="397" stroke="#596a78" stroke-width="2"/>
+<line x1="392" y1="403" x2="382" y2="409" stroke="#596a78" stroke-width="2"/>
+<text x="284" y="388" font-family="Arial, sans-serif" font-size="14" fill="#596a78">lengths × 2</text>
+<text x="605" y="367" font-family="Arial, sans-serif" font-size="15" fill="#17324d">Four of the</text>
+<text x="605" y="392" font-family="Arial, sans-serif" font-size="15" fill="#17324d">original unit squares</text>
+<text x="162" y="473" font-family="Arial, sans-serif" font-size="16" fill="#17324d">Area = 1</text>
+<text x="472" y="473" font-family="Arial, sans-serif" font-size="16" fill="#17324d">Area = 4</text>
+</svg>
