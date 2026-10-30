@@ -16,7 +16,7 @@ For a system designer, the resulting questions concern the information received,
 
 The description label of "assistant" does not establish that he performed the stated actions. It specifies the claimed behavior closely enough for that claim to be assessed. If the quality of his work were to be reviewed, then his role may be decomposed for inspection.  A model can help produce this account without the account itself becoming evidence of implementation.
 
-The example already combines several moves. Decomposition makes the task explicit; specification supplies its inputs and conditions; comparison decides whether the results agree. Their organization gives the method its purpose. Naming the moves alone would leave that organization unstated.
+The contributing moves begin with abstraction: treat checking as a function that different people or programs could perform. Decomposition separates that function into actions, and concretization supplies their inputs and conditions. Comparison then relates the computed total to the stated answer. Together, these moves turn a compact role description into an inspectable account of what the role requires.
 
 ## 2. Conditions and purposes
 
@@ -33,6 +33,8 @@ Replacing the required means while retaining the stated purpose is **constraint 
 An additional requirement can change that comparison. If the paper must remain unmarked, a clip that leaves a mark fails even if it holds the sheet securely. The alternative has to preserve the requirements that actually govern the task.
 
 Regime change concerns what happens under another condition, i.e. changing the condition may yield a different results. Constraint substitution concerns whether a different constraint can still yield the same result. The distinction allows a proposed change to be examined without losing the purpose it was meant to serve.
+
+Both examples hold part of a situation steady while varying another. For the gate, abstraction isolates the condition of passage; comparison shows what opening and closing change. For the paper, abstraction identifies the purpose; analogy suggests another means with a related holding function; and concretization supplies the clip-and-board arrangement. Evaluation checks whether that arrangement preserves the requirements. These combinations let us distinguish a change in what is possible from a change in how the same purpose is served.
 
 ## 3. Time and order
 
@@ -60,6 +62,8 @@ The first sequence sorts all three numbers before discarding one. The second dis
 
 This is **operator sequence reordering**: the same actions are arranged differently, and their dependencies determine the effect. A model can compare candidate sequences by tracing what each action makes available to the next. The relevant constraint is visible in the intermediate states, including any information lost along the way.
 
+Decomposition separates the door cycle into phases, abstraction identifies the characteristic change within each phase, and sequencing retains their before-and-after relationships. In the sorting example, recombination changes the order while holding the operations fixed, inference traces what remains available after each step, and comparison exposes the difference between the results. Combining these moves adds an account of dependence to a description of events. We can explain why a later action is affected by what an earlier one preserved or discarded.
+
 ## 4. Deliberate intervention
 
 A small program with the rule `y = 2x + s` provides a direct example of intervention. Suppose `x` normally comes from a sensor. Bypassing that input and setting `x` directly changes how its value is determined.
@@ -69,6 +73,8 @@ With `s` held at 3, setting `x` to 1 gives `y = 5`; setting `x` to 2 gives `y = 
 This illustrates **counterfactual intervention**: deliberately set part of a system differently and follow the consequences, instead of accepting the value its ordinary source would supply.
 
 The results here follow from the stipulated formula. They provide no measurement of what a real sensor will report. A model can reason through the stated intervention while retaining the distinction between a consequence of the supplied rule and evidence about an external system.
+
+In the sensor example, abstraction isolates the input whose effect matters. Substitution replaces the sensor-supplied value with a chosen one, inference applies the stated rule, and comparison relates the resulting outputs. Holding the rule and the other input fixed makes the difference traceable to the selected change. The combined operation lets us examine a chosen variation while preserving the surrounding conditions needed to interpret its consequence.
 
 ## 5. Connections and roles
 
@@ -94,6 +100,8 @@ This is **actor–role rebinding**. The available actors remain; their assignmen
 
 Rewiring changes connections between components. Rebinding changes who occupies a role. Both can alter a system's behavior, but they imply different implementation changes. A model can help distinguish them when developing or comparing candidate arrangements.
 
+Abstraction separates a component's identity from its connections, and an actor's identity from the role assigned. Recombination rearranges the existing connections; in the role-exchange example, inversion supplies the simple swap between assignments. Concretization specifies the resulting arrangement, and evaluation checks its ordering and access requirements. The added capability is to change an organization while retaining an account of its parts, so that altered dependencies and missing resources become visible.
+
 ## 6. Compatibility between requirements
 
 One person needs quiet to read; another needs conversation to rehearse. With one room available, the two activities conflict if they must occur together.
@@ -103,6 +111,8 @@ Flexible timing creates another arrangement. Separate quiet and conversation per
 This is a **relationship rebase**: an arrangement is revised so that consequential requirements can relate differently. In this case, the change concerns operating conditions, making it a regime-focused rebase.
 
 Its applicability depends on timing. If both people must use the room at noon, separate periods have not resolved the conflict. A useful model response retains that result as an unresolved requirement, rather than treating the existence of an imaginable schedule as agreement.
+
+Abstraction identifies the requirements that each person needs preserved. A change of viewpoint moves attention from choosing between the people to organizing their use of the room. Decomposition separates that use into periods, concretization supplies a schedule, and evaluation checks it against the timing requirements. Their combination allows distinct aims to remain in view while the arrangement between them changes. This is the additional work of the rebase: the relationship becomes adjustable without requiring either aim to disappear.
 
 ## 7. Challenges to claims and arrangements
 
@@ -118,6 +128,8 @@ Developing that branch is **adversarial verification**: a consequential challeng
 
 In this example, the quiet period overrun remains hypothetical. Testing the state of that period lies in exposing that the arrangement was satisfied, rather than assuming that the quiet state will occur. A model can make the challenge precise enough to inform a decision or a test.
 
+Decomposition separates a claim's conditions from its conclusion. Negation identifies the failure to look for: the conditions hold while the conclusion does not. Concretization supplies a candidate case, and comparison checks both parts. Adversarial verification extends this construction to an arrangement over time: vary a plausible event, trace its consequences, and check whether the promised condition survives. The added capability is directed challenge. A particular claim or requirement gives the search its target and determines what would count as a consequential failure.
+
 ## 8. Organizing assumptions and alternative routes
 
 Repeatedly searching a book from its first page can frame the problem as a need to read faster. Proposed improvements may then retain the assumption that starting at the beginning is necessary.
@@ -129,6 +141,8 @@ The candidate still has to be reconstructed against the actual book and search. 
 This illustrates **anchor suspension followed by reconstitution**. An organizing assumption is relaxed, another route is explored, and the proposal is brought back to the objective and its requirements.
 
 The return gives the departure its practical significance. An index serves this search when its entries meet the need. An alternative that cannot meet the objective remains a possibility to develop rather than a completed solution.
+
+Abstraction separates the objective of locating a topic from the habit of starting at page one. Changing viewpoint presents the book as an indexed structure as well as a linear sequence. Concretization turns that view into a proposed search route, and evaluation brings the route back to the actual topic and available entries. The compound feature is a controlled departure and return: an organizing assumption can be set aside while the objective remains available to judge what replaces it.
 
 ## 9. Application design
 
@@ -145,6 +159,8 @@ Information for the work can come from training, supplied context, or retrieved 
 The repository's modules organize examples of this work. O/D/R/O makes the represented situation explicit. KCE helps identify a relation that may be reusable. Exploration, comparison, and oversight modules offer further arrangements for particular needs. The underlying transformations provide a basis for selecting, combining, or developing approaches suited to an application.
 
 A tool can therefore be explained through the problem it addresses and the arrangement of transformations it uses. In the room example, identifying the two requirements, varying the timing, and examining a failure case contribute to one candidate arrangement. Another problem may need a different combination.
+
+Application design uses abstraction to recognize what kind of difficulty is present, comparison to select a suitable method, and concretization to bind it to the actual inputs and constraints. Sequencing arranges the selected operations so that one result supplies what the next needs; evaluation determines whether to continue, revisit a choice or stop. This coordination is the additional feature supplied by a tool: familiar transformations become a purposeful process with dependencies and conditions for completion.
 
 The tool chapters develop that relationship between purpose and method. The [framework overview](../tools/00_FRAMEWORK_OVERVIEW.md) introduces the available modules; their individual guides explain the particular work each one organizes.
 
