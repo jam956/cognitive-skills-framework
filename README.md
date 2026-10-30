@@ -1,5 +1,7 @@
 # Cognitive Skills Framework
 
+[Orientation: Transforming Meaning](docs/chapters/01_ORIENTATION.md) introduces the cognitive transformations through simple examples and their limits. The [book design](docs/BOOK_DESIGN.md) outlines the broader documentation structure.
+
 **From searching across knowledge domains to preserving and applying the structure of a thought.**
 
 Large language models can draw connections across disciplines, extract concepts and turn an abstract idea into a specific explanation or piece of writing. These abilities are not always used reliably. A model may settle on the first plausible framing, lose a qualification during abstraction, or produce fluent prose that no longer follows the intended concept.
