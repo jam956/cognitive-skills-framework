@@ -1,10 +1,10 @@
-# Orientation: Transforming Meaning
+# Cognitive Transformation:  Overview and Basics
 
-An application built around a language model depends on the work the model can perform with the information it receives. A relationship recognized in one example may be useful in another setting. Carrying it across requires an account of what remains valid and where the correspondence ends.
+An application built around a language model requires work from the model on the information it receives as well as the information within its training data. Information is connected and grouped in various patterns representing new meaning to the user.
 
-Such changes are cognitive transformations: ways of working with meaning by changing how a situation is represented or approached. The central question is how these changes can produce a useful result while preserving a logical and coherent account. That gives us a practical basis for specifying the work assigned to a model.
+Such changes are cognitive transformations:  emergence of such new patterns changes how a situation is represented or approached, allowing for new possibilities. The central question is how these changes can produce a useful result while preserving a logical and coherent account. That gives us a practical basis for specifying the work assigned to a model.
 
-The Cognitive Skills Framework organizes examples of this work into reusable methods. This orientation examines the underlying transformations through simple cases whose relationships and limits remain visible. The resulting distinctions provide a basis for assessing the repository's modules and developing other arrangements suited to a particular application.
+The Cognitive Skills Framework organizes examples of this work into reusable methods. This repository examines the underlying transformations, basic and complex, through simple cases whose relationships and limits remain visible. The information provided is largely for informational and educational purposes.  The documents provided should provide the reader an understanding of what is possible and a basis for evaluating the repository's modules.  Given a fuller understanding, the hope is that robust solutions to longstanding problems in AI applications may be realized.
 
 ## 1. Analogy
 
