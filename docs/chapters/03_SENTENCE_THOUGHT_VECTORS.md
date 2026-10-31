@@ -4,7 +4,7 @@
 
 [Overview and Basics](01_OVERVIEW_AND_BASICS.md) introduces the cognitive transformations through simple examples and their limits. The [book design](../BOOK_DESIGN.md) outlines the broader documentation structure.
 
-The opening chapters examined transformations and their combinations. This chapter introduces a way to keep the parts of a thought available while those transformations are applied: identify what is involved, what happens, the conditions that govern it, and what is affected or reached. The framework introduction formerly used as the repository README is carried forward here.
+The opening chapters examined transformations and their combinations. This chapter deconstructs the anatomy of a thought while those transformations are applied: identify what is involved, what happens, the conditions that govern it, and what is affected or reached.
 
 **From searching across knowledge domains to preserving and applying the structure of a thought.**
 
@@ -18,7 +18,7 @@ This repository publishes the methods and structured specifications behind that 
 
 The original Prism began with ontology: identifying the kinds of things and relationships involved in a problem. During the October–November 2025 period, that idea developed into a framework of **19 broad categories of human knowledge**. They served as lenses through which the same prompt could be examined.
 
-The motivation was to make better use of the knowledge already available to an LLM. A question first framed as an engineering problem might also involve biology, economics, political authority or human behavior. An answer could remain plausible within its opening discipline while missing a relationship another domain would reveal.
+The motivation was to make better use of the knowledge already available to an LLM. A question first framed as an engineering problem might also involve biology, economics, political authority or human behavior. The fundamental idea was that an answer to the prompt had a certain shape regarding its actions and constraints.  Through analogical reasoning, similarly shaped answers might exist in an unrelated domain, and its general concepts would transpose back to a coherent answer.  That answer could remain plausible within its opening discipline while missing a relationship another domain would reveal.
 
 Prism therefore sought to delay premature search closure. It encouraged alternative framings and movement through relevant disciplines or coherent domains before committing to an answer. The aim was selective breadth: explore another perspective when it could change the analysis, then stop when further exploration ceased to help.
 
@@ -37,11 +37,11 @@ The organizing analogy was the structure of a sentence:
 | **Regime** | Modifiers and qualifying phrases | Conditions and constraints governing the relationship. |
 | **Ontology: object or destination** | Object or resulting state | What is affected, related to or reached. |
 
-This became **O/D/R/O**. The rationale was that language—the material from which LLMs learn—already expresses meaning through entities, actions, qualifications and their relationships. The framework makes those roles explicit and available for inspection. It is a semantic model, rather than a requirement that every language or sentence follow one grammatical order.
+This became **O/D/R/O**. The rationale was that language—the material from which LLMs learn—already expresses meaning through entities, actions, qualifications and their relationships. The grade school exercise of diagramming a sentence into decomposable elements is case and point of its explicit existence within an LLM.  But deeper abstraction lies in the latent spaces and various  concepts, also known as coherent domains.  As such, the same structure also underlies higher level language structure which builds paragraphs, sections, essays, chapters, and books.  These higher level abstractions are also decomposable into those same **O/D/R/O** elements.  Collections of these sentence-constructs form the attractor basin.  The framework makes those roles explicit and available for inspection. It is a semantic model, rather than a requirement that every language or sentence follow one grammatical order.
 
 Each component can be analyzed and categorized independently, much as the original Prism organized ontology into broad knowledge domains. Search can then consider a particular process across different subjects, a shared destination reached by different routes, or a relationship whose applicability changes under a different regime.
 
-The components must also remain connected. Consider the test assertions “Americans love freedom” and “Americans do not love freedom.” They share a subject, a relationship and an object, while negation changes what is asserted. In a regime-based encoding, the logical constraint qualifies the love relationship. A useful representation preserves that scope; denying love does not establish hatred.
+The components must also remain connected. Consider the test assertions “Americans love freedom” and “Americans do not love freedom.” They share a subject, a relationship and an object, while negation changes what is asserted. In a pure vector numerical embedding, the two sentences are semantically similar and may be difficult to distinguish one sentence from the other.  In a regime-based encoding, the logical constraint qualifies the love relationship. A useful representation preserves that scope; denying love does not establish hatred.
 
 This was the intended advantage over relying only on whole-sentence similarity: make the consequential parts of meaning separately searchable while preserving the thought they form together. Realizing that advantage requires faithful normalization and a search or applicability check that respects the relationships.
 
@@ -53,7 +53,7 @@ A structured description of one experience is not yet a reusable method. It may 
 
 For example, a technician may know how to diagnose a pump but still depend on someone else to unlock the workshop. The transferable concept concerns the separation between capability and control of necessary access. “Skill never creates independence” overgeneralizes it; merely retelling the workshop story leaves the reusable relationship implicit.
 
-In Basin Memory, KCE was incorporated into capture and search orientation to help find reusable concepts across different situations. The documented procedure selects a provisional concept anchor, limits abstraction, and records the governing operation, applicability conditions and failure boundaries. Categories provide routes to the concept; the preserved thought supplies what a later model must assess.
+The [Key Concept Generalization and Specification Evaluation](https://github.com/jam956/Key_Concept_Generalization_and_Specification_Eval), KCE was incorporated into the thought-vector capture procedure to capture Henry Kissinger's pattern into a relational database.  The various orientations may be searched to help find reusable concepts across different situations. The documented procedure selects a provisional concept anchor, limits abstraction, and records the governing operation, applicability conditions and failure boundaries. Categories provide routes to the concept; the preserved thought supplies what a later model must assess.
 
 That distinction matters. Two records can occupy similar categories while asserting different relationships. A retrieved candidate must still be checked against the present problem. Broader discovery and precise applicability are complementary parts of the design.
 
@@ -67,7 +67,7 @@ The historical progression is therefore **broader inquiry → structured thought
 
 Once a concept is preserved, another question follows: what should the model do with it? The later modules made different jobs explicit instead of leaving every transformation inside one broad instruction.
 
-**CTR** names the available transformations and what they must preserve. **ETE** applies selected transformations to produce meaningfully different candidate systems. **PSPP** compares those candidates and records why a branch is selected, merged or deferred. This division became clearer in the April–May 2026 revisions; it is a functional explanation, not the order in which every idea was invented.
+**CTR** names the available transformations and what they must preserve. **ETE** applies selected transformations to produce meaningfully different candidate systems. **PSPP** compares those candidates and records why a branch is selected, merged or deferred. The various modules and frameworks have evolved.  They are more educational than functional in nature, even though they are structured as JSON skills.  A useful exercise is to load a skill and have your LLM describe and discuss it.  It may stimulate ideas for development or incorporation into a project.
 
 An earlier picture made the search easier to imagine: walk around a circle from a thesis to its opposing view, hold the tension when both reveal something important, then try a **YZ tilt** if movement around the same plane keeps returning to the same difficulty. In the [archive example](../DIALECTICAL_SEARCH.md), opening fragile notebooks and protecting them seem opposed until the inquiry distinguishes access to their words from access to the physical objects. That distinction creates new arrangements worth exploring; comparison determines whether any of them earns the name synthesis.
 
