@@ -10,7 +10,7 @@ This makes the abstraction explicit enough to inspect and retrieve. A model can 
 
 ## Historical development
 
-The [README history](../../README.md#3-kce-elevate-the-concept-without-losing-the-thought) describes its role in moving from sentence-thought structure to reusable concepts. Later specifications retained several candidate anchors, reported compression risks and separated ontology, dynamics and regime rather than letting one attractive label settle the interpretation. Basin's consumer contract bounded elevation and preserved source support and failure boundaries.
+The [sentence-thought overview](../chapters/03_SENTENCE_THOUGHT_VECTORS.md#3-kce-elevate-the-concept-without-losing-the-thought) describes its role in moving from sentence-thought structure to reusable concepts. Later specifications retained several candidate anchors, reported compression risks and separated ontology, dynamics and regime rather than letting one attractive label settle the interpretation. Basin's consumer contract bounded elevation and preserved source support and failure boundaries.
 
 The included v2.3 specification supersedes v2.2. Its source name is *Key Concept Extraction*; *Elevation* describes the abstraction task in the evaluation. These are related usages rather than two independently tested mechanisms.
 

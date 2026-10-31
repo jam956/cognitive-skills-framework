@@ -164,9 +164,9 @@ Trying to chain all of the tools together can impose more work than a task needs
 
 Application design uses abstraction to recognize what kind of difficulty is present, comparison to select a suitable method, and concretization to bind it to the actual inputs and constraints. Sequencing arranges the selected operations so that one result supplies what the next needs; evaluation determines whether to continue, revisit a choice or stop. This coordination is the additional feature supplied by a tool: familiar transformations become a purposeful process with dependencies and conditions for completion.
 
-The modules were explicitly developed during work with the ChatGPT 5.x series. Their historical evolution is recorded in the [historical guide](../HISTORY.md). The [framework overview](../tools/00_FRAMEWORK_OVERVIEW.md) introduces the available modules; their individual guides explain the particular work each one organizes.
+The modules were explicitly developed during work with the ChatGPT 5.x series. Their historical evolution is recorded in the [historical guide](../HISTORY.md). The [sentence-thought and framework introduction](03_SENTENCE_THOUGHT_VECTORS.md) introduces the available modules; their individual guides explain the particular work each one organizes.
 
-[O/D/R/O](../ODRO.md) develops the next issue: representing a situation so that its important relationships can survive a transformation.
+[Chapter 3: Sentence-Thought Vectors and the Framework](03_SENTENCE_THOUGHT_VECTORS.md) develops the next issue: representing a situation so that its important relationships can survive a transformation.
 
 ## Reference: examples and registry
 
@@ -193,4 +193,4 @@ The [current CTR registry](../../framework/CTR_Parallax_v2.1_SplitTransformRegis
 
 The registry's invocation and verification requirements remain part of applying its workflows. Ordered-path validation is assigned to CEC, relationship rebases route to CREM, and anchor suspension requires DARE authorization and supervision. Returnability may be deferred during a discontinuous departure, but a coherent return must be reconstructed and reviewed by CEC; otherwise the candidate remains speculative. These examples illustrate representative transformations and do not imply execution of those workflows. The [module index](../MODULES.md) supplies the detailed reference route.
 
-[Previous: Overview and Basics](01_OVERVIEW_AND_BASICS.md) · [Next: O/D/R/O](../ODRO.md) · [Tools overview](../tools/00_FRAMEWORK_OVERVIEW.md)
+[Previous: Overview and Basics](01_OVERVIEW_AND_BASICS.md) · [Next: Sentence-Thought Vectors](03_SENTENCE_THOUGHT_VECTORS.md) · [Book contents](../../README.md)

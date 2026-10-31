@@ -1,5 +1,7 @@
 # Dynamical Prism: separate what happens from what we call it
 
+Textbook chapter: [The Dynamical Prism](../chapters/05_DYNAMICAL_PRISM.md).
+
 **Question:** What process is actually operating?
 
 ## The problem and the method

@@ -8,23 +8,36 @@ The main reading path follows conceptual prerequisites. Development history and 
 
 The narrative stance is collegial exposition. The prose lays out cases, relationships and consequences for a technical peer to assess. Simplicity belongs to the examples and their limits; it does not imply a hierarchy between writer and reader.
 
-## Begin with two orientation chapters
+## Begin with transformations and their representation
 
 [Chapter 1: Overview and Basics](chapters/01_OVERVIEW_AND_BASICS.md) introduces analogy, metaphor, changes of viewpoint and dimensionality, abstraction, salience, inversion, and reversibility. The triangle, square, prism, and subway map keep the relationships visible. This is a teaching foundation, rather than an exhaustive inventory of primitive faculties.
 
 [Chapter 2: Compound Transformations](chapters/02_WORKING_WITH_TRANSFORMATIONS.md) develops further operations through behavior labels, conditions, sequences, interventions, connections, roles, requirements, and challenges. It shows how several moves can serve one purpose and leads into the repository's tools. Some operations remain individually useful; their placement here does not make every one a compound.
 
-The two chapters preserve the distinction between a model's learned capabilities and the particular arrangements an application supplies. Information may come from training, supplied context, external retrieval, or tools; consequences inferred from that information and proposed alternatives have their own status.
+[Chapter 3: Sentence-Thought Vectors and the Framework](chapters/03_SENTENCE_THOUGHT_VECTORS.md) carries forward the substantive introduction formerly used as the README. It makes ontology, dynamics, regime, and object or destination explicit, then places concept extraction and the broader toolset around that representation. Its historical context remains supporting explanation.
+
+The opening chapters preserve the distinction between a model's learned capabilities and the particular arrangements an application supplies. Information may come from training, supplied context, external retrieval, or tools; consequences inferred from that information and proposed alternatives have their own status.
 
 Operation names enter with cases that give them a concrete meaning. The detailed family map follows the second chapter, where it is available as reference without carrying the opening exposition. Each movement develops one issue, with the examples presented as shared objects of analysis.
 
 ## Build toward the repository's designs
 
-The tools section begins with the [framework overview](tools/00_FRAMEWORK_OVERVIEW.md), which retains the fuller introduction formerly used as the repository README. The following conceptual sequence connects the opening chapters to the individual tool guides.
+Four separate tool chapters follow the sentence-thought introduction:
+
+| Chapter | Central work |
+|---|---|
+| [4. The Ontological Prism](chapters/04_ONTOLOGICAL_PRISM.md) | Distinguish the identity class being examined from the domain lens used to examine it. |
+| [5. The Dynamical Prism](chapters/05_DYNAMICAL_PRISM.md) | Decompose a behavior into processes and retain the dependencies between them. |
+| [6. The Regime Field](chapters/06_REGIME_FIELD.md) | Identify which conditions change the meaning or applicability of those processes. |
+| [7. The Prism Coupler](chapters/07_PRISM_COUPLER.md) | Bind the separate accounts to actors, roles, objects, resources, and conditions. |
+
+The chapters reuse a small calculator/checker/reporter case. Each develops one tool through a concrete difficulty, its supporting transformations, the capability their combination adds, an applicable limit, and a bounded request. Reusing the case lets the new distinction carry the reader's attention. The ontological chapter explains how the existing KCE and CDP definitions contribute; it does not invent another registered module.
+
+The following conceptual sequence connects this foundation to the remaining reader guides.
 
 | Conceptual step | What the reader needs to understand | Repository examples |
 |---|---|---|
-| Represent a thought | Entities, processes, relationships, conditions, objects, and consequences. | [O/D/R/O](ODRO.md). |
+| Represent a thought | Entities, processes, relationships, conditions, objects, and consequences. | [Sentence-thought vectors](chapters/03_SENTENCE_THOUGHT_VECTORS.md) and the [O/D/R/O reference](ODRO.md). |
 | Extract and reuse a concept | Abstraction, governing relations, applicability, and specification in a new situation. | KCE and the [worked examples](WORKED_EXAMPLES.md). |
 | Explore other possibilities | Domain lenses, process and regime distinctions, candidate representations, and useful transformations. | Prism, Coupler, CTR, ETE. |
 | Work with several perspectives | Conflict generators, necessary dependencies, compatibility, and changed arrangements. | CREM. |
@@ -42,4 +55,4 @@ The main prose explains. Compact tables support comparisons; diagrams can show r
 
 Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](EVALUATION.md).
 
-The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. The two opening chapters and tools overview provide the current reading route; the individual guides remain starting pages for further development.
+The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–7 provide the current reading route; the other individual guides remain starting pages for further development.

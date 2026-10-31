@@ -1,5 +1,7 @@
 # Prism Coupler: bind the fields into a candidate system
 
+Textbook chapter: [The Prism Coupler](../chapters/07_PRISM_COUPLER.md).
+
 **Question:** Who does what, to whom, under which conditions?
 
 ## The problem and the method

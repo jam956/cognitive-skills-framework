@@ -1,5 +1,7 @@
 # CDP: choose which domains can change the answer
 
+Textbook chapter: [The Ontological Prism](../chapters/04_ONTOLOGICAL_PRISM.md).
+
 **Question:** Which knowledge domains deserve attention on this particular problem?
 
 ## The problem and the method
@@ -26,4 +28,4 @@ A procurement delay may initially look like a scheduling issue. An authority len
 
 The specified weights and activation limits are design controls, not evidence that a model has measured its internal attention. Domain selection should improve a decision or a check.
 
-**Read:** [CDP v1.2 specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) · [Prism history](../../README.md#1-prism-broaden-the-inquiry-before-closing-it) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [CDP v1.2 specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) · [Prism history](../chapters/03_SENTENCE_THOUGHT_VECTORS.md#1-prism-broaden-the-inquiry-before-closing-it) · [evidence trail](../HISTORY.md#evidence-trail)

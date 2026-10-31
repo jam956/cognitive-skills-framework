@@ -4,6 +4,10 @@ Start with the [reader overview](../README.md), then the [original skill guide](
 
 For purpose, historical development and examples, use the [historical reader guide](HISTORY.md). The table below remains the source-file index.
 
+## Textbook route
+
+The [book contents](../README.md) lead from [basic transformations](chapters/01_OVERVIEW_AND_BASICS.md) and [their combinations](chapters/02_WORKING_WITH_TRANSFORMATIONS.md) to [sentence-thought vectors](chapters/03_SENTENCE_THOUGHT_VECTORS.md). The four tool chapters develop the [Ontological Prism](chapters/04_ONTOLOGICAL_PRISM.md), [Dynamical Prism](chapters/05_DYNAMICAL_PRISM.md), [Regime Field](chapters/06_REGIME_FIELD.md), and [Prism Coupler](chapters/07_PRISM_COUPLER.md). The table below retains the source-file index.
+
 ## Definitions and controls
 
 | Component | Internal version | Role | Source |

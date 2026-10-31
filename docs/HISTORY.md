@@ -1,6 +1,6 @@
 # How the cognitive modules developed
 
-The original [Prism and sentence-thought history](../README.md#1-prism-broaden-the-inquiry-before-closing-it) explains broadening inquiry and preserving a thought's structure. The later modules address what happens next: choosing a transformation, exploring its consequences, comparing candidates, checking relationships and paths, and deciding whether to reopen the frame.
+The original [Prism and sentence-thought history](chapters/03_SENTENCE_THOUGHT_VECTORS.md#1-prism-broaden-the-inquiry-before-closing-it) explains broadening inquiry and preserving a thought's structure. The later modules address what happens next: choosing a transformation, exploring its consequences, comparing candidates, checking relationships and paths, and deciding whether to reopen the frame.
 
 This is a reconstructed design history. Module order is not invention order. Some supporting ideas appeared before the later pipeline acquired its present names.
 

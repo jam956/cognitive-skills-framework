@@ -1,5 +1,7 @@
 # Regime Field: keep the conditions that change meaning or fit
 
+Textbook chapter: [The Regime Field](../chapters/06_REGIME_FIELD.md).
+
 **Question:** Under what conditions does this process produce the behavior we observe?
 
 ## The problem and the method
