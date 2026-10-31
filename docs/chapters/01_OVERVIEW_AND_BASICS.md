@@ -4,7 +4,7 @@ An application built around a language model requires work from the model on the
 
 Such changes are cognitive transformations:  emergence of such new patterns changes how a situation is represented or approached, allowing for new possibilities. The central question is how these changes can produce a useful result while preserving a logical and coherent account. That gives us a practical basis for specifying the work assigned to a model.
 
-The Cognitive Skills Framework organizes examples of this work into reusable methods. This repository examines the underlying transformations, basic and complex, through simple cases whose relationships and limits remain visible. The information provided is largely for informational and educational purposes.  The documents provided should provide the reader an understanding of what is possible and a basis for evaluating the repository's modules.  Given a fuller understanding, the hope is that robust solutions to longstanding problems in AI applications may be realized.
+The Cognitive Skills Framework organizes examples of this work into reusable methods. This repository examines basic and complex transformations through simple cases whose relationships and limits remain visible. Its purpose is to help readers recognize what a model may be capable of, assess the repository's modules, and design approaches suited to their own applications. A fuller understanding of these possibilities may support more robust solutions to longstanding problems in AI applications.
 
 ## 1. Analogy
 
@@ -85,4 +85,4 @@ The distinction gives inversion a useful question to carry with it: what informa
 
 These examples provide a small foundation for the discussion that follows. They are ways of recognizing and describing useful changes in meaning; the grouping makes no claim to identify the model's irreducible faculties.
 
-[Next: Working with transformations](02_WORKING_WITH_TRANSFORMATIONS.md) develops further operations and shows how they can be combined around a purpose.
+[Next: Compound Transformations](02_WORKING_WITH_TRANSFORMATIONS.md) develops further operations and shows how they can be combined around a purpose.

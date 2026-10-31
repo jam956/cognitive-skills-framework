@@ -8,8 +8,8 @@ The reading path begins with simple relationships, then develops further operati
 
 | Part | Starting page | What it develops |
 |---|---|---|
-| Foundations | [1. Orientation: Transforming Meaning](docs/chapters/01_ORIENTATION.md) | Analogy, metaphor, viewpoint, abstraction, salience, inversion, and reversibility. |
-| Working with transformations | [2. Working with Transformations](docs/chapters/02_WORKING_WITH_TRANSFORMATIONS.md) | Further operations, recurring combinations, and the organization of a useful method. |
+| Foundations | [1. Overview and Basics](docs/chapters/01_OVERVIEW_AND_BASICS.md) | Analogy, metaphor, viewpoint, abstraction, salience, inversion, and reversibility. |
+| Working with transformations | [2. Compound Transformations](docs/chapters/02_WORKING_WITH_TRANSFORMATIONS.md) | Further operations, recurring combinations, and the organization of a useful method. |
 | Representing and reusing a thought | [O/D/R/O](docs/ODRO.md), then [KCE](docs/skills/KCE.md) | The relationships a transformation should preserve and the movement between a particular case and a reusable concept. |
 | Tools | [Framework overview](docs/tools/00_FRAMEWORK_OVERVIEW.md) | The available modules, their purposes, and the individual tool guides. |
 

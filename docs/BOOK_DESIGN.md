@@ -1,6 +1,6 @@
 # A Textbook for Designing with Cognitive Transformations
 
-**Working editorial design · revised 30 October 2026**
+**Working editorial design · revised 31 October 2026**
 
 This book explains the ideas behind the Cognitive Skills Framework so that a program designer can develop an application of their own. The repository's modules are examples of ways to organize an LLM's abilities. They provide useful distinctions and possible designs within a much larger space of approaches.
 
@@ -10,9 +10,9 @@ The narrative stance is collegial exposition. The prose lays out cases, relation
 
 ## Begin with two orientation chapters
 
-[Chapter 1: Orientation—Transforming Meaning](chapters/01_ORIENTATION.md) introduces analogy, metaphor, changes of viewpoint and dimensionality, abstraction, salience, inversion, and reversibility. The triangle, square, prism, and subway map keep the relationships visible. This is a teaching foundation, rather than an exhaustive inventory of primitive faculties.
+[Chapter 1: Overview and Basics](chapters/01_OVERVIEW_AND_BASICS.md) introduces analogy, metaphor, changes of viewpoint and dimensionality, abstraction, salience, inversion, and reversibility. The triangle, square, prism, and subway map keep the relationships visible. This is a teaching foundation, rather than an exhaustive inventory of primitive faculties.
 
-[Chapter 2: Working with Transformations](chapters/02_WORKING_WITH_TRANSFORMATIONS.md) develops further operations through behavior labels, conditions, sequences, interventions, connections, roles, requirements, and challenges. It shows how several moves can serve one purpose and leads into the repository's tools. Some operations remain individually useful; their placement here does not make every one a compound.
+[Chapter 2: Compound Transformations](chapters/02_WORKING_WITH_TRANSFORMATIONS.md) develops further operations through behavior labels, conditions, sequences, interventions, connections, roles, requirements, and challenges. It shows how several moves can serve one purpose and leads into the repository's tools. Some operations remain individually useful; their placement here does not make every one a compound.
 
 The two chapters preserve the distinction between a model's learned capabilities and the particular arrangements an application supplies. Information may come from training, supplied context, external retrieval, or tools; consequences inferred from that information and proposed alternatives have their own status.
 

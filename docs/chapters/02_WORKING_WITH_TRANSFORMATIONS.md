@@ -1,10 +1,10 @@
 # Compound Transformations
 
-[Introduction: Overview and Basics](01_OVERVIEW_AND_BASICS.md) introduced several broad ways of working with a basic transformations. A useful method usually involves a combination of such moves around a particular idea. Establishing what must be preserved, changing part of an arrangement, and examining the consequences can form one connected inquiry.
+[Introduction: Overview and Basics](01_OVERVIEW_AND_BASICS.md) introduced several broad ways of working with basic transformations. A useful method usually involves a combination of such moves around a particular idea. Establishing what must be preserved, changing part of an arrangement, and examining the consequences can form one connected inquiry.
 
 The examples here extend that repertoire and make its organization visible. Some introduce a further operation; others show several operations working together. Their placement in this chapter does not make every operation compounded, nor does it make the preceding chapter an exhaustive list of primitives.
 
-A recurring set of combinations deserve a name or a separate explanation when commonly invoked. Likewise, the repository's complex cognitive tool sets provide examples of a series of compounded arrangements useful for particular functions. Their complexity depends on the relationships they coordinate, the conditions they retain, and the points at which an earlier choice may need to be revisited.
+A recurring set of combinations deserves a name or a separate explanation when commonly invoked. Likewise, the repository's complex cognitive tool sets provide examples of a series of compounded arrangements useful for particular functions. Their complexity depends on the relationships they coordinate, the conditions they retain, and the points at which an earlier choice may need to be revisited.
 
 ## 1. Behavior labels and their supporting actions
 
@@ -16,13 +16,13 @@ For a system designer, the resulting questions concern the information received,
 
 The description label of "assistant" does not establish that he performed the stated actions. It specifies the claimed behavior closely enough for that claim to be assessed. If the quality of his work were to be reviewed, then his role may be decomposed for inspection.  A model can help produce this account without the account itself becoming evidence of implementation.  This would be analogous to the name of a subroutine as opposed to the function of the module itself.
 
-The contributing moves begin with *abstraction*: treating the label separately from that of the people or programs assigned to be performed. *Decomposition* separates that function into actions, and concretization supplies their inputs and conditions. *Comparison* then relates the computed total to the stated answer. Together, these moves turn a compact role description into an inspectable account of what the role requires.
+The contributing moves begin with *abstraction*: separating a role from the person or program assigned to perform it. *Decomposition* separates that function into actions, and concretization supplies their inputs and conditions. *Comparison* then relates the computed total to the stated answer. Together, these moves turn a compact role description into an inspectable account of what the role requires.
 
 ## 2. Conditions and purposes
 
 A route through a gate is available when the gate is open allowing access through a certain path. When the gate is closed, the same line on the map is no longer available for passage. The route, traveler, and intended journey can remain the same while the gate's state affects what is permissible.
 
-This dependence illustrates a **regime change**.  A particular idea may be applicable under one operating conditions; but no longer available under a different one.
+This dependence illustrates a **regime change**.  A particular idea may be applicable under one set of operating conditions, but no longer available under a different one.
 
 A model can make the dependence explicit in a recommendation: the route is available when the gate is open.  However, the map cannot establish the gate's present state, so the recommendation identifies a condition that still needs to be checked.
 
@@ -32,9 +32,9 @@ Replacing the required means while retaining the stated purpose is **constraint 
 
 An additional requirement can change that comparison. If the paper must remain undamaged, a tack that leaves a hole fails as an option even if it holds the sheet securely. The alternative has to preserve the fixed requirements that actually govern the task, such as choosing a paper weight, instead.
 
-**Regime change** concerns what happens under another condition, i.e. changing the condition may yield a different results. **Constraint substitution** concerns whether a different constraint can still yield the same result. The distinction allows a proposed change to be examined without losing the purpose it was meant to serve.
+**Regime change** concerns what happens under another condition, i.e. changing the condition may yield different results. **Constraint substitution** concerns whether a different constraint can still yield the same result. The distinction allows a proposed change to be examined without losing the purpose it was meant to serve.
 
-Both examples hold part of a situation steady while varying another. For the gate, *abstraction* isolates the condition of passage; *comparison* shows what opening and closing change. For the paper, *abstraction* identifies the purpose; *analogy* suggests another means with a related holding function; and *concretization* supplies the clip-and-board arrangement. *Evaluation* checks whether that arrangement preserves the requirements. These combinations let us distinguish a change in what is possible from a change in how the same purpose is served.
+Both examples hold part of a situation steady while varying another. For the gate, *abstraction* isolates the condition of passage; *comparison* shows what opening and closing change. For the paper, *abstraction* identifies the purpose; *analogy* suggests another means with a related holding function; and *concretization* supplies the thumbtack-and-corkboard arrangement. *Evaluation* checks whether that arrangement preserves the requirements. These combinations let us distinguish a change in what is possible from a change in how the same purpose is served.
 
 ## 3. Time and order
 
@@ -62,7 +62,7 @@ The first sequence sorts all three numbers before discarding one. The second dis
 
 This is **operator sequence reordering**: the same actions are arranged differently, and their dependencies determine the effect. A model can compare candidate sequences by tracing what each action makes available to the next. The relevant constraint is visible in the intermediate states, including any information lost along the way.
 
-*Phase Decomposition* separates the door cycle into phases, *abstraction* identifies the characteristic change within each phase, and *sequencing* retains their before-and-after relationships. In the sorting example, *recombination* changes the order while holding the operations fixed.  What remains available after each step is inferred.  The difference between the results can be compared. Combining these moves adds an **account of dependence** to a description of events. We can explain why a later action is affected by what an earlier one preserved or discarded.
+*Decomposition* separates the door cycle into phases, *abstraction* identifies the characteristic change within each phase, and *sequencing* retains their before-and-after relationships. In the sorting example, *recombination* changes the order while holding the operations fixed.  What remains available after each step is inferred.  The difference between the results can be compared. Combining these moves adds an **account of dependence** to a description of events. We can explain why a later action is affected by what an earlier one preserved or discarded.
 
 ## 4. Deliberate intervention
 
@@ -70,7 +70,7 @@ A small program with the rule `y = 2x + s` provides a direct example of interven
 
 With `s` held at 3, setting `x` to 1 gives `y = 5`; setting `x` to 2 gives `y = 7`. The rule and `s` remain fixed. The output is allowed to vary because its response to the intervention is the property under examination.
 
-This illustrates **counterfactual intervention**: deliberately seting part of a system differently and follow the consequences, instead of accepting the value its ordinary source would supply.
+This illustrates **counterfactual intervention**: deliberately setting part of a system differently and following the consequences, instead of accepting the value its ordinary source would supply.
 
 The results here follow from the stipulated formula. They provide no measurement of what a real sensor will report. A model can reason through the stated intervention while retaining the distinction between a consequence of the supplied rule and evidence about an external system.
 
@@ -128,7 +128,7 @@ Developing that branch is **adversarial verification**: a consequential challeng
 
 In the previous example, the quiet period overrun remains hypothetical. Testing the state of that period lies in exposing that the arrangement was satisfied, rather than assuming that the quiet state will occur. A model can make the challenge precise enough to inform a decision or a test.
 
-*Decomposition* separates a claim's conditions from its conclusion. *Negation* identifies the failure to look for: the conditions hold while the conclusion does not. *Concretization* supplies a candidate case, and comparison checks both parts. *Adversarial verification* extends this construction to an arrangement over time: vary a plausible event, trace its consequences, and check whether the promised condition survives. The added capability is directed challenge. A particular claim or requirement gives the search its target and determines what would count as a consequential failure.
+*Decomposition* separates a claim's conditions from its conclusion. *Negation* identifies the failure to look for: the conditions hold while the conclusion does not. *Concretization* supplies a candidate case, and comparison checks both parts. **Adversarial verification** extends this construction to an arrangement over time: vary a plausible event, trace its consequences, and check whether the promised condition survives. The added capability is directed challenge. A particular claim or requirement gives the search its target and determines what would count as a consequential failure.
 
 ## 8. Organizing assumptions and alternative routes
 
@@ -146,23 +146,25 @@ The return gives the departure its practical significance. An index serves this 
 
 ## 9. Application design
 
-The transformations considered here act on different aspects of a representation: relationships carried between cases, viewpoints, levels of detail, conditions, sequences, connections, and responsibilities. Each exposes a particular kind of change and the properties that need to survive it.  Many times, multiple cognitive transformations might be changed, adjusted, and rebased at a time to search for a particular finding.
+The transformations considered here act on different aspects of a representation: relationships carried between cases, viewpoints, levels of detail, conditions, sequences, connections, and responsibilities. Each exposes a particular kind of change and the properties that need to survive it. Several transformations may be changed, adjusted, or rebased while searching for a useful finding.
 
-This is the distinction of complex cognitive tool sets, that is carrying multiple compounded transformations:  carry a relation into another case; describe another view while retaining the facts; identify a missing condition; compare orders; find a counterexample; or preserve distinct requirements while exploring another arrangement.
+A complex cognitive toolset can organize several such requests: carry a relation into another case; describe another view while retaining the facts; identify a missing condition; compare orders; find a counterexample; or preserve distinct requirements while exploring another arrangement.
 
 This book uses **native** for a transformation the model can carry out through learned capacities without the application implementing that transformation's algorithm separately. The application remains responsible for supplying relevant material, preserving requirements, and assessing whether the result serves its purpose.
 
-The names describe work that can be requested and examined. They establish neither a particular internal mechanism nor a fixed number of independent faculties. Several transformations may contribute to one answer. Reliability can vary among models, especially as a task becomes longer or less familiar.  As one may expect, there is a finite number of transformations that a model can manage in parallel before becoming saturated.  At that point it would be wise to stage your workflow pipeline.
+The names describe work that can be requested and examined. They establish neither a particular internal mechanism nor a fixed number of independent faculties. Several transformations may contribute to one answer. Reliability can vary among models, especially as a task becomes longer or less familiar. A workflow can stage the work when its demands become difficult to manage together.
 
 Information for the work can come from training, supplied context, or retrieved material. A model can also infer consequences and propose alternatives. The formula above supports consequences that follow from a supplied rule. The bridge and index are proposals whose applicability depends on further information. Their different status affects what an application can conclude and what it needs to obtain next.
 
-The repository's modules organize examples of this work. Each module was defined explicitly by the ChatGPT 5.x series.  One will find many complex cognitive tools that may be useful.  The O/D/R/O construct makes the represented situation explicit. KCE helps identify a relation that may be reusable. Exploration, comparison, and oversight modules offer further arrangements for particular needs. The underlying transformations provide a basis for selecting, combining, or developing approaches suited to an application.  
+Named tools give us ways to direct and organize transformations a model may already perform. They may be useful selectively, as an instruction for a particular response, or as part of a workflow. For example, when a model provides an answer I find unsatisfactory, I might ask it to use the CDP Prism to search for more possibilities. That request directs a kind of exploration; it need not invoke every stage in the repository.
 
-Frontier LLM's are capable of understanding these cognitive transformations and generally are able to do so natively, though not necessarily predictably even when applicable.  These tools have an historical evolution.  But trying to chain all of these tools together many times will paralyze an AI agent and are provided for illustration and educational purposes.  However one might use a tool selectively or as part of a workflow.  For example when a model provides an answer in which I find unsatisfactory, I might ask the model to use the CDP Prism to search for more possibilities.  In a complex workflow, many times I use KCE to work with categories rather than actual entities.  The PSPP has now been externalized as an AI workspace in order to test multiple possibilities outside of its finite context memory.  Frontier models are able to "get the shape" of the cognitive toolset when asked for working through a problem without executing it as an entire pipeline.
+In a more complex workflow, O/D/R/O makes the represented situation explicit, and KCE helps identify a relation that may be reusable. I often use KCE to work with categories rather than only the original entities, while retaining the governing relationship. PSPP supplies a structure for comparing possibilities. In my own work it has also been externalized as an AI workspace, allowing possibilities to be examined outside the model's immediate context. These tools have different jobs, developed in their own guides.
+
+Trying to chain all of the tools together can impose more work than a task needs. A capable model may instead get the shape of a selected method and use that strategy without executing it as an entire pipeline. An explicit workflow becomes useful when inputs, dependencies, checks or repeated use need to be managed separately. The choice follows the problem rather than a requirement to use every available module.
 
 Application design uses abstraction to recognize what kind of difficulty is present, comparison to select a suitable method, and concretization to bind it to the actual inputs and constraints. Sequencing arranges the selected operations so that one result supplies what the next needs; evaluation determines whether to continue, revisit a choice or stop. This coordination is the additional feature supplied by a tool: familiar transformations become a purposeful process with dependencies and conditions for completion.
 
-The tool chapters develop that relationship between purpose and method. The [framework overview](../tools/00_FRAMEWORK_OVERVIEW.md) introduces the available modules; their individual guides explain the particular work each one organizes.
+The modules were explicitly developed during work with the ChatGPT 5.x series. Their historical evolution is recorded in the [historical guide](../HISTORY.md). The [framework overview](../tools/00_FRAMEWORK_OVERVIEW.md) introduces the available modules; their individual guides explain the particular work each one organizes.
 
 [O/D/R/O](../ODRO.md) develops the next issue: representing a situation so that its important relationships can survive a transformation.
 
@@ -176,7 +178,7 @@ The [current CTR registry](../../framework/CTR_Parallax_v2.1_SplitTransformRegis
 | Abstraction ladder | `CTR_ABS_LIFT_001` — abstraction lift | Stations and connections become nodes and links. |
 | Label decomposition | `CTR_LABEL_DECOMP_001` — computed label decomposition | Unpack what checking a sum entails in the specified task. |
 | Deformation | `CTR_DEF_SALIENCE_001` — salience reweighting | Give time or transfers greater importance. |
-| Constraint isolation | `CTR_CON_SUB_001` — constraint substitution | Replace the paperweight with a clip while retaining the purpose. |
+| Constraint isolation | `CTR_CON_SUB_001` — constraint substitution | Try a thumbtack in place of the paperweight, then check the undamaged-paper requirement. |
 | Regime transformation | `CTR_REG_SHIFT_001` — regime shift | A route depends on whether its gate is open. |
 | Dimensional | `CTR_DIM_LIFT_001` — dimensional lift | Add height to distinguish a crossing from a junction. |
 | Temporal phase | `CTR_TEMP_PHASE_DECOMP_001` — phase decomposition | Opening, held open, closing within one door cycle. |
@@ -191,4 +193,4 @@ The [current CTR registry](../../framework/CTR_Parallax_v2.1_SplitTransformRegis
 
 The registry's invocation and verification requirements remain part of applying its workflows. Ordered-path validation is assigned to CEC, relationship rebases route to CREM, and anchor suspension requires DARE authorization and supervision. Returnability may be deferred during a discontinuous departure, but a coherent return must be reconstructed and reviewed by CEC; otherwise the candidate remains speculative. These examples illustrate representative transformations and do not imply execution of those workflows. The [module index](../MODULES.md) supplies the detailed reference route.
 
-[Previous: Orientation—Transforming Meaning](01_ORIENTATION.md) · [Next: O/D/R/O](../ODRO.md) · [Tools overview](../tools/00_FRAMEWORK_OVERVIEW.md)
+[Previous: Overview and Basics](01_OVERVIEW_AND_BASICS.md) · [Next: O/D/R/O](../ODRO.md) · [Tools overview](../tools/00_FRAMEWORK_OVERVIEW.md)

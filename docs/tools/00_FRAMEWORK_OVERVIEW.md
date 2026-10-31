@@ -1,8 +1,8 @@
 # Tools: Framework Overview
 
-[Book contents](../../README.md) · [Foundations](../chapters/01_ORIENTATION.md) · [Working with transformations](../chapters/02_WORKING_WITH_TRANSFORMATIONS.md)
+[Book contents](../../README.md) · [Foundations](../chapters/01_OVERVIEW_AND_BASICS.md) · [Compound Transformations](../chapters/02_WORKING_WITH_TRANSFORMATIONS.md)
 
-[Orientation: Transforming Meaning](../chapters/01_ORIENTATION.md) introduces the cognitive transformations through simple examples and their limits. The [book design](../BOOK_DESIGN.md) outlines the broader documentation structure.
+[Overview and Basics](../chapters/01_OVERVIEW_AND_BASICS.md) introduces the cognitive transformations through simple examples and their limits. The [book design](../BOOK_DESIGN.md) outlines the broader documentation structure.
 
 **From searching across knowledge domains to preserving and applying the structure of a thought.**
 
