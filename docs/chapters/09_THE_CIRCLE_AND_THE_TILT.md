@@ -14,7 +14,7 @@ Across the circle, the opposing proposal also has a reason: restrict original ha
 
 These positions can be called **thesis** and **antithesis**. They oppose one another as proposals while addressing the same collection and the same larger question. Defending a proposal and preserving that question are different things.
 
-![Four quadrants around a shared question: thesis upper left, antithesis lower left, alternatives lower right and synthesis upper right. The vertical axis points to direct answer above and paradox below.](../figures/09_circle_compass.svg)
+![A bold upward arrow through the prompt, with direct answer curved above its tip and paradox below its tail. Thesis, antithesis, alternatives and synthesis occupy the four quadrants.](../figures/09_circle_compass.svg)
 
 *A direct answer responds within the opening frame; a paradox retains a tension that frame has not resolved.*
 
@@ -44,9 +44,9 @@ A reader tracing changes in vocabulary may need a searchable transcription and c
 
 The distinction adds a dimension to the opening comparison: **the kind of research need and the form of access that can serve it**. We can now consider more than an undifferentiated increase or decrease in handling.
 
-![An oblique circle plane and horizon, with a shaded upper orbit for potential escape conditions and a lower orbit for conditions that strengthen the paradox.](../figures/09_yz_tilt.svg)
+![Two orbital ellipses share a focus at the prompt. Their other foci lie outside the picture; the upper orbit shows escape conditions and the lower shows strengthening conditions.](../figures/09_yz_tilt.svg)
 
-*The upper orbit tests conditions that could release the paradox; the lower tests conditions that strengthen it. Either can reveal something consequential.*
+*Each orbit keeps one focus at the prompt while extending beyond the view. Its conditions may release or strengthen the paradox.*
 
 The earlier Prism vocabulary called this a **YZ tilt** or paradox escape. Moving beyond the opening plane exposes conditions for evaluation: an added distinction may open a solution, while another condition may make the tension harder to resolve.
 

@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="920" viewBox="0 0 1120 920" role="img" aria-labelledby="title desc">
 <title id="title">Four directions around a prompt and response</title>
-<desc id="desc">A question sits at the center of a numberless dial. The vertical axis points to direct answer at twelve o'clock and paradox at six. Thesis occupies the upper-left quadrant, antithesis the lower-left, alternatives the lower-right, and synthesis the upper-right. These are overlapping directions of inquiry, not mandatory stages or an exhaustive classification.</desc>
+<desc id="desc">A prompt sits at the center of a numberless quadrant dial. A bold vertical arrow extends beyond the circle at both ends and points upward to direct answer; paradox curves around its tail. Thesis is upper left, antithesis lower left, alternatives lower right, and synthesis upper right. The curved labels follow the arrow tip and tail.</desc>
 <defs>
 <style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.2px}.pole{font-size:29px;font-weight:600}.quadrant{font-size:24px;font-weight:600}</style>
-<marker id="axis-arrow" viewBox="0 0 12 12" markerWidth="11" markerHeight="11" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#647d8e"/></marker>
+
 </defs>
 <rect width="1120" height="920" fill="#fdfdfb"/>
 <path d="M560 460H280A280 280 0 0 1 560 180Z" fill="#eaf2f8"/>
@@ -73,13 +73,36 @@
 <line x1="560" y1="184" x2="560" y2="194" transform="rotate(348 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
 <line x1="560" y1="184" x2="560" y2="194" transform="rotate(354 560 460)" stroke="#bdc7cd" stroke-width="1.1"/></g>
 <path d="M280 460H840" fill="none" stroke="#b0bec7" stroke-width="1.5" stroke-dasharray="5 7"/>
-<path d="M560 445V210M560 475V710" fill="none" stroke="#647d8e" stroke-width="2.5" marker-end="url(#axis-arrow)"/>
+<path d="M560 790V148" fill="none" stroke="#3e5b6e" stroke-width="7" stroke-linecap="round"/>
+<path d="M560 122L543 154H577Z" fill="#3e5b6e"/>
 <text x="414" y="340" text-anchor="middle" class="quadrant" style="fill:#316b96">THESIS</text>
 <text x="706" y="340" text-anchor="middle" class="quadrant" style="fill:#47796b">SYNTHESIS</text>
 <text x="418" y="586" text-anchor="middle" class="quadrant" style="fill:#a57236">ANTITHESIS</text>
 <text x="698" y="586" text-anchor="middle" class="quadrant" style="fill:#796391">ALTERNATIVES</text>
 <circle cx="560" cy="460" r="72" fill="#fdfdfb" stroke="#9aaab4" stroke-width="1.5"/>
-<text x="560" y="467" text-anchor="middle" font-size="20" font-weight="600">QUESTION</text>
-<text x="560" y="112" text-anchor="middle" class="pole">DIRECT ANSWER</text>
-<text x="560" y="828" text-anchor="middle" class="pole">PARADOX</text>
+<text x="560" y="467" text-anchor="middle" font-size="20" font-weight="600">PROMPT</text>
+<g role="img" aria-label="DIRECT ANSWER" class="pole">
+<text x="447.518" y="134.473" text-anchor="middle" transform="rotate(-38.675 447.518 134.473)">D</text>
+<text x="460.354" y="125.098" text-anchor="middle" transform="rotate(-33.614 460.354 125.098)">I</text>
+<text x="473.967" y="116.892" text-anchor="middle" transform="rotate(-28.552 473.967 116.892)">R</text>
+<text x="493.471" y="107.746" text-anchor="middle" transform="rotate(-21.691 493.471 107.746)">E</text>
+<text x="513.928" y="100.996" text-anchor="middle" transform="rotate(-14.830 513.928 100.996)">C</text>
+<text x="534.184" y="96.861" text-anchor="middle" transform="rotate(-8.246 534.184 96.861)">T</text>
+
+<text x="566.619" y="95.122" text-anchor="middle" transform="rotate(2.107 566.619 95.122)">A</text>
+<text x="588.776" y="97.315" text-anchor="middle" transform="rotate(9.199 588.776 97.315)">N</text>
+<text x="609.797" y="102.025" text-anchor="middle" transform="rotate(16.060 609.797 102.025)">S</text>
+<text x="633.031" y="110.481" text-anchor="middle" transform="rotate(23.937 633.031 110.481)">W</text>
+<text x="654.888" y="122.042" text-anchor="middle" transform="rotate(31.813 654.888 122.042)">E</text>
+<text x="672.482" y="134.473" text-anchor="middle" transform="rotate(38.675 672.482 134.473)">R</text>
+</g>
+<g role="img" aria-label="PARADOX" class="pole">
+<text x="494.066" y="846.693" text-anchor="middle" transform="rotate(22.821 494.066 846.693)">P</text>
+<text x="514.410" y="853.773" text-anchor="middle" transform="rotate(15.556 514.410 853.773)">A</text>
+<text x="536.203" y="858.326" text-anchor="middle" transform="rotate(8.047 536.203 858.326)">R</text>
+<text x="558.405" y="859.993" text-anchor="middle" transform="rotate(0.538 558.405 859.993)">A</text>
+<text x="580.634" y="858.743" text-anchor="middle" transform="rotate(-6.972 580.634 858.743)">D</text>
+<text x="603.351" y="854.380" text-anchor="middle" transform="rotate(-14.774 603.351 854.380)">O</text>
+<text x="625.265" y="846.973" text-anchor="middle" transform="rotate(-22.576 625.265 846.973)">X</text>
+</g>
 </svg>
