@@ -8,13 +8,13 @@ A software team encounters a similar difficulty. Its tests passed, but the artif
 
 ## 1. Recover the relationship behind the incident
 
-“The reporter used the wrong version” describes the immediate problem. “Checking is important” offers a broader statement, but leaves the consequential relationship unstated. Neither explains what yet another designer should have recognized in a different application.
+“The reporter used the wrong version” describes the immediate problem. “Checking is important” offers a broader statement, but leaves the consequential relationship unstated. Neither yet explains what another designer could recognize in a different application.
 
 In the calculation case, the decision concerns an examined item. A later item is presented for publication. The rule requires a check applicable to that later item, and the existing decision does not establish one.
 
 One candidate concept is:
 
-> When a decision rests on examining a particular item, applying that decision to a changed item requires support that its rule still holds.
+> When a decision rests on examining a particular item, applying that decision to a changed item requires support that the decision still applies to the changed item under the rule.
 
 The numbers `7`, `5`, and `12` can disappear from this description. The connection between the decision and its evidence cannot. Removing the numbers changes the level of description; removing that connection changes the thought.
 
@@ -38,11 +38,11 @@ Here, *label decomposition* opens “approval” into the claim it carries. *Com
 
 An abstraction can remain too close to the incident or move beyond what it supports. Consider three descriptions:
 
-| Description | Logical Inconsistency |
+| Description | Logical fit and limits |
 |---|---|
 | R17 version 1 was checked; the reporter holds version 2. | Preserves the incident, with its reusable relation still implicit. |
 | A decision based on one item needs a supported scope before it is applied to a changed item. | Retains the relation while allowing different objects and implementations. |
-| Every change invalidates every earlier result. | Extends the claim beyond the evidence resulting in overchecking. |
+| Every change invalidates every earlier result. | Extends the claim beyond the evidence, resulting in overchecking. |
 
 The third statement is decisive but excessive. The arithmetic result concerning version 1 remains valid. A change can also be irrelevant to the property being checked. Reusing evidence may be justified when the relevant object and conditions remain equivalent; that equivalence needs its own support.
 
@@ -93,8 +93,8 @@ A bounded request can make that movement inspectable:
 
 > Apply KCE to the version-checking example. Identify a reusable relationship and state what must survive when the record names and numbers are removed. Retain an alternative anchor if it would lead to a materially different repair. Give an overgeneralization and explain its failure. Then apply the supported concept to a rebuilt software artifact, leaving the relevance of any changes unresolved where the facts do not establish it.
 
-The next chapter asks how to choose a transformation when preserving the present account is no longer enough: which change of view or arrangement could reveal a useful alternative?
+The next chapter follows possible movements around a preserved question. The circle and the tilt give us a picture of changing a view or frame before the registry makes transformation choice explicit.
 
 Reference: [KCE v2.3 specification](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) · [short KCE guide](../skills/KCE.md) · [O/D/R/O reference](../ODRO.md).
 
-[Previous: The Prism Coupler](07_PRISM_COUPLER.md) · [Next: The Cognitive Transformation Registry](09_COGNITIVE_TRANSFORM_REGISTRY.md)
+[Previous: The Prism Coupler](07_PRISM_COUPLER.md) · [Next: The Circle and the Tilt](09_THE_CIRCLE_AND_THE_TILT.md)

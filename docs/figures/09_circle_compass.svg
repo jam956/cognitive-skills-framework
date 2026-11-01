@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="920" viewBox="0 0 1120 920" role="img" aria-labelledby="title desc">
+  <title id="title">A circle and compass for exploring the same question</title>
+  <desc id="desc">The center holds meaningful study and future access together. The upper hemisphere develops support for the opening proposal to open original notebooks; the lower hemisphere develops challenges to that proposal. Lateral views ask about other readers and evidence needs. A separate callout preserves the practical tension between use and damage. Compass bearings are schematic, not measured reasoning angles or a required sequence.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #20333f; }
+      .kicker { font-size: 18px; font-weight: 700; letter-spacing: 1.6px; }
+      .body { font-size: 21px; }
+      .small { font-size: 18px; }
+      .bearing { font-size: 18px; font-weight: 700; fill: #627480; }
+      .support { fill: #245a86; }
+      .challenge { fill: #986022; }
+    </style>
+  </defs>
+  <rect width="1120" height="920" fill="#fdfdfb"/>
+  <text x="56" y="44" class="kicker" fill="#627480">A SEARCH MAP</text>
+  <text x="56" y="87" font-size="34" font-weight="700">Around the same question</text>
+  <text x="56" y="124" class="body">Opening proposal: open originals for study.</text>
+
+  <path d="M340 430 A220 220 0 0 1 780 430 Z" fill="#e8f1f8"/>
+  <path d="M780 430 A220 220 0 0 1 340 430 Z" fill="#f8eedf"/>
+  <circle cx="560" cy="430" r="220" fill="none" stroke="#647883" stroke-width="2.5"/>
+  <path d="M340 430H780" fill="none" stroke="#84959f" stroke-width="1.5" stroke-dasharray="6 7"/>
+  <path d="M560 210V650" fill="none" stroke="#a7b5bd" stroke-width="1.5" stroke-dasharray="4 7"/>
+
+  <g fill="#647883">
+    <path d="M560 192 L553 205 L567 205 Z"/>
+    <path d="M560 668 L553 655 L567 655 Z"/>
+    <path d="M322 430 L335 423 L335 437 Z"/>
+    <path d="M798 430 L785 423 L785 437 Z"/>
+  </g>
+  <g stroke="#8c9da7" stroke-width="1.5">
+    <path d="M398 268L407 277 M713 583L722 592 M398 592L407 583 M713 277L722 268"/>
+  </g>
+  <text x="560" y="178" text-anchor="middle" class="bearing">N</text>
+  <text x="560" y="696" text-anchor="middle" class="bearing">S</text>
+  <text x="307" y="437" text-anchor="middle" class="bearing">W</text>
+  <text x="813" y="437" text-anchor="middle" class="bearing">E</text>
+
+  <text x="560" y="274" text-anchor="middle" class="kicker support">SUPPORT / THESIS</text>
+  <text x="560" y="307" text-anchor="middle" class="body support">Why open the originals?</text>
+  <text x="560" y="556" text-anchor="middle" class="kicker challenge">CHALLENGE / ANTITHESIS</text>
+  <text x="560" y="589" text-anchor="middle" class="body challenge">Why limit original handling?</text>
+
+  <rect x="390" y="366" width="340" height="128" rx="16" fill="#ffffff" stroke="#7f939f" stroke-width="2"/>
+  <text x="560" y="397" text-anchor="middle" class="kicker">SHARED QUESTION</text>
+  <text x="560" y="432" text-anchor="middle" font-size="25" font-weight="700">Meaningful study</text>
+  <text x="560" y="464" text-anchor="middle" font-size="25" font-weight="700">+ future access</text>
+
+  <rect x="44" y="362" width="246" height="136" rx="12" fill="#ffffff" stroke="#c9d3d9" stroke-width="1.5"/>
+  <text x="66" y="395" class="kicker">ANOTHER VIEW</text>
+  <text x="66" y="431" class="body">What will future</text>
+  <text x="66" y="461" class="body">readers need?</text>
+  <rect x="830" y="362" width="246" height="136" rx="12" fill="#ffffff" stroke="#c9d3d9" stroke-width="1.5"/>
+  <text x="852" y="395" class="kicker">ANOTHER VIEW</text>
+  <text x="852" y="431" class="body">Which evidence does</text>
+  <text x="852" y="461" class="body">this request require?</text>
+
+  <rect x="246" y="735" width="628" height="106" rx="12" fill="#f0eef6" stroke="#c8c2d9" stroke-width="1.5"/>
+  <text x="560" y="768" text-anchor="middle" class="kicker" fill="#655582">TENSION TO PRESERVE</text>
+  <text x="560" y="800" text-anchor="middle" class="body">Use serves the collection's purpose;</text>
+  <text x="560" y="828" text-anchor="middle" class="body">handling can consume its future usefulness.</text>
+
+  <text x="560" y="879" text-anchor="middle" class="small">Both hemispheres serve the shared inquiry. Bearings are schematic directions,</text>
+  <text x="560" y="904" text-anchor="middle" class="small">not measured angles or a required order of reasoning.</text>
+</svg>

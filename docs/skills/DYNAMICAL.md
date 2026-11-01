@@ -22,7 +22,7 @@ The preserved filename includes v1.2, while its declared reduced-core version is
 
 Earlier discussions also used thesis, antithesis, paradox, escape and synthesis to describe how an inquiry could move. Those are transformations of the analysis, rather than additional primitive actions in the reduced core. In the current package, related moves are named by CTR and explored by ETE.
 
-The [circle-and-tilt example](../DIALECTICAL_SEARCH.md) follows one such movement while keeping the original subject and constraints visible.
+The [circle-and-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) follows one such movement while keeping the original subject and constraints visible.
 
 ## Example and boundary
 

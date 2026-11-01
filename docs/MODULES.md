@@ -6,7 +6,7 @@ For purpose, historical development and examples, use the [historical reader gui
 
 ## Textbook route
 
-The [book contents](../README.md) lead from [basic transformations](chapters/01_OVERVIEW_AND_BASICS.md) and [their combinations](chapters/02_WORKING_WITH_TRANSFORMATIONS.md) to [sentence-thought vectors](chapters/03_SENTENCE_THOUGHT_VECTORS.md). The four tool chapters develop the [Ontological Prism](chapters/04_ONTOLOGICAL_PRISM.md), [Dynamical Prism](chapters/05_DYNAMICAL_PRISM.md), [Regime Field](chapters/06_REGIME_FIELD.md), and [Prism Coupler](chapters/07_PRISM_COUPLER.md). The next group develops [KCE](chapters/08_KEY_CONCEPT_EXTRACTION.md), [CTR](chapters/09_COGNITIVE_TRANSFORM_REGISTRY.md), [ETE](chapters/10_EXPLORATION_TRANSFORM_ENGINE.md), and [PSPP](chapters/11_PARALLEL_SYSTEM_COMPARISON.md). The table below retains the source-file index.
+The [book contents](../README.md) lead from [basic transformations](chapters/01_OVERVIEW_AND_BASICS.md) and [their combinations](chapters/02_WORKING_WITH_TRANSFORMATIONS.md) to [sentence-thought vectors](chapters/03_SENTENCE_THOUGHT_VECTORS.md). The four tool chapters develop the [Ontological Prism](chapters/04_ONTOLOGICAL_PRISM.md), [Dynamical Prism](chapters/05_DYNAMICAL_PRISM.md), [Regime Field](chapters/06_REGIME_FIELD.md), and [Prism Coupler](chapters/07_PRISM_COUPLER.md). The next group develops [KCE](chapters/08_KEY_CONCEPT_EXTRACTION.md), [the circle and the tilt](chapters/09_THE_CIRCLE_AND_THE_TILT.md), [CTR](chapters/10_COGNITIVE_TRANSFORM_REGISTRY.md), [ETE](chapters/11_EXPLORATION_TRANSFORM_ENGINE.md), and [PSPP](chapters/12_PARALLEL_SYSTEM_COMPARISON.md). The table below retains the source-file index.
 
 ## Definitions and controls
 

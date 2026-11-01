@@ -1,6 +1,6 @@
 # ETE: explore what the changed view makes possible
 
-For the extended treatment, see [Chapter 10: The Exploration and Transform Engine](../chapters/10_EXPLORATION_TRANSFORM_ENGINE.md).
+For the extended treatment, see [Chapter 11: The Exploration and Transform Engine](../chapters/11_EXPLORATION_TRANSFORM_ENGINE.md).
 
 Recognizing a missing distinction does not yet produce a workable arrangement. In the archive example, separating access to text from access to the physical notebook opens several routes: reproductions, supervised handling, a staged combination or continued restrictions where neither route is adequate.
 
@@ -8,7 +8,7 @@ ETE is concerned with exploring those possibilities. The branches should differ 
 
 ## After the tilt
 
-The [circle-and-tilt example](../DIALECTICAL_SEARCH.md) begins with two coherent positions: readers need access and the notebooks need protection. The tilt introduces kinds of access as a further dimension.
+The [circle-and-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) begins with two coherent positions: readers need access and the notebooks need protection. The tilt introduces kinds of access as a further dimension.
 
 One branch might serve routine textual study with reproductions. Another might reserve original handling for material questions. A combined branch must confront the costs and limitations of both. None earns acceptance simply because it sounds like a synthesis.
 
@@ -28,4 +28,4 @@ Exploration has done useful work when it has produced a small set of meaningfull
 
 The publication supplies this execution specification. A model or harness must perform the exploration; reading the document does not launch an autonomous search.
 
-**Read:** [ETE v1.1 specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) · [packet template](../../framework/ETE_v1.1_PacketTemplate.json) · [circle-and-tilt example](../DIALECTICAL_SEARCH.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [ETE v1.1 specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) · [packet template](../../framework/ETE_v1.1_PacketTemplate.json) · [circle-and-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) · [evidence trail](../HISTORY.md#evidence-trail)

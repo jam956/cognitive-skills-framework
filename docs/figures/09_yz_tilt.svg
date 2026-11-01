@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="920" viewBox="0 0 1120 920" role="img" aria-labelledby="title desc">
+  <title id="title">A YZ tilt changes the frame while retaining the question</title>
+  <desc id="desc">A sextant-like arc rises above and below a horizontal opening frame that varies the amount of original notebook handling. The pivot retains meaningful study and future access. One ray distinguishes textual study served by an adequate copy; the other distinguishes material study needing permitted access to an original. The added relationship is research need to evidence carrier. Up and down are alternative re-expressions, not rankings or measured model angles.</desc>
+  <defs>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #20333f; }
+      .kicker { font-size: 18px; font-weight: 700; letter-spacing: 1.4px; }
+      .body { font-size: 21px; }
+      .small { font-size: 18px; }
+    </style>
+    <marker id="blue-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10Z" fill="#245a86"/></marker>
+    <marker id="amber-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L10 5L0 10Z" fill="#986022"/></marker>
+  </defs>
+  <rect width="1120" height="920" fill="#fdfdfb"/>
+  <text x="56" y="44" class="kicker" fill="#627480">A CHANGE OF FRAME</text>
+  <text x="56" y="87" font-size="34" font-weight="700">A tilt can expose a different relationship</text>
+  <text x="56" y="124" class="body">The question stays; the opening terms can change.</text>
+
+  <path d="M430 430L682 233A320 320 0 0 1 750 430Z" fill="#e8f1f8"/>
+  <path d="M430 430L750 430A320 320 0 0 1 682 627Z" fill="#f8eedf"/>
+  <path d="M55 430H1065" stroke="#8798a3" stroke-width="2" stroke-dasharray="7 7"/>
+
+  <path d="M666 246A300 300 0 0 1 666 614" fill="none" stroke="#77638f" stroke-width="3"/>
+  <g stroke="#9d8cab" stroke-width="1.5">
+    <path d="M690 280L700 274 M711 327L723 323 M724 378L736 376 M730 430H742 M724 482L736 484 M711 533L723 537 M690 580L700 586"/>
+  </g>
+  <path d="M430 430L737 190" fill="none" stroke="#245a86" stroke-width="3" marker-end="url(#blue-arrow)"/>
+  <path d="M430 430L737 670" fill="none" stroke="#986022" stroke-width="3" marker-end="url(#amber-arrow)"/>
+
+  <rect x="66" y="220" width="304" height="158" rx="16" fill="#ffffff" stroke="#7f939f" stroke-width="2"/>
+  <text x="218" y="255" text-anchor="middle" class="kicker">QUESTION RETAINED</text>
+  <text x="218" y="295" text-anchor="middle" font-size="25" font-weight="700">Meaningful study</text>
+  <text x="218" y="330" text-anchor="middle" font-size="25" font-weight="700">+ future access</text>
+  <path d="M370 299L424 420" fill="none" stroke="#647883" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <circle cx="430" cy="430" r="10" fill="#ffffff" stroke="#647883" stroke-width="2.5"/>
+  <circle cx="430" cy="430" r="3" fill="#647883"/>
+
+  <rect x="758" y="151" width="306" height="115" rx="12" fill="#ffffff" stroke="#b8cfdf" stroke-width="1.5"/>
+  <text x="780" y="184" class="kicker" fill="#245a86">TEXTUAL STUDY</text>
+  <text x="780" y="219" font-size="25" font-weight="700">Use a copy</text>
+  <text x="780" y="248" class="small">where it supplies the evidence</text>
+
+  <rect x="758" y="603" width="306" height="115" rx="12" fill="#ffffff" stroke="#dec8aa" stroke-width="1.5"/>
+  <text x="780" y="636" class="kicker" fill="#986022">MATERIAL STUDY</text>
+  <text x="780" y="671" font-size="25" font-weight="700">Examine the original</text>
+  <text x="780" y="700" class="small">when needed and permitted</text>
+
+  <text x="782" y="341" font-size="24" font-weight="700" fill="#655582">YZ tilt</text>
+  <text x="782" y="370" class="small">Re-express the relation</text>
+  <text x="1065" y="408" text-anchor="end" class="kicker" fill="#627480">OPENING FRAME</text>
+  <text x="55" y="466" class="small" fill="#627480">Less original handling</text>
+  <text x="1065" y="466" text-anchor="end" class="small" fill="#627480">More original handling</text>
+
+  <rect x="88" y="759" width="944" height="100" rx="12" fill="#f0eef6" stroke="#c8c2d9" stroke-width="1.5"/>
+  <text x="560" y="791" text-anchor="middle" class="kicker" fill="#655582">ADDED DISTINCTION</text>
+  <text x="560" y="829" text-anchor="middle" font-size="27" font-weight="700">Research need ↔ evidence carrier</text>
+  <text x="560" y="897" text-anchor="middle" class="small">Up and down distinguish alternative re-expressions; neither is inherently better.</text>
+</svg>
