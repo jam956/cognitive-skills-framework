@@ -1,5 +1,7 @@
 # CREM: reframe relationships without erasing the parties
 
+For the extended treatment, see [Chapter 12: CREM: Reframing Relationships](../chapters/12_RELATIONSHIP_REBASE.md).
+
 **Question:** Can we change the structure of a disagreement while preserving the differences and dependencies that make it real?
 
 ## The problem and the method

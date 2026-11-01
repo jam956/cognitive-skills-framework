@@ -1,5 +1,7 @@
 # DARE/IDCM: question the frame and the discarded alternatives
 
+For the extended treatment, see [Chapter 14: DARE/IDCM: Reopening the Frame](../chapters/14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md).
+
 **Question:** Did the process become coherent by excluding something important?
 
 ## The problem and the method

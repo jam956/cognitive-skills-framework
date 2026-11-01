@@ -1,6 +1,6 @@
 # A Textbook for Designing with Cognitive Transformations
 
-**Working editorial design · revised 1 November 2026**
+**Editorial design · reference edition, 1 November 2026**
 
 This book explains the ideas behind the Cognitive Skills Framework so that a program designer can develop an application of their own. The repository's modules are examples of ways to organize an LLM's abilities. They provide useful distinctions and possible designs within a much larger space of approaches.
 
@@ -46,7 +46,29 @@ KCE returns here after its introduction in Chapter 3 so the completed representa
 
 Chapters 9–11 share the archive's access-and-preservation problem. The circle and the tilt first make possible movements visible. ETE develops arrangements, and PSPP compares what those arrangements support. The CTR reference guide remains available for naming and selecting transformations. A settled local point becomes the starting point for the next consequential question.
 
-The following conceptual sequence connects these chapters to the remaining reader guides.
+Three further reasoning chapters develop the difficulties that a comparison can leave open:
+
+| Chapter | Central work |
+|---|---|
+| [12. CREM: Reframing Relationships](chapters/12_RELATIONSHIP_REBASE.md) | Preserve coherent parties and shared dependencies while changing the structure of conflict or alignment. |
+| [13. CEC: From a Proposal to a Valid Path](chapters/13_CAUSAL_ENTAILMENT_CHAINING.md) | Test whether consequential intermediate steps and permissions support the route to a proposal. |
+| [14. DARE/IDCM: Reopening the Frame](chapters/14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) | Inspect discarded alternatives, anchor choices and missing operations before authorizing a bounded correction. |
+
+The archive remains a common case. The reader can follow how a relationship proposal acquires dependencies, how its ordered path is examined, and how an apparently sound selection can be reopened. Each chapter adds one governing issue while retaining the concerns established earlier.
+
+The application section then examines how a designer can choose, observe and adjust a method:
+
+| Chapter | Central work |
+|---|---|
+| [15. Choosing and Combining the Tools](chapters/15_SELECTIVE_TOOL_ROUTING.md) | Use Probe Profiles to select a sufficient operation, a compact result, fuller work or another strategy. |
+| [16. Organ Atlas: Observing the Application](chapters/16_OBSERVATION_AND_RECOVERY.md) | Distinguish an actual observation from a proposed internal probe and relate qualified evidence to recovery. |
+| [17. Reward Controller: Adjusting Future Effort](chapters/17_AUDITOR_FEEDBACK_CONTROL.md) | Keep evaluation with an auditor and apply bounded suggestions to future assignments. |
+
+Chapters 16–17 are optional engineering references. Their proposed observation and feedback interfaces are explained through a document-delivery application without treating the source templates as installed instrumentation or model-weight training.
+
+[Appendix A](appendices/A_STRUCTURED_HANDOFFS.md) develops selected-field packet examples and receiving-key translations. The seven templates and their index share that space, while modules with output definitions inside their main JSON link to the relevant contract. CTR remains a reference guide, following the book's chosen scope.
+
+The following conceptual sequence summarizes the reading route.
 
 | Conceptual step | What the reader needs to understand | Repository examples |
 |---|---|---|
@@ -68,4 +90,4 @@ The main prose explains. Compact tables support comparisons; diagrams can show r
 
 Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](EVALUATION.md).
 
-The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–11 provide the current reading route; the other individual guides remain starting pages for further development.
+The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–17 and the handoff appendix provide the reading route. The shorter guides remain available for independent reference. The module index and appendix connect every source JSON file to its explanatory use.

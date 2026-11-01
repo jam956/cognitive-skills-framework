@@ -1,5 +1,7 @@
 # CEC: check whether the path can actually be followed
 
+For the extended treatment, see [Chapter 13: CEC: From a Proposal to a Valid Path](../chapters/13_CAUSAL_ENTAILMENT_CHAINING.md).
+
 **Question:** Is each consequential step licensed by what comes before it?
 
 ## The problem and the method

@@ -88,4 +88,4 @@ A bounded request keeps the comparison inspectable:
 
 Reference: [PSPP v5.0-lite specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) · [PSPP reader guide](../skills/PSPP.md) · [CEC](../skills/CEC.md) · [CREM](../skills/CREM.md) · [DARE/IDCM](../skills/DARE.md) · [source and version notes](../PROVENANCE.md#pspps-numerical-policy).
 
-[Previous: The Exploration and Transform Engine](10_EXPLORATION_TRANSFORM_ENGINE.md) · [Next reader route: CREM](../skills/CREM.md)
+[Previous: The Exploration and Transform Engine](10_EXPLORATION_TRANSFORM_ENGINE.md) · [Next: CREM: Reframing Relationships](12_RELATIONSHIP_REBASE.md)

@@ -1,5 +1,7 @@
 # Probe profiles: decide how much machinery the task needs
 
+For the extended treatment, see [Chapter 15: Choosing and Combining the Tools](../chapters/15_SELECTIVE_TOOL_ROUTING.md).
+
 **Question:** Would a fuller cognitive operation change the next useful decision?
 
 ## The problem and the method

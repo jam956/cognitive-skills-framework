@@ -19,8 +19,16 @@ The reading path begins with simple relationships, then develops further operati
 | 9 | [The Circle and the Tilt](docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md) | Keep a question in view while exploring supporting, opposing and reframed relationships. |
 | 10 | [The Exploration and Transform Engine](docs/chapters/10_EXPLORATION_TRANSFORM_ENGINE.md) | Develop materially different candidate arrangements and retain their dependencies. |
 | 11 | [PSPP: Comparing Candidate Systems](docs/chapters/11_PARALLEL_SYSTEM_COMPARISON.md) | Compare alternatives, direct consequential checks, and justify a choice or an unresolved result. |
+| 12 | [CREM: Reframing Relationships](docs/chapters/12_RELATIONSHIP_REBASE.md) | Preserve distinct concerns and dependencies while changing a relationship. |
+| 13 | [CEC: From a Proposal to a Valid Path](docs/chapters/13_CAUSAL_ENTAILMENT_CHAINING.md) | Expose consequential order, intermediate steps and missing dependencies. |
+| 14 | [DARE/IDCM: Reopening the Frame](docs/chapters/14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) | Audit assumptions, pruning and missing operations; reopen a route with retained constraints. |
+| 15 | [Choosing and Combining the Tools](docs/chapters/15_SELECTIVE_TOOL_ROUTING.md) | Select the smallest useful operation, escalation level and receiving contract. |
+| 16 | [Organ Atlas: Observing the Application](docs/chapters/16_OBSERVATION_AND_RECOVERY.md) | Relate qualified observations and proposed probes to recovery conditions. |
+| 17 | [Reward Controller: Adjusting Future Effort](docs/chapters/17_AUDITOR_FEEDBACK_CONTROL.md) | Use auditor-owned, bounded feedback to guide future assignments. |
 
-The [book design](docs/BOOK_DESIGN.md) describes the developing editorial structure. Chapters 8–11 carry the representation into concept reuse, changes of view and frame, exploration and comparison. Each chapter can also be consulted for its particular question. The [module index](docs/MODULES.md) links the shorter reader guides, detailed specifications and templates.
+The [book design](docs/BOOK_DESIGN.md) describes the editorial structure. Chapters 8–14 develop concept reuse, exploration, comparison, relationship rebase, ordered validity and process audit. Chapters 15–17 turn to selective application and optional monitoring and feedback. Each chapter can also be consulted for its particular question.
+
+[Appendix A: Structured Handoffs and Packet Examples](docs/appendices/A_STRUCTURED_HANDOFFS.md) follows the archive case through the seven packet templates and their shared index. The [module index](docs/MODULES.md) maps every source module to its chapter or reference guide. Together these routes account for all 23 JSON definitions and templates in the preserved framework.
 
 ## Reference and application
 

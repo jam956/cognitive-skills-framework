@@ -1,5 +1,7 @@
 # Organ Atlas: name the monitoring surface before claiming a measurement
 
+For the extended treatment, see [Chapter 16: Organ Atlas: Observing the Application](../chapters/16_OBSERVATION_AND_RECOVERY.md).
+
 **Question:** What observable signals, probes or recovery conditions would a deployment need?
 
 ## The problem and the method

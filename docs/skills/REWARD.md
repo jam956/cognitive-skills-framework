@@ -1,5 +1,7 @@
 # Reward Controller: keep feedback separate from the solver's objective
 
+For the extended treatment, see [Chapter 17: Reward Controller: Adjusting Future Effort](../chapters/17_AUDITOR_FEEDBACK_CONTROL.md).
+
 **Question:** How should observed results change future effort without letting the solver redefine success?
 
 ## The problem and the method
