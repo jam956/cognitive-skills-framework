@@ -1,66 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="920" viewBox="0 0 1120 920" role="img" aria-labelledby="title desc">
-  <title id="title">A circle and compass for exploring the same question</title>
-  <desc id="desc">The center holds meaningful study and future access together. The upper hemisphere develops support for the opening proposal to open original notebooks; the lower hemisphere develops challenges to that proposal. Lateral views ask about other readers and evidence needs. A separate callout preserves the practical tension between use and damage. Compass bearings are schematic, not measured reasoning angles or a required sequence.</desc>
+  <title id="title">The circle: a dial of possible directions</title>
+  <desc id="desc">A numberless clock face holds a shared question at its pivot. Thesis and antithesis face one another vertically; paradox and synthesis lie on the lateral axis. Opposed hands and two partial curved arrows suggest changes of position without prescribing a full sequence. The direction labels are conceptual bearings.</desc>
   <defs>
-    <style>
-      text { font-family: Arial, Helvetica, sans-serif; fill: #20333f; }
-      .kicker { font-size: 18px; font-weight: 700; letter-spacing: 1.6px; }
-      .body { font-size: 21px; }
-      .small { font-size: 18px; }
-      .bearing { font-size: 18px; font-weight: 700; fill: #627480; }
-      .support { fill: #245a86; }
-      .challenge { fill: #986022; }
-    </style>
+    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.6px}.label{font-size:28px;font-weight:600}</style>
+    <marker id="blue" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="9" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#316b96"/></marker>
+    <marker id="amber" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="9" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#a57236"/></marker>
   </defs>
   <rect width="1120" height="920" fill="#fdfdfb"/>
-  <text x="56" y="44" class="kicker" fill="#627480">A SEARCH MAP</text>
-  <text x="56" y="87" font-size="34" font-weight="700">Around the same question</text>
-  <text x="56" y="124" class="body">Opening proposal: open originals for study.</text>
-
-  <path d="M340 430 A220 220 0 0 1 780 430 Z" fill="#e8f1f8"/>
-  <path d="M780 430 A220 220 0 0 1 340 430 Z" fill="#f8eedf"/>
-  <circle cx="560" cy="430" r="220" fill="none" stroke="#647883" stroke-width="2.5"/>
-  <path d="M340 430H780" fill="none" stroke="#84959f" stroke-width="1.5" stroke-dasharray="6 7"/>
-  <path d="M560 210V650" fill="none" stroke="#a7b5bd" stroke-width="1.5" stroke-dasharray="4 7"/>
-
-  <g fill="#647883">
-    <path d="M560 192 L553 205 L567 205 Z"/>
-    <path d="M560 668 L553 655 L567 655 Z"/>
-    <path d="M322 430 L335 423 L335 437 Z"/>
-    <path d="M798 430 L785 423 L785 437 Z"/>
+  <path d="M280 460A280 280 0 0 1 840 460Z" fill="#edf4f9"/>
+  <path d="M840 460A280 280 0 0 1 280 460Z" fill="#faf1e5"/>
+  <circle cx="560" cy="460" r="280" fill="none" stroke="#7b8d98" stroke-width="2"/>
+  <circle cx="560" cy="460" r="267" fill="none" stroke="#d5dfe4" stroke-width="1"/>
+  <g>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(0 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(6 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(12 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(18 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(24 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(30 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(36 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(42 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(48 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(54 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(60 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(66 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(72 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(78 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(84 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(90 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(96 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(102 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(108 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(114 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(120 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(126 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(132 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(138 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(144 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(150 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(156 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(162 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(168 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(174 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(180 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(186 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(192 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(198 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(204 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(210 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(216 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(222 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(228 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(234 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(240 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(246 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(252 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(258 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(264 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(270 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(276 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(282 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(288 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(294 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(300 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(306 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(312 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(318 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(324 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(330 560 460)" stroke="#74828b" stroke-width="2.5"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(336 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(342 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(348 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
+    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(354 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
   </g>
-  <g stroke="#8c9da7" stroke-width="1.5">
-    <path d="M398 268L407 277 M713 583L722 592 M398 592L407 583 M713 277L722 268"/>
-  </g>
-  <text x="560" y="178" text-anchor="middle" class="bearing">N</text>
-  <text x="560" y="696" text-anchor="middle" class="bearing">S</text>
-  <text x="307" y="437" text-anchor="middle" class="bearing">W</text>
-  <text x="813" y="437" text-anchor="middle" class="bearing">E</text>
-
-  <text x="560" y="274" text-anchor="middle" class="kicker support">SUPPORT / THESIS</text>
-  <text x="560" y="307" text-anchor="middle" class="body support">Why open the originals?</text>
-  <text x="560" y="556" text-anchor="middle" class="kicker challenge">CHALLENGE / ANTITHESIS</text>
-  <text x="560" y="589" text-anchor="middle" class="body challenge">Why limit original handling?</text>
-
-  <rect x="390" y="366" width="340" height="128" rx="16" fill="#ffffff" stroke="#7f939f" stroke-width="2"/>
-  <text x="560" y="397" text-anchor="middle" class="kicker">SHARED QUESTION</text>
-  <text x="560" y="432" text-anchor="middle" font-size="25" font-weight="700">Meaningful study</text>
-  <text x="560" y="464" text-anchor="middle" font-size="25" font-weight="700">+ future access</text>
-
-  <rect x="44" y="362" width="246" height="136" rx="12" fill="#ffffff" stroke="#c9d3d9" stroke-width="1.5"/>
-  <text x="66" y="395" class="kicker">ANOTHER VIEW</text>
-  <text x="66" y="431" class="body">What will future</text>
-  <text x="66" y="461" class="body">readers need?</text>
-  <rect x="830" y="362" width="246" height="136" rx="12" fill="#ffffff" stroke="#c9d3d9" stroke-width="1.5"/>
-  <text x="852" y="395" class="kicker">ANOTHER VIEW</text>
-  <text x="852" y="431" class="body">Which evidence does</text>
-  <text x="852" y="461" class="body">this request require?</text>
-
-  <rect x="246" y="735" width="628" height="106" rx="12" fill="#f0eef6" stroke="#c8c2d9" stroke-width="1.5"/>
-  <text x="560" y="768" text-anchor="middle" class="kicker" fill="#655582">TENSION TO PRESERVE</text>
-  <text x="560" y="800" text-anchor="middle" class="body">Use serves the collection's purpose;</text>
-  <text x="560" y="828" text-anchor="middle" class="body">handling can consume its future usefulness.</text>
-
-  <text x="560" y="879" text-anchor="middle" class="small">Both hemispheres serve the shared inquiry. Bearings are schematic directions,</text>
-  <text x="560" y="904" text-anchor="middle" class="small">not measured angles or a required order of reasoning.</text>
+  <path d="M560 435V242" fill="none" stroke="#316b96" stroke-width="4" marker-end="url(#blue)"/>
+  <path d="M560 485V677" fill="none" stroke="#a57236" stroke-width="4" marker-end="url(#amber)"/>
+  <path d="M600 215A248 248 0 0 1 805 424" fill="none" stroke="#316b96" stroke-width="3" marker-end="url(#blue)"/>
+  <path d="M520 705A248 248 0 0 1 315 496" fill="none" stroke="#a57236" stroke-width="3" marker-end="url(#amber)"/>
+  <circle cx="560" cy="460" r="76" fill="#fdfdfb" stroke="#9baab3" stroke-width="1.5"/>
+  <text x="560" y="467" text-anchor="middle" font-size="20" font-weight="600">QUESTION</text>
+  <text x="560" y="112" text-anchor="middle" class="label" style="fill:#316b96">THESIS</text>
+  <text x="560" y="828" text-anchor="middle" class="label" style="fill:#a57236">ANTITHESIS</text>
+  <text x="972" y="470" text-anchor="middle" class="label" style="fill:#75618c">PARADOX</text>
+  <text x="144" y="470" text-anchor="middle" class="label" style="fill:#486b70">SYNTHESIS</text>
 </svg>
