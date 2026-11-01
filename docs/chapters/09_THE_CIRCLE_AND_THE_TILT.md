@@ -2,17 +2,17 @@
 
 KCE gives us a way to preserve a governing relationship while changing its level of description. A stable anchor also makes another movement possible: examine the same problem from different positions without losing what the inquiry is about.
 
-An archive holds fragile research notebooks. Readers want to study them; handling is gradually damaging the pages. Some researchers need only the words. Others need the binding, paper or marks that a reproduction may not preserve. The shared question is how to make the collection useful while keeping it available for future readers.
+Take for example a library archive which holds fragile research notebooks. Readers want to study them; handling is gradually damaging the pages. Some researchers need only the words. Others need to study the binding, paper, or short-hand marks in the margins that a reproduction might not have preserved. The shared question is how to make the collection useful while keeping it available for future readers.
 
-The circle and the tilt make possible search directions visible. The circle changes the view of a shared question. A tilt changes the terms in which its alternatives can be expressed. The archive lets us follow both movements before the following chapters give them more explicit jobs within the cognitive tools.
+The circle and the tilt make possible search directions visible. The circle changes the view of a shared question. A tilt changes the terms in which its alternatives can be expressed. The archive example lets us follow both movements before the following chapters give them more explicit jobs within the cognitive tools.  This construct is merely for illustrative purposes and does not imply anything of the internal compute mechanisms.
 
-## 1. Keep the question at the center
+## 1. Keep the question or prompt at the center
 
-Begin with a **direct answer**: open the original notebooks to readers. A collection that cannot be studied has lost much of its purpose. From this position, restrictions look like the principal obstacle.
+Begin with a **direct answer**: open the original notebooks to readers. After all, a collection that cannot be studied has lost much of its purpose. From this vantage point, any restrictions look like an obstacle.
 
-Across the circle, the opposing proposal also has a reason: restrict original handling. A damaged page cannot be restored simply because access was well intentioned. Unrestricted use can consume the evidence that makes future study possible.
+Across the circle, the opposing proposal also has a reason: restrict handling of the originals. A damaged page cannot be restored simply because access was well intentioned. Unrestricted use may consume the notebooks which might preclude future study.
 
-These positions can be called **thesis** and **antithesis**. They oppose one another as proposals while addressing the same collection and the same larger question. Defending a proposal and preserving that question are different things.
+These positions can be called **thesis** and **antithesis**. Studying the material requires access.  Access to the material may cause damage.  These competing claims oppose one another as proposals while addressing the same collection and the same larger question.  Defending a proposal and preserving the constraints are different things.
 
 ![A bold upward arrow through the prompt, with direct answer curved above its tip and paradox below its tail. Thesis, antithesis, alternatives and synthesis occupy the four quadrants.](../figures/09_circle_compass.svg)
 
@@ -20,7 +20,7 @@ These positions can be called **thesis** and **antithesis**. They oppose one ano
 
 On this map, **thesis** develops an opening answer, **antithesis** tests it, **alternatives** changes assumptions or arrangements, and **synthesis** combines compatible relationships. A counterfactual is one possible alternative. The quadrants can overlap; they name directions in an inquiry rather than a fixed sequence.
 
-Other positions can introduce different opening hours, shorter appointments or stricter eligibility. They alter the amount or distribution of handling. Examining them can reveal a useful arrangement even when no more radical change is needed.
+Other alternative restrictions can introduce different opening hours, shorter appointments or stricter eligibility. They alter the amount or distribution of handling. Examining them can reveal a useful arrangement even when no more radical change is needed.
 
 *Perspective change* brings another consequence into view. *Inversion* reverses the working presumption about original handling. *Comparison* relates the views to the opening proposal, and *salience reweighting* changes which concern receives attention. Their combination lets us move without replacing the subject each time a different consideration becomes prominent.
 
@@ -40,7 +40,7 @@ A practical paradox therefore gives the next move a target: the assumption linki
 
 The useful movement now is to reconsider what counts as access.
 
-A reader tracing changes in vocabulary may need a searchable transcription and clear page images. A researcher examining a repair to the binding needs the original object. Both seek access, but the evidence their questions require differs.
+A reader tracing changes in vocabulary may need a searchable transcription and clear page images. A researcher examining a repair to the binding needs the original object. Both seek access, but the level of access to answewr their questions differ.
 
 The distinction adds a dimension to the opening comparison: **the kind of research need and the form of access that can serve it**. We can now consider more than an undifferentiated increase or decrease in handling.
 
