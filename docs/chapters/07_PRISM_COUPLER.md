@@ -80,4 +80,4 @@ The central limit remains evidential. A coherent candidate system can describe h
 
 Reference: [Prism Coupler v1.5 specification](../../framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json).
 
-[Previous: The Regime Field](06_REGIME_FIELD.md) · [Next reader route: Key Concept Extraction and Elevation](../skills/KCE.md)
+[Previous: The Regime Field](06_REGIME_FIELD.md) · [Next: KCE: Extracting a Reusable Concept](08_KEY_CONCEPT_EXTRACTION.md)

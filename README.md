@@ -15,8 +15,12 @@ The reading path begins with simple relationships, then develops further operati
 | 5 | [The Dynamical Prism](docs/chapters/05_DYNAMICAL_PRISM.md) | Open a behavior label into processes and dependencies. |
 | 6 | [The Regime Field](docs/chapters/06_REGIME_FIELD.md) | Retain conditions that change meaning, permission, and applicability. |
 | 7 | [The Prism Coupler](docs/chapters/07_PRISM_COUPLER.md) | Bind actors, roles, processes, objects, and conditions into a candidate system. |
+| 8 | [KCE: Extracting a Reusable Concept](docs/chapters/08_KEY_CONCEPT_EXTRACTION.md) | Preserve a governing relationship while changing its level of generality and applying it elsewhere. |
+| 9 | [The Cognitive Transformation Registry](docs/chapters/09_COGNITIVE_TRANSFORM_REGISTRY.md) | Choose a useful change of view or arrangement and state what it must preserve. |
+| 10 | [The Exploration and Transform Engine](docs/chapters/10_EXPLORATION_TRANSFORM_ENGINE.md) | Develop materially different candidate arrangements and retain their dependencies. |
+| 11 | [PSPP: Comparing Candidate Systems](docs/chapters/11_PARALLEL_SYSTEM_COMPARISON.md) | Compare alternatives, direct consequential checks, and justify a choice or an unresolved result. |
 
-The [book design](docs/BOOK_DESIGN.md) describes the developing editorial structure. The [KCE guide](docs/skills/KCE.md) develops concept extraction and elevation; the [module index](docs/MODULES.md) links the other reader guides, detailed specifications and templates.
+The [book design](docs/BOOK_DESIGN.md) describes the developing editorial structure. Chapters 8–11 carry the representation into concept reuse, transformation choice, exploration and comparison. Each chapter can also be consulted for its particular question. The [module index](docs/MODULES.md) links the shorter reader guides, detailed specifications and templates.
 
 ## Reference and application
 

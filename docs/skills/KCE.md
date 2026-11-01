@@ -1,5 +1,7 @@
 # KCE: preserve a thought while changing its level of generality
 
+For the extended treatment, see [Chapter 8: KCE: Extracting a Reusable Concept](../chapters/08_KEY_CONCEPT_EXTRACTION.md).
+
 **Question:** What can be carried into another situation without losing the relationship that made the original example useful?
 
 ## The problem and the method
