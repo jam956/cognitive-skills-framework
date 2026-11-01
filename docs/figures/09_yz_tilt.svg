@@ -1,44 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="920" viewBox="0 0 1120 920" role="img" aria-labelledby="title desc">
-<title id="title">Orbital conditions around the paradox</title>
-<desc id="desc">The circle keeps prompt at its center. At its front edge, paradox is the shared near focus of two genuine orbital ellipses, one rising above and the other passing below the horizon through that point. Each far focus is outside the view. Blue shading marks potential escape conditions and amber shading marks conditions that strengthen the paradox.</desc>
+<title id="title">Swept orbital conditions from prompt toward paradox</title>
+<desc id="desc">The circle is rotated a quarter turn and kept in perspective. Direct answer sits on the left, prompt at the center, and paradox on the right. Two elongated orbital ellipses share their visible near focus at prompt and sweep toward paradox above and below the plane. Each far focus lies beyond the right edge. Blue shading marks potential escape conditions; amber shading marks conditions strengthening the paradox. Dashed axes show the inclinations toward the unseen foci.</desc>
 <defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.4px}.condition{font-size:26px;font-weight:600}.pole{font-size:23px;font-weight:600}</style>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.2px}.condition{font-size:26px;font-weight:600}.label{font-size:19px;font-weight:600}</style>
 <clipPath id="above"><rect width="1120" height="460"/></clipPath>
 <clipPath id="below"><rect y="460" width="1120" height="460"/></clipPath>
-<linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cbd7df"/><stop offset="1" stop-color="#eff2f3"/></linearGradient>
-<linearGradient id="edge-fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="black"/><stop offset=".10" stop-color="white"/><stop offset=".90" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+<linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cad6df"/><stop offset="1" stop-color="#edf1f3"/></linearGradient>
+<linearGradient id="edge-fade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="white"/><stop offset=".84" stop-color="white"/><stop offset="1" stop-color="#888"/></linearGradient>
 <mask id="fade" maskUnits="userSpaceOnUse" x="0" y="0" width="1120" height="920"><rect width="1120" height="920" fill="url(#edge-fade)"/></mask>
 </defs>
 <rect width="1120" height="920" fill="#fdfdfb"/>
 <g mask="url(#fade)">
-<g clip-path="url(#above)"><ellipse cx="611.977923" cy="215.463100" rx="259.036677" ry="360" transform="rotate(12 611.977923 215.463100)" fill="#dcebf6" opacity=".7"/></g>
-<g clip-path="url(#below)"><ellipse cx="611.977923" cy="704.536900" rx="259.036677" ry="360" transform="rotate(-12 611.977923 704.536900)" fill="#f1ddbf" opacity=".6"/></g>
+<g clip-path="url(#above)"><ellipse cx="905" cy="280" rx="620" ry="234.467482" transform="rotate(-18.277110 905 280)" fill="#dcebf6" opacity=".7"/></g>
+<g clip-path="url(#below)"><ellipse cx="905" cy="640" rx="620" ry="234.467482" transform="rotate(18.277110 905 640)" fill="#f1ddbf" opacity=".6"/></g>
 </g>
-<g transform="translate(0 -112)">
-<path d="M250 460A310 112 0 0 0 870 460V475A310 112 0 0 1 250 475Z" fill="url(#rim)" stroke="#b5c2ca" stroke-width="1"/>
-<ellipse cx="560" cy="460" rx="310" ry="112" fill="#fdfdfb"/>
-<path d="M560 460H250A310 112 0 0 1 560 348Z" fill="#eaf2f8"/>
-<path d="M560 460V348A310 112 0 0 1 870 460Z" fill="#edf5f1"/>
-<path d="M560 460V572A310 112 0 0 1 250 460Z" fill="#faf0e2"/>
-<path d="M560 460H870A310 112 0 0 1 560 572Z" fill="#f2eef8"/>
-<ellipse cx="560" cy="460" rx="310" ry="112" fill="none" stroke="#8b9eaa" stroke-width="1.8"/>
-<ellipse cx="560" cy="460" rx="292" ry="105" fill="none" stroke="#d5dfe5" stroke-width="1"/>
-<path d="M560 348V572" fill="none" stroke="#afbdc6" stroke-width="1.2" stroke-dasharray="4 7"/>
-<path d="M250 460H870" fill="none" stroke="#7e94a3" stroke-width="1.4" stroke-dasharray="6 8"/>
-</g>
-<path d="M100 460H1020" fill="none" stroke="#7e94a3" stroke-width="1.4" stroke-dasharray="6 8"/>
+<path d="M130 460A230 100 0 0 0 590 460V474A230 100 0 0 1 130 474Z" fill="url(#rim)" stroke="#b4c2cb" stroke-width="1"/>
+<ellipse cx="360" cy="460" rx="230" ry="100" fill="#fdfdfb"/>
+<path d="M360 460H130A230 100 0 0 1 360 360Z" fill="#edf5f1"/>
+<path d="M360 460V360A230 100 0 0 1 590 460Z" fill="#f2eef8"/>
+<path d="M360 460V560A230 100 0 0 1 130 460Z" fill="#eaf2f8"/>
+<path d="M360 460H590A230 100 0 0 1 360 560Z" fill="#faf0e2"/>
+<ellipse cx="360" cy="460" rx="230" ry="100" fill="none" stroke="#8b9eaa" stroke-width="1.8"/>
+<ellipse cx="360" cy="460" rx="216" ry="93" fill="none" stroke="#d5dfe5" stroke-width="1"/>
+<path d="M360 360V560" fill="none" stroke="#afbdc6" stroke-width="1.2" stroke-dasharray="4 7"/>
+<path d="M80 460H1090" fill="none" stroke="#7e94a3" stroke-width="1.4" stroke-dasharray="6 8"/>
 <g mask="url(#fade)">
-<g clip-path="url(#above)"><ellipse cx="611.977923" cy="215.463100" rx="259.036677" ry="360" transform="rotate(12 611.977923 215.463100)" fill="none" stroke="#316b96" stroke-width="3.5"/></g>
-<g clip-path="url(#below)"><ellipse cx="611.977923" cy="704.536900" rx="259.036677" ry="360" transform="rotate(-12 611.977923 704.536900)" fill="none" stroke="#a57236" stroke-width="3.5"/></g>
-<g clip-path="url(#below)"><ellipse cx="611.977923" cy="215.463100" rx="259.036677" ry="360" transform="rotate(12 611.977923 215.463100)" fill="none" stroke="#8db3d0" stroke-width="1.7" stroke-dasharray="5 7" opacity=".7"/></g>
-<g clip-path="url(#above)"><ellipse cx="611.977923" cy="704.536900" rx="259.036677" ry="360" transform="rotate(-12 611.977923 704.536900)" fill="none" stroke="#c6a175" stroke-width="1.7" stroke-dasharray="5 7" opacity=".7"/></g>
+<g clip-path="url(#above)"><ellipse cx="905" cy="280" rx="620" ry="234.467482" transform="rotate(-18.277110 905 280)" fill="none" stroke="#316b96" stroke-width="3.5"/></g>
+<g clip-path="url(#below)"><ellipse cx="905" cy="640" rx="620" ry="234.467482" transform="rotate(18.277110 905 640)" fill="none" stroke="#a57236" stroke-width="3.5"/></g>
+<g clip-path="url(#below)"><ellipse cx="905" cy="280" rx="620" ry="234.467482" transform="rotate(-18.277110 905 280)" fill="none" stroke="#8db3d0" stroke-width="1.7" stroke-dasharray="5 7" opacity=".65"/></g>
+<g clip-path="url(#above)"><ellipse cx="905" cy="640" rx="620" ry="234.467482" transform="rotate(18.277110 905 640)" fill="none" stroke="#c6a175" stroke-width="1.7" stroke-dasharray="5 7" opacity=".65"/></g>
+<path d="M360 460L1120 208.990826" fill="none" stroke="#7ea5c1" stroke-width="1.5" stroke-dasharray="5 8" opacity=".75"/>
+<path d="M360 460L1120 711.009174" fill="none" stroke="#bd9465" stroke-width="1.5" stroke-dasharray="5 8" opacity=".75"/>
 </g>
-<g transform="translate(0 -112)" stroke="#8096a4" stroke-width="1.8"><path d="M560 348V361M560 559V572M250 460H270M850 460H870M405 363L414 373M715 363L706 373M405 557L414 547M715 557L706 547"/></g>
-<ellipse cx="560" cy="348" rx="77" ry="31" fill="#fdfdfb" stroke="#96a8b4" stroke-width="1.3"/>
-<text x="560" y="355" text-anchor="middle" font-size="19" font-weight="600">PROMPT</text>
-<text x="560" y="214" text-anchor="middle" class="pole">DIRECT ANSWER</text>
-<ellipse cx="560" cy="460" rx="82" ry="31" fill="#fdfdfb" stroke="#96a8b4" stroke-width="1.3"/>
-<text x="560" y="467" text-anchor="middle" font-size="19" font-weight="600">PARADOX</text>
-<text x="612" y="124" text-anchor="middle" class="condition" style="fill:#316b96">ESCAPE CONDITIONS</text>
-<text x="612" y="830" text-anchor="middle" class="condition" style="fill:#a57236">STRENGTHENING CONDITIONS</text>
+<g stroke="#8196a4" stroke-width="1.7"><path d="M360 360V373M360 547V560M130 460H148M572 460H590M245 373L254 383M475 373L466 383M245 547L254 537M475 547L466 537"/></g>
+<ellipse cx="130" cy="460" rx="99" ry="31" fill="#fdfdfb" stroke="#96a8b4" stroke-width="1.2"/>
+<text x="130" y="467" text-anchor="middle" class="label">DIRECT ANSWER</text>
+<ellipse cx="360" cy="460" rx="70" ry="31" fill="#fdfdfb" stroke="#96a8b4" stroke-width="1.2"/>
+<text x="360" y="467" text-anchor="middle" class="label">PROMPT</text>
+<ellipse cx="590" cy="460" rx="79" ry="31" fill="#fdfdfb" stroke="#96a8b4" stroke-width="1.2"/>
+<text x="590" y="467" text-anchor="middle" class="label">PARADOX</text>
+<text x="780" y="175" text-anchor="middle" class="condition" style="fill:#316b96">ESCAPE CONDITIONS</text>
+<text x="780" y="715" text-anchor="middle" class="condition" style="fill:#a57236">STRENGTHENING CONDITIONS</text>
 </svg>
