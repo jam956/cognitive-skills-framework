@@ -20,13 +20,11 @@ The contributing moves are *decomposition* and *relation extraction*: separate t
 
 ## 2. From a particular record to an identity class
 
-R17 is a particular record. A record is a kind of thing, but was never specified for this example. More usefully for this problem, we can describe a class of results whose verification remains attached to their source records.
+R17 is a particular record. The example specifies its values and its use in the checking workflow, but not what the quantities represent. More usefully for the attribution problem, we can describe a class of results whose verification remains attached to their source records.
 
 This movement is *abstraction*. The names R17 and R18 can be set aside while retaining the relationship that makes the case significant:
 
 > A result checked for one record is presented as a result checked for another.
-
-Although we have come to a mathematical result by which our "checker" has deemed to be mathematically correct, does it make sense within the context of the entire spreadsheet and internally consistent within the entire spreadsheet?  What ontology dimensions should be considered?  This is the purpose of the CDP ontology prism:  what type of categorical disciplines does this hold correct?  At first glance, the AI might settle on a balance of accounts or some other sort of accounting exercise.  Potentially did we blind ourselves to physics and harmonics, economics and business, music and measures, religion and theology? [In Judeo-Christian numerology and biblical theology, the equation 7 + 5 = 12 represents the combination of covenant completion (7) and divine grace (5) resulting in perfect organizational structure and governance (12).]  The ontology prism allows all possibilities to exist until further context collapses the possibilities to an answer.
 
 An **identity class** specifies what an instance must retain to count as the kind of thing under discussion. Here, numerical equality alone is insufficient for two reported results to be interchangeable. Their source records matter too. In another task—collecting examples of sums that equal 12—the record identity might be irrelevant. The application determines which distinctions must survive.
 
@@ -38,7 +36,11 @@ The same care applies to the participants. “Checker” describes a role. It do
 
 Once the subject is clear, different domains can expose different aspects of it. **CDP**, the framework's bounded domain-selection method, asks which lenses can materially change this inquiry.
 
-The mathematical view checks the addition. The information view examines how the value represents its source record. Both concern the same result, but they answer different questions:
+The attribution problem is specified, but the application behind the numbers is not. If R17 belongs to a spreadsheet, does the mathematically correct total make sense in that larger context? What ontology dimensions should be considered? At first glance, the AI might settle on a balance of accounts or some other accounting exercise. Could that framing overlook physics and harmonics, economics and business, music and measures, or religion and theology? For example, a symbolic reading of 7 + 5 = 12 could associate covenant completion (7) and divine grace (5) with perfect organizational structure and governance (12). Such a reading concerns what the numbers represent; it does not change the arithmetic equality.
+
+The prism keeps plausible interpretations available while further context guides a bounded selection of useful lenses. It can retain possibilities without developing every one, and further context may narrow the inquiry without settling it completely.
+
+Returning to the stated R17/R18 error, the mathematical view checks the addition. The information view examines how the value represents its source record. Both concern the same result, but they answer different questions:
 
 | Lens | Question in this case | What it contributes |
 |---|---|---|

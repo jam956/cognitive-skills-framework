@@ -14,7 +14,7 @@ This is **label decomposition** applied to a process. *Abstraction* separates th
 
 The combination exposes a distinction that the opening sentence hides. A checker may establish that `7 + 5 = 12` while failing to establish that the record was handled appropriately. If the reporter attaches that approval to `R18`, the arithmetic agreement survives while the workflow's claim fails. We can now ask which relationship needs repair instead of asking vaguely for “better checking.”
 
-Let's say the receiver of the spreadsheet is dissatisfied with the result because the checker was at fault.  Was it because the total was not properly formatted, reported as a value instead of a boolean, not to be reported unless the total crossed a certain threshold, not forwarded to another receiver?  These possible errors are due to a loss of a defined dynamical (what it does) for the checker.
+Now consider a separate diagnostic case: the receiver of a spreadsheet is dissatisfied, and an inspection locates a fault in the checking role. Was the total improperly formatted or reported as a value instead of a Boolean? Should it have been withheld unless it crossed a certain threshold, or forwarded to another receiver? These questions expose what an underspecified checking function or handoff can leave open. Some concern what the checker does; others concern the conditions governing it or the recipient to which its result is bound. The following chapters separate those questions.
 
 The description remains a stipulated account of the task. Whether a particular checker performs it requires evidence about that checker.
 
