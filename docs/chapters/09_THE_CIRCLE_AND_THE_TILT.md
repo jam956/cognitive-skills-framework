@@ -8,15 +8,17 @@ The circle and the tilt make possible search directions visible. The circle chan
 
 ## 1. Keep the question at the center
 
-Begin with a proposal: open the original notebooks to readers. A collection that cannot be studied has lost much of its purpose. From this position, restrictions look like the principal obstacle.
+Begin with a **direct answer**: open the original notebooks to readers. A collection that cannot be studied has lost much of its purpose. From this position, restrictions look like the principal obstacle.
 
 Across the circle, the opposing proposal also has a reason: restrict original handling. A damaged page cannot be restored simply because access was well intentioned. Unrestricted use can consume the evidence that makes future study possible.
 
 These positions can be called **thesis** and **antithesis**. They oppose one another as proposals while addressing the same collection and the same larger question. Defending a proposal and preserving that question are different things.
 
-![A clock-like dial with thesis and antithesis opposed across a shared question, and paradox and synthesis at the sides.](../figures/09_circle_compass.svg)
+![Four quadrants around a shared question: thesis upper left, antithesis lower left, alternatives lower right and synthesis upper right. The vertical axis points to direct answer above and paradox below.](../figures/09_circle_compass.svg)
 
-*The dial keeps the question in view as the inquiry changes direction. Its labels mark possible positions rather than a required sequence.*
+*A direct answer responds within the opening frame; a paradox retains a tension that frame has not resolved.*
+
+On this map, **thesis** develops an opening answer, **antithesis** tests it, **alternatives** changes assumptions or arrangements, and **synthesis** combines compatible relationships. A counterfactual is one possible alternative. The quadrants can overlap; they name directions in an inquiry rather than a fixed sequence.
 
 Other positions can introduce different opening hours, shorter appointments or stricter eligibility. They alter the amount or distribution of handling. Examining them can reveal a useful arrangement even when no more radical change is needed.
 
@@ -42,13 +44,13 @@ A reader tracing changes in vocabulary may need a searchable transcription and c
 
 The distinction adds a dimension to the opening comparison: **the kind of research need and the form of access that can serve it**. We can now consider more than an undifferentiated increase or decrease in handling.
 
-![An oblique circle plane with evaluation paths above and below it, showing escape and entrapment.](../figures/09_yz_tilt.svg)
+![An oblique circle plane and horizon, with a shaded upper orbit for potential escape conditions and a lower orbit for conditions that strengthen the paradox.](../figures/09_yz_tilt.svg)
 
-*Above and below show alternative outcomes of evaluation. The return path tests whether a changed relationship answers the original question.*
+*The upper orbit tests conditions that could release the paradox; the lower tests conditions that strengthen it. Either can reveal something consequential.*
 
-The earlier Prism vocabulary called this a **YZ tilt** or paradox escape. Moving beyond the opening plane exposes conditions for evaluation: a changed relationship may release the difficulty, or the same limitation may persist in another form.
+The earlier Prism vocabulary called this a **YZ tilt** or paradox escape. Moving beyond the opening plane exposes conditions for evaluation: an added distinction may open a solution, while another condition may make the tension harder to resolve.
 
-Here, *label decomposition* opens the compressed word “access.” *Classification* relates each request to its evidence needs. *Dimensional lift* allows those relationships to vary independently of the total amount of handling. Together these moves make a different arrangement conceivable. Renaming the difficulty alone would leave that work undone.
+Here, *label decomposition* opens the compressed word “access.” *Classification* relates each request to its evidence needs. *Dimensional lift* allows those relationships to vary independently of the total amount of handling. Together these moves make a different arrangement conceivable. An adequate copy may release a textual request from original handling. If the copy is unreadable and the original too fragile to examine, the conditions strengthen the tension. Changing the view settles neither result by itself.
 
 ## 4. Return with an arrangement that preserves the concern
 
@@ -66,14 +68,14 @@ Sometimes the resulting distinction supports a workable synthesis. Sometimes it 
 
 ## 5. Bind the analogy to the cognitive tools
 
-The analogy becomes useful to an application designer when its movements can be related to explicit operations. The following chapters develop that division of work:
+The analogy becomes useful to an application designer when its movements can be related to explicit operations. The following chapters and reference guides develop that division of work:
 
 | Movement in the example | Where the tools contribute |
 |---|---|
 | Retain the shared question and its consequential relationships. | [KCE](08_KEY_CONCEPT_EXTRACTION.md) develops the anchor; the [Coupler](07_PRISM_COUPLER.md) binds its participants and conditions. |
-| Select a turn, inversion or added distinction. | [CTR](10_COGNITIVE_TRANSFORM_REGISTRY.md) names transformations and what they must preserve. |
-| Develop the arrangements the changed view permits. | [ETE](11_EXPLORATION_TRANSFORM_ENGINE.md) constructs alternatives with their dependencies and limits. |
-| Examine what each arrangement actually supports. | [PSPP](12_PARALLEL_SYSTEM_COMPARISON.md) compares candidates and retains grounds for a choice or an unresolved result. |
+| Select a turn, inversion or added distinction. | [CTR](../skills/CTR.md) names transformations and what they must preserve. |
+| Develop the arrangements the changed view permits. | [ETE](10_EXPLORATION_TRANSFORM_ENGINE.md) constructs alternatives with their dependencies and limits. |
+| Examine what each arrangement actually supports. | [PSPP](11_PARALLEL_SYSTEM_COMPARISON.md) compares candidates and retains grounds for a choice or an unresolved result. |
 | Revisit a particular remaining difficulty. | [CREM](../skills/CREM.md) can address conflicting relationships; [CEC](../skills/CEC.md) can examine consequential order; [DARE/IDCM](../skills/DARE.md) can inspect a frame or rejection that concealed something important. |
 
 The full circle is not one compulsory route through these modules. A direct comparison may suffice. A difficult antithesis or paradox may make the tilt especially useful because the opening alternatives cannot yet express a needed relationship.
@@ -82,8 +84,8 @@ A bounded request can expose the movement:
 
 > Use the circle-and-tilt analogy for the fragile notebooks. Keep meaningful study and future preservation in view. Develop the case for original access and the case for restricting handling. Identify what both positions assume about access. Consider whether different research needs require different evidence carriers, then return a possible arrangement to the original concerns. State a request it could serve and one it could leave unresolved. Use only the movements that change the inquiry.
 
-The next chapter makes transformation choice explicit: which movement should be tried, what should it preserve, and how should its consequences be checked?
+The next chapter develops the arrangements these movements make possible, retaining the conditions that comparison will need.
 
 Reference: [CTR transformation definitions](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) · [ETE specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) · [historical circle-and-tilt context](../HISTORY.md#the-earlier-circle-and-tilt).
 
-[Previous: KCE: Extracting a Reusable Concept](08_KEY_CONCEPT_EXTRACTION.md) · [Next: The Cognitive Transformation Registry](10_COGNITIVE_TRANSFORM_REGISTRY.md)
+[Previous: KCE: Extracting a Reusable Concept](08_KEY_CONCEPT_EXTRACTION.md) · [Next: The Exploration and Transform Engine](10_EXPLORATION_TRANSFORM_ENGINE.md)

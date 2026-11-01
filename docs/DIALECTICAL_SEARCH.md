@@ -1,6 +1,6 @@
 # The Circle and the Tilt
 
-The worked circle-and-tilt explanation is now [Chapter 9 of the main book](chapters/09_THE_CIRCLE_AND_THE_TILT.md), with the compass and YZ-tilt graphics and links to the cognitive tools.
+The worked circle-and-tilt explanation is now [Chapter 9 of the main book](chapters/09_THE_CIRCLE_AND_THE_TILT.md), with the quadrant and orbital-tilt graphics and links to the cognitive tools.
 
 This reference page retains the earlier section addresses for existing links.
 

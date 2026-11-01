@@ -1,6 +1,6 @@
 # PSPP: decide what the exploration has earned
 
-For the extended treatment, see [Chapter 12: PSPP: Comparing Candidate Systems](../chapters/12_PARALLEL_SYSTEM_COMPARISON.md).
+For the extended treatment, see [Chapter 11: PSPP: Comparing Candidate Systems](../chapters/11_PARALLEL_SYSTEM_COMPARISON.md).
 
 The archive now has several proposals. One protects the originals by severely restricting handling. Another serves some readers with reproductions. A third combines reproductions with supervised access for questions about the physical object.
 

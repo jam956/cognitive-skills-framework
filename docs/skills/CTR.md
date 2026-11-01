@@ -1,7 +1,5 @@
 # CTR: choose a transformation deliberately
 
-For the extended treatment, see [Chapter 10: The Cognitive Transformation Registry](../chapters/10_COGNITIVE_TRANSFORM_REGISTRY.md).
-
 An archive is caught between opening fragile notebooks to readers and protecting them from handling. Defend access and preservation starts to look like obstruction. Defend preservation and access starts to look careless. The argument can keep changing sides without changing shape.
 
 CTR gives names to the movements that might help. A rotation changes the view of the same relationship. An inversion develops its opposing direction. A dimensional lift introduces a distinction that the opening frame could not express.

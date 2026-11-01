@@ -1,33 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="920" viewBox="0 0 1120 920" role="img" aria-labelledby="title desc">
-  <title id="title">The tilt: evaluate conditions beyond the opening plane</title>
-  <desc id="desc">The same conceptual dial is seen obliquely as a thin circular plane. From the paradox position a blue path rises above the plane, changes its relation, and returns to the shared question. An amber path passes below the plane and repeats a loop: the limiting condition remains. Escape and entrapment are outcomes to test, not consequences of physical elevation. The chapter supplies the conditions and concrete case.</desc>
-  <defs>
-    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.5px}.label{font-size:25px;font-weight:600}.outcome{font-size:29px;font-weight:600}</style>
-    <linearGradient id="plane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f0f5"/><stop offset="0.55" stop-color="#fdfdfb"/><stop offset="1" stop-color="#f6ead9"/></linearGradient>
-    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c9d5dd"/><stop offset="1" stop-color="#ebeff1"/></linearGradient>
-    <marker id="blue" viewBox="0 0 12 12" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#316b96"/></marker>
-    <marker id="amber" viewBox="0 0 12 12" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#a57236"/></marker>
-  </defs>
-  <rect width="1120" height="920" fill="#fdfdfb"/>
-  <path d="M560 165V760" fill="none" stroke="#d2d9df" stroke-width="1.5" stroke-dasharray="5 9"/>
-  <path d="M870 440C930 565 857 728 727 718C599 708 611 605 711 612C805 619 827 720 740 750C699 764 657 748 635 720" fill="none" stroke="#a57236" stroke-width="4.5" stroke-linecap="round" marker-end="url(#amber)"/>
-  <path d="M250 440A310 122 0 0 0 870 440V457A310 122 0 0 1 250 457Z" fill="url(#rim)" stroke="#b3c1ca" stroke-width="1"/>
-  <ellipse cx="560" cy="440" rx="310" ry="122" fill="url(#plane)" stroke="#889ca9" stroke-width="1.8"/>
-  <path d="M250 440A310 122 0 0 1 870 440" fill="none" stroke="#93a5b0" stroke-width="1.6" stroke-dasharray="5 7"/>
-  <ellipse cx="560" cy="440" rx="292" ry="113" fill="none" stroke="#d7e0e5" stroke-width="1"/>
-  <path d="M560 318V562M250 440H870" fill="none" stroke="#aebbc4" stroke-width="1.2" stroke-dasharray="4 7"/>
-  <g stroke="#8196a4" stroke-width="2">
-    <path d="M560 318V333M560 547V562M250 440H272M848 440H870"/>
-    <path d="M405 334L414 345M715 334L706 345M292 379L311 385M828 379L809 385M292 501L311 495M828 501L809 495M405 546L414 535M715 546L706 535"/>
-  </g>
-  <path d="M870 440C864 278 766 170 590 165C419 160 377 249 437 339C464 379 493 404 514 420" fill="none" stroke="#316b96" stroke-width="4.5" stroke-linecap="round" marker-end="url(#blue)"/>
-  <circle cx="870" cy="440" r="6" fill="#75618c"/>
-  <ellipse cx="560" cy="440" rx="77" ry="32" fill="#fdfdfb" stroke="#95a6b0" stroke-width="1.2"/>
-  <text x="560" y="447" text-anchor="middle" font-size="19" font-weight="600">QUESTION</text>
-  <text x="560" y="288" text-anchor="middle" class="label" style="fill:#316b96">THESIS</text>
-  <text x="560" y="614" text-anchor="middle" class="label" style="fill:#a57236">ANTITHESIS</text>
-  <text x="974" y="449" text-anchor="middle" class="label" style="fill:#75618c">PARADOX</text>
-  <text x="142" y="449" text-anchor="middle" class="label" style="fill:#486b70">SYNTHESIS</text>
-  <text x="590" y="104" text-anchor="middle" class="outcome" style="fill:#316b96">ESCAPE</text>
-  <text x="727" y="826" text-anchor="middle" class="outcome" style="fill:#a57236">ENTRAPMENT</text>
+<title id="title">Conditions above and below the opening plane</title>
+<desc id="desc">The same quadrant dial is seen obliquely as a circular plane on a horizontal horizon. An inclined blue orbit shades the region above the horizon for conditions that may release a paradox. A complementary amber orbit shades the region below for conditions that strengthen the paradox. Both evaluations can be informative. Their placement illustrates different condition sets rather than inherent merit or measured model geometry.</desc>
+<defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.5px}.condition{font-size:28px;font-weight:600}.pole{font-size:23px;font-weight:600}</style>
+<linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cbd7df"/><stop offset="1" stop-color="#eff2f3"/></linearGradient>
+</defs>
+<rect width="1120" height="920" fill="#fdfdfb"/>
+<path d="M250 460C300 110 820 110 870 460Z" fill="#d9e9f5" opacity=".6"/>
+<path d="M250 460C300 810 820 810 870 460Z" fill="#f1ddbf" opacity=".55"/>
+<path d="M250 460A310 112 0 0 0 870 460V475A310 112 0 0 1 250 475Z" fill="url(#rim)" stroke="#b5c2ca" stroke-width="1"/>
+<ellipse cx="560" cy="460" rx="310" ry="112" fill="#fdfdfb" stroke="#8b9eaa" stroke-width="1.8"/>
+<path d="M560 460H250A310 112 0 0 1 560 348Z" fill="#eaf2f8"/>
+<path d="M560 460V348A310 112 0 0 1 870 460Z" fill="#edf5f1"/>
+<path d="M560 460V572A310 112 0 0 1 250 460Z" fill="#faf0e2"/>
+<path d="M560 460H870A310 112 0 0 1 560 572Z" fill="#f2eef8"/>
+<ellipse cx="560" cy="460" rx="310" ry="112" fill="none" stroke="#8b9eaa" stroke-width="1.8"/>
+<ellipse cx="560" cy="460" rx="292" ry="105" fill="none" stroke="#d5dfe5" stroke-width="1"/>
+<path d="M560 348V572" fill="none" stroke="#afbdc6" stroke-width="1.2" stroke-dasharray="4 7"/>
+<path d="M100 460H1020" fill="none" stroke="#7e94a3" stroke-width="1.4" stroke-dasharray="6 8"/>
+<path d="M250 460C380 525 740 525 870 460" fill="none" stroke="#8db3d0" stroke-width="1.8" stroke-dasharray="5 7" opacity=".65"/>
+<path d="M250 460C380 395 740 395 870 460" fill="none" stroke="#c6a175" stroke-width="1.8" stroke-dasharray="5 7" opacity=".65"/>
+<path d="M250 460C300 110 820 110 870 460" fill="none" stroke="#316b96" stroke-width="3.5"/>
+<path d="M250 460C300 810 820 810 870 460" fill="none" stroke="#a57236" stroke-width="3.5"/>
+<g fill="#7d91a0"><circle cx="250" cy="460" r="4.5"/><circle cx="870" cy="460" r="4.5"/></g>
+<g stroke="#8096a4" stroke-width="1.8"><path d="M560 348V361M560 559V572M250 460H270M850 460H870M405 363L414 373M715 363L706 373M405 557L414 547M715 557L706 547"/></g>
+<ellipse cx="560" cy="460" rx="77" ry="31" fill="#fdfdfb" stroke="#96a8b4" stroke-width="1.3"/>
+<text x="560" y="467" text-anchor="middle" font-size="19" font-weight="600">QUESTION</text>
+<text x="560" y="326" text-anchor="middle" class="pole">DIRECT ANSWER</text>
+<text x="560" y="618" text-anchor="middle" class="pole">PARADOX</text>
+<text x="560" y="124" text-anchor="middle" class="condition" style="fill:#316b96">ESCAPE CONDITIONS</text>
+<text x="560" y="830" text-anchor="middle" class="condition" style="fill:#a57236">STRENGTHENING CONDITIONS</text>
 </svg>

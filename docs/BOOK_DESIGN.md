@@ -33,19 +33,18 @@ Four separate tool chapters follow the sentence-thought introduction:
 
 The chapters reuse a small calculator/checker/reporter case. Each develops one tool through a concrete difficulty, its supporting transformations, the capability their combination adds, an applicable limit, and a bounded request. Reusing the case lets the new distinction carry the reader's attention. The ontological chapter explains how the existing KCE and CDP definitions contribute; it does not invent another registered module.
 
-Five further chapters develop how an account can become reusable and how alternatives can be constructed and compared:
+Four further chapters develop how an account can become reusable and how alternatives can be constructed and compared:
 
 | Chapter | Central work |
 |---|---|
 | [8. KCE: Extracting a Reusable Concept](chapters/08_KEY_CONCEPT_EXTRACTION.md) | Recover a governing relation, retain its conditions, and specify it in another situation. |
 | [9. The Circle and the Tilt](chapters/09_THE_CIRCLE_AND_THE_TILT.md) | Follow supporting and opposing views of a shared question, then introduce a distinction the opening frame could not express. |
-| [10. The Cognitive Transformation Registry](chapters/10_COGNITIVE_TRANSFORM_REGISTRY.md) | Select movements that preserve the concern while changing the view or arrangement. |
-| [11. The Exploration and Transform Engine](chapters/11_EXPLORATION_TRANSFORM_ENGINE.md) | Develop alternatives with consequential differences, dependencies, and return paths. |
-| [12. PSPP: Comparing Candidate Systems](chapters/12_PARALLEL_SYSTEM_COMPARISON.md) | Compare what those alternatives support and retain the grounds for selection, combination or deferral. |
+| [10. The Exploration and Transform Engine](chapters/10_EXPLORATION_TRANSFORM_ENGINE.md) | Develop alternatives with consequential differences, dependencies, and return paths. |
+| [11. PSPP: Comparing Candidate Systems](chapters/11_PARALLEL_SYSTEM_COMPARISON.md) | Compare what those alternatives support and retain the grounds for selection, combination or deferral. |
 
 KCE returns here after its introduction in Chapter 3 so the completed representation can show what a generalization must preserve. This is an explanatory reading order. The source architecture places provisional KCE extraction before domain selection and coupling; an application can revisit it as its account changes. The book does not prescribe a universal execution pipeline.
 
-Chapters 9–12 share the archive's access-and-preservation problem. The circle and the tilt first make possible movements visible. CTR then names and selects them, ETE develops arrangements, and PSPP compares what those arrangements support. A settled local point becomes the starting point for the next consequential question.
+Chapters 9–11 share the archive's access-and-preservation problem. The circle and the tilt first make possible movements visible. ETE develops arrangements, and PSPP compares what those arrangements support. The CTR reference guide remains available for naming and selecting transformations. A settled local point becomes the starting point for the next consequential question.
 
 The following conceptual sequence connects these chapters to the remaining reader guides.
 
@@ -69,4 +68,4 @@ The main prose explains. Compact tables support comparisons; diagrams can show r
 
 Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](EVALUATION.md).
 
-The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–12 provide the current reading route; the other individual guides remain starting pages for further development.
+The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–11 provide the current reading route; the other individual guides remain starting pages for further development.

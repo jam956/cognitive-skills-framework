@@ -1,3 +1,5 @@
-# The Cognitive Transformation Registry
+# Cognitive Transformation Registry reference
 
-This chapter is now [Chapter 10: The Cognitive Transformation Registry](10_COGNITIVE_TRANSFORM_REGISTRY.md). The book sequence was renumbered when **The Circle and the Tilt** became Chapter 9.
+CTR is available in the [reference guide](../skills/CTR.md) and its linked source specification.
+
+Continue the main book with [Chapter 9: The Circle and the Tilt](09_THE_CIRCLE_AND_THE_TILT.md) or [Chapter 10: The Exploration and Transform Engine](10_EXPLORATION_TRANSFORM_ENGINE.md).

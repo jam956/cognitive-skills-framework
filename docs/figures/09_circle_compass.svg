@@ -1,86 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="920" viewBox="0 0 1120 920" role="img" aria-labelledby="title desc">
-  <title id="title">The circle: a dial of possible directions</title>
-  <desc id="desc">A numberless clock face holds a shared question at its pivot. Thesis and antithesis face one another vertically; paradox and synthesis lie on the lateral axis. Opposed hands and two partial curved arrows suggest changes of position without prescribing a full sequence. The direction labels are conceptual bearings.</desc>
-  <defs>
-    <style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.6px}.label{font-size:28px;font-weight:600}</style>
-    <marker id="blue" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="9" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#316b96"/></marker>
-    <marker id="amber" viewBox="0 0 12 12" markerWidth="10" markerHeight="10" refX="9" refY="6" orient="auto-start-reverse" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#a57236"/></marker>
-  </defs>
-  <rect width="1120" height="920" fill="#fdfdfb"/>
-  <path d="M280 460A280 280 0 0 1 840 460Z" fill="#edf4f9"/>
-  <path d="M840 460A280 280 0 0 1 280 460Z" fill="#faf1e5"/>
-  <circle cx="560" cy="460" r="280" fill="none" stroke="#7b8d98" stroke-width="2"/>
-  <circle cx="560" cy="460" r="267" fill="none" stroke="#d5dfe4" stroke-width="1"/>
-  <g>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(0 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(6 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(12 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(18 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(24 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(30 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(36 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(42 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(48 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(54 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(60 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(66 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(72 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(78 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(84 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(90 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(96 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(102 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(108 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(114 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(120 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(126 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(132 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(138 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(144 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(150 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(156 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(162 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(168 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(174 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(180 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(186 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(192 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(198 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(204 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(210 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(216 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(222 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(228 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(234 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(240 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(246 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(252 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(258 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(264 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(270 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(276 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(282 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(288 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(294 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(300 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(306 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(312 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(318 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(324 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="205" transform="rotate(330 560 460)" stroke="#74828b" stroke-width="2.5"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(336 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(342 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(348 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-    <line x1="560" y1="184" x2="560" y2="195" transform="rotate(354 560 460)" stroke="#bac3c8" stroke-width="1.2"/>
-  </g>
-  <path d="M560 435V242" fill="none" stroke="#316b96" stroke-width="4" marker-end="url(#blue)"/>
-  <path d="M560 485V677" fill="none" stroke="#a57236" stroke-width="4" marker-end="url(#amber)"/>
-  <path d="M600 215A248 248 0 0 1 805 424" fill="none" stroke="#316b96" stroke-width="3" marker-end="url(#blue)"/>
-  <path d="M520 705A248 248 0 0 1 315 496" fill="none" stroke="#a57236" stroke-width="3" marker-end="url(#amber)"/>
-  <circle cx="560" cy="460" r="76" fill="#fdfdfb" stroke="#9baab3" stroke-width="1.5"/>
-  <text x="560" y="467" text-anchor="middle" font-size="20" font-weight="600">QUESTION</text>
-  <text x="560" y="112" text-anchor="middle" class="label" style="fill:#316b96">THESIS</text>
-  <text x="560" y="828" text-anchor="middle" class="label" style="fill:#a57236">ANTITHESIS</text>
-  <text x="972" y="470" text-anchor="middle" class="label" style="fill:#75618c">PARADOX</text>
-  <text x="144" y="470" text-anchor="middle" class="label" style="fill:#486b70">SYNTHESIS</text>
+<title id="title">Four directions around a prompt and response</title>
+<desc id="desc">A question sits at the center of a numberless dial. The vertical axis points to direct answer at twelve o'clock and paradox at six. Thesis occupies the upper-left quadrant, antithesis the lower-left, alternatives the lower-right, and synthesis the upper-right. These are overlapping directions of inquiry, not mandatory stages or an exhaustive classification.</desc>
+<defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#263b47;letter-spacing:1.2px}.pole{font-size:29px;font-weight:600}.quadrant{font-size:24px;font-weight:600}</style>
+<marker id="axis-arrow" viewBox="0 0 12 12" markerWidth="11" markerHeight="11" refX="9" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1L11 6L1 11Z" fill="#647d8e"/></marker>
+</defs>
+<rect width="1120" height="920" fill="#fdfdfb"/>
+<path d="M560 460H280A280 280 0 0 1 560 180Z" fill="#eaf2f8"/>
+<path d="M560 460V180A280 280 0 0 1 840 460Z" fill="#edf5f1"/>
+<path d="M560 460V740A280 280 0 0 1 280 460Z" fill="#faf0e2"/>
+<path d="M560 460H840A280 280 0 0 1 560 740Z" fill="#f2eef8"/>
+<circle cx="560" cy="460" r="280" fill="none" stroke="#7b8f9c" stroke-width="2"/>
+<circle cx="560" cy="460" r="267" fill="none" stroke="#d8e1e5" stroke-width="1"/>
+<g><line x1="560" y1="184" x2="560" y2="205" transform="rotate(0 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(6 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(12 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(18 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(24 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(30 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(36 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(42 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(48 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(54 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(60 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(66 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(72 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(78 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(84 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(90 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(96 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(102 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(108 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(114 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(120 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(126 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(132 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(138 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(144 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(150 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(156 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(162 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(168 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(174 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(180 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(186 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(192 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(198 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(204 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(210 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(216 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(222 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(228 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(234 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(240 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(246 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(252 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(258 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(264 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(270 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(276 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(282 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(288 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(294 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(300 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(306 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(312 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(318 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(324 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="205" transform="rotate(330 560 460)" stroke="#7e8f99" stroke-width="2.2"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(336 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(342 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(348 560 460)" stroke="#bdc7cd" stroke-width="1.1"/>
+<line x1="560" y1="184" x2="560" y2="194" transform="rotate(354 560 460)" stroke="#bdc7cd" stroke-width="1.1"/></g>
+<path d="M280 460H840" fill="none" stroke="#b0bec7" stroke-width="1.5" stroke-dasharray="5 7"/>
+<path d="M560 445V210M560 475V710" fill="none" stroke="#647d8e" stroke-width="2.5" marker-end="url(#axis-arrow)"/>
+<text x="414" y="340" text-anchor="middle" class="quadrant" style="fill:#316b96">THESIS</text>
+<text x="706" y="340" text-anchor="middle" class="quadrant" style="fill:#47796b">SYNTHESIS</text>
+<text x="418" y="586" text-anchor="middle" class="quadrant" style="fill:#a57236">ANTITHESIS</text>
+<text x="698" y="586" text-anchor="middle" class="quadrant" style="fill:#796391">ALTERNATIVES</text>
+<circle cx="560" cy="460" r="72" fill="#fdfdfb" stroke="#9aaab4" stroke-width="1.5"/>
+<text x="560" y="467" text-anchor="middle" font-size="20" font-weight="600">QUESTION</text>
+<text x="560" y="112" text-anchor="middle" class="pole">DIRECT ANSWER</text>
+<text x="560" y="828" text-anchor="middle" class="pole">PARADOX</text>
 </svg>

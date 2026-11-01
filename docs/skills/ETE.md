@@ -1,6 +1,6 @@
 # ETE: explore what the changed view makes possible
 
-For the extended treatment, see [Chapter 11: The Exploration and Transform Engine](../chapters/11_EXPLORATION_TRANSFORM_ENGINE.md).
+For the extended treatment, see [Chapter 10: The Exploration and Transform Engine](../chapters/10_EXPLORATION_TRANSFORM_ENGINE.md).
 
 Recognizing a missing distinction does not yet produce a workable arrangement. In the archive example, separating access to text from access to the physical notebook opens several routes: reproductions, supervised handling, a staged combination or continued restrictions where neither route is adequate.
 
