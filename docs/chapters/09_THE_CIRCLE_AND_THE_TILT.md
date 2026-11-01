@@ -44,9 +44,9 @@ A reader tracing changes in vocabulary may need a searchable transcription and c
 
 The distinction adds a dimension to the opening comparison: **the kind of research need and the form of access that can serve it**. We can now consider more than an undifferentiated increase or decrease in handling.
 
-![Two orbital ellipses share a focus at the prompt. Their other foci lie outside the picture; the upper orbit shows escape conditions and the lower shows strengthening conditions.](../figures/09_yz_tilt.svg)
+![Two orbital ellipses share a focus at the paradox position on the circle's front edge. Prompt remains at the circle's center. The upper orbit shows escape conditions and the lower shows strengthening conditions.](../figures/09_yz_tilt.svg)
 
-*Each orbit keeps one focus at the prompt while extending beyond the view. Its conditions may release or strengthen the paradox.*
+*At the paradox, one orbit explores conditions that could release the tension; the other explores conditions that strengthen it. Their far foci lie beyond the view.*
 
 The earlier Prism vocabulary called this a **YZ tilt** or paradox escape. Moving beyond the opening plane exposes conditions for evaluation: an added distinction may open a solution, while another condition may make the tension harder to resolve.
 
