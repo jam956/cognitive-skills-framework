@@ -2,9 +2,9 @@
 
 KCE gives us a way to preserve a governing relationship while changing its level of description. A stable anchor also makes another movement possible: examine the same problem from different positions without losing what the inquiry is about.
 
-Take for example a library archive which holds fragile research notebooks. Readers want to study them; handling is gradually damaging the pages. Some researchers need only the words. Others need to study the binding, paper, or short-hand marks in the margins that a reproduction might not have preserved. The shared question is how to make the collection useful while keeping it available for future readers.
+Take for example a library archive which holds fragile research notebooks. Readers want to study them; handling is gradually damaging the pages. Some researchers need only the words. Others need to study the binding, paper, or shorthand marks in the margins that a reproduction might not have preserved. The shared question is how to make the collection useful while keeping it available for future readers.
 
-The circle and the tilt make possible search directions visible. The circle changes the view of a shared question. A tilt changes the terms in which its alternatives can be expressed. The archive example lets us follow both movements before the following chapters give them more explicit jobs within the cognitive tools.  This construct is merely for illustrative purposes and does not imply anything of the internal compute mechanisms.
+The circle and the tilt make possible search directions visible. The circle changes the view of a shared question. A tilt changes the terms in which its alternatives can be expressed. The archive example lets us follow both movements before the following chapters give them more explicit jobs within the cognitive tools.  This construct is merely for illustrative purposes and does not imply anything about the internal compute mechanisms.
 
 ## 1. Keep the question or prompt at the center
 
@@ -12,7 +12,7 @@ Begin with a **direct answer**: open the original notebooks to readers. After al
 
 Across the circle, the opposing proposal also has a reason: restrict handling of the originals. A damaged page cannot be restored simply because access was well intentioned. Unrestricted use may consume the notebooks which might preclude future study.
 
-These positions can be called **thesis** and **antithesis**. Studying the material requires access.  Access to the material may cause damage.  These competing claims oppose one another as proposals while addressing the same collection and the same larger question.  Defending a proposal and preserving the constraints are different things.
+These positions can be called **thesis** and **antithesis**. Studying the material requires access.  Access to the material may cause damage.  These claims support competing proposals while addressing the same collection and the same larger question.  Defending a proposal and preserving the constraints are different things.
 
 ![A bold upward arrow through the prompt, with direct answer curved above its tip and paradox below its tail. Thesis, antithesis, alternatives and synthesis occupy the four quadrants.](../figures/09_circle_compass.svg)
 
@@ -40,7 +40,7 @@ A practical paradox therefore gives the next move a target: the assumption linki
 
 The useful movement now is to reconsider what counts as access.
 
-A reader tracing changes in vocabulary may need a searchable transcription and clear page images. A researcher examining a repair to the binding needs the original object. Both seek access, but the level of access to answewr their questions differ.
+A reader tracing changes in vocabulary may need a searchable transcription and clear page images. A researcher examining a repair to the binding needs the original object. Both seek access, but the levels of access needed to answer their questions differ.
 
 The distinction adds a dimension to the opening comparison: **the kind of research need and the form of access that can serve it**. We can now consider more than an undifferentiated increase or decrease in handling.
 

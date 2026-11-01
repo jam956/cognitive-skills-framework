@@ -6,9 +6,11 @@ The **Exploration and Transform Engine**, or **ETE**, develops those alternative
 
 The [circle-and-tilt example](09_THE_CIRCLE_AND_THE_TILT.md) supplied possible directions. ETE now develops the arrangements those movements permit. The [CTR reference guide](../skills/CTR.md) can help name and select a transformation when that choice needs to be explicit. The distinction becomes clearer when one useful insight develops into several materially different arrangements.
 
-## 1. Turn a distinction into candidate regimes
+## 1. Turn a distinction into candidate access regimes
 
 Return to the archive with fragile research notebooks. Its purpose includes meaningful study and preservation for future readers. Some requests concern the text; others may require the paper, ink or binding. Handling is currently restricted. We have not established whether suitable copies or enough supervisory capacity are available.
+
+An access regime here is a proposed policy for using the collection. The candidate system keeps that policy's processes, roles and operating conditions together.
 
 Four candidate arrangements can now be described:
 
@@ -23,7 +25,7 @@ Four candidate arrangements can now be described:
 
 The current arrangement remains a candidate. A more elaborate proposal has to offer something consequential before it earns further development.
 
-## 2. Vary the dynamicals separately from its conditions
+## 2. Vary the dynamicals separately from their conditions
 
 Consider the reproduction-led route. It changes the process by which textual material reaches a reader: consult a copy instead of handling the notebook. Now hold that process steady and vary a condition. A clear, complete reproduction may serve a transcription question; a copy with an unreadable passage may not. The same access route has different applicability under those conditions.
 

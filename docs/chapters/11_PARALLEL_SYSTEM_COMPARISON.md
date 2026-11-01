@@ -2,7 +2,9 @@
 
 The archive has several ways to approach access to its fragile notebooks. It could retain the current restrictions, offer supervised study of originals, use reproductions for suitable questions, or combine those routes according to the request. The [Exploration and Transform Engine](10_EXPLORATION_TRANSFORM_ENGINE.md) made these alternatives available. Their presence leaves a further question: which arrangement is justified by what we know?
 
-The tiered proposal may look attractive because it appears to reconcile access and preservation. It could also depend on copies that omit necessary detail or supervision the archive cannot provide. **PSPP—the ProblemSolving Parallel Pipeline—**organizes comparison of candidate systems, keeping their requirements and uncertainties attached to the decision.
+The tiered proposal may look attractive because it appears to reconcile access and preservation. It could also depend on copies that omit necessary detail or supervision the archive cannot provide. **PSPP—the Problem Solving Parallel Pipeline—**organizes comparison of candidate systems, keeping their requirements and uncertainties attached to the decision.
+
+The **v5.0-lite** artifact gives that pipeline a focused role: ETE develops the alternatives; PSPP compares what the exploration has produced. In the archive, its parallel structure is the set of alternatives held open for comparison. A model or application carries out the procedure; the JSON specifies no simultaneous-call schedule or worker count.
 
 ## 1. Bring the alternatives to the same question
 
@@ -19,7 +21,7 @@ The four candidates can be stated compactly:
 
 The existing arrangement remains a candidate. “Restricted” does not tell us that it blocks all study; it might already include supervised access. If a proposed supervised route merely renames what already happens, it supplies no additional alternative. Conversely, a small change to the present policy may serve the task without a larger redesign.
 
-*Abstraction* identifies the shared concern. *Concretization* supplies what each proposal would do for a particular request. *Comparison* then exposes substantive differences and duplicates. This **normalization** gives the alternatives a common basis without pretending they offer the same service.
+*Abstraction* identifies the shared concern. *Concretization* supplies what each proposal would do for a particular request. *Comparison* then exposes substantive differences and duplicates. This **normalization** gives the alternatives a common basis without pretending they offer the same service. Each candidate carries more than a name: it identifies who would do what, under which conditions, and how that arrangement serves the original concern.
 
 ## 2. Separate a failed requirement from a disadvantage
 
@@ -59,20 +61,31 @@ A model can also defer. If a material question requires original examination and
 
 The useful outcome is an account of what the alternatives have earned, including a conditional choice or a clearly located unresolved dependency.
 
+Before relying on a provisional choice, the comparison also asks how it responds to a changed condition. Reduced supervision may narrow a tiered arrangement; a newly identified omission in the copy may reopen a reproduction-led choice. This **fragility check** keeps the recommendation attached to the conditions that support it.
+
 ## 5. Keep the grounds available for return
 
 The decision should preserve why a branch was selected, rejected, combined, or left open. “Copies are inadequate” is too broad if the actual finding was that one copy omitted the binding evidence for one request. Retaining that scope allows a different copy or a different research question to reopen the comparison appropriately.
 
 *Abstraction* retains the governing reason; *scope preservation* keeps it attached to the evidence and task. A later *comparison* can then determine whether new circumstances change the result. The added capability is a decision that can be reconsidered without reconstructing the entire inquiry or inheriting an obsolete rejection.
 
-PSPP's selection packet and decision artifacts organize these grounds. They carry the chosen arrangement, alternatives, assumptions, checks, rejection reasons, and remaining uncertainties into the next stage. **CTR** supplies transformation choices; **ETE** develops alternatives; PSPP compares them. A capable model may use that division selectively within one response or an application may arrange it across separate steps. Together, these transformations help keep ontology, dynamics and regime in context while supporting directed exploration. Branching, pruning and stopping conditions keep attention on alternatives that could change the answer.
+PSPP's selection packet and decision artifacts organize these grounds. They carry the chosen arrangement, alternatives, assumptions, checks, rejection reasons, and remaining uncertainties into the next stage.
+
+| What leaves the comparison | What it carries in the archive example |
+|---|---|
+| Selected-system packet | Use an adequate reproduction for the wording request; retain the unmet original-examination requirement for the binding request. |
+| Decision artifacts | Why the copy route was selected, why the binding request remains unresolved, and which changed facts could reopen either judgment. |
+
+The final synthesis step, called the **Arbiter** in the specification, uses the selected-system packet to compose an answer to the original prompt. PSPP hands over the comparison and its grounds; an appropriate inspection still supplies any external finding on which the answer depends.
+
+**CTR** supplies transformation choices; **ETE** develops alternatives; PSPP compares them. A capable model may use that division selectively within one response or an application may arrange it across separate steps. Together, these transformations help keep ontology, dynamics and regime in context while supporting directed exploration. Branching, pruning and stopping conditions keep attention on alternatives that could change the answer.
 
 Further work follows the unresolved difficulty. **CEC** can examine a consequential order of actions. **CREM** can develop a changed relationship when coherent parties or perspectives still conflict. **DARE/IDCM** can review whether premature pruning concealed a useful route. These methods need not all run because a comparison occurred.
 
 A bounded request keeps the comparison inspectable:
 
-> Compare current restricted access, supervised originals, reproduction-led access, and tiered access for the fragile notebooks. Preserve meaningful study and collection preservation. Distinguish a wording request from a binding request. Leave copy adequacy, current permissions, and supervision unknown unless supplied. Retain the current arrangement unless a material reason rules it out. Identify duplicates, the checks that could change the choice, and any conditional selection or unresolved dependency. Give reasons tied to each request rather than an unsupported overall score.
+> Compare current restricted access, supervised originals, reproduction-led access, and tiered access for the fragile notebooks. Preserve meaningful study and collection preservation. Distinguish a wording request from a binding request. Leave copy adequacy, current permissions, and supervision unknown unless supplied. Retain the current arrangement unless a material reason rules it out. Identify duplicates, the checks that could change the choice, and any conditional selection or unresolved dependency. Give reasons tied to each request rather than an unsupported overall score. Return a selection packet for final synthesis and a decision record that carries unresolved checks forward.
 
-Reference: [PSPP v5.0-lite specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) · [PSPP reader guide](../skills/PSPP.md) · [CEC](../skills/CEC.md) · [CREM](../skills/CREM.md) · [DARE/IDCM](../skills/DARE.md).
+Reference: [PSPP v5.0-lite specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) · [PSPP reader guide](../skills/PSPP.md) · [CEC](../skills/CEC.md) · [CREM](../skills/CREM.md) · [DARE/IDCM](../skills/DARE.md) · [source and version notes](../PROVENANCE.md#pspps-numerical-policy).
 
 [Previous: The Exploration and Transform Engine](10_EXPLORATION_TRANSFORM_ENGINE.md) · [Next reader route: CREM](../skills/CREM.md)

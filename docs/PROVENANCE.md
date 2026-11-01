@@ -21,6 +21,15 @@ The project copy includes prose-first guidance and sentence-structure coupling a
 - The historical CREM PDF and the module's JSON specification reflect different stages of development. For the current documented split of ontology, dynamics and regime, use the v1.3 JSON and the skill guide.
 - Retired filenames are listed for migration context. They are not missing current components.
 
+## PSPP's numerical policy
+
+The [PSPP v5.0-lite artifact](../framework/PSPP_v5.0_CandidateSystemComparator.json) is preserved as published. Its comparison method is clear, while two policy details need a consistent interpretation in an implementation:
+
+- `lite_contract.dare_audit_surface` requires DARE review at pruning loss `>= 0.35` or fragility `>= 0.45`. The corresponding `operational_thresholds` are `0.45` and `0.55`. The file does not state a precedence rule or distinguish the two sets as separate stages.
+- The minimal example reports a top-branch score margin of `0.05` and sets DARE audit to `recommended: false`, although the lite contract requires review below `0.08`. The example merges contributions for the Arbiter but does not explain an exemption from that trigger.
+
+These are unresolved details within the source design. The chapter illustrates comparison and conditional selection without treating those numerical controls as calibrated measurements.
+
 ## External companions
 
 The specifications mention related components such as MPE, PSPE, ECE, an arbiter, memory curators, runtime monitors and provider-specific instrumentation. These are external interfaces or historical companion designs. Their mention does not imply that an implementation is bundled or that it runs when the documents are read.
