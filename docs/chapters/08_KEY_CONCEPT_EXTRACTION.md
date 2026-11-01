@@ -4,17 +4,17 @@ The checker approved version 1 of a calculation record. The reporter now holds v
 
 A software team encounters a similar difficulty. Its tests passed, but the artifact awaiting deployment was rebuilt afterward. The names and activities differ. What can be carried between these situations without treating them as the same event?
 
-**KCE—Key Concept Extraction—** makes that question explicit. It identifies a governing relationship, considers a useful level of generality, and retains the conditions that make the relationship applicable. *Elevation* describes the movement toward a more general concept; specification brings that concept into another case. Chapter 3 introduced this movement. We can now examine what the earlier prisms and Coupler help it preserve.
+**KCE—Key Concept Extraction—** makes that question explicit. It identifies a governing relationship, considers a useful level of generality, and retains the conditions that make the relationship applicable. *Elevation* describes the movement toward a more general concept; *specification* brings that concept down into another case. Chapter 3 introduced this movement. We can now examine what the earlier prisms and Coupler help it preserve.
 
 ## 1. Recover the relationship behind the incident
 
-“The reporter used the wrong version” describes the immediate problem. “Checking is important” offers a broader statement, but leaves the consequential relationship unstated. Neither yet explains what another designer should recognize in a different application.
+“The reporter used the wrong version” describes the immediate problem. “Checking is important” offers a broader statement, but leaves the consequential relationship unstated. Neither explains what yet another designer should have recognized in a different application.
 
 In the calculation case, the decision concerns an examined item. A later item is presented for publication. The rule requires a check applicable to that later item, and the existing decision does not establish one.
 
 One candidate concept is:
 
-> When a decision rests on examining a particular item, applying that decision to a changed item requires support that its scope still holds.
+> When a decision rests on examining a particular item, applying that decision to a changed item requires support that its rule still holds.
 
 The numbers `7`, `5`, and `12` can disappear from this description. The connection between the decision and its evidence cannot. Removing the numbers changes the level of description; removing that connection changes the thought.
 
@@ -38,11 +38,11 @@ Here, *label decomposition* opens “approval” into the claim it carries. *Com
 
 An abstraction can remain too close to the incident or move beyond what it supports. Consider three descriptions:
 
-| Description | What it retains or loses |
+| Description | Logical Inconsistency |
 |---|---|
 | R17 version 1 was checked; the reporter holds version 2. | Preserves the incident, with its reusable relation still implicit. |
 | A decision based on one item needs a supported scope before it is applied to a changed item. | Retains the relation while allowing different objects and implementations. |
-| Every change invalidates every earlier result. | Extends the claim beyond the evidence. |
+| Every change invalidates every earlier result. | Extends the claim beyond the evidence resulting in overchecking. |
 
 The third statement is decisive but excessive. The arithmetic result concerning version 1 remains valid. A change can also be irrelevant to the property being checked. Reusing evidence may be justified when the relevant object and conditions remain equivalent; that equivalence needs its own support.
 
@@ -62,7 +62,7 @@ Even a faithful description can foreground different relationships. The calculat
 | Preserve the scope of the evidence. | Does the earlier check establish the property now being claimed? |
 | Preserve the connection through the handoff. | Did the decision reach its recipient with enough information to apply it? |
 
-These descriptions overlap, but they can lead to different repairs. A missing identifier calls for a different intervention from an inadequate test or a decision stripped of its scope during transmission.
+These descriptions overlap, but they can lead to different repairs. A missing identifier calls for a different intervention from an inadequate test or from a decision stripped of its scope during transmission.
 
 KCE retains alternatives when choosing one would conceal a consequential uncertainty. The current question gives a working anchor its purpose. A request to repair the report may foreground identity; a request to reuse an earlier check may foreground evidence scope. Later findings can change that choice.
 
