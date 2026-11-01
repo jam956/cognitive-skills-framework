@@ -44,9 +44,9 @@ A reader tracing changes in vocabulary may need a searchable transcription and c
 
 The distinction adds a dimension to the opening comparison: **the kind of research need and the form of access that can serve it**. We can now consider more than an undifferentiated increase or decrease in handling.
 
-![A circle in perspective with Direct Answer on the left, Prompt at its center, and Paradox on the right. Upper and lower elliptical orbits share the Prompt focus and sweep toward Paradox; their far foci are beyond the right edge.](../figures/09_yz_tilt.svg)
+![Two complete tilted ellipses enclose sets of possible answers above and below the Paradox side of a circle in perspective. Prompt remains their shared near focus, with Direct Answer left and Paradox right.](../figures/09_yz_tilt.svg)
 
-*With Direct Answer left and Paradox right, both tilted orbits retain Prompt as their visible focus. Their other foci lie beyond the view.*
+*The upper ellipse encloses candidate answers under possible escape conditions; the lower encloses candidates under conditions that strengthen the paradox.*
 
 The earlier Prism vocabulary called this a **YZ tilt** or paradox escape. Moving beyond the opening plane exposes conditions for evaluation: an added distinction may open a solution, while another condition may make the tension harder to resolve.
 
