@@ -12,7 +12,9 @@ Consider the calculation workflow from Chapter 2. Record `R17`, version `v1`, co
 
 This is **label decomposition** applied to a process. *Abstraction* separates the checking function from the particular component named “checker.” *Decomposition* opens the function into actions. *Concretization* supplies the values, comparison rule, record identity, and expected decision.
 
-The combination exposes a distinction that the opening sentence hides. A checker may establish that `7 + 5 = 12` while failing to establish which record the result belongs to. If the reporter attaches that approval to `R18`, the arithmetic agreement survives while the workflow's claim fails. We can now ask which relationship needs repair instead of asking vaguely for “better checking.”
+The combination exposes a distinction that the opening sentence hides. A checker may establish that `7 + 5 = 12` while failing to establish that the record was handled appropriately. If the reporter attaches that approval to `R18`, the arithmetic agreement survives while the workflow's claim fails. We can now ask which relationship needs repair instead of asking vaguely for “better checking.”
+
+Let's say the receiver of the spreadsheet is dissatisfied with the result because the checker was at fault.  Was it because the total was not properly formatted, reported as a value instead of a boolean, not to be reported unless the total crossed a certain threshold, not forwarded to another receiver?  These possible errors are due to a loss of a defined dynamical (what it does) for the checker.
 
 The description remains a stipulated account of the task. Whether a particular checker performs it requires evidence about that checker.
 
