@@ -43,3 +43,5 @@ The [Reference section](docs/appendices/REFERENCE.md) brings together source fil
 Historical and editorial records remain in the archive. File identities and publication changes are recorded in the [source manifest](SOURCE_MANIFEST.json).
 
 Published under the [MIT License](LICENSE).
+
+**Contributed authorship:** Alex (AI collaborator), with Jimmy for concepts, direction and revision.

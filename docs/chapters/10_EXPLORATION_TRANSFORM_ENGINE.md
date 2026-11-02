@@ -4,7 +4,7 @@ Separating access to a notebook's contents from handling the original changes th
 
 The **Exploration and Transform Engine**, or **ETE**, develops those alternatives. It applies selected transformations to produce candidate systems: arrangements whose actors, actions, conditions and dependencies can be examined together. Its central question is what the changed view makes possible, and what each possibility requires.
 
-The [circle-and-tilt example](09_THE_CIRCLE_AND_THE_TILT.md) supplied possible directions. ETE now develops the arrangements those movements permit. The [CTR reference guide](02_WORKING_WITH_TRANSFORMATIONS.md#reference-examples-and-registry) can help name and select a transformation when that choice needs to be explicit. The distinction becomes clearer when one useful insight develops into several materially different arrangements.
+The [circle-and-tilt example](09_THE_CIRCLE_AND_THE_TILT.md) supplied possible directions. ETE now develops the arrangements those movements permit. The [CTR registry overview](02_WORKING_WITH_TRANSFORMATIONS.md#reference-examples-and-registry) can help name and select a transformation when that choice needs to be explicit. The distinction becomes clearer when one useful insight develops into several materially different arrangements.
 
 ## 1. Turn a distinction into candidate access regimes
 

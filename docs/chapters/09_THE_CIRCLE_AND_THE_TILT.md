@@ -68,7 +68,7 @@ Sometimes the resulting distinction supports a workable synthesis. Sometimes it 
 
 ## 5. Bind the analogy to the cognitive tools
 
-The analogy becomes useful to an application designer when its movements can be related to explicit operations. The following chapters and reference guides develop that division of work:
+The analogy becomes useful to an application designer when its movements can be related to explicit operations. The following chapters and the [Reference section](../appendices/REFERENCE.md) develop that division of work:
 
 | Movement in the example | Where the tools contribute |
 |---|---|

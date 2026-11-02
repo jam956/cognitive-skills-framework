@@ -75,6 +75,6 @@ The following request invites the combined method while keeping the example smal
 
 > Record R17 contains 7 and 5. The calculator produces 12, and the checker verifies that addition. The reporter publishes 12 under R18. Identify the things and relationships needed to explain the error. Abstract one reusable description, then show how it applies to these facts. Use mathematical and information lenses only where each changes the analysis. Explain what the arithmetic check establishes, what it leaves unresolved, and what information a corrected report must preserve. Do not assume publication rules that have not been supplied.
 
-**References:** [CDP reader guide](04_ONTOLOGICAL_PRISM.md) · [CDP v1.2 specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) · [KCE v2.3 specification](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) · [O/D/R/O guide](../appendices/REFERENCE.md#represent-the-case)
+**References:** [CDP v1.2 specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) · [KCE v2.3 specification](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) · [O/D/R/O guide](../appendices/REFERENCE.md#represent-the-case)
 
 [Previous: Sentence-thought vectors](03_SENTENCE_THOUGHT_VECTORS.md) · [Next: The Dynamical Prism](05_DYNAMICAL_PRISM.md)

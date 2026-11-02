@@ -93,7 +93,7 @@ A bounded request can make that movement inspectable:
 
 > Apply KCE to the version-checking example. Identify a reusable relationship and state what must survive when the record names and numbers are removed. Retain an alternative anchor if it would lead to a materially different repair. Give an overgeneralization and explain its failure. Then apply the supported concept to a rebuilt software artifact, leaving the relevance of any changes unresolved where the facts do not establish it.
 
-The next chapter follows possible movements around a preserved question. The circle and the tilt give us a picture of changing a view or frame before the registry makes transformation choice explicit.
+The next chapter follows possible movements around a preserved question. The circle and the tilt give us a picture of changing a view or frame; the registry supplies names and checks for the available movements.
 
 Reference: [KCE v2.3 specification](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) · [O/D/R/O reference](../appendices/REFERENCE.md#represent-the-case).
 

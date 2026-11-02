@@ -164,7 +164,7 @@ Trying to chain all of the tools together can impose more work than a task needs
 
 Application design uses abstraction to recognize what kind of difficulty is present, comparison to select a suitable method, and concretization to bind it to the actual inputs and constraints. Sequencing arranges the selected operations so that one result supplies what the next needs; evaluation determines whether to continue, revisit a choice or stop. This coordination is the additional feature supplied by a tool: familiar transformations become a purposeful process with dependencies and conditions for completion.
 
-The modules were explicitly developed during work with the ChatGPT 5.x series. Their historical evolution is recorded in the [historical guide](../../archive/HISTORY.md). The [sentence-thought and framework introduction](03_SENTENCE_THOUGHT_VECTORS.md) introduces the available modules; their individual guides explain the particular work each one organizes.
+The modules were explicitly developed during work with the ChatGPT 5.x series. Their historical evolution is recorded in the [historical guide](../../archive/HISTORY.md). The [sentence-thought and framework introduction](03_SENTENCE_THOUGHT_VECTORS.md) introduces the available modules; the following chapters explain the work each method organizes.
 
 [Chapter 3: Sentence-Thought Vectors and the Framework](03_SENTENCE_THOUGHT_VECTORS.md) develops the next issue: representing a situation so that its important relationships can survive a transformation.
 

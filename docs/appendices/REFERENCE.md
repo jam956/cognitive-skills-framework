@@ -49,7 +49,7 @@ The table connects each definition to the chapter that explains its purpose. Cho
 | CEC | `v1.1.0` | Validate consequential ordering and dependency gaps. | [Specification](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) | [13](../chapters/13_CAUSAL_ENTAILMENT_CHAINING.md) |
 | DARE/IDCM | `v1.0.0` | Audit closure, pruning, missing operators and fragility. | [Specification](../../framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json) | [14](../chapters/14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) |
 | Probe profiles | `v1.0.0` | Choose a small sufficient route before loading full definitions. | [Specification](../../framework/CognitiveTools_ProbeProfiles_v1.json) | [15](../chapters/15_SELECTIVE_TOOL_ROUTING.md) |
-| Organ Atlas | `not declared` | Describe optional monitoring and fail-safe probes; instruments are external. | [Specification](../../framework/Organ_Atlas_Template_v0.3.json) | [16](../chapters/16_OBSERVATION_AND_RECOVERY.md) |
+| Organ Atlas | `0.3 (atlas)` | Describe optional monitoring and fail-safe probes; instruments are external. | [Specification](../../framework/Organ_Atlas_Template_v0.3.json) | [16](../chapters/16_OBSERVATION_AND_RECOVERY.md) |
 | Reward Controller | `1.0` | Specify auditor-owned future feedback, not autonomous reward optimization. | [Specification](../../framework/RewardController_ParallaxEngine.v1.json) | [17](../chapters/17_AUDITOR_FEEDBACK_CONTROL.md) |
 
 ## 2. Structured handoffs
@@ -408,7 +408,7 @@ O/D/R/O separates four related aspects of a description. It is a lexical structu
 | Field | Meaning | Access-dependency example |
 |---|---|---|
 | Ontology | The entities, roles or relationship being described. | A competent practitioner and a separate controller of necessary access. |
-| Dynamics | The process or relationship that produces or maintains a state. | Skill increases while access remains controlled elsewhere. |
+| Dynamics | The process or relationship that produces or maintains a state. | The practitioner can diagnose the fault, while task completion still requires access controlled elsewhere. |
 | Regime | Conditions under which that description holds. | The controlled access is necessary and no viable alternative is available. |
 | Outcome | A supported or conditional consequence. | Completing this task remains dependent on the access controller. |
 

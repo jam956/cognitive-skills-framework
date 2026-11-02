@@ -75,7 +75,7 @@ Three further concerns require different checks. **CREM** reframes relationships
 
 The supporting controls address cost, observability and feedback: **probe profiles** select the smallest useful route, **Organ Atlas** describes optional monitoring surfaces, and **Reward Controller** bounds how observed results may influence future effort. Some of these ideas have antecedents in the 2025 Prism work.
 
-These are methods a capable model may already perform through prompting. Their intended contribution is to make the choice, constraints and checks explicit and reusable. The [historical guide](../../archive/HISTORY.md) traces the surviving evidence; each linked page below explains its problem, purpose, evolution and an example.
+These are methods a capable model may already perform through prompting. Their intended contribution is to make the choice, constraints and checks explicit and reusable. The [historical guide](../../archive/HISTORY.md) traces the surviving evidence; the linked chapters below show each method's role and an example.
 
 ## The cognitive methods
 
@@ -104,13 +104,13 @@ Using all of the included stages simultaneously in practice can be quite paralyz
 
 ## What is included
 
-- [The original framework package](../../framework): its agent-facing `SKILL.md`, 23 JSON specifications/templates and four reference documents.
+- [The framework](../../framework): its agent-facing `SKILL.md` and 23 JSON definitions and templates.
 - [An O/D/R/O explanation](../appendices/REFERENCE.md#represent-the-case), [module index](../appendices/REFERENCE.md#module-and-file-index) and [worked examples](../appendices/REFERENCE.md#carry-the-relation-into-an-application).
-- [Module history and evidence trail](../../archive/HISTORY.md), with individual reader guides linked above.
+- [Module history and evidence trail](../../archive/HISTORY.md), alongside the chapter and source links above.
 - [Research notes and open questions](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md), including a proposed abductive loop.
 - [Source/version notes](../appendices/REFERENCE.md#5-source-and-version-notes) and a [file-hash manifest](../../SOURCE_MANIFEST.json).
 
-The original package is preserved as a source snapshot. Its historical status labels and numerical controls are design declarations, not evidence of measured reliability. Some specifications refer to companion modules or instruments that are not included. The provenance notes explain these boundaries.
+The JSON specifications retain their source contents. The skill guide has documented header and navigation repairs; the manifest records the omitted companion documents and their earlier identities. Historical status labels and numerical controls are design declarations, not evidence of measured reliability. Some specifications refer to companion modules or instruments that are not included. The source and version notes explain these boundaries.
 
 ## Read, try, contribute
 
