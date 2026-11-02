@@ -50,6 +50,8 @@ CREM's **party integrity** and **false harmony** checks target these losses. The
 
 Alignment can also be developed directly. Where the parties already recognize complementary contributions, a plan might make the relevant research feature and handling concern available in the same review. That is a proposal for better coordination. Whether it improves trust or is accepted requires evidence beyond the proposed structure.
 
+The essential transformation is when two thought-vectors have only one thought element in common, this framework allows for a change in the two other elements to find common ground to attain their destination.
+
 *Countercase construction* tests the rebase with the binding request. *Evaluation* checks whose requirement or burden has disappeared. *Scope preservation* retains the distinction between a useful textual route and the unresolved material route. Their combination adds disciplined relationship change: an arrangement can improve without claiming complete reconciliation. The specification's gates organize that examination; their scores do not establish consent, diagnose a party's psychology or transfer decision authority.
 
 ## 5. Hand over a changed arrangement with its grounds
