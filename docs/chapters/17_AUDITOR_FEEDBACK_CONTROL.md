@@ -80,4 +80,4 @@ The shared appendix gives examples of how to carry such bounded requests and fin
 
 Reference: [Reward Controller specification](../../framework/RewardController_ParallaxEngine.v1.json) · [Reward Controller guide](../skills/REWARD.md) · [probe profiles](../skills/PROBES.md) · [evaluation boundaries](../EVALUATION.md) · [external companions](../PROVENANCE.md#external-companions).
 
-[Previous: Organ Atlas: Observing the Application](16_OBSERVATION_AND_RECOVERY.md) · [Next: Structured Handoffs and Packet Examples](../appendices/A_STRUCTURED_HANDOFFS.md)
+[Previous: Organ Atlas: Observing the Application](16_OBSERVATION_AND_RECOVERY.md) · [Next: Afterword: From a Useful Transformation to a Reusable Method](../AFTERWORD.md)

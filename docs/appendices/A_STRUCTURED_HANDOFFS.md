@@ -355,4 +355,4 @@ A bounded request can make that translation inspectable:
 
 Reference: [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json) · [module and file index](../MODULES.md) · [source and version notes](../PROVENANCE.md).
 
-[Previous: Reward Controller: Adjusting Future Effort](../chapters/17_AUDITOR_FEEDBACK_CONTROL.md) · [Book contents](../../README.md)
+[Previous: Afterword: From a Useful Transformation to a Reusable Method](../AFTERWORD.md) · [Book contents](../../README.md)

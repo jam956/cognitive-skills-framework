@@ -1,8 +1,12 @@
 # Cognitive Skills Framework
 
-This book introduces cognitive transformations a language model may perform and shows how they can be organized into useful methods. The repository's modules are examples a designer can inspect, adapt, or combine when developing an application.
+This book is a reference for software developers and AI engineers who want to make deliberate use of a language model's cognitive transformations. It develops the relationships behind analogy, abstraction, changes of viewpoint, concept reuse and the examination of alternatives, then shows how selected transformations can be organized into useful methods.
 
-The reading path begins with simple relationships, then develops further operations and their combinations before turning to the tools. The examples make the underlying ideas available for discussion; model capabilities and reliability can vary.
+A model may work with information learned during training, supplied in a prompt or obtained from external sources. The further work concerns what it can do with that information: recognize a shared relation, identify a missing condition, construct another possibility or trace what a conclusion requires. The examples make those operations available for inspection and discussion. Their usefulness depends on preserving the facts, qualifications and relationships that matter to the task.
+
+The repository's modules provide concrete designs to study and adapt. Each addresses a particular difficulty, such as an abstraction that loses its conditions, an exploration that repeats the same proposal, or a coherent answer that conceals a missing dependency. A designer can use a method directly, combine selected contributions or develop another arrangement for the application. The reading order supplies conceptual prerequisites; a particular task determines which methods it needs.
+
+The book begins with simple examples and develops their logical progression before introducing the fuller tool designs. It also distinguishes a proposed explanation from supporting evidence, a procedure from its execution, and a useful result from a reusable method. Models differ in how reliably they perform these transformations, especially as the task becomes more complex.
 
 ## The book
 
@@ -26,16 +30,21 @@ The reading path begins with simple relationships, then develops further operati
 | 16 | [Organ Atlas: Observing the Application](docs/chapters/16_OBSERVATION_AND_RECOVERY.md) | Relate qualified observations and proposed probes to recovery conditions. |
 | 17 | [Reward Controller: Adjusting Future Effort](docs/chapters/17_AUDITOR_FEEDBACK_CONTROL.md) | Use auditor-owned, bounded feedback to guide future assignments. |
 
-The [book design](docs/BOOK_DESIGN.md) describes the editorial structure. Chapters 8–14 develop concept reuse, exploration, comparison, relationship rebase, ordered validity and process audit. Chapters 15–17 turn to selective application and optional monitoring and feedback. Each chapter can also be consulted for its particular question.
+Chapters 1–7 develop transformations and the O/D/R/O representation: ontology, dynamics, regime, and object or destination. Chapters 8–14 examine concept reuse, exploration, comparison, relationship rebase, ordered validity and process audit. Chapters 15–17 turn to selective application and optional observation and feedback. Each chapter can also be consulted for its particular question.
 
-[Appendix A: Structured Handoffs and Packet Examples](docs/appendices/A_STRUCTURED_HANDOFFS.md) follows the archive case through the seven packet templates and their shared index. The [module index](docs/MODULES.md) maps every source module to its chapter or reference guide. Together these routes account for all 23 JSON definitions and templates in the preserved framework.
+The [afterword, From a Useful Transformation to a Reusable Method](docs/AFTERWORD.md), draws these ideas together around what a method must preserve when it is carried into another application.
 
-## Reference and application
+[Appendix A: Structured Handoffs and Packet Examples](docs/appendices/A_STRUCTURED_HANDOFFS.md) follows the archive case through seven packet templates and their shared index. The [module and file index](docs/MODULES.md) connects every source module to its chapter, quick guide and contract. These routes account for all 23 JSON definitions and templates in the preserved framework.
 
-- [Worked examples](docs/WORKED_EXAMPLES.md) and [dialectical search](docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md).
-- [Evaluation and limitations](docs/EVALUATION.md), [research notes](docs/MUSINGS.md), and [history](docs/HISTORY.md).
-- [Original framework snapshot](framework/), [provenance](docs/PROVENANCE.md), and [source manifest](SOURCE_MANIFEST.json).
+## Using the reference material
 
-The original framework remains a preserved source snapshot. A clear task may need only a small part of it, or none. Chapter 3 retains the fuller account previously used as this repository's introduction. The tool chapters show how selected methods can be understood, applied, and adapted without requiring a universal pipeline.
+| Reader's purpose | Supporting material |
+|---|---|
+| Recall a distinction or look up a method. | [O/D/R/O reference](docs/ODRO.md) and [module index with quick skill guides](docs/MODULES.md). |
+| Explore an application in another setting. | [Worked examples](docs/WORKED_EXAMPLES.md), with illustrative cases and a compact trial instruction. |
+| Examine what is supported and where limits remain. | [Evaluation and limits](docs/EVALUATION.md), [source and version notes](docs/PROVENANCE.md), and the [source manifest](SOURCE_MANIFEST.json). |
+| Follow the development or consider a further extension. | Optional [design history](docs/HISTORY.md) and [research questions](docs/MUSINGS.md). |
+
+The short skill guides serve as independent lookups and companion examples. The [original framework snapshot](framework/) preserves the detailed specifications and handoff contracts. The [book design](docs/BOOK_DESIGN.md) records the editorial organization.
 
 Published under the [MIT License](LICENSE).

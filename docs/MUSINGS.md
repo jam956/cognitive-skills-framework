@@ -1,32 +1,28 @@
-# Research notes and open questions
+# Research questions and prospective extensions
 
-These notes separate prospective work from the preserved module specifications. They are proposals, not implemented features or established results.
+The [afterword, From a Useful Transformation to a Reusable Method](AFTERWORD.md), develops the common argument behind these notes. This notebook retains questions whose answers could change a future design. The proposed extensions remain separate from the preserved module specifications.
 
 ## An explicit abductive loop
 
-KCE can preserve alternative anchors; transformation and exploration can generate candidates; PSPP can compare them; DARE can challenge premature closure. An integrated abductive method would make the evidence relationships explicit:
+The afterword illustrates a loop connecting observations, rival explanations, discriminating consequences and evidence. Its useful next specification would need to answer:
 
-1. Record the observation separately from its interpretation.
-2. Propose rival explanations, including combinations or observation artifacts when warranted.
-3. Derive consequences that distinguish the explanations.
-4. Identify available evidence or a feasible check that could change their ranking.
-5. Compare coverage, contradictions, regime fit and unsupported assumptions.
-6. Retain a provisional explanation or suspend judgment, recording what would reopen the question.
+- What distinguishes an observation from an interpretation in the receiving record?
+- How should combined explanations, observation artifacts and unavailable checks be represented?
+- What grounds a change in an explanation's ranking, and what reopens a settled comparison?
+- When does the evidence justify a conclusion, a conditional explanation or suspended judgment?
 
-The key addition is the link from an explanation to a discriminating prediction and then to evidence. Coherence alone is insufficient. The outcome field records what a hypothesis predicts, not what the investigator wants.
+The proposed composition can draw on KCE, exploration, comparison and process audit. Its precise contract and practical benefit remain to be established.
 
-## Preserving a skill's shape
+## Preserving and discovering a method
 
-A reusable skill needs more than a name. A useful record could preserve purpose, applicability, transformation, invariants, destination, stopping conditions, examples and failure lessons. A separate experience record can link an execution to the skill version without silently rewriting the procedure after every use.
+Which parts of a skill require full instructions, and which survive in a compact description of purpose, applicability, transformation and invariants? What do counterexamples add? How should an execution record support a versioned refinement without rewriting the method after every use?
 
-O/D/R/O may help qualify applicability; text supplies detailed instructions; an embedding may help find candidates. Their relative retrieval reliability requires evaluation. We should not infer a persistent learned procedure merely from a model's ability to reconstruct one from context.
+Stable identifiers, source pointers, O/D/R/O fields, text search and embedding search offer possible routes to a candidate. Their contribution should be examined separately from the model's ability to apply the retrieved method. Useful comparisons include missed applicable methods and plausible-looking retrievals that do not fit.
 
 ## Attention and expression
 
-The same analytical relation can be expressed in different voices and amounts of detail. How much of a writer's characteristic movement can a normalized representation preserve? Which features require examples, and which can be specified as relationships or sequencing constraints?
+How much of an explanation's characteristic movement can be preserved through relations and sequencing constraints? Where are examples necessary? Does a change in voice or compression preserve the evidence, uncertainty and causal relationships of the account?
 
-A related question is whether steering that improves sentence-level expression also preserves character independence, unresolved conflict and long-range causality. These should be evaluated separately.
+Fiction applications raise additional questions about character independence, unresolved conflict and long-range causality. Those belong to their own application studies rather than requirements for every use of this framework.
 
-## A library that remains discoverable
-
-A method contributes only when a model or harness can find and apply it. Stable identifiers, applicability descriptions, versioned entry points and provenance may help bridge documentation, memory and runtime selection. Publishing this collection makes those interfaces inspectable; it does not itself provide a universal discovery service.
+The [evaluation notes](EVALUATION.md) describe how to distinguish a proposed method, an illustrative use and evidence about an actual result.

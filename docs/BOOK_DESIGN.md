@@ -68,6 +68,8 @@ Chapters 16–17 are optional engineering references. Their proposed observation
 
 [Appendix A](appendices/A_STRUCTURED_HANDOFFS.md) develops selected-field packet examples and receiving-key translations. The seven templates and their index share that space, while modules with output definitions inside their main JSON link to the relevant contract. CTR remains a reference guide, following the book's chosen scope.
 
+The unnumbered [afterword, From a Useful Transformation to a Reusable Method](AFTERWORD.md), provides the capstone. A document-lookup example develops what must survive when a useful correction becomes a method someone else can find and adapt. The prospective abductive loop illustrates a possible composition; method records, expression and discovery are examined through the same reusable-method question. Open contracts and unanswered application questions remain in the [research notebook](MUSINGS.md).
+
 The following conceptual sequence summarizes the reading route.
 
 | Conceptual step | What the reader needs to understand | Repository examples |
@@ -90,4 +92,4 @@ The main prose explains. Compact tables support comparisons; diagrams can show r
 
 Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](EVALUATION.md).
 
-The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–17 and the handoff appendix provide the reading route. The shorter guides remain available for independent reference. The module index and appendix connect every source JSON file to its explanatory use.
+The original [framework snapshot](../framework/), [provenance](PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–17, the afterword and the handoff appendix provide the reading route. The shorter guides remain available for independent reference, with alternate examples and brief development notes. O/D/R/O is a compact glossary; worked examples support optional practice. History, evaluation and the research notebook remain supporting routes rather than additional prerequisite chapters. The module index and appendix connect every source JSON file to its explanatory use.
