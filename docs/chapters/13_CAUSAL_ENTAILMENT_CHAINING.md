@@ -63,7 +63,7 @@ A novel proposal can lack its connecting path because exploration has not develo
 
 Suppose a later inquiry proposes a specialized imaging method that might expose the binding feature without the contemplated original examination. This remains a candidate, not a finding about available equipment or evidential adequacy. Its development must account for what the images would reveal, how they would be produced, and which handling and permission requirements production would introduce.
 
-The function of CREM framework is that once a proper sentence-vector is decided, to follow the dynamical/action to completion, there may be multiple gatings or *phase decompositions* in a logical order for the objective to be satisfied.
+The function of CEC framework is that once a proper sentence-vector is decided, to follow the dynamical/action to completion, there may be multiple gatings or *phase decompositions* in a logical order for the objective to be satisfied.
 
 An ordinary underdeveloped proposal can return to exploration. If [DARE/IDCM](14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) has deliberately suspended an organizing assumption, its branch needs a **reconstitution packet**: an account of the changed anchor, why the earlier frame was inadequate, the requirements that survive, the return to the objective, and the conditions that could defeat the proposal. CEC then examines that reconstructed path. It does not force the old anchor to serve as its first premise.
 
