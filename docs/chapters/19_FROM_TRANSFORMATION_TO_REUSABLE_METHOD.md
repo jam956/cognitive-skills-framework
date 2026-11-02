@@ -12,7 +12,7 @@ In the lookup example, the useful idea is more specific than “be cautious.” 
 
 A reusable method can therefore ask an inquiry to separate the observation, the proposed interpretation and the conditions connecting them. It can retain the question of existence while examining whether the search was capable of answering it. The distinction can also help with a test that finds no defect or a monitor that reports no event, provided the new case supports the same relationship.
 
-[KCE](08_KEY_CONCEPT_EXTRACTION.md) helps state that relationship at a useful level of generality. The [O/D/R/O reference](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#1-represent-the-case) helps retain what was examined, what operation occurred, the conditions governing it and what its result supports. The source case supplies grounds for a candidate transfer; the destination case determines whether those grounds still apply.
+[KCE](08_KEY_CONCEPT_EXTRACTION.md) helps state that relationship at a useful level of generality. The [O/D/R/O reference](../appendices/REFERENCE.md#represent-the-case) helps retain what was examined, what operation occurred, the conditions governing it and what its result supports. The source case supplies grounds for a candidate transfer; the destination case determines whether those grounds still apply.
 
 A method record needs enough detail to recover this work: its purpose, applicable conditions, requested transformation, relationships to preserve and a point at which the work is sufficient. A counterexample helps establish its boundary. If a complete and reliable inventory has already established absence, repeating an unrestricted search for hidden records may add nothing.
 
@@ -64,6 +64,6 @@ For the lookup example, a procedure about search coverage may help explain an em
 
 These directions extend the book's central design opportunity. A practitioner can identify a recurring difficulty, select transformations that address it, and preserve enough of their purpose, conditions and limits for someone else to inspect and adapt the method. The modules in this repository provide worked designs from which to begin.
 
-The [preceding chapter](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) develops the remaining design questions. [Worked examples](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#2-carry-the-relation-into-an-application) provide other application settings; [evaluation and limits](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence) distinguish proposed utility from evidence about particular uses.
+The [preceding chapter](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) develops the remaining design questions. [Worked examples](../appendices/REFERENCE.md#carry-the-relation-into-an-application) provide other application settings; [evaluation and limits](../appendices/REFERENCE.md#distinguish-illustration-from-evidence) distinguish proposed utility from evidence about particular uses.
 
-[Previous: Open Questions and Further Directions](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) · [Next: Appendix A: Structured Handoffs and Packet Examples](../appendices/A_STRUCTURED_HANDOFFS.md) · [Book contents](../../README.md)
+[Previous: Open Questions and Further Directions](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) · [Next: Reference](../appendices/REFERENCE.md) · [Book contents](../../README.md)

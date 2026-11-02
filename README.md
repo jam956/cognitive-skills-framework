@@ -36,12 +36,10 @@ Chapters 1–7 develop transformations and the O/D/R/O representation: ontology,
 
 Chapter 18 develops the further design questions. Chapter 19 draws the common requirements together around what a useful transformation must preserve when it becomes a reusable method.
 
-[Appendix A: Structured Handoffs and Packet Examples](docs/appendices/A_STRUCTURED_HANDOFFS.md) follows the archive case through seven packet templates and their shared index. The [module and file index in Appendix A](docs/appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) connects every source definition to its chapter and contract. These routes account for all 23 JSON definitions and templates in the preserved framework.
+## Reference
 
-## Appendices
+The [Reference section](docs/appendices/REFERENCE.md) brings together source files and templates, structured handoffs, worked applications, evidence and evaluation, and source/version notes. Its topic index provides a direct route to the detail needed. All 23 JSON definitions and templates are connected to their explanatory chapters there.
 
-[Appendix B: Applying and Assessing a Method](docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md) combines the O/D/R/O reference, worked applications, and evidence and evaluation notes. It provides one route from representing a case to assessing what a use of the method establishes.
-
-Appendix A also supplies the source-file index and handoff vocabulary. [Source and version notes](docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#6-source-and-version-notes) follow the application material in Appendix B. The [source manifest](SOURCE_MANIFEST.json) records file identities and publication changes; historical and editorial records remain in the archive.
+Historical and editorial records remain in the archive. File identities and publication changes are recorded in the [source manifest](SOURCE_MANIFEST.json).
 
 Published under the [MIT License](LICENSE).

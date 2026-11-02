@@ -45,7 +45,7 @@ The components must also remain connected. Consider the test assertions “Ameri
 
 This was the intended advantage over relying only on whole-sentence similarity: make the consequential parts of meaning separately searchable while preserving the thought they form together. Realizing that advantage requires faithful normalization and a search or applicability check that respects the relationships.
 
-The final O is not automatically a desired outcome. It may be the object of a relationship, such as freedom in the example, or a destination state in a transformation. Current consumer schemas use names such as `outcome` and `destination`; their contracts determine the interpretation. See [the O/D/R/O guide](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#1-represent-the-case) for the current distinctions between consequences and objectives.
+The final O is not automatically a desired outcome. It may be the object of a relationship, such as freedom in the example, or a destination state in a transformation. Current consumer schemas use names such as `outcome` and `destination`; their contracts determine the interpretation. See [the O/D/R/O guide](../appendices/REFERENCE.md#represent-the-case) for the current distinctions between consequences and objectives.
 
 ## 3. KCE: elevate the concept without losing the thought
 
@@ -96,7 +96,7 @@ These are methods a capable model may already perform through prompting. Their i
 | **[Organ Atlas](16_OBSERVATION_AND_RECOVERY.md)** | Define optional probes and recovery posture. | [v0.3 template](../../framework/Organ_Atlas_Template_v0.3.json) |
 | **[Reward Controller](17_AUDITOR_FEEDBACK_CONTROL.md)** | Keep bounded feedback under external evaluation. | [Contract JSON](../../framework/RewardController_ParallaxEngine.v1.json) |
 
-Use the smallest useful combination. A clear, simple task may need none of them. The [file index](../appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) also links packet templates and reference documents.
+Use the smallest useful combination. A clear, simple task may need none of them. The [file index](../appendices/REFERENCE.md#module-and-file-index) connects the source definitions with their chapters and packet templates.
 
 ## Attention steering in practice
 
@@ -105,10 +105,10 @@ Using all of the included stages simultaneously in practice can be quite paralyz
 ## What is included
 
 - [The original framework package](../../framework): its agent-facing `SKILL.md`, 23 JSON specifications/templates and four reference documents.
-- [An O/D/R/O explanation](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#1-represent-the-case), [module index](../appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) and [worked examples](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#2-carry-the-relation-into-an-application).
+- [An O/D/R/O explanation](../appendices/REFERENCE.md#represent-the-case), [module index](../appendices/REFERENCE.md#module-and-file-index) and [worked examples](../appendices/REFERENCE.md#carry-the-relation-into-an-application).
 - [Module history and evidence trail](../../archive/HISTORY.md), with individual reader guides linked above.
 - [Research notes and open questions](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md), including a proposed abductive loop.
-- [Source/version notes](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#6-source-and-version-notes) and a [file-hash manifest](../../SOURCE_MANIFEST.json).
+- [Source/version notes](../appendices/REFERENCE.md#5-source-and-version-notes) and a [file-hash manifest](../../SOURCE_MANIFEST.json).
 
 The original package is preserved as a source snapshot. Its historical status labels and numerical controls are design declarations, not evidence of measured reliability. Some specifications refer to companion modules or instruments that are not included. The provenance notes explain these boundaries.
 

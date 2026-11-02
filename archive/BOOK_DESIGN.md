@@ -66,23 +66,23 @@ The application section then examines how a designer can choose, observe and adj
 
 Chapters 16–17 are optional engineering references. Their proposed observation and feedback interfaces are explained through a document-delivery application without treating the source templates as installed instrumentation or model-weight training.
 
-[Appendix A](../docs/appendices/A_STRUCTURED_HANDOFFS.md) develops selected-field packet examples and receiving-key translations. The seven templates and their index share that space, while modules with output definitions inside their main JSON link to the relevant contract. CTR remains a reference guide, following the book's chosen scope.
+[Reference section](../docs/appendices/REFERENCE.md#2-structured-handoffs) develops selected-field packet examples and receiving-key translations. The seven templates and their index share that space, while modules with output definitions inside their main JSON link to the relevant contract. CTR's source definition supports transformation choice within the existing chapters.
 
 The closing chapters promote the earlier research questions and afterword into the main book. [Chapter 18: Open Questions and Further Directions](../docs/chapters/18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) develops unresolved design questions through a document-delay case. [Chapter 19: From a Useful Transformation to a Reusable Method](../docs/chapters/19_FROM_TRANSFORMATION_TO_REUSABLE_METHOD.md) draws the requirements together through the document-lookup case.
 
-[Appendix B: Applying and Assessing a Method](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md) combines the former O/D/R/O, worked-example and evaluation pages. Former technical guides and the file map have been consolidated into the chapters and appendices; historical and editorial records remain in `archive/`.
+[Reference: Applying and Assessing a Method](../docs/appendices/REFERENCE.md#3-applying-a-method) combines the former O/D/R/O, worked-example and evaluation pages. Former technical guides and the file map have been consolidated into the chapters and reference section; historical and editorial records remain in `archive/`.
 
 The following conceptual sequence summarizes the reading route.
 
 | Conceptual step | What the reader needs to understand | Repository examples |
 |---|---|---|
-| Represent a thought | Entities, processes, relationships, conditions, objects, and consequences. | [Sentence-thought vectors](../docs/chapters/03_SENTENCE_THOUGHT_VECTORS.md) and the [O/D/R/O reference](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#1-represent-the-case). |
-| Extract and reuse a concept | Abstraction, governing relations, applicability, and specification in a new situation. | KCE and the [worked examples](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#2-carry-the-relation-into-an-application). |
+| Represent a thought | Entities, processes, relationships, conditions, objects, and consequences. | [Sentence-thought vectors](../docs/chapters/03_SENTENCE_THOUGHT_VECTORS.md) and the [O/D/R/O reference](../docs/appendices/REFERENCE.md#represent-the-case). |
+| Extract and reuse a concept | Abstraction, governing relations, applicability, and specification in a new situation. | KCE and the [worked examples](../docs/appendices/REFERENCE.md#carry-the-relation-into-an-application). |
 | Explore other possibilities | Domain lenses, process and regime distinctions, candidate representations, and useful transformations. | Prism, Coupler, CTR, ETE. |
 | Work with several perspectives | Conflict generators, necessary dependencies, compatibility, and changed arrangements. | CREM. |
 | Compose a useful application | Candidate comparison, ordered dependencies, selective orchestration, and process oversight. | PSPP, CEC, DARE/IDCM and combinations appropriate to a particular design. |
 
-Each module enters after the reader understands the problem it helps organize. The [module index](../docs/appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) supplies the detailed reference route. A reader may choose an existing arrangement, alter it, or design another one.
+Each module enters after the reader understands the problem it helps organize. The [module index](../docs/appendices/REFERENCE.md#module-and-file-index) supplies the detailed reference route. A reader may choose an existing arrangement, alter it, or design another one.
 
 ## Expository construction
 
@@ -92,6 +92,6 @@ The prose serves illustration, communication, and edification. Ordinary idiom an
 
 The main prose explains. Compact tables support comparisons; diagrams can show relationships; examples connect abstractions to understandable situations. Detailed schemas, packet formats, the full transformation registry, and historical documents belong in reference material reached when needed.
 
-Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence).
+Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](../docs/appendices/REFERENCE.md#distinguish-illustration-from-evidence).
 
-The original [framework snapshot](../framework), [provenance](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#6-source-and-version-notes), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–19 and the two appendices provide the reading route. The chapters and appendices now carry the useful material from the former short guides. O/D/R/O is a compact glossary; worked examples support optional practice. Historical records remain outside the book; evaluation supports the application appendix and the former research notebook is now Chapter 18. The module index and appendix connect every source JSON file to its explanatory use.
+The original [framework snapshot](../framework), [provenance](../docs/appendices/REFERENCE.md#5-source-and-version-notes), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–19 and the unified reference section provide the reading route. The chapters and reference section now carry the useful material from the former short guides. O/D/R/O is a compact glossary; worked examples support optional practice. Historical records remain outside the book; evaluation supports the application material and the former research notebook is now Chapter 18. The module index and appendix connect every source JSON file to its explanatory use.

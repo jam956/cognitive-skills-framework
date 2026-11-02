@@ -62,6 +62,6 @@ Discovery therefore leads to another judgment: does the candidate address the cu
 
 These questions identify places where a new design could add something consequential. Its value would lie in the relationship it makes usable, rather than the number of existing modules it invokes. [Chapter 19](19_FROM_TRANSFORMATION_TO_REUSABLE_METHOD.md) draws the common requirements together: what a method must retain so that another practitioner can inspect, find and adapt it.
 
-Reference: [KCE](08_KEY_CONCEPT_EXTRACTION.md) · [exploration](10_EXPLORATION_TRANSFORM_ENGINE.md) · [comparison](11_PARALLEL_SYSTEM_COMPARISON.md) · [process audit](14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) · [evaluation and limits](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence).
+Reference: [KCE](08_KEY_CONCEPT_EXTRACTION.md) · [exploration](10_EXPLORATION_TRANSFORM_ENGINE.md) · [comparison](11_PARALLEL_SYSTEM_COMPARISON.md) · [process audit](14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) · [evaluation and limits](../appendices/REFERENCE.md#distinguish-illustration-from-evidence).
 
 [Previous: Reward Controller: Adjusting Future Effort](17_AUDITOR_FEEDBACK_CONTROL.md) · [Next: From a Useful Transformation to a Reusable Method](19_FROM_TRANSFORMATION_TO_REUSABLE_METHOD.md)

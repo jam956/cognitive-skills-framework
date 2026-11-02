@@ -121,8 +121,8 @@
     },
     {
       "path": "framework/SKILL.md",
-      "bytes": 14603,
-      "sha256": "3cf9e31fe5a22fbf25cff077a4f94ce4c05e4321f33d96a1d056779cf9ecd794"
+      "bytes": 14598,
+      "sha256": "fe389d179c7063f4f296140ceaf4ef99ba23544350c3cc9f8717d7db605e2e78"
     }
   ],
   "publication_repairs": [
@@ -143,7 +143,17 @@
       "previous_publication_bytes": 14256,
       "previous_publication_sha256": "bb82f918e20083fe44a283e20de5e77fc87307a54179b295efc9bcc044b9672b",
       "published_bytes": 14603,
-      "published_sha256": "3cf9e31fe5a22fbf25cff077a4f94ce4c05e4321f33d96a1d056779cf9ecd794"
+      "published_sha256": "3cf9e31fe5a22fbf25cff077a4f94ce4c05e4321f33d96a1d056779cf9ecd794",
+      "publication_commit": "fb26352083e43b607143042f30d2b63fbf551c81"
+    },
+    {
+      "path": "framework/SKILL.md",
+      "kind": "unified_reference_navigation",
+      "description": "Point the existing book entry instructions to the unified reference section; retain all other instruction text.",
+      "previous_publication_bytes": 14603,
+      "previous_publication_sha256": "3cf9e31fe5a22fbf25cff077a4f94ce4c05e4321f33d96a1d056779cf9ecd794",
+      "published_bytes": 14598,
+      "published_sha256": "fe389d179c7063f4f296140ceaf4ef99ba23544350c3cc9f8717d7db605e2e78"
     }
   ],
   "omitted_source_files": [

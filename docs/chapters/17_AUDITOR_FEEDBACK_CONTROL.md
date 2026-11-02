@@ -76,8 +76,8 @@ The controller's added capability is a bounded feedback path: observed result, g
 
 > Review the document-delivery trial using the request, execution records, delivered response, and page inspection. Separate actual findings from judgments about task and process quality. Identify the smallest future-assignment adjustment supported by the omitted adequacy check. State the proposed dial, its operational effect, and the auditor or outer-loop gate required to accept it. Preserve safety and truth priorities. Leave unsupported numerical or divergence inputs unavailable, and keep the solver from rewriting its success criterion. Specify what a later comparable outcome would need to show before retaining or revising the adjustment.
 
-The shared appendix gives examples of how to carry such bounded requests and findings between stages. A structured handoff can preserve the grounds for a change; its structure does not establish that the change has been implemented or has improved an outcome.
+The reference section gives examples of how to carry such bounded requests and findings between stages. A structured handoff can preserve the grounds for a change; its structure does not establish that the change has been implemented or has improved an outcome.
 
-Reference: [Reward Controller specification](../../framework/RewardController_ParallaxEngine.v1.json) · [probe profiles](15_SELECTIVE_TOOL_ROUTING.md) · [evaluation boundaries](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence) · [external companions](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#external-companions).
+Reference: [Reward Controller specification](../../framework/RewardController_ParallaxEngine.v1.json) · [probe profiles](15_SELECTIVE_TOOL_ROUTING.md) · [evaluation boundaries](../appendices/REFERENCE.md#distinguish-illustration-from-evidence) · [external companions](../appendices/REFERENCE.md#external-companions).
 
 [Previous: Organ Atlas: Observing the Application](16_OBSERVATION_AND_RECOVERY.md) · [Next: Open Questions and Further Directions](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md)

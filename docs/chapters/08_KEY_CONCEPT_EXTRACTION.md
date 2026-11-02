@@ -95,6 +95,6 @@ A bounded request can make that movement inspectable:
 
 The next chapter follows possible movements around a preserved question. The circle and the tilt give us a picture of changing a view or frame before the registry makes transformation choice explicit.
 
-Reference: [KCE v2.3 specification](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) · [O/D/R/O reference](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#1-represent-the-case).
+Reference: [KCE v2.3 specification](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) · [O/D/R/O reference](../appendices/REFERENCE.md#represent-the-case).
 
 [Previous: The Prism Coupler](07_PRISM_COUPLER.md) · [Next: The Circle and the Tilt](09_THE_CIRCLE_AND_THE_TILT.md)
