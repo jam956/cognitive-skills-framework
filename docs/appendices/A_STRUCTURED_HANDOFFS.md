@@ -34,6 +34,28 @@ These records support different receiving questions. A simple access request may
 
 *Classification* selects the record appropriate to the unresolved issue. *Abstraction* retains its consequential content. Their combination reduces the amount carried while preserving what would change the next decision.
 
+### Module and file index
+
+The table connects each definition to the chapter that explains its purpose. Choose the needed contribution from the task, then inspect its source contract. The [packet index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json) lists the optional full templates; load the selected template when its richer local structure is required. A module with an output schema inside its main JSON does not need a separate template.
+
+| Component | Internal version | Role | Source | Book route |
+|---|---|---|---|---|
+| KCE | `v2.3.0` | Identify provisional anchors and compression risks. | [Specification](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) | [8](../chapters/08_KEY_CONCEPT_EXTRACTION.md) |
+| CDP | `v1.2.0` | Select relevant domains and expose collision or lock-in risks. | [Specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) | [4](../chapters/04_ONTOLOGICAL_PRISM.md) |
+| Regime profile | `v1.0.0` | Pass a compact constraint surface between stages. | [Specification](../../framework/CognitiveTools_RegimeProfile_v1.json) | [6](../chapters/06_REGIME_FIELD.md) |
+| Dynamical Prism | `v0.2.0_reduced_core` | Describe primitive processes separately from conditions. | [Specification](../../framework/Dynamical_Prism_v1.2_ReducedCore.json) | [5](../chapters/05_DYNAMICAL_PRISM.md) |
+| Regime Field | `v0.1.0` | Describe constraints, operating conditions and phase. | [Specification](../../framework/Regime_Field_v0.1.json) | [6](../chapters/06_REGIME_FIELD.md) |
+| Coupler | `v1.5.0` | Bind ontology, actors, processes and regime. | [Specification](../../framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json) | [7](../chapters/07_PRISM_COUPLER.md) |
+| CTR | `v2.1.0` | Select transformations and preservation checks. | [Specification](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) | [2](../chapters/02_WORKING_WITH_TRANSFORMATIONS.md#reference-examples-and-registry) |
+| ETE | `v1.1.0` | Explore selected transformations and retain candidate branches. | [Specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) | [10](../chapters/10_EXPLORATION_TRANSFORM_ENGINE.md) |
+| CREM | `v1.3.0` | Rebase conflict and alignment while preserving dependencies. | [Specification](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) | [12](../chapters/12_RELATIONSHIP_REBASE.md) |
+| PSPP | `v5.0.0-lite` | Compare and select, merge or defer candidates. | [Specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) | [11](../chapters/11_PARALLEL_SYSTEM_COMPARISON.md) |
+| CEC | `v1.1.0` | Validate consequential ordering and dependency gaps. | [Specification](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) | [13](../chapters/13_CAUSAL_ENTAILMENT_CHAINING.md) |
+| DARE/IDCM | `v1.0.0` | Audit closure, pruning, missing operators and fragility. | [Specification](../../framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json) | [14](../chapters/14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) |
+| Probe profiles | `v1.0.0` | Choose a small sufficient route before loading full definitions. | [Specification](../../framework/CognitiveTools_ProbeProfiles_v1.json) | [15](../chapters/15_SELECTIVE_TOOL_ROUTING.md) |
+| Organ Atlas | `not declared` | Describe optional monitoring and fail-safe probes; instruments are external. | [Specification](../../framework/Organ_Atlas_Template_v0.3.json) | [16](../chapters/16_OBSERVATION_AND_RECOVERY.md) |
+| Reward Controller | `1.0` | Specify auditor-owned future feedback, not autonomous reward optimization. | [Specification](../../framework/RewardController_ParallaxEngine.v1.json) | [17](../chapters/17_AUDITOR_FEEDBACK_CONTROL.md) |
+
 ## 3. Follow one case through the template fields
 
 ### KCE: retain the governing relationship
@@ -335,7 +357,13 @@ Several modules define their products inside the main specification rather than 
 | [Organ Atlas](../../framework/Organ_Atlas_Template_v0.3.json) | Qualified watch and recovery information when actual probes are supplied. |
 | [Reward Controller](../../framework/RewardController_ParallaxEngine.v1.json) | Auditor report and bounded suggestions for future assignment dials. |
 
-The compact [Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json) and [CDP](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) have their own source contracts as well. The [module index](../../reference/MODULES.md) connects every module definition to its explanatory chapter or reference guide.
+The compact [Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json) and [CDP](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) have their own source contracts as well. The [module and file index above](#module-and-file-index) connects every definition to its explanatory chapter.
+
+### Compact routing and audit records
+
+A probe hands over a decision about further work. The [Probe Profiles](../../framework/CognitiveTools_ProbeProfiles_v1.json) lite-audit contract requires `decision`, `confidence`, `expected_gain`, `kept_fields`, `suppressed_fields`, `suppression_reasons`, `escalation_reasons`, `dare_watchpoints` and `audit_stub`. The record should name the risk of suppression and its recheck trigger. Scores in these fields need an interpretation and grounds; merely emitting numbers does not measure benefit or confidence.
+
+When CEC is active, preserve its `path_packet`, `dependency_graph` and `gap_report`. CREM can add its `crem_packet`, `rebase_vector` and `crem_gate_report`. DARE/IDCM can add `dare_audit_report`, `rescued_branch_refs`, `rerun_requests` and `operator_injection_requests`. Optional runtime observation can add `exec_trace`, `hidden_state_watch`, `fail_safe_report` and `runtime_parameters` when an application supplies the actual instruments. These are conditional handoff products; the task determines which contribution is active.
 
 ## 5. Check whether the handoff can be used
 
@@ -353,6 +381,6 @@ A bounded request can make that translation inspectable:
 
 > Use the archive case to prepare selected-field handoff excerpts for the relevant modules. Preserve the original question, actor responsibilities, evidence requirements and unknown conditions. Resolve each local identifier, map the module products to the packet index's receiving vocabulary, and state what the receiving component can do next. Identify omitted fields whose absence would prevent full contract use. Keep a proposed check distinct from a completed finding.
 
-Reference: [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json) · [module and file index](../../reference/MODULES.md) · [source and version notes](../../reference/PROVENANCE.md).
+Reference: [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json) · [module and file index](A_STRUCTURED_HANDOFFS.md#module-and-file-index) · [source and version notes](B_APPLYING_AND_ASSESSING_A_METHOD.md#6-source-and-version-notes).
 
 [Previous: From a Useful Transformation to a Reusable Method](../chapters/19_FROM_TRANSFORMATION_TO_REUSABLE_METHOD.md) · [Next: Applying and Assessing a Method](B_APPLYING_AND_ASSESSING_A_METHOD.md) · [Book contents](../../README.md)

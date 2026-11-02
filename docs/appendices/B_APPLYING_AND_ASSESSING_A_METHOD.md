@@ -102,4 +102,44 @@ The JSON source specifications contain conceptual scores, thresholds, telemetry 
 
 Likewise, a schema-valid packet establishes only a structural property. Its source claims, applicability and proposed actions still require independent checks. Do not convert agreement between model roles into independent evidence of truth.
 
-[Previous: Structured Handoffs and Packet Examples](A_STRUCTURED_HANDOFFS.md) · [Book contents](../../README.md) · [Technical reference index](../../reference/MODULES.md)
+## 6. Source and version notes
+
+### Publication source
+
+The `framework/` directory contains 23 JSON definitions and templates and one agent-facing skill guide from the `skills/cognitive-tools` package in `bounded-route-hyperagent`, source commit `dc6b7e536aeace455637fa22ce08edbbade712c4`. All 23 JSON files remain byte-preserved. The [manifest](../../SOURCE_MANIFEST.json) records the current files and their size and SHA-256 identities.
+
+The original publication also included three usage guides and a historical CREM PDF under `framework/references/`. Their important content is now incorporated into the chapters and Appendix A. The manifest retains their former identities and links to the preceding publication for source inspection. The separate quick guides and file index have likewise been consolidated into the book.
+
+### Skill guide publication repair
+
+The source guide's unquoted YAML description contained `design: the model`, which a YAML reader treated as a mapping delimiter. A folded scalar repairs that header while preserving the description wording. A subsequent navigation revision replaces its removed reference-directory pointers with Chapter 15 and Appendix A. All other instruction text is retained.
+
+The manifest distinguishes these publication repairs from the upstream source revision and records the file identities before and after each change. The JSON contracts are unchanged.
+
+### Reading the source specifications
+
+- KCE's source module is named **Key Concept Extraction**; the evaluation uses **Key Concept Elevation** for the abstraction task. This publication retains both usages with their contexts.
+- The Dynamical Prism's filename includes `v1.2`, while its internal reduced-core version is `v0.2.0_reduced_core`. Use the declared internal version when interpreting the model; the filename is retained for compatibility.
+- Terms such as `design_stable_executable_spec` are historical design-status labels. They do not mean this repository includes an executable implementation or a validated cognitive instrument.
+- Some source prose describes an answer as becoming “inevitable.” Read that as a design aspiration toward constrained, defensible selection, not a guarantee or a reason to discard uncertainty.
+- Historical CREM prose describes an earlier development stage. Use the v1.3 JSON and Chapter 12 for the current split of ontology, dynamics and regime.
+- Retired filenames are listed for migration context. They are not missing current components.
+
+### PSPP's numerical policy
+
+The [PSPP v5.0-lite artifact](../../framework/PSPP_v5.0_CandidateSystemComparator.json) is preserved as published. Its comparison method is clear, while two policy details need a consistent interpretation in an implementation:
+
+- `lite_contract.dare_audit_surface` requires DARE review at pruning loss `>= 0.35` or fragility `>= 0.45`. The corresponding `operational_thresholds` are `0.45` and `0.55`. The file does not state a precedence rule or distinguish the two sets as separate stages.
+- The minimal example reports a top-branch score margin of `0.05` and sets DARE audit to `recommended: false`, although the lite contract requires review below `0.08`. The example merges contributions for the Arbiter but does not explain an exemption from that trigger.
+
+These are unresolved details within the source design. The chapter illustrates comparison and conditional selection without treating those numerical controls as calibrated measurements.
+
+### External companions
+
+The specifications mention related components such as MPE, PSPE, ECE, an arbiter, memory curators, runtime monitors and provider-specific instrumentation. These are external interfaces or historical companion designs. Their mention does not imply that an implementation is bundled or that it runs when the documents are read.
+
+### Updating this publication
+
+Keep explanatory edits distinct from source changes. A source refresh should identify its revision, update file hashes and record compatibility changes. Prospective arrangements in [Chapter 18](../chapters/18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) retain their open contract and implementation status. Development history and editorial records remain in the archive outside the main reading route.
+
+[Previous: Structured Handoffs and Packet Examples](A_STRUCTURED_HANDOFFS.md) · [Book contents](../../README.md) · [Module and file index](A_STRUCTURED_HANDOFFS.md#module-and-file-index)

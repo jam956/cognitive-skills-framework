@@ -66,6 +66,6 @@ A bounded request can focus the model on one change:
 
 > Apply the Regime Field to the stipulated checker workflow. `R17/v1` contains `7` and `5`, and its proposed total `12` has passed the arithmetic check. Final release requires separate authorization valid until noon. Compare attempted publication at 11:55 and at 12:05, holding every other fact fixed. Identify the changed condition and its effect on permission. Preserve the arithmetic result and the scope of the negative conclusion. Then state the gap if the attempted-publication time is unknown.
 
-Reference: [Regime Field specification](../../framework/Regime_Field_v0.1.json) · [compact Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json) · [Regime guide](../../reference/skills/REGIME.md)
+Reference: [Regime Field specification](../../framework/Regime_Field_v0.1.json) · [compact Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json)
 
 [Previous: The Dynamical Prism](05_DYNAMICAL_PRISM.md) · [Next: The Prism Coupler](07_PRISM_COUPLER.md)

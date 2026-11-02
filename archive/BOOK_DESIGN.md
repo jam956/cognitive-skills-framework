@@ -70,7 +70,7 @@ Chapters 16–17 are optional engineering references. Their proposed observation
 
 The closing chapters promote the earlier research questions and afterword into the main book. [Chapter 18: Open Questions and Further Directions](../docs/chapters/18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) develops unresolved design questions through a document-delay case. [Chapter 19: From a Useful Transformation to a Reusable Method](../docs/chapters/19_FROM_TRANSFORMATION_TO_REUSABLE_METHOD.md) draws the requirements together through the document-lookup case.
 
-[Appendix B: Applying and Assessing a Method](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md) combines the former O/D/R/O, worked-example and evaluation pages. Technical guides and the file map live in `reference/`; historical and editorial records live in `archive/`. These provide supporting detail outside the main book tree.
+[Appendix B: Applying and Assessing a Method](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md) combines the former O/D/R/O, worked-example and evaluation pages. Former technical guides and the file map have been consolidated into the chapters and appendices; historical and editorial records remain in `archive/`.
 
 The following conceptual sequence summarizes the reading route.
 
@@ -82,7 +82,7 @@ The following conceptual sequence summarizes the reading route.
 | Work with several perspectives | Conflict generators, necessary dependencies, compatibility, and changed arrangements. | CREM. |
 | Compose a useful application | Candidate comparison, ordered dependencies, selective orchestration, and process oversight. | PSPP, CEC, DARE/IDCM and combinations appropriate to a particular design. |
 
-Each module enters after the reader understands the problem it helps organize. The [module index](../reference/MODULES.md) supplies the detailed reference route. A reader may choose an existing arrangement, alter it, or design another one.
+Each module enters after the reader understands the problem it helps organize. The [module index](../docs/appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) supplies the detailed reference route. A reader may choose an existing arrangement, alter it, or design another one.
 
 ## Expository construction
 
@@ -94,4 +94,4 @@ The main prose explains. Compact tables support comparisons; diagrams can show r
 
 Variation among models belongs within the explanation of capability. Naming an operation, carrying it out, and sustaining it across a complex task can make different demands. This practical qualification informs a designer's choices without becoming the book's central subject. Experimental protocols and model comparisons stay in [evaluation and limitations](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence).
 
-The original [framework snapshot](../framework), [provenance](../reference/PROVENANCE.md), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–19 and the two appendices provide the reading route. The shorter guides remain available for independent reference, with alternate examples and brief development notes. O/D/R/O is a compact glossary; worked examples support optional practice. Historical records remain outside the book; evaluation supports the application appendix and the former research notebook is now Chapter 18. The module index and appendix connect every source JSON file to its explanatory use.
+The original [framework snapshot](../framework), [provenance](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#6-source-and-version-notes), and source manifest retain their existing roles. This editorial design changes the explanatory route. Chapters 1–19 and the two appendices provide the reading route. The chapters and appendices now carry the useful material from the former short guides. O/D/R/O is a compact glossary; worked examples support optional practice. Historical records remain outside the book; evaluation supports the application appendix and the former research notebook is now Chapter 18. The module index and appendix connect every source JSON file to its explanatory use.

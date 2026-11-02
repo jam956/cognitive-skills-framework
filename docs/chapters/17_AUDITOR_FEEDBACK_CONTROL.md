@@ -78,6 +78,6 @@ The controller's added capability is a bounded feedback path: observed result, g
 
 The shared appendix gives examples of how to carry such bounded requests and findings between stages. A structured handoff can preserve the grounds for a change; its structure does not establish that the change has been implemented or has improved an outcome.
 
-Reference: [Reward Controller specification](../../framework/RewardController_ParallaxEngine.v1.json) · [Reward Controller guide](../../reference/skills/REWARD.md) · [probe profiles](../../reference/skills/PROBES.md) · [evaluation boundaries](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence) · [external companions](../../reference/PROVENANCE.md#external-companions).
+Reference: [Reward Controller specification](../../framework/RewardController_ParallaxEngine.v1.json) · [probe profiles](15_SELECTIVE_TOOL_ROUTING.md) · [evaluation boundaries](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence) · [external companions](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#external-companions).
 
 [Previous: Organ Atlas: Observing the Application](16_OBSERVATION_AND_RECOVERY.md) · [Next: Open Questions and Further Directions](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md)

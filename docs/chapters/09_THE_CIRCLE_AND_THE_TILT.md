@@ -73,10 +73,10 @@ The analogy becomes useful to an application designer when its movements can be 
 | Movement in the example | Where the tools contribute |
 |---|---|
 | Retain the shared question and its consequential relationships. | [KCE](08_KEY_CONCEPT_EXTRACTION.md) develops the anchor; the [Coupler](07_PRISM_COUPLER.md) binds its participants and conditions. |
-| Select a turn, inversion or added distinction. | [CTR](../../reference/skills/CTR.md) names transformations and what they must preserve. |
+| Select a turn, inversion or added distinction. | [CTR](02_WORKING_WITH_TRANSFORMATIONS.md#reference-examples-and-registry) names transformations and what they must preserve. |
 | Develop the arrangements the changed view permits. | [ETE](10_EXPLORATION_TRANSFORM_ENGINE.md) constructs alternatives with their dependencies and limits. |
 | Examine what each arrangement actually supports. | [PSPP](11_PARALLEL_SYSTEM_COMPARISON.md) compares candidates and retains grounds for a choice or an unresolved result. |
-| Revisit a particular remaining difficulty. | [CREM](../../reference/skills/CREM.md) can address conflicting relationships; [CEC](../../reference/skills/CEC.md) can examine consequential order; [DARE/IDCM](../../reference/skills/DARE.md) can inspect a frame or rejection that concealed something important. |
+| Revisit a particular remaining difficulty. | [CREM](12_RELATIONSHIP_REBASE.md) can address conflicting relationships; [CEC](13_CAUSAL_ENTAILMENT_CHAINING.md) can examine consequential order; [DARE/IDCM](14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) can inspect a frame or rejection that concealed something important. |
 
 The full circle is not one compulsory route through these modules. A direct comparison may suffice. A difficult antithesis or paradox may make the tilt especially useful because the opening alternatives cannot yet express a needed relationship.
 

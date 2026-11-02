@@ -54,13 +54,28 @@ In the source protocol, high suppression risk, suspected pruning loss, suppresse
 
 Once the needed work is clear, tools can be combined according to what each result supplies. In the archive, ETE can develop candidate arrangements when none is adequate yet. PSPP can compare the resulting candidates. CEC can examine an ordered permission and handling path when that order affects validity. DARE/IDCM can inspect a fragile selection or consequential rejection.
 
+The following map relates each difficulty to the contribution it needs and what the next decision should receive. A route can enter where the available work justifies it.
+
+| Difficulty still open | Contribution | What the next decision receives |
+|---|---|---|
+| The governing concept or relevant domain is unclear. | KCE and CDP. | A provisional anchor, useful domain lenses and the limits of the opening account. |
+| A behavior label conceals its actions or operating conditions. | Dynamical Prism and Regime Field. | Separate process and condition descriptions that can be bound to the case. |
+| Actors, roles and resources have not been connected. | Prism Coupler. | A candidate system with responsibilities, dependencies and unsettled bindings. |
+| A changed view needs materially different possibilities. | CTR and ETE. | Selected transformations, their checks and candidate branches with retained requirements. |
+| Parties' concerns or shared dependencies need another arrangement. | CREM. | Rebase candidates, preserved dependencies and unresolved tensions. |
+| Several viable arrangements require a choice. | PSPP. | A selection, compatible combination or deferral with comparison grounds. |
+| Consequential intermediate steps remain uncertain. | CEC. | A supported or conditional path and its dependency gaps. |
+| Pruning, omitted operations or the frame may have concealed something. | DARE/IDCM. | An audit disposition and targeted correction or reconsideration requests. |
+
 CREM becomes useful if the unresolved issue concerns how coherent parties' requirements and shared dependencies relate. Its presence is not established merely because two people participate in a consultation. Similarly, CEC need not expand an obvious step simply because the answer contains verbs in an order.
 
 This permits different bounded routes. A comparison of supplied candidates can begin with those candidates and their requirements. A request to repair a known missing step can focus on CEC. A request to reconsider a discarded alternative can focus on DARE/IDCM and return a justified rescue to the comparison. Each route preserves the original concern and supplies whatever the next act actually needs.
 
 *Sequencing* arranges dependent contributions. *Recombination* joins compatible results. *Evaluation* checks the connection back to the task. Together they add coordination without requiring every tool to participate.
 
-The architecture reference lists a broad execution order and the probe file supplies several stack presets. These express conditional responsibilities; the book's chapter order is not an execution requirement. A capable model may also use the useful strategy of a selected method within one response; an application needs explicit orchestration when separate calls, artifacts or checks must be managed.
+The source design assigns conditional module responsibilities, and the probe file supplies several stack presets. The book's chapter order is not an execution requirement. A capable model may also use the useful strategy of a selected method within one response; an application needs explicit orchestration when separate calls, artifacts or checks must be managed.
+
+Loading can follow the same dependency logic. Consult the compact [Probe Profiles](../../framework/CognitiveTools_ProbeProfiles_v1.json) for routing; load a chosen module’s full JSON after escalation or when its full definition is explicitly requested. If a detailed handoff needs a template, consult the [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json) and then load only the selected template. Keep the compact audit stub available as context is reduced, so fuller detail can reopen a routing choice under its stated conditions.
 
 ## 5. Escalate, stop, and retain a way back
 
@@ -76,6 +91,6 @@ A bounded request exposes the routing discipline:
 
 The following chapters consider two further application concerns: what an implemented system can observe, and how an auditor can use outcome evidence to adjust future effort.
 
-Reference: [Cognitive Tools Probe Profiles v1](../../framework/CognitiveTools_ProbeProfiles_v1.json) · [probe strategy](../../framework/references/cognitive-tools-probe-strategy.md) · [cognitive-tools architecture](../../framework/references/cognitive-tools-architecture.md) · [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json).
+Reference: [Cognitive Tools Probe Profiles v1](../../framework/CognitiveTools_ProbeProfiles_v1.json) · [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json).
 
 [Previous: DARE/IDCM: Reopening the Frame](14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md) · [Next: Organ Atlas: Observing the Application](16_OBSERVATION_AND_RECOVERY.md)

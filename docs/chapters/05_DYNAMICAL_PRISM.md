@@ -76,6 +76,6 @@ A bounded model request can keep this inquiry small:
 
 > Apply the Dynamical Prism to this stipulated workflow: `R17/v1` contains `7` and `5`; the calculator proposes `12`; the checker recomputes and compares; the reporter requires approval for the same record and version. Describe the information path using only the relevant registered process verbs. Keep the arithmetic comparison explicit. Explain what fails if the reporter receives only “approved,” and identify the smallest missing relationship. Treat the description as a proposed arrangement, not evidence of execution.
 
-Reference: [Dynamical Core specification](../../framework/Dynamical_Prism_v1.2_ReducedCore.json) · [Dynamical Prism guide](../../reference/skills/DYNAMICAL.md)
+Reference: [Dynamical Core specification](../../framework/Dynamical_Prism_v1.2_ReducedCore.json)
 
 [Previous: The Ontological Prism](04_ONTOLOGICAL_PRISM.md) · [Next: The Regime Field](06_REGIME_FIELD.md)

@@ -387,9 +387,9 @@ Stop when:
 
 ## References
 
-Use `references/cognitive-tools-file-map.md` to find the smallest relevant file
-before loading full engine specs. Use packet templates as optional skeletons,
-not as mandatory thought forms.
+Use [Chapter 15: Choosing and Combining the Tools](../docs/chapters/15_SELECTIVE_TOOL_ROUTING.md) for selective routing, responsibility boundaries and escalation. Use [Appendix A](../docs/appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) to locate a source definition, choose an optional packet template and normalize its output into the shared handoff vocabulary. The machine-readable routing contract remains `CognitiveTools_ProbeProfiles_v1.json`.
+
+Use packet templates as optional skeletons, not as mandatory thought forms.
 
 Final principle: the model walks the terrain in prose; the artifact marks the
 trail in structure.

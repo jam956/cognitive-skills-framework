@@ -38,6 +38,10 @@ A candidate rebase can separate the choice of evidence carrier from the authoriz
 
 The change has a return path to the opening disagreement. Treating every request as original handling coupled meaningful study to a potentially damaging act. Differentiating evidence needs can loosen that dependency for some requests. It does not loosen it for every request or establish that the available copies are adequate.
 
+Sometimes the disagreement persists after the known actions and conditions have been mapped. CREM calls the further inquiry **latent-axis ranking**: examine possible relationship dimensions that the surface account has omitted. In the archive, candidates might concern who judges evidential adequacy, who carries the handling burden, or whether a proposal considers only the present visit or future use as well.
+
+These are competing relational hypotheses. Compare them against the parties’ stated requirements, responsibilities and available records. A proposed dimension earns attention when it explains the difficult cases and changes what a rebase must preserve. Ranking it means giving that explanatory possibility priority for examination; it does not establish an unstated motive or reveal a model’s hidden state.
+
 *Relation extraction* identifies the shared dependency. *Perspective change* moves attention from choosing between parties to organizing their contributions. *Recombination* connects requests, evidence carriers and handling decisions differently. Together they create a candidate arrangement whose consequences can be inspected. A proposed invariant earns its place by explaining the original difficulty and constraining the rebase; a general declaration that everyone values the archive would supply too little guidance.
 
 ## 4. Preserve the tension that still carries information
@@ -66,6 +70,6 @@ The [CREM packet template](../../framework/CREM_v1.3_PacketTemplate.json) keeps 
 
 > Apply CREM to researchers and conservators considering access to fragile notebooks. Preserve the distinct needs of wording and binding research. Separate incompatible actions from incompatible authority, resource or handling conditions; identify any supported operator and regime alignment. Develop a rebase around adequate evidence and continued preservation. Retain each party's responsibilities, unknown permissions, copy adequacy and supervision. Test whether the arrangement hides an unmet need or transfers an unsupported burden. Return candidate arrangements, preserved dependencies and unresolved tensions for comparison. Treat acceptance and improved trust as matters to establish.
 
-Reference: [CREM v1.3 specification](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) · [CREM packet template](../../framework/CREM_v1.3_PacketTemplate.json) · [CREM guide](../../reference/skills/CREM.md) · [basic relationship rebase](02_WORKING_WITH_TRANSFORMATIONS.md#6-compatibility-between-requirements).
+Reference: [CREM v1.3 specification](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) · [CREM packet template](../../framework/CREM_v1.3_PacketTemplate.json) · [basic relationship rebase](02_WORKING_WITH_TRANSFORMATIONS.md#6-compatibility-between-requirements).
 
 [Previous: PSPP: Comparing Candidate Systems](11_PARALLEL_SYSTEM_COMPARISON.md) · [Next: CEC: From a Proposal to a Valid Path](13_CAUSAL_ENTAILMENT_CHAINING.md)

@@ -121,28 +121,8 @@
     },
     {
       "path": "framework/SKILL.md",
-      "bytes": 14256,
-      "sha256": "bb82f918e20083fe44a283e20de5e77fc87307a54179b295efc9bcc044b9672b"
-    },
-    {
-      "path": "framework/references/CREM_Pipeline_Document_v1.pdf",
-      "bytes": 2861,
-      "sha256": "a728b965b02b9a04896a10a04e56679feb9323215605e14007c0daf893f9825e"
-    },
-    {
-      "path": "framework/references/cognitive-tools-architecture.md",
-      "bytes": 14795,
-      "sha256": "29faeb3c8bdc76a97f52bb37067e372d1e8bacc8780fcae249c19a8180004021"
-    },
-    {
-      "path": "framework/references/cognitive-tools-file-map.md",
-      "bytes": 5473,
-      "sha256": "01cf52763fcc780606e9b6cdd53bdf97c3cf195dc5caf5ba1c346e0eab334a88"
-    },
-    {
-      "path": "framework/references/cognitive-tools-probe-strategy.md",
-      "bytes": 4428,
-      "sha256": "b2d570a90141f9c5c4c96629bfac178eb3d3972bc3e480065fe5c0f981dc2fc3"
+      "bytes": 14603,
+      "sha256": "3cf9e31fe5a22fbf25cff077a4f94ce4c05e4321f33d96a1d056779cf9ecd794"
     }
   ],
   "publication_repairs": [
@@ -153,7 +133,51 @@
       "upstream_bytes": 14251,
       "upstream_sha256": "072993340e215dea29536b42239bdb6160c9b5baca5520f39d0d5f59efa39c4b",
       "published_bytes": 14256,
-      "published_sha256": "bb82f918e20083fe44a283e20de5e77fc87307a54179b295efc9bcc044b9672b"
+      "published_sha256": "bb82f918e20083fe44a283e20de5e77fc87307a54179b295efc9bcc044b9672b",
+      "publication_commit": "d2bc83a572d947aa9fcfe3db88bca77524adf32c"
+    },
+    {
+      "path": "framework/SKILL.md",
+      "kind": "reference_consolidation_navigation",
+      "description": "Replace removed reference-directory instructions with book chapter and appendix entry points; retain all other instruction text and the valid YAML header.",
+      "previous_publication_bytes": 14256,
+      "previous_publication_sha256": "bb82f918e20083fe44a283e20de5e77fc87307a54179b295efc9bcc044b9672b",
+      "published_bytes": 14603,
+      "published_sha256": "3cf9e31fe5a22fbf25cff077a4f94ce4c05e4321f33d96a1d056779cf9ecd794"
+    }
+  ],
+  "omitted_source_files": [
+    {
+      "path": "framework/references/CREM_Pipeline_Document_v1.pdf",
+      "bytes": 2861,
+      "sha256": "a728b965b02b9a04896a10a04e56679feb9323215605e14007c0daf893f9825e",
+      "reason": "Explanatory content incorporated into the book; historical source retained in the preceding publication.",
+      "previous_publication_commit": "d2bc83a572d947aa9fcfe3db88bca77524adf32c",
+      "previous_publication_url": "https://github.com/jam956/cognitive-skills-framework/blob/d2bc83a572d947aa9fcfe3db88bca77524adf32c/framework/references/CREM_Pipeline_Document_v1.pdf"
+    },
+    {
+      "path": "framework/references/cognitive-tools-architecture.md",
+      "bytes": 14795,
+      "sha256": "29faeb3c8bdc76a97f52bb37067e372d1e8bacc8780fcae249c19a8180004021",
+      "reason": "Explanatory content incorporated into the book; historical source retained in the preceding publication.",
+      "previous_publication_commit": "d2bc83a572d947aa9fcfe3db88bca77524adf32c",
+      "previous_publication_url": "https://github.com/jam956/cognitive-skills-framework/blob/d2bc83a572d947aa9fcfe3db88bca77524adf32c/framework/references/cognitive-tools-architecture.md"
+    },
+    {
+      "path": "framework/references/cognitive-tools-file-map.md",
+      "bytes": 5473,
+      "sha256": "01cf52763fcc780606e9b6cdd53bdf97c3cf195dc5caf5ba1c346e0eab334a88",
+      "reason": "Explanatory content incorporated into the book; historical source retained in the preceding publication.",
+      "previous_publication_commit": "d2bc83a572d947aa9fcfe3db88bca77524adf32c",
+      "previous_publication_url": "https://github.com/jam956/cognitive-skills-framework/blob/d2bc83a572d947aa9fcfe3db88bca77524adf32c/framework/references/cognitive-tools-file-map.md"
+    },
+    {
+      "path": "framework/references/cognitive-tools-probe-strategy.md",
+      "bytes": 4428,
+      "sha256": "b2d570a90141f9c5c4c96629bfac178eb3d3972bc3e480065fe5c0f981dc2fc3",
+      "reason": "Explanatory content incorporated into the book; historical source retained in the preceding publication.",
+      "previous_publication_commit": "d2bc83a572d947aa9fcfe3db88bca77524adf32c",
+      "previous_publication_url": "https://github.com/jam956/cognitive-skills-framework/blob/d2bc83a572d947aa9fcfe3db88bca77524adf32c/framework/references/cognitive-tools-probe-strategy.md"
     }
   ]
 }

@@ -81,22 +81,22 @@ These are methods a capable model may already perform through prompting. Their i
 
 | Reader guide | Contribution | Original definition |
 |---|---|---|
-| **[KCE](../../reference/skills/KCE.md)** | Preserve a reusable concept through abstraction. | [v2.3 JSON](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) |
+| **[KCE](08_KEY_CONCEPT_EXTRACTION.md)** | Preserve a reusable concept through abstraction. | [v2.3 JSON](../../framework/KCE_Parallax_v2.3_SplitLayerAnchor.json) |
 | **[CDP](04_ONTOLOGICAL_PRISM.md)** | Select domain lenses that can change the analysis. | [v1.2 JSON](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) |
 | **[Dynamical Prism](05_DYNAMICAL_PRISM.md)** | Describe the processes behind a behavior label. | [Reduced-core JSON](../../framework/Dynamical_Prism_v1.2_ReducedCore.json) |
 | **[Regime Field](06_REGIME_FIELD.md)** | Preserve the conditions governing those processes. | [Field](../../framework/Regime_Field_v0.1.json) / [profile](../../framework/CognitiveTools_RegimeProfile_v1.json) |
 | **[Prism Coupler](07_PRISM_COUPLER.md)** | Bind actors, roles, processes and constraints. | [v1.5 JSON](../../framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json) |
-| **[CTR](../../reference/skills/CTR.md)** | Choose transformations and their preservation checks. | [v2.1 JSON](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) |
-| **[ETE](../../reference/skills/ETE.md)** | Explore transformations and retain candidate systems. | [v1.1 JSON](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) |
-| **[CREM](../../reference/skills/CREM.md)** | Rebase relationships without erasing parties or dependencies. | [v1.3 JSON](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) |
-| **[PSPP](../../reference/skills/PSPP.md)** | Compare candidates before choosing a conclusion. | [v5.0-lite JSON](../../framework/PSPP_v5.0_CandidateSystemComparator.json) |
-| **[CEC](../../reference/skills/CEC.md)** | Check consequential causal and dependency steps. | [v1.1 JSON](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) |
-| **[DARE/IDCM](../../reference/skills/DARE.md)** | Audit the frame, pruning and unexplained residue. | [v1.0 JSON](../../framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json) |
-| **[Probe profiles](../../reference/skills/PROBES.md)** | Decide when a fuller operation is worth its cost. | [Profiles JSON](../../framework/CognitiveTools_ProbeProfiles_v1.json) |
-| **[Organ Atlas](../../reference/skills/ORGAN_ATLAS.md)** | Define optional probes and recovery posture. | [v0.3 template](../../framework/Organ_Atlas_Template_v0.3.json) |
-| **[Reward Controller](../../reference/skills/REWARD.md)** | Keep bounded feedback under external evaluation. | [Contract JSON](../../framework/RewardController_ParallaxEngine.v1.json) |
+| **[CTR](02_WORKING_WITH_TRANSFORMATIONS.md#reference-examples-and-registry)** | Choose transformations and their preservation checks. | [v2.1 JSON](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) |
+| **[ETE](10_EXPLORATION_TRANSFORM_ENGINE.md)** | Explore transformations and retain candidate systems. | [v1.1 JSON](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) |
+| **[CREM](12_RELATIONSHIP_REBASE.md)** | Rebase relationships without erasing parties or dependencies. | [v1.3 JSON](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) |
+| **[PSPP](11_PARALLEL_SYSTEM_COMPARISON.md)** | Compare candidates before choosing a conclusion. | [v5.0-lite JSON](../../framework/PSPP_v5.0_CandidateSystemComparator.json) |
+| **[CEC](13_CAUSAL_ENTAILMENT_CHAINING.md)** | Check consequential causal and dependency steps. | [v1.1 JSON](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) |
+| **[DARE/IDCM](14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md)** | Audit the frame, pruning and unexplained residue. | [v1.0 JSON](../../framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json) |
+| **[Probe profiles](15_SELECTIVE_TOOL_ROUTING.md)** | Decide when a fuller operation is worth its cost. | [Profiles JSON](../../framework/CognitiveTools_ProbeProfiles_v1.json) |
+| **[Organ Atlas](16_OBSERVATION_AND_RECOVERY.md)** | Define optional probes and recovery posture. | [v0.3 template](../../framework/Organ_Atlas_Template_v0.3.json) |
+| **[Reward Controller](17_AUDITOR_FEEDBACK_CONTROL.md)** | Keep bounded feedback under external evaluation. | [Contract JSON](../../framework/RewardController_ParallaxEngine.v1.json) |
 
-Use the smallest useful combination. A clear, simple task may need none of them. The [file index](../../reference/MODULES.md) also links packet templates and reference documents.
+Use the smallest useful combination. A clear, simple task may need none of them. The [file index](../appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) also links packet templates and reference documents.
 
 ## Attention steering in practice
 
@@ -105,10 +105,10 @@ Using all of the included stages simultaneously in practice can be quite paralyz
 ## What is included
 
 - [The original framework package](../../framework): its agent-facing `SKILL.md`, 23 JSON specifications/templates and four reference documents.
-- [An O/D/R/O explanation](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#1-represent-the-case), [module index](../../reference/MODULES.md) and [worked examples](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#2-carry-the-relation-into-an-application).
+- [An O/D/R/O explanation](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#1-represent-the-case), [module index](../appendices/A_STRUCTURED_HANDOFFS.md#module-and-file-index) and [worked examples](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#2-carry-the-relation-into-an-application).
 - [Module history and evidence trail](../../archive/HISTORY.md), with individual reader guides linked above.
 - [Research notes and open questions](18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md), including a proposed abductive loop.
-- [Source/version notes](../../reference/PROVENANCE.md) and a [file-hash manifest](../../SOURCE_MANIFEST.json).
+- [Source/version notes](../appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#6-source-and-version-notes) and a [file-hash manifest](../../SOURCE_MANIFEST.json).
 
 The original package is preserved as a source snapshot. Its historical status labels and numerical controls are design declarations, not evidence of measured reliability. Some specifications refer to companion modules or instruments that are not included. The provenance notes explain these boundaries.
 
