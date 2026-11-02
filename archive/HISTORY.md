@@ -58,8 +58,6 @@ That distinction is central to the documentation: a specification describes a me
 
 The local baseline commit is `6f34c48`; RewardController's addition is `6690630`. The published source snapshot's revision and file hashes are recorded in [provenance](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#6-source-and-version-notes) and the [manifest](../SOURCE_MANIFEST.json). Source commit identifiers document the reconstruction; the original project history is not bundled here.
 
-Dates in the table use the author's America/Chicago context. First surviving mention, artifact metadata and first Git addition are not interchangeable dates.
-
 ## Evidence trail
 
 The history was researched through the surviving source package, local source-control history and targeted retrieval of earlier author–Alex design discussions. Full private conversations and personal memory databases are not republished. Conversation-derived dates below should be read as recovered historical references, not publicly inspectable transcript editions.
