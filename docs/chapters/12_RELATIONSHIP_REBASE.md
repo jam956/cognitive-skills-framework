@@ -66,6 +66,6 @@ The [CREM packet template](../../framework/CREM_v1.3_PacketTemplate.json) keeps 
 
 > Apply CREM to researchers and conservators considering access to fragile notebooks. Preserve the distinct needs of wording and binding research. Separate incompatible actions from incompatible authority, resource or handling conditions; identify any supported operator and regime alignment. Develop a rebase around adequate evidence and continued preservation. Retain each party's responsibilities, unknown permissions, copy adequacy and supervision. Test whether the arrangement hides an unmet need or transfers an unsupported burden. Return candidate arrangements, preserved dependencies and unresolved tensions for comparison. Treat acceptance and improved trust as matters to establish.
 
-Reference: [CREM v1.3 specification](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) · [CREM packet template](../../framework/CREM_v1.3_PacketTemplate.json) · [CREM guide](../skills/CREM.md) · [basic relationship rebase](02_WORKING_WITH_TRANSFORMATIONS.md#6-compatibility-between-requirements).
+Reference: [CREM v1.3 specification](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) · [CREM packet template](../../framework/CREM_v1.3_PacketTemplate.json) · [CREM guide](../../reference/skills/CREM.md) · [basic relationship rebase](02_WORKING_WITH_TRANSFORMATIONS.md#6-compatibility-between-requirements).
 
 [Previous: PSPP: Comparing Candidate Systems](11_PARALLEL_SYSTEM_COMPARISON.md) · [Next: CEC: From a Proposal to a Valid Path](13_CAUSAL_ENTAILMENT_CHAINING.md)

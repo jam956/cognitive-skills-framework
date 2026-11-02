@@ -121,8 +121,8 @@
     },
     {
       "path": "framework/SKILL.md",
-      "bytes": 14251,
-      "sha256": "072993340e215dea29536b42239bdb6160c9b5baca5520f39d0d5f59efa39c4b"
+      "bytes": 14256,
+      "sha256": "bb82f918e20083fe44a283e20de5e77fc87307a54179b295efc9bcc044b9672b"
     },
     {
       "path": "framework/references/CREM_Pipeline_Document_v1.pdf",
@@ -143,6 +143,17 @@
       "path": "framework/references/cognitive-tools-probe-strategy.md",
       "bytes": 4428,
       "sha256": "b2d570a90141f9c5c4c96629bfac178eb3d3972bc3e480065fe5c0f981dc2fc3"
+    }
+  ],
+  "publication_repairs": [
+    {
+      "path": "framework/SKILL.md",
+      "kind": "yaml_front_matter_scalar",
+      "description": "Use a folded scalar for the description so the colon in 'design: the model' is valid YAML; instruction body and description wording are unchanged.",
+      "upstream_bytes": 14251,
+      "upstream_sha256": "072993340e215dea29536b42239bdb6160c9b5baca5520f39d0d5f59efa39c4b",
+      "published_bytes": 14256,
+      "published_sha256": "bb82f918e20083fe44a283e20de5e77fc87307a54179b295efc9bcc044b9672b"
     }
   ]
 }

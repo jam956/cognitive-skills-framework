@@ -83,6 +83,6 @@ The output keeps the path and its gaps together. A path packet records steps and
 
 > Review the archive's tiered-access proposal using CEC where order affects correctness. Preserve adequate research evidence and acceptable handling. Treat the real permission rules, copy adequacy, conservation findings and supervision as unknown unless supplied. Trace prerequisites forward and backward; distinguish requesting authorization from receiving it. Identify missing intermediates, genuine branchpoints and transitions that remain conditional or fail the stated rules. Retain a novel underdeveloped branch for further development; request reconstitution before validating any DARE-mediated discontinuous route. Return the path, gaps and required qualifications for the final recommendation.
 
-Reference: [CEC v1.1 specification](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) · [CEC guide](../skills/CEC.md) · [basic order transformations](02_WORKING_WITH_TRANSFORMATIONS.md#3-time-and-order) · [DARE/IDCM guide](../skills/DARE.md).
+Reference: [CEC v1.1 specification](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) · [CEC guide](../../reference/skills/CEC.md) · [basic order transformations](02_WORKING_WITH_TRANSFORMATIONS.md#3-time-and-order) · [DARE/IDCM guide](../../reference/skills/DARE.md).
 
 [Previous: CREM: Reframing Relationships](12_RELATIONSHIP_REBASE.md) · [Next: DARE/IDCM: Reopening the Frame](14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md)

@@ -1,6 +1,6 @@
 # Organ Atlas: name the monitoring surface before claiming a measurement
 
-For the extended treatment, see [Chapter 16: Organ Atlas: Observing the Application](../chapters/16_OBSERVATION_AND_RECOVERY.md).
+For the extended treatment, see [Chapter 16: Organ Atlas: Observing the Application](../../docs/chapters/16_OBSERVATION_AND_RECOVERY.md).
 
 **Question:** What observable signals, probes or recovery conditions would a deployment need?
 
@@ -22,4 +22,4 @@ An instrumented application might observe repeated execution failures or resourc
 
 Some atlas fields concern latent or internal properties unavailable through ordinary chat APIs. They remain proposed instrumentation interfaces unless a deployment supplies the required access and measurements. The documentation release contains the template, not that instrumentation.
 
-**Read:** [Organ Atlas v0.3](../../framework/Organ_Atlas_Template_v0.3.json) · [Dynamical Prism](DYNAMICAL.md) · [evaluation boundaries](../EVALUATION.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [Organ Atlas v0.3](../../framework/Organ_Atlas_Template_v0.3.json) · [Dynamical Prism](DYNAMICAL.md) · [evaluation boundaries](../../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

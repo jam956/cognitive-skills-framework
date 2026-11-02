@@ -335,7 +335,7 @@ Several modules define their products inside the main specification rather than 
 | [Organ Atlas](../../framework/Organ_Atlas_Template_v0.3.json) | Qualified watch and recovery information when actual probes are supplied. |
 | [Reward Controller](../../framework/RewardController_ParallaxEngine.v1.json) | Auditor report and bounded suggestions for future assignment dials. |
 
-The compact [Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json) and [CDP](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) have their own source contracts as well. The [module index](../MODULES.md) connects every module definition to its explanatory chapter or reference guide.
+The compact [Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json) and [CDP](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) have their own source contracts as well. The [module index](../../reference/MODULES.md) connects every module definition to its explanatory chapter or reference guide.
 
 ## 5. Check whether the handoff can be used
 
@@ -353,6 +353,6 @@ A bounded request can make that translation inspectable:
 
 > Use the archive case to prepare selected-field handoff excerpts for the relevant modules. Preserve the original question, actor responsibilities, evidence requirements and unknown conditions. Resolve each local identifier, map the module products to the packet index's receiving vocabulary, and state what the receiving component can do next. Identify omitted fields whose absence would prevent full contract use. Keep a proposed check distinct from a completed finding.
 
-Reference: [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json) · [module and file index](../MODULES.md) · [source and version notes](../PROVENANCE.md).
+Reference: [packet template index](../../framework/CognitiveTools_PacketTemplateIndex_v1.json) · [module and file index](../../reference/MODULES.md) · [source and version notes](../../reference/PROVENANCE.md).
 
-[Previous: Afterword: From a Useful Transformation to a Reusable Method](../AFTERWORD.md) · [Book contents](../../README.md)
+[Previous: From a Useful Transformation to a Reusable Method](../chapters/19_FROM_TRANSFORMATION_TO_REUSABLE_METHOD.md) · [Next: Applying and Assessing a Method](B_APPLYING_AND_ASSESSING_A_METHOD.md) · [Book contents](../../README.md)

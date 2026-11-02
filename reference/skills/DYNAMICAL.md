@@ -1,6 +1,6 @@
 # Dynamical Prism: separate what happens from what we call it
 
-Textbook chapter: [The Dynamical Prism](../chapters/05_DYNAMICAL_PRISM.md).
+Textbook chapter: [The Dynamical Prism](../../docs/chapters/05_DYNAMICAL_PRISM.md).
 
 **Question:** What process is actually operating?
 
@@ -22,7 +22,7 @@ The preserved filename includes v1.2, while its declared reduced-core version is
 
 Earlier discussions also used thesis, antithesis, paradox, escape and synthesis to describe how an inquiry could move. Those are transformations of the analysis, rather than additional primitive actions in the reduced core. In the current package, related moves are named by CTR and explored by ETE.
 
-The [circle-and-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) follows one such movement while keeping the original subject and constraints visible.
+The [circle-and-tilt example](../../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md) follows one such movement while keeping the original subject and constraints visible.
 
 ## Example and boundary
 
@@ -30,4 +30,4 @@ The [circle-and-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) follows
 
 The primitive vocabulary is a proposed modeling choice. It should not erase source meaning merely to fit a predefined operator.
 
-**Read:** [Dynamical Prism specification](../../framework/Dynamical_Prism_v1.2_ReducedCore.json) · [packet template](../../framework/Dynamical_Prism_v0.2_PacketTemplate.json) · [Regime Field](REGIME.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [Dynamical Prism specification](../../framework/Dynamical_Prism_v1.2_ReducedCore.json) · [packet template](../../framework/Dynamical_Prism_v0.2_PacketTemplate.json) · [Regime Field](REGIME.md) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

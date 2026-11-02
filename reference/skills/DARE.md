@@ -1,6 +1,6 @@
 # DARE/IDCM: question the frame and the discarded alternatives
 
-For the extended treatment, see [Chapter 14: DARE/IDCM: Reopening the Frame](../chapters/14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md).
+For the extended treatment, see [Chapter 14: DARE/IDCM: Reopening the Frame](../../docs/chapters/14_DISCONTINUOUS_ANCHOR_RECONSTITUTION.md).
 
 **Question:** Did the process become coherent by excluding something important?
 
@@ -24,4 +24,4 @@ A permission explanation may fit a repair delay, yet fail to explain why authori
 
 The specification describes an external supervisory role. Reading it does not create autonomous parallel agents or reveal a model's unknown knowledge. A requested falsifier is a proposed check until performed.
 
-**Read:** [DARE/IDCM v1.0 specification](../../framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json) · [ETE](ETE.md) · [CEC](CEC.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [DARE/IDCM v1.0 specification](../../framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json) · [ETE](ETE.md) · [CEC](CEC.md) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

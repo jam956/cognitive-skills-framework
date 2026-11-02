@@ -1,6 +1,6 @@
 # Prism Coupler: bind the fields into a candidate system
 
-Textbook chapter: [The Prism Coupler](../chapters/07_PRISM_COUPLER.md).
+Textbook chapter: [The Prism Coupler](../../docs/chapters/07_PRISM_COUPLER.md).
 
 **Question:** Who does what, to whom, under which conditions?
 
@@ -22,4 +22,4 @@ A technician can diagnose a fault; a manager can authorize entry; a building sys
 
 A candidate system is a proposed interpretation, not a verified causal model. New relationship edges need evidence. Read the [CTR page](CTR.md) next when the system must be transformed, or [CREM](CREM.md) when party relationships are central.
 
-**Read:** [Coupler v1.5 specification](../../framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json) · [packet template](../../framework/Prism_Coupler_v1.5_PacketTemplate.json) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [Coupler v1.5 specification](../../framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json) · [packet template](../../framework/Prism_Coupler_v1.5_PacketTemplate.json) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

@@ -1,6 +1,6 @@
 # Probe profiles: decide how much machinery the task needs
 
-For the extended treatment, see [Chapter 15: Choosing and Combining the Tools](../chapters/15_SELECTIVE_TOOL_ROUTING.md).
+For the extended treatment, see [Chapter 15: Choosing and Combining the Tools](../../docs/chapters/15_SELECTIVE_TOOL_ROUTING.md).
 
 **Question:** Would a fuller cognitive operation change the next useful decision?
 
@@ -22,4 +22,4 @@ A direct factual lookup may need no transformation. A contested interpretation m
 
 The threshold values in the profiles are design settings, not calibrated estimates of expected benefit. The smallest sufficient route is a task judgment that can be wrong and should remain revisable.
 
-**Read:** [Probe profiles](../../framework/CognitiveTools_ProbeProfiles_v1.json) · [probe strategy guide](../../framework/references/cognitive-tools-probe-strategy.md) · [agent-facing guide](../../framework/SKILL.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [Probe profiles](../../framework/CognitiveTools_ProbeProfiles_v1.json) · [probe strategy guide](../../framework/references/cognitive-tools-probe-strategy.md) · [agent-facing guide](../../framework/SKILL.md) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

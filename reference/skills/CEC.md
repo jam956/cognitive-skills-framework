@@ -1,6 +1,6 @@
 # CEC: check whether the path can actually be followed
 
-For the extended treatment, see [Chapter 13: CEC: From a Proposal to a Valid Path](../chapters/13_CAUSAL_ENTAILMENT_CHAINING.md).
+For the extended treatment, see [Chapter 13: CEC: From a Proposal to a Valid Path](../../docs/chapters/13_CAUSAL_ENTAILMENT_CHAINING.md).
 
 **Question:** Is each consequential step licensed by what comes before it?
 
@@ -24,4 +24,4 @@ That placement also protects exploration: a novel branch should not be discarded
 
 “Think step by step” can elicit similar work. CEC adds named gap states, dependency checks and a receiving contract. It does not establish external facts or causal truth merely by arranging claims in sequence.
 
-**Read:** [CEC v1.1 specification](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) · [PSPP](PSPP.md) · [DARE/IDCM](DARE.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [CEC v1.1 specification](../../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json) · [PSPP](PSPP.md) · [DARE/IDCM](DARE.md) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

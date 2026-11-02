@@ -1,6 +1,6 @@
 # CDP: choose which domains can change the answer
 
-Textbook chapter: [The Ontological Prism](../chapters/04_ONTOLOGICAL_PRISM.md).
+Textbook chapter: [The Ontological Prism](../../docs/chapters/04_ONTOLOGICAL_PRISM.md).
 
 **Question:** Which knowledge domains deserve attention on this particular problem?
 
@@ -18,7 +18,7 @@ The practical refinement was selective breadth. A suppressed domain can be recon
 
 ## Keeping the subject at the center
 
-In the older circle analogy, the subject could stay fixed while the inquiry moved between positions around it. An archive's access problem can be viewed from readers' needs or preservation needs without leaving the selected ontology. The [YZ-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) then introduces different kinds of access, rather than abandoning the archive for an unrelated topic.
+In the older circle analogy, the subject could stay fixed while the inquiry moved between positions around it. An archive's access problem can be viewed from readers' needs or preservation needs without leaving the selected ontology. The [YZ-tilt example](../../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md) then introduces different kinds of access, rather than abandoning the archive for an unrelated topic.
 
 CDP helps hold that domain boundary. CTR and ETE supply movements within or beyond the opening representation when they materially change the analysis.
 
@@ -28,4 +28,4 @@ A procurement delay may initially look like a scheduling issue. An authority len
 
 The specified weights and activation limits are design controls, not evidence that a model has measured its internal attention. Domain selection should improve a decision or a check.
 
-**Read:** [CDP v1.2 specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) · [Prism history](../chapters/03_SENTENCE_THOUGHT_VECTORS.md#1-prism-broaden-the-inquiry-before-closing-it) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [CDP v1.2 specification](../../framework/CDP_Parallax_v1.2_BoundedDomainSpace.json) · [Prism history](../../docs/chapters/03_SENTENCE_THOUGHT_VECTORS.md#1-prism-broaden-the-inquiry-before-closing-it) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

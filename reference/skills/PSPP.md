@@ -1,6 +1,6 @@
 # PSPP: decide what the exploration has earned
 
-For the extended treatment, see [Chapter 11: PSPP: Comparing Candidate Systems](../chapters/11_PARALLEL_SYSTEM_COMPARISON.md).
+For the extended treatment, see [Chapter 11: PSPP: Comparing Candidate Systems](../../docs/chapters/11_PARALLEL_SYSTEM_COMPARISON.md).
 
 **PSPP** expands to **Problem Solving Parallel Pipeline**; the source spells `ProblemSolving` as one word. The current v5.0-lite contract concentrates on candidate-system comparison.
 
@@ -26,7 +26,7 @@ The archive example can demonstrate that comparison in prose. An implementation 
 
 ## Synthesis is an outcome to earn
 
-The earlier circle placed thesis and antithesis across from one another, retained their tension as a paradox and used a YZ tilt to seek another representation. In the [archive example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md), that representation distinguishes kinds of access.
+The earlier circle placed thesis and antithesis across from one another, retained their tension as a paradox and used a YZ tilt to seek another representation. In the [archive example](../../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md), that representation distinguishes kinds of access.
 
 PSPP's job is not to reward the branch labeled synthesis. It compares the resulting arrangements. If the new distinction does not support a viable choice, the conflict remains. A clearer unresolved tension can be more useful than an unsupported resolution.
 
@@ -38,4 +38,4 @@ The May 2 refactor made PSPP v5.0-lite primarily a comparator: [ETE](ETE.md) exp
 
 Numerical fields in the specification are proposed controls. A model assigning a number has not established calibrated quality or feasibility. Evidence and task-specific checks remain necessary.
 
-**Read:** [PSPP v5.0-lite specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) · [ETE](ETE.md) · [CEC](CEC.md) · [DARE/IDCM](DARE.md) · [circle-and-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md)
+**Read:** [PSPP v5.0-lite specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) · [ETE](ETE.md) · [CEC](CEC.md) · [DARE/IDCM](DARE.md) · [circle-and-tilt example](../../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md)

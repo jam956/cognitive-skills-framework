@@ -12,7 +12,7 @@ Doubling every side of a triangle enlarges the figure while preserving its angle
 
 This is a simple instance of **analogy**. The correspondence concerns the operation and the relationship it preserves. Recognizing that relationship allows an idea developed in one case to become useful in another.
 
-![A triangle and a square enlarged by doubling every length; the enlarged unit square contains four unit squares.](assets/01-relational-scaling.svg)
+![A triangle and a square enlarged by doubling every length; the enlarged unit square contains four unit squares.](../figures/01-relational-scaling.svg)
 
 The correspondence has a definite scope. A square with sides of one unit becomes a square with sides of two units. Four of the original unit squares fit inside it. Length doubles; area becomes four times as large.
 

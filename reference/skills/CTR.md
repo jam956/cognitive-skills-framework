@@ -8,7 +8,7 @@ CTR gives names to the movements that might help. A rotation changes the view of
 
 In the archive, the useful distinction may be between reading the text and examining the physical notebook. The original open-or-closed choice had treated both as the same kind of access. Once they are separated, reproductions and supervised original handling become different possibilities rather than opposing slogans.
 
-In the earlier Prism/Parallax analogy, this was the YZ tilt: leave the opening plane of alternatives while keeping the problem in view. The [full example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) follows the movement from thesis and antithesis through the practical paradox to a possible synthesis.
+In the earlier Prism/Parallax analogy, this was the YZ tilt: leave the opening plane of alternatives while keeping the problem in view. The [full example](../../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md) follows the movement from thesis and antithesis through the practical paradox to a possible synthesis.
 
 CTR's current dimensional-lift operation describes a related move: add a missing dimension while preserving the conflicting observations. Its rotation and inversion operations capture other parts of the older circle.
 
@@ -24,4 +24,4 @@ Recovered December 2025 discussions describe dialectical movement and YZ escape 
 
 CTR selects a transformation. [ETE](ETE.md) explores what it produces; [PSPP](PSPP.md) compares the candidates. The analogy describes a route a model may use, not an automatic requirement to visit every position or end in synthesis.
 
-**Read:** [CTR v2.1 specification](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) · [packet template](../../framework/CTR_Parallax_v2.1_PacketTemplate.json) · [circle-and-tilt example](../chapters/09_THE_CIRCLE_AND_THE_TILT.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [CTR v2.1 specification](../../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json) · [packet template](../../framework/CTR_Parallax_v2.1_PacketTemplate.json) · [circle-and-tilt example](../../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

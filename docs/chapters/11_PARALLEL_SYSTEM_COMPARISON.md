@@ -86,6 +86,6 @@ A bounded request keeps the comparison inspectable:
 
 > Compare current restricted access, supervised originals, reproduction-led access, and tiered access for the fragile notebooks. Preserve meaningful study and collection preservation. Distinguish a wording request from a binding request. Leave copy adequacy, current permissions, and supervision unknown unless supplied. Retain the current arrangement unless a material reason rules it out. Identify duplicates, the checks that could change the choice, and any conditional selection or unresolved dependency. Give reasons tied to each request rather than an unsupported overall score. Return a selection packet for final synthesis and a decision record that carries unresolved checks forward.
 
-Reference: [PSPP v5.0-lite specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) · [PSPP reader guide](../skills/PSPP.md) · [CEC](../skills/CEC.md) · [CREM](../skills/CREM.md) · [DARE/IDCM](../skills/DARE.md) · [source and version notes](../PROVENANCE.md#pspps-numerical-policy).
+Reference: [PSPP v5.0-lite specification](../../framework/PSPP_v5.0_CandidateSystemComparator.json) · [PSPP reader guide](../../reference/skills/PSPP.md) · [CEC](../../reference/skills/CEC.md) · [CREM](../../reference/skills/CREM.md) · [DARE/IDCM](../../reference/skills/DARE.md) · [source and version notes](../../reference/PROVENANCE.md#pspps-numerical-policy).
 
 [Previous: The Exploration and Transform Engine](10_EXPLORATION_TRANSFORM_ENGINE.md) · [Next: CREM: Reframing Relationships](12_RELATIONSHIP_REBASE.md)

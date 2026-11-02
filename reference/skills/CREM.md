@@ -1,6 +1,6 @@
 # CREM: reframe relationships without erasing the parties
 
-For the extended treatment, see [Chapter 12: CREM: Reframing Relationships](../chapters/12_RELATIONSHIP_REBASE.md).
+For the extended treatment, see [Chapter 12: CREM: Reframing Relationships](../../docs/chapters/12_RELATIONSHIP_REBASE.md).
 
 **Question:** Can we change the structure of a disagreement while preserving the differences and dependencies that make it real?
 
@@ -22,4 +22,4 @@ Two groups share infrastructure. One wants autonomy over upgrades; the other wan
 
 CREM should retain productive tension and party integrity. Its gates are design checks, not proof of a psychological diagnosis or permission to choose for another person. [PSPP](PSPP.md) can compare the resulting arrangements; [CEC](CEC.md) can check dependencies.
 
-**Read:** [CREM v1.3 specification](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) · [packet template](../../framework/CREM_v1.3_PacketTemplate.json) · [historical pipeline PDF](../../framework/references/CREM_Pipeline_Document_v1.pdf) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [CREM v1.3 specification](../../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json) · [packet template](../../framework/CREM_v1.3_PacketTemplate.json) · [historical pipeline PDF](../../framework/references/CREM_Pipeline_Document_v1.pdf) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

@@ -1,6 +1,6 @@
 # Reward Controller: keep feedback separate from the solver's objective
 
-For the extended treatment, see [Chapter 17: Reward Controller: Adjusting Future Effort](../chapters/17_AUDITOR_FEEDBACK_CONTROL.md).
+For the extended treatment, see [Chapter 17: Reward Controller: Adjusting Future Effort](../../docs/chapters/17_AUDITOR_FEEDBACK_CONTROL.md).
 
 **Question:** How should observed results change future effort without letting the solver redefine success?
 
@@ -24,4 +24,4 @@ Repeated failures caused by omitted dependency checks might justify more verific
 
 The stored weights, caps and divergence inputs are configuration proposals. This repository neither measures all of them nor changes model weights. Claims of calibrated reward, automatic learning or a measured persona divergence require separate instrumentation and evidence.
 
-**Read:** [Reward Controller specification](../../framework/RewardController_ParallaxEngine.v1.json) · [probe profiles](PROBES.md) · [DARE/IDCM](DARE.md) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [Reward Controller specification](../../framework/RewardController_ParallaxEngine.v1.json) · [probe profiles](PROBES.md) · [DARE/IDCM](DARE.md) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

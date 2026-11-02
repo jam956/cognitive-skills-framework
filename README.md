@@ -29,22 +29,19 @@ The book begins with simple examples and develops their logical progression befo
 | 15 | [Choosing and Combining the Tools](docs/chapters/15_SELECTIVE_TOOL_ROUTING.md) | Select the smallest useful operation, escalation level and receiving contract. |
 | 16 | [Organ Atlas: Observing the Application](docs/chapters/16_OBSERVATION_AND_RECOVERY.md) | Relate qualified observations and proposed probes to recovery conditions. |
 | 17 | [Reward Controller: Adjusting Future Effort](docs/chapters/17_AUDITOR_FEEDBACK_CONTROL.md) | Use auditor-owned, bounded feedback to guide future assignments. |
+| 18 | [Open Questions and Further Directions](docs/chapters/18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) | Develop the unresolved design questions behind explanation, method preservation, expression and discovery. |
+| 19 | [From a Useful Transformation to a Reusable Method](docs/chapters/19_FROM_TRANSFORMATION_TO_REUSABLE_METHOD.md) | Draw together what a method must retain so another practitioner can inspect, find and adapt it. |
 
 Chapters 1–7 develop transformations and the O/D/R/O representation: ontology, dynamics, regime, and object or destination. Chapters 8–14 examine concept reuse, exploration, comparison, relationship rebase, ordered validity and process audit. Chapters 15–17 turn to selective application and optional observation and feedback. Each chapter can also be consulted for its particular question.
 
-The [afterword, From a Useful Transformation to a Reusable Method](docs/AFTERWORD.md), draws these ideas together around what a method must preserve when it is carried into another application.
+Chapter 18 develops the further design questions. Chapter 19 draws the common requirements together around what a useful transformation must preserve when it becomes a reusable method.
 
-[Appendix A: Structured Handoffs and Packet Examples](docs/appendices/A_STRUCTURED_HANDOFFS.md) follows the archive case through seven packet templates and their shared index. The [module and file index](docs/MODULES.md) connects every source module to its chapter, quick guide and contract. These routes account for all 23 JSON definitions and templates in the preserved framework.
+[Appendix A: Structured Handoffs and Packet Examples](docs/appendices/A_STRUCTURED_HANDOFFS.md) follows the archive case through seven packet templates and their shared index. The [module and file index](reference/MODULES.md) connects every source module to its chapter, quick guide and contract. These routes account for all 23 JSON definitions and templates in the preserved framework.
 
-## Using the reference material
+## Appendices and technical reference
 
-| Reader's purpose | Supporting material |
-|---|---|
-| Recall a distinction or look up a method. | [O/D/R/O reference](docs/ODRO.md) and [module index with quick skill guides](docs/MODULES.md). |
-| Explore an application in another setting. | [Worked examples](docs/WORKED_EXAMPLES.md), with illustrative cases and a compact trial instruction. |
-| Examine what is supported and where limits remain. | [Evaluation and limits](docs/EVALUATION.md), [source and version notes](docs/PROVENANCE.md), and the [source manifest](SOURCE_MANIFEST.json). |
-| Follow the development or consider a further extension. | Optional [design history](docs/HISTORY.md) and [research questions](docs/MUSINGS.md). |
+[Appendix B: Applying and Assessing a Method](docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md) combines the O/D/R/O reference, worked applications, and evidence and evaluation notes. It provides one route from representing a case to assessing what a use of the method establishes.
 
-The short skill guides serve as independent lookups and companion examples. The [original framework snapshot](framework/) preserves the detailed specifications and handoff contracts. The [book design](docs/BOOK_DESIGN.md) records the editorial organization.
+The [technical reference index](reference/MODULES.md) supplies the module-to-file map and concise companion guides. The [source and version notes](reference/PROVENANCE.md) explain the preserved framework and its documented publication repair. Development history and editorial records are kept separately in the archive.
 
 Published under the [MIT License](LICENSE).

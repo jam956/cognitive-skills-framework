@@ -1,6 +1,7 @@
 ---
 name: cognitive-tools
-description: Use for structural reasoning, route-space design, candidate-system comparison, conflict or relationship rebase, cross-domain/operator transfer, path validation, and multi-agent handoff packets. Best when direct answering is brittle and an agent must decide which cognitive moves to use before solving. The skill is long-form by design: the model may follow its own reasoning path through ontology, regime, dynamics, coupling, transformation, exploration, rebase, comparison, path validation, and audit, but each stage handoff must normalize into the canonical structured artifact vocabulary.
+description: >-
+  Use for structural reasoning, route-space design, candidate-system comparison, conflict or relationship rebase, cross-domain/operator transfer, path validation, and multi-agent handoff packets. Best when direct answering is brittle and an agent must decide which cognitive moves to use before solving. The skill is long-form by design: the model may follow its own reasoning path through ontology, regime, dynamics, coupling, transformation, exploration, rebase, comparison, path validation, and audit, but each stage handoff must normalize into the canonical structured artifact vocabulary.
 ---
 
 # Cognitive Tools

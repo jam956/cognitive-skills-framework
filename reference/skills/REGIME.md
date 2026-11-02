@@ -1,6 +1,6 @@
 # Regime Field: keep the conditions that change meaning or fit
 
-Textbook chapter: [The Regime Field](../chapters/06_REGIME_FIELD.md).
+Textbook chapter: [The Regime Field](../../docs/chapters/06_REGIME_FIELD.md).
 
 **Question:** Under what conditions does this process produce the behavior we observe?
 
@@ -22,4 +22,4 @@ Sharing a record can mean the same action under public-release authorization or 
 
 In a sentence-thought encoding, logical qualifications can also be represented as regime constraints, provided their scope remains explicit. “Not permitted to express a preference” must not become “does not have that preference.” Categorization alone does not enforce that distinction.
 
-**Read:** [Regime Field v0.1](../../framework/Regime_Field_v0.1.json) · [compact Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json) · [packet template](../../framework/Regime_Field_v0.1_PacketTemplate.json) · [evidence trail](../HISTORY.md#evidence-trail)
+**Read:** [Regime Field v0.1](../../framework/Regime_Field_v0.1.json) · [compact Regime Profile](../../framework/CognitiveTools_RegimeProfile_v1.json) · [packet template](../../framework/Regime_Field_v0.1_PacketTemplate.json) · [evidence trail](../../archive/HISTORY.md#evidence-trail)

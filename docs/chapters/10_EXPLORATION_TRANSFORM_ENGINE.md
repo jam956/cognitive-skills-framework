@@ -4,7 +4,7 @@ Separating access to a notebook's contents from handling the original changes th
 
 The **Exploration and Transform Engine**, or **ETE**, develops those alternatives. It applies selected transformations to produce candidate systems: arrangements whose actors, actions, conditions and dependencies can be examined together. Its central question is what the changed view makes possible, and what each possibility requires.
 
-The [circle-and-tilt example](09_THE_CIRCLE_AND_THE_TILT.md) supplied possible directions. ETE now develops the arrangements those movements permit. The [CTR reference guide](../skills/CTR.md) can help name and select a transformation when that choice needs to be explicit. The distinction becomes clearer when one useful insight develops into several materially different arrangements.
+The [circle-and-tilt example](09_THE_CIRCLE_AND_THE_TILT.md) supplied possible directions. ETE now develops the arrangements those movements permit. The [CTR reference guide](../../reference/skills/CTR.md) can help name and select a transformation when that choice needs to be explicit. The distinction becomes clearer when one useful insight develops into several materially different arrangements.
 
 ## 1. Turn a distinction into candidate access regimes
 
@@ -73,6 +73,6 @@ A bounded request can make exploration inspectable:
 
 The specification organizes exploration a model or application performs. Its value appears in the candidates it returns: whether they differ in consequential ways, preserve the opening concern, and expose what later evidence or comparison must settle.
 
-Reference: [ETE v1.1 specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) · [ETE guide](../skills/ETE.md) · [CTR](../skills/CTR.md).
+Reference: [ETE v1.1 specification](../../framework/ETE_v1.1_SplitLayerExplorationTransform.json) · [ETE guide](../../reference/skills/ETE.md) · [CTR](../../reference/skills/CTR.md).
 
 [Previous: The Circle and the Tilt](09_THE_CIRCLE_AND_THE_TILT.md) · [Next: PSPP: Comparing Candidate Systems](11_PARALLEL_SYSTEM_COMPARISON.md)

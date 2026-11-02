@@ -1,6 +1,6 @@
 # How the cognitive modules developed
 
-The original [Prism and sentence-thought history](chapters/03_SENTENCE_THOUGHT_VECTORS.md#1-prism-broaden-the-inquiry-before-closing-it) explains broadening inquiry and preserving a thought's structure. The later modules address what happens next: choosing a transformation, exploring its consequences, comparing candidates, checking relationships and paths, and deciding whether to reopen the frame.
+The original [Prism and sentence-thought history](../docs/chapters/03_SENTENCE_THOUGHT_VECTORS.md#1-prism-broaden-the-inquiry-before-closing-it) explains broadening inquiry and preserving a thought's structure. The later modules address what happens next: choosing a transformation, exploring its consequences, comparing candidates, checking relationships and paths, and deciding whether to reopen the frame.
 
 This is a reconstructed design history. Module order is not invention order. Some supporting ideas appeared before the later pipeline acquired its present names.
 
@@ -10,28 +10,28 @@ Before the current registry, executor and comparator acquired separate roles, th
 
 Recovered December 2025 discussions describe this as preserving the problem's identity and constraints while changing a domain, level, role or explanatory relationship. Other discussions used different descriptions of the Y and Z axes. The functional thread is re-expression with a return path, rather than a single fixed coordinate system or a compulsory sequence of angles.
 
-The [archive example](chapters/09_THE_CIRCLE_AND_THE_TILT.md) lets the reader follow that movement. Access and preservation remain the concerns throughout; distinguishing kinds of access changes what arrangements become possible.
+The [archive example](../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md) lets the reader follow that movement. Access and preservation remain the concerns throughout; distinguishing kinds of access changes what arrangements become possible.
 
-The later package distributes these jobs. [CTR](skills/CTR.md) names rotation, inversion and dimensional lift; [ETE](skills/ETE.md) explores their consequences, inheriting earlier MPO and MetaDiagnostic responsibilities; [PSPP](skills/PSPP.md) compares the resulting candidates. CDP can keep a specified ontology in focus throughout. A tilt does not automatically authorize changing the subject or guarantee a synthesis.
+The later package distributes these jobs. [CTR](../reference/skills/CTR.md) names rotation, inversion and dimensional lift; [ETE](../reference/skills/ETE.md) explores their consequences, inheriting earlier MPO and MetaDiagnostic responsibilities; [PSPP](../reference/skills/PSPP.md) compares the resulting candidates. CDP can keep a specified ontology in focus throughout. A tilt does not automatically authorize changing the subject or guarantee a synthesis.
 
 ## Read by the problem you are trying to solve
 
 | Question | Method and reader guide |
 |---|---|
-| What concept must survive abstraction? | [KCE](skills/KCE.md) |
-| Which domains can change the answer? | [CDP](skills/CDP.md) |
-| What process is operating? | [Dynamical Prism](skills/DYNAMICAL.md) |
-| Which conditions change its meaning or fit? | [Regime Field](skills/REGIME.md) |
-| Who carries the process, and how are the relationships bound? | [Prism Coupler](skills/COUPLER.md) |
-| Which transformation should we try? | [CTR](skills/CTR.md) |
-| What alternatives does that transformation produce? | [ETE](skills/ETE.md) |
-| Does a reframe preserve the parties and their dependencies? | [CREM](skills/CREM.md) |
-| Which candidate survives comparison? | [PSPP](skills/PSPP.md) |
-| Can its consequential path be followed? | [CEC](skills/CEC.md) |
-| Did pruning or the opening frame hide something important? | [DARE/IDCM](skills/DARE.md) |
-| Is fuller processing worth its cost? | [Probe profiles](skills/PROBES.md) |
-| What could actually be monitored? | [Organ Atlas](skills/ORGAN_ATLAS.md) |
-| How should observed results affect future effort? | [Reward Controller](skills/REWARD.md) |
+| What concept must survive abstraction? | [KCE](../reference/skills/KCE.md) |
+| Which domains can change the answer? | [CDP](../reference/skills/CDP.md) |
+| What process is operating? | [Dynamical Prism](../reference/skills/DYNAMICAL.md) |
+| Which conditions change its meaning or fit? | [Regime Field](../reference/skills/REGIME.md) |
+| Who carries the process, and how are the relationships bound? | [Prism Coupler](../reference/skills/COUPLER.md) |
+| Which transformation should we try? | [CTR](../reference/skills/CTR.md) |
+| What alternatives does that transformation produce? | [ETE](../reference/skills/ETE.md) |
+| Does a reframe preserve the parties and their dependencies? | [CREM](../reference/skills/CREM.md) |
+| Which candidate survives comparison? | [PSPP](../reference/skills/PSPP.md) |
+| Can its consequential path be followed? | [CEC](../reference/skills/CEC.md) |
+| Did pruning or the opening frame hide something important? | [DARE/IDCM](../reference/skills/DARE.md) |
+| Is fuller processing worth its cost? | [Probe profiles](../reference/skills/PROBES.md) |
+| What could actually be monitored? | [Organ Atlas](../reference/skills/ORGAN_ATLAS.md) |
+| How should observed results affect future effort? | [Reward Controller](../reference/skills/REWARD.md) |
 
 ## What this adds to ordinary prompting
 
@@ -56,7 +56,7 @@ That distinction is central to the documentation: a specification describes a me
 | May 6, 2026 | The source update separates Dynamical Core from Regime Field and revises CTR, ETE, CREM and Coupler accordingly. | Recovered discussion and source commit `14670f4`. |
 | May 19–24, 2026 | Sentence-structure coupling and prose-first reasoning with structured handoffs refine the package. | Source commits `d22cec3` and `d78a13c`, reflected in the published snapshot. |
 
-The local baseline commit is `6f34c48`; RewardController's addition is `6690630`. The published source snapshot's revision and file hashes are recorded in [provenance](PROVENANCE.md) and the [manifest](../SOURCE_MANIFEST.json). Source commit identifiers document the reconstruction; the original project history is not bundled here.
+The local baseline commit is `6f34c48`; RewardController's addition is `6690630`. The published source snapshot's revision and file hashes are recorded in [provenance](../reference/PROVENANCE.md) and the [manifest](../SOURCE_MANIFEST.json). Source commit identifiers document the reconstruction; the original project history is not bundled here.
 
 Dates in the table use the author's America/Chicago context. First surviving mention, artifact metadata and first Git addition are not interchangeable dates.
 
@@ -68,16 +68,16 @@ The history was researched through the surviving source package, local source-co
 |---|---|---|
 | October 20, 2025: Prism v13 control discussion naming Organ_Atlas_Template_v0.3.json, probe_handshake_template.py and a concise/analyst split. | Antecedents of optional monitoring and selective escalation. The intervening revision path remains incomplete. | [Current atlas](../framework/Organ_Atlas_Template_v0.3.json), [probe profiles](../framework/CognitiveTools_ProbeProfiles_v1.json). |
 | December 7, 2025: RewardController and coarse-to-fine search discussion; March 22, 2026: programming-orchestrator integration discussion. | Feedback as bounded search/control and differing integration contexts. | [Current Reward Controller contract](../framework/RewardController_ParallaxEngine.v1.json). |
-| December 11 and 15, 2025 local time: Prism/DVM and Prism Reasoning Protocol discussions of thesis, antithesis and YZ paradox escape. | Earlier geometric search vocabulary; preservation of problem identity while re-expressing the frame. Exact axis descriptions varied. | [Descriptive example](chapters/09_THE_CIRCLE_AND_THE_TILT.md), [rotation and dimensional-lift definitions](../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json), [ETE](../framework/ETE_v1.1_SplitLayerExplorationTransform.json). |
+| December 11 and 15, 2025 local time: Prism/DVM and Prism Reasoning Protocol discussions of thesis, antithesis and YZ paradox escape. | Earlier geometric search vocabulary; preservation of problem identity while re-expressing the frame. Exact axis descriptions varied. | [Descriptive example](../docs/chapters/09_THE_CIRCLE_AND_THE_TILT.md), [rotation and dimensional-lift definitions](../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json), [ETE](../framework/ETE_v1.1_SplitLayerExplorationTransform.json). |
 | April 3, 2026: CognitiveTransformationRegistry_ParallaxEngine_v1.json discussion; April 8 local time: sequential/path-family proposal. | Named transformations and the requirement to license ordered steps. | [CTR supersession and transform families](../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json), [CEC definition](../framework/CEC_Parallax_v1.1_ConditionalPathValidator.json). |
 | April 20, 2026: system-construction and v4-era skill discussion. | Ontology-first, dynamics-first and hybrid entry points; candidate systems rather than merely alternative phrasings. | [Dynamical Prism](../framework/Dynamical_Prism_v1.2_ReducedCore.json), [Coupler](../framework/Prism_Coupler_v1.5_OntologyDynamicsRegime.json), [PSPP supersession](../framework/PSPP_v5.0_CandidateSystemComparator.json). |
 | April 26–27, 2026: CREM_ConflictRebase_EdgeDiscovery_Module_v1.json and pipeline-document discussion. | Early conflict/dependency pipeline, with deterministic, heuristic and model-driven portions distinguished. | [Historical PDF](../framework/references/CREM_Pipeline_Document_v1.pdf), [current CREM](../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json). |
 | May 2, 2026: CTR v2.0, ETE v1.0 and PSPP-lite consolidation; n-party CREM and DARE/IDCM discussions. | Division of responsibilities and supervisory decision artifacts. | [CTR](../framework/CTR_Parallax_v2.1_SplitTransformRegistry.json), [ETE](../framework/ETE_v1.1_SplitLayerExplorationTransform.json), [PSPP](../framework/PSPP_v5.0_CandidateSystemComparator.json), [CREM](../framework/CREM_v1.3_SplitOntologyDynamicsRegime.json), [DARE](../framework/DARE_IDCM_v1.0_ParallelSupervisoryLayer.json). |
-| May 6, 2026: Dynamical Core/Regime Field separation and split-layer packages. | Independent process and operating-condition descriptions; computed behavior labels. | [Regime Field](../framework/Regime_Field_v0.1.json), [source/version notes](PROVENANCE.md). |
+| May 6, 2026: Dynamical Core/Regime Field separation and split-layer packages. | Independent process and operating-condition descriptions; computed behavior labels. | [Regime Field](../framework/Regime_Field_v0.1.json), [source/version notes](../reference/PROVENANCE.md). |
 | May 19–24 source changes. | Coupled sentence roles and prose-first guidance with inspectable handoffs. | [KCE packet](../framework/KCE_Parallax_v2.3_PacketTemplate.json), [agent-facing guide](../framework/SKILL.md). |
 
 ## What remains to establish
 
 The earliest appearance of every idea has not been recovered. In particular, the precise origins of the current probe-profile contract and the revisions between the 2025 atlas and the 2026 copy remain open. The source package also contains historical numeric controls and instrumentation proposals whose calibration is not established.
 
-The [KCE evaluation](https://github.com/jam956/Key_Concept_Generalization_and_Specification_Eval) supplies recorded outputs and a rubric for selected generalization/specification tasks. It is not a validation of every transformation module. See [evaluation and limits](EVALUATION.md) for how to distinguish design intent from tested behavior.
+The [KCE evaluation](https://github.com/jam956/Key_Concept_Generalization_and_Specification_Eval) supplies recorded outputs and a rubric for selected generalization/specification tasks. It is not a validation of every transformation module. See [evaluation and limits](../docs/appendices/B_APPLYING_AND_ASSESSING_A_METHOD.md#3-distinguish-illustration-from-evidence) for how to distinguish design intent from tested behavior.

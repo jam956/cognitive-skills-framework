@@ -2,11 +2,17 @@
 
 ## Publication source
 
-The `framework/` directory is a complete, byte-preserved snapshot of `skills/cognitive-tools` from the `bounded-route-hyperagent` project at commit `dc6b7e536aeace455637fa22ce08edbbade712c4`.
+The `framework/` directory reproduces the complete `skills/cognitive-tools` package from the `bounded-route-hyperagent` project at commit `dc6b7e536aeace455637fa22ce08edbbade712c4`.
 
-It contains 28 files: one agent-facing skill guide, 23 JSON specification/template files and four reference documents, including a historical CREM PDF. The [manifest](../SOURCE_MANIFEST.json) records each file's size and SHA-256 hash. No personal memory databases, literary corpora, credentials or machine configuration files are part of this snapshot.
+It contains 28 files: one agent-facing skill guide, 23 JSON specification/template files and four reference documents, including a historical CREM PDF. The [manifest](../SOURCE_MANIFEST.json) records each file's size and SHA-256 hash. All 23 JSON files and four reference documents remain byte-preserved. The skill guide has the front-matter repair recorded below; its instruction body is unchanged. No personal memory databases, literary corpora, credentials or machine configuration files are part of this snapshot.
 
-The public README and `docs/` guides are publication material accompanying that snapshot. They distinguish design intent from demonstrated behavior and explain the methods in reader-facing language. The snapshot's internal filenames, versions and module names are preserved.
+The public README, book chapters, appendices and `reference/` guides are publication material accompanying that snapshot. They distinguish design intent from demonstrated behavior and explain the methods in reader-facing language. The snapshot's internal filenames, versions and module names are preserved.
+
+## Skill guide publication repair
+
+The source guide's unquoted YAML description contained `design: the model`. A YAML reader treated the colon as a mapping delimiter and rejected the front matter. The publication uses a folded scalar for that description; its wording and the full instruction body are unchanged.
+
+The manifest records both the upstream and published size and SHA-256 identity for this one repair. The source revision remains the same. This is a metadata syntax correction, not a revision to the cognitive method or its JSON contracts.
 
 ## Why this copy
 
@@ -36,4 +42,4 @@ The specifications mention related components such as MPE, PSPE, ECE, an arbiter
 
 ## Updating this publication
 
-Keep original snapshot changes distinct from explanatory edits. A future source refresh should name its revision, preserve provenance, update hashes and document any compatibility changes. A newly proposed algorithm belongs in the research notes until its contract and implementation status are explicit.
+Keep original snapshot changes distinct from explanatory edits. A future source refresh should name its revision, preserve provenance, update hashes and document any compatibility changes. Prospective arrangements in [Chapter 18](../docs/chapters/18_OPEN_QUESTIONS_AND_FURTHER_DIRECTIONS.md) retain their open contract and implementation status. Development history is kept in the [archive](../archive/HISTORY.md), alongside the [editorial design](../archive/BOOK_DESIGN.md), outside the main reading route.
