@@ -36,7 +36,7 @@ Rescue does not make a branch viable. A copy still needs inspection; original ac
 
 ## 3. Locate missing understanding without inventing it
 
-IDCM treats contradiction, residual error, fragile conclusions and repeated failed repair as reasons to question the adequacy of the current account. The specification groups such signals under **unknown-pressure**.
+IDCM treats contradiction, residual error, fragile conclusions and repeated failed repair as reasons to question the adequacy of the current account. Possibly during the course of processing, a key constraint or regime may be lost.  Sometimes it may be a blind spot inherited by the model during training.  DARE/IDCM exists in an attempt to recover the missing constraint.  The specification groups such signals under **unknown-pressure**.
 
 Suppose each proposed repair changes appointment duration, while the unresolved request requires evidence absent from the copy. More scheduling detail has not addressed that difficulty. The useful correction may be to distinguish the evidence carrier from the conditions of consultation. This is an **operator gap**: the inquiry needs a different kind of transformation, such as decomposition or constraint isolation, before repeating the same search.
 
